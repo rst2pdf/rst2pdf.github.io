@@ -14,6 +14,11 @@ The `rst2pdf` tool creates PDF documents from your ReStructured Text markup.  It
 
 **Open Source** Free to use and free to change - the tool, the styles you use, it's all yours!
 
+## Quick Links for the Impatient
+
+* The fine [manual]({{ site.base_url }}/static/manual.pdf)
+* [github project](https://github.com/rst2pdf/rst2pdf)
+
 ## Getting Started
 
 To create your first PDF, simply install the `rst2pdf` tool, write some text, and create the first document.
