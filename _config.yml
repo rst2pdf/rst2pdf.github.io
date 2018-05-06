@@ -1,4 +1,6 @@
 theme: jekyll-theme-slate
+github:
+  repository_url: "https://github.com/rst2pdf/rst2pdf"
 title: "rst2pdf"
 description: "Use a text editor. Make a PDF"
 twitter:
