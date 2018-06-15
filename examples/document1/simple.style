@@ -1,0 +1,20 @@
+fontsAlias:
+    stdFont: Georgia
+    stdBold: League Gothic
+
+styles:
+    normal:
+        fontName: stdFont
+        textColor: #383745
+        fontSize: 16
+        alignment: TA_LEFT
+
+    heading:
+        fontName: stdBold
+        fontSize: 32
+        textColor: #1a8099
+
+    heading1:
+        parent: heading
+        fontSize: 26
+
