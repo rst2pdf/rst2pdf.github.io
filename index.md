@@ -74,4 +74,22 @@ rst2pdf sample.rst
 
 Check for a new file called `sample.pdf` - and you are already on your `rst2pdf` journey!
 
+## Tips, Tricks and Tools
 
+There are a few other PDF tools that we use and love, they are included here in case you need them too!
+
+### Working with PDF Files
+
+**pdftk: The PDF Toolkit**
+
+This commandline tool allows you to combine PDFs and other fun activities
+
+**pdfjam**
+
+This one is great for printing multiple PDFs to a page, ideal for printable items such as newsletters or slide handouts
+
+## Presenting with PDF
+
+On linux, try `pdfpc` - it's available from apt.
+
+On mac, we like `presentation.py`
