@@ -85,15 +85,15 @@ There are a few other PDF tools that we use and love, they are included here in 
 
 This commandline tool allows you to combine PDFs (useful for adding coversheets), extract and change metadata such as bookmarks, and much more.
 
-Try this for 12 slides per page, A4 landscape (also ideal for checking that the fonts are large enough, you should be able to read this when printed ...)
+**pdfjam** [https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/firth/software/pdfjam/](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/firth/software/pdfjam/)
+
+Very useful for resizing and scaling PDFs, and printing handouts with multiple slides per page.
+
+Try the example below for 12 slides per page, A4 landscape (also ideal for checking that the fonts are large enough, you should be able to read this when printed ...)
 
 ```
 pdfjam --suffix handout --nup '4x3' --frame 'true' --noautoscale 'false' --delta '0.2cm 2cm' --scale '0.9' --landscape -- ${FILE}.pdf -
 ```
-
-**pdfjam** [https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/firth/software/pdfjam/](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/firth/software/pdfjam/)
-
-Very useful for resizing and scaling PDFs, and printing handouts with multiple slides per page.
 
 **Imagemagick** [https://www.imagemagick.org](https://www.imagemagick.org)
 
