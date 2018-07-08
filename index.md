@@ -74,4 +74,41 @@ rst2pdf sample.rst
 
 Check for a new file called `sample.pdf` - and you are already on your `rst2pdf` journey!
 
+## Tips, Tricks and Tools
+
+There are a few other PDF tools that we use and love, they are included here in case you need them too!
+
+### Working with PDF Files
+
+**pdftk: The PDF Toolkit** [https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/)
+
+This commandline tool allows you to combine PDFs (useful for adding coversheets), extract and change metadata such as bookmarks, and much more.
+
+Try this for 12 slides per page, A4 landscape (also ideal for checking that the fonts are large enough, you should be able to read this when printed ...)
+
+```
+pdfjam --suffix handout --nup '4x3' --frame 'true' --noautoscale 'false' --delta '0.2cm 2cm' --scale '0.9' --landscape -- ${FILE}.pdf -
+```
+
+**pdfjam** [https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/firth/software/pdfjam/](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/firth/software/pdfjam/)
+
+Very useful for resizing and scaling PDFs, and printing handouts with multiple slides per page.
+
+**Imagemagick** [https://www.imagemagick.org](https://www.imagemagick.org)
+
+Can treat PDFs as images, very useful for creating previews, thumbnails, or tweetable versions of slides ...
+
+### Presenting with PDF
+
+**PDF Presenter Console** [https://pdfpc.github.io/](https://pdfpc.github.io/)
+
+<img src="images/pdfpc.png" alt="screenshot of pdfpc in action" />
+
+Available for most Linux flavours (on Ubuntu, `apt-get install pdf-presenter-console`) and is also open source so you can patch if required.
+
+**Presentation.app** [http://iihm.imag.fr/blanch/software/osx-presentation/](http://iihm.imag.fr/blanch/software/osx-presentation/)
+
+<img src="images/presentation-app-presenter-view.png" alt="speaker view screen of presentation.app" />
+
+For OSX, this is a great Keynote-alternative for presenter view and notes.
 
