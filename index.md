@@ -17,8 +17,9 @@ The `rst2pdf` tool creates PDF documents from your ReStructured Text markup.  It
 
 ## Quick Links for the Impatient
 
-* The fine [manual]({{ site.base_url }}/static/manual.pdf)
+* The fine [manual]({{ site.base_url }}/static/manual.pdf) on {{site.base_url}}
 * [github project](https://github.com/rst2pdf/rst2pdf)
+* [some examples](/examples)
 
 ## Getting Started
 
