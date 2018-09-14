@@ -1,0 +1,45 @@
+pageSetup:
+    size: null
+    width: 16cm
+    height: 9cm
+    margin-top: 0cm
+    margin-bottom: 0cm
+    margin-left: 0cm
+    margin-right: 0cm
+    margin-gutter: 0cm
+    spacing-header: 2mm
+    spacing-footer: 2mm
+    firstTemplate: standardPage
+
+pageTemplates:
+    standardPage:
+        frames: []
+            [3%, 3%, 94%, 94%]
+        background: white.jpg
+        showHeader: false
+        showFooter: false
+
+linkColor: #1b7b88
+
+styles:
+    normal:
+        fontSize: 14
+
+    bodytext:
+        alignment: TA_LEFT
+        hyphenation: false
+        spaceAfter: 10
+
+    titleslideinfo:
+        parent: normal
+        alignment: TA_CENTER
+
+    literal:
+        textColor: #000000
+
+    code:
+        parent: literal
+        fontSize: 11
+        leftIndent: 0
+        spaceBefore: 8
+        spaceAfter: 8

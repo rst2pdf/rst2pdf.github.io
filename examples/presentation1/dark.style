@@ -1,0 +1,56 @@
+pageSetup:
+    size: null
+    width: 16cm
+    height: 9cm
+    margin-top: 0cm
+    margin-bottom: 0cm
+    margin-left: 0cm
+    margin-right: 0cm
+    margin-gutter: 0cm
+    spacing-header: 2mm
+    spacing-footer: 2mm
+    firstTemplate: standardPage
+
+pageTemplates:
+    standardPage:
+        frames: []
+            [3%, 3%, 94%, 94%]
+        background: black.png
+        showHeader: false
+        showFooter: false
+
+linkColor: #add8e6
+
+styles:
+    normal:
+        fontSize: 14
+        textColor: white
+
+    bodytext:
+        alignment: TA_LEFT
+        hyphenation: false
+        spaceAfter: 10
+
+    titleslideinfo:
+        parent: normal
+        alignment: TA_CENTER
+
+    literal:
+        textColor: silver
+
+    table:
+      commands: []
+             [ROWBACKGROUNDS, [0, 0], [-1, -1], [#333333, black]]
+
+    table-heading:
+      parent: heading
+      backColor: black 
+      alignment : TA_LEFT
+
+    code:
+        parent: literal
+        fontSize: 11
+        leftIndent: 0
+        spaceBefore: 8
+        spaceAfter: 8
+        backColor: #333333
