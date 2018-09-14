@@ -48,6 +48,7 @@ Some text here and then a list:
 Image on a slide
 ================
 
+.. Photo from https://www.flickr.com/photos/akrabat/6385577945 (Thanks @akrabat!)
 .. image:: elephpant.jpg
     :width: 8cm
 
