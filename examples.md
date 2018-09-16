@@ -1,5 +1,5 @@
 ---
-title: rst2pdf: Examples
+title: Examples
 ---
 
 # rst2pdf Examples
