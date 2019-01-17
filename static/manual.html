@@ -1,0 +1,2705 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.14: http://docutils.sourceforge.net/" />
+<title>How to use rst2pdf</title>
+<meta content="rst2pdf project &lt;https://rst2pdf.org&gt;; Roberto Alsina &lt;ralsina&#64;netmanagers.com.ar&gt;;" name="authors" />
+<meta content="0.94" name="version" />
+<meta content="2019011700" name="revision" />
+<style type="text/css">
+
+/*
+Stylesheet for Docutils, based on voidspace.css.
+Based on ``blue_box.css`` by Ian Bicking
+and ``html4css1.css`` revision 1.46.
+*/
+
+@import url(html4css1.css);
+
+body {
+  font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+}
+
+a.target {
+  color: darkblue;
+}
+
+a.toc-backref {
+  text-decoration: none;
+  color: black;
+}
+
+a.toc-backref:hover {
+  background-color: inherit;
+}
+
+a:hover {
+  background-color: #cccccc;
+}
+
+div.attention, div.caution, div.danger, div.error, div.hint,
+div.important, div.note, div.tip, div.warning {
+  background-color: #cccccc;
+  padding: 3px;
+  width: 80%;
+}
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title  {
+  text-align: center;
+  color: white;
+  font-size: 120%;
+  font-weight: bold;
+  background-color: #999999;
+  display: block;
+  margin: 0;
+}
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: #cc0000;
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #999999;
+  display: block;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+  padding: 4px;
+}
+
+h3 a.toc-backref, h4 a.toc-backref, h5 a.toc-backref, 
+h6 a.toc-backref { 
+  color: #000000;
+}
+
+h1.title {
+  text-align: center;
+}
+
+table.footnote {
+  padding-left: 0.5ex;
+}
+
+table.citation {
+  padding-left: 0.5ex
+}
+
+pre.literal-block, pre.doctest-block {
+  border: thin black solid;
+  background-color: #ffffdf;
+  padding: 5px;
+}
+
+.image img { border-style : solid;
+            border-width : 2px;
+}
+
+h1 tt, h2 tt, h3 tt, h4 tt, h5 tt, h6 tt {
+  font-size: 100%;
+}
+
+code, tt {
+  color: #000066;
+}
+
+kbd {
+  color: #101010;
+}
+
+.auto-toc {
+  list-style-type: none;
+  list-style: none;
+}
+
+.toc-root > ul {
+  padding-left: 10px;
+}
+
+</style>
+<style type="text/css">
+
+/*
+*   math2html: convert LaTeX equations to HTML output.
+*
+*   Copyright (C) 2009,2010 Alex Fernández
+*
+*   Released under the terms of the `2-Clause BSD license'_, in short:
+*   Copying and distribution of this file, with or without modification,
+*   are permitted in any medium without royalty provided the copyright
+*   notice and this notice are preserved.
+*   This file is offered as-is, without any warranty.
+*
+* .. _2-Clause BSD license: http://www.spdx.org/licenses/BSD-2-Clause
+*
+*   Based on eLyXer: convert LyX source files to HTML output.
+*   http://elyxer.nongnu.org/
+*/
+/* --end--
+* CSS file for LaTeX formulas.
+*/
+
+/* Formulas */
+.formula {
+	text-align: center;
+	font-family: "Droid Serif", "DejaVu Serif", "STIX", serif;
+	margin: 1.2em 0;
+}
+span.formula {
+	white-space: nowrap;
+}
+div.formula {
+	padding: 0.5ex;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Basic features */
+a.eqnumber {
+	display: inline-block;
+	float: right;
+	clear: right;
+	font-weight: bold;
+}
+span.unknown {
+	color: #800000;
+}
+span.ignored, span.arraydef {
+	display: none;
+}
+.formula i {
+	letter-spacing: 0.1ex;
+}
+
+/* Alignment */
+.align-left, .align-l {
+	text-align: left;
+}
+.align-right, .align-r {
+	text-align: right;
+}
+.align-center, .align-c {
+	text-align: center;
+}
+
+/* Structures */
+span.overline, span.bar {
+	text-decoration: overline;
+}
+.fraction, .fullfraction {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+}
+.fraction .fraction {
+	font-size: 80%;
+	line-height: 100%;
+}
+span.numerator {
+	display: block;
+}
+span.denominator {
+	display: block;
+	padding: 0ex;
+	border-top: thin solid;
+}
+sup.numerator, sup.unit {
+	font-size: 70%;
+	vertical-align: 80%;
+}
+sub.denominator, sub.unit {
+	font-size: 70%;
+	vertical-align: -20%;
+}
+span.sqrt {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0.1ex;
+}
+sup.root {
+	font-size: 70%;
+	position: relative;
+	left: 1.4ex;
+}
+span.radical {
+	display: inline-block;
+	padding: 0ex;
+	font-size: 150%;
+	vertical-align: top;
+}
+span.root {
+	display: inline-block;
+	border-top: thin solid;
+	padding: 0ex;
+	vertical-align: middle;
+}
+span.symbol {
+	line-height: 125%;
+	font-size: 125%;
+}
+span.bigsymbol {
+	line-height: 150%;
+	font-size: 150%;
+}
+span.largesymbol {
+	font-size: 175%;
+}
+span.hugesymbol {
+	font-size: 200%;
+}
+span.scripts {
+	display: inline-table;
+	vertical-align: middle;
+}
+.script {
+	display: table-row;
+	text-align: left;
+	line-height: 150%;
+}
+span.limits {
+	display: inline-table;
+	vertical-align: middle;
+}
+.limit {
+	display: table-row;
+	line-height: 99%;
+}
+sup.limit, sub.limit {
+	line-height: 100%;
+}
+span.symbolover {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	float: right;
+	right: 100%;
+	bottom: 0.5em;
+	width: 0px;
+}
+span.withsymbol {
+	display: inline-block;
+}
+span.symbolunder {
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	float: right;
+	right: 80%;
+	top: 0.3em;
+	width: 0px;
+}
+
+/* Environments */
+span.array, span.bracketcases, span.binomial, span.environment {
+	display: inline-table;
+	text-align: center;
+	border-collapse: collapse;
+	margin: 0em;
+	vertical-align: middle;
+}
+span.arrayrow, span.binomrow {
+	display: table-row;
+	padding: 0ex;
+	border: 0ex;
+}
+span.arraycell, span.bracket, span.case, span.binomcell, span.environmentcell {
+	display: table-cell;
+	padding: 0ex 0.2ex;
+	line-height: 99%;
+	border: 0ex;
+}
+/*
+* CSS file for LaTeX formulas, extra stuff:
+* binomials, vertical braces, stackrel, fonts and colors.
+*/
+
+/* Inline binomials */
+span.binom {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 80%;
+}
+span.binomstack {
+	display: block;
+	padding: 0em;
+}
+
+/* Over- and underbraces */
+span.overbrace {
+	border-top: 2pt solid;
+}
+span.underbrace {
+	border-bottom: 2pt solid;
+}
+
+/* Stackrel */
+span.stackrel {
+	display: inline-block;
+	text-align: center;
+}
+span.upstackrel {
+	display: block;
+	padding: 0em;
+	font-size: 80%;
+	line-height: 64%;
+	position: relative;
+	top: 0.15em;
+
+}
+span.downstackrel {
+	display: block;
+	vertical-align: bottom;
+	padding: 0em;
+}
+
+/* Fonts */
+span.mathsf, span.textsf {
+	font-style: normal;
+	font-family: sans-serif;
+}
+span.mathrm, span.textrm {
+	font-style: normal;
+	font-family: serif;
+}
+span.text, span.textnormal {
+	font-style: normal;
+}
+span.textipa {
+	color: #008080;
+}
+span.fraktur {
+	font-family: "Lucida Blackletter", eufm10, blackletter;
+}
+span.blackboard {
+	font-family: Blackboard, msbm10, serif;
+}
+span.scriptfont {
+	font-family: "Monotype Corsiva", "Apple Chancery", "URW Chancery L", cursive;
+	font-style: italic;
+}
+
+/* Colors */
+span.colorbox {
+	display: inline-block;
+	padding: 5px;
+}
+span.fbox {
+	display: inline-block;
+	border: thin solid black;
+	padding: 2px;
+}
+span.boxed, span.framebox {
+	display: inline-block;
+	border: thin solid black;
+	padding: 5px;
+}
+
+
+</style>
+</head>
+<body>
+<div class="header">
+
+<hr class="header"/>
+</div>
+<div class="document" id="how-to-use-rst2pdf">
+<h1 class="title">How to use rst2pdf</h1>
+
+<div class="contents toc-root topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="auto-toc simple">
+<li><a class="reference internal" href="#introduction" id="id8">1&nbsp;&nbsp;&nbsp;Introduction</a></li>
+<li><a class="reference internal" href="#command-line-options" id="id9">2&nbsp;&nbsp;&nbsp;Command line options</a></li>
+<li><a class="reference internal" href="#configuration-file" id="id10">3&nbsp;&nbsp;&nbsp;Configuration File</a></li>
+<li><a class="reference internal" href="#pipe-usage" id="id11">4&nbsp;&nbsp;&nbsp;Pipe usage</a></li>
+<li><a class="reference internal" href="#headers-and-footers" id="id12">5&nbsp;&nbsp;&nbsp;Headers and Footers</a></li>
+<li><a class="reference internal" href="#footnotes" id="id13">6&nbsp;&nbsp;&nbsp;Footnotes</a></li>
+<li><a class="reference internal" href="#images" id="id14">7&nbsp;&nbsp;&nbsp;Images</a><ul class="auto-toc">
+<li><a class="reference internal" href="#inline" id="id15">7.1&nbsp;&nbsp;&nbsp;Inline</a></li>
+<li><a class="reference internal" href="#supported-image-types" id="id16">7.2&nbsp;&nbsp;&nbsp;Supported Image Types</a></li>
+<li><a class="reference internal" href="#image-size" id="id17">7.3&nbsp;&nbsp;&nbsp;Image Size</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#styles" id="id18">8&nbsp;&nbsp;&nbsp;Styles</a><ul class="auto-toc">
+<li><a class="reference internal" href="#included-stylesheets" id="id19">8.1&nbsp;&nbsp;&nbsp;Included StyleSheets</a></li>
+<li><a class="reference internal" href="#stylesheet-syntax" id="id20">8.2&nbsp;&nbsp;&nbsp;StyleSheet Syntax</a></li>
+<li><a class="reference internal" href="#font-alias" id="id21">8.3&nbsp;&nbsp;&nbsp;Font Alias</a></li>
+<li><a class="reference internal" href="#style-definition" id="id22">8.4&nbsp;&nbsp;&nbsp;Style Definition</a></li>
+<li><a class="reference internal" href="#widows-and-orphans" id="id23">8.5&nbsp;&nbsp;&nbsp;Widows and Orphans</a></li>
+<li><a class="reference internal" href="#font-embedding" id="id24">8.6&nbsp;&nbsp;&nbsp;Font Embedding</a><ul class="auto-toc">
+<li><a class="reference internal" href="#the-easy-way" id="id25">8.6.1&nbsp;&nbsp;&nbsp;The Easy Way</a><ul class="auto-toc">
+<li><a class="reference internal" href="#fonty-is-a-true-type-font" id="id26">8.6.1.1&nbsp;&nbsp;&nbsp;Fonty is a True Type font:</a></li>
+<li><a class="reference internal" href="#fonty-is-a-type-1-font" id="id27">8.6.1.2&nbsp;&nbsp;&nbsp;Fonty is a Type 1 font:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#the-harder-way-true-type" id="id28">8.6.2&nbsp;&nbsp;&nbsp;The Harder Way (True Type)</a></li>
+<li><a class="reference internal" href="#the-harder-way-type1" id="id29">8.6.3&nbsp;&nbsp;&nbsp;The Harder Way (Type1)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#page-size-and-margins" id="id30">8.7&nbsp;&nbsp;&nbsp;Page Size and Margins</a></li>
+<li><a class="reference internal" href="#advanced-table-styles" id="id31">8.8&nbsp;&nbsp;&nbsp;Advanced: table styles</a></li>
+<li><a class="reference internal" href="#multiple-stylesheets" id="id32">8.9&nbsp;&nbsp;&nbsp;Multiple Stylesheets</a></li>
+<li><a class="reference internal" href="#styling-your-document" id="id33">8.10&nbsp;&nbsp;&nbsp;Styling Your Document</a><ul class="auto-toc">
+<li><a class="reference internal" href="#the-base-styles" id="id34">8.10.1&nbsp;&nbsp;&nbsp;The Base Styles</a></li>
+<li><a class="reference internal" href="#lists" id="id35">8.10.2&nbsp;&nbsp;&nbsp;Lists</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#syntax-highlighting" id="id36">9&nbsp;&nbsp;&nbsp;Syntax Highlighting</a><ul class="auto-toc">
+<li><a class="reference internal" href="#file-inclusion" id="id37">9.1&nbsp;&nbsp;&nbsp;File inclusion</a><ul class="auto-toc">
+<li><a class="reference internal" href="#include-with-boundaries" id="id38">9.1.1&nbsp;&nbsp;&nbsp;Include with Boundaries</a></li>
+<li><a class="reference internal" href="#options" id="id39">9.1.2&nbsp;&nbsp;&nbsp;Options</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#raw-directive" id="id40">10&nbsp;&nbsp;&nbsp;Raw Directive</a><ul class="auto-toc">
+<li><a class="reference internal" href="#raw-pdf" id="id41">10.1&nbsp;&nbsp;&nbsp;Raw PDF</a></li>
+<li><a class="reference internal" href="#page-counters" id="id42">10.2&nbsp;&nbsp;&nbsp;Page Counters</a></li>
+<li><a class="reference internal" href="#page-breaks" id="id43">10.3&nbsp;&nbsp;&nbsp;Page Breaks</a></li>
+<li><a class="reference internal" href="#frame-breaks" id="id44">10.4&nbsp;&nbsp;&nbsp;Frame Breaks</a></li>
+<li><a class="reference internal" href="#page-transitions" id="id45">10.5&nbsp;&nbsp;&nbsp;Page Transitions</a></li>
+<li><a class="reference internal" href="#text-annotations" id="id46">10.6&nbsp;&nbsp;&nbsp;Text Annotations</a></li>
+<li><a class="reference internal" href="#raw-html" id="id47">10.7&nbsp;&nbsp;&nbsp;Raw HTML</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#the-counter-role" id="id48">11&nbsp;&nbsp;&nbsp;The counter role</a></li>
+<li><a class="reference internal" href="#the-oddeven-directive" id="id49">12&nbsp;&nbsp;&nbsp;The oddeven directive</a></li>
+<li><a class="reference internal" href="#mathematics" id="id50">13&nbsp;&nbsp;&nbsp;Mathematics</a></li>
+<li><a class="reference internal" href="#hyphenation" id="id51">14&nbsp;&nbsp;&nbsp;Hyphenation</a></li>
+<li><a class="reference internal" href="#page-layout" id="id52">15&nbsp;&nbsp;&nbsp;Page Layout</a></li>
+<li><a class="reference internal" href="#smart-quotes" id="id53">16&nbsp;&nbsp;&nbsp;Smart Quotes</a></li>
+<li><a class="reference internal" href="#kerning" id="id54">17&nbsp;&nbsp;&nbsp;Kerning</a></li>
+<li><a class="reference internal" href="#sphinx" id="id55">18&nbsp;&nbsp;&nbsp;Sphinx</a></li>
+<li><a class="reference internal" href="#extensions" id="id56">19&nbsp;&nbsp;&nbsp;Extensions</a><ul class="auto-toc">
+<li><a class="reference internal" href="#preprocess-e-preprocess" id="id57">19.1&nbsp;&nbsp;&nbsp;Preprocess (<tt class="docutils literal"><span class="pre">-e</span> preprocess</tt>)</a></li>
+<li><a class="reference internal" href="#inkscape-e-inkscape" id="id58">19.2&nbsp;&nbsp;&nbsp;Inkscape (<tt class="docutils literal"><span class="pre">-e</span> inkscape</tt>)</a></li>
+<li><a class="reference internal" href="#dotted-toc-e-dotted-toc" id="id59">19.3&nbsp;&nbsp;&nbsp;Dotted_TOC (<tt class="docutils literal"><span class="pre">-e</span> dotted_toc</tt>)</a><ul class="auto-toc">
+<li><a class="reference internal" href="#history" id="id60">19.3.1&nbsp;&nbsp;&nbsp;History:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#developers" id="id61">20&nbsp;&nbsp;&nbsp;Developers</a><ul class="auto-toc">
+<li><a class="reference internal" href="#guidelines" id="id62">20.1&nbsp;&nbsp;&nbsp;Guidelines</a></li>
+<li><a class="reference internal" href="#continuous-integration" id="id63">20.2&nbsp;&nbsp;&nbsp;Continuous Integration</a></li>
+<li><a class="reference internal" href="#running-tests" id="id64">20.3&nbsp;&nbsp;&nbsp;Running tests</a><ul class="auto-toc">
+<li><a class="reference internal" href="#first-run" id="id65">20.3.1&nbsp;&nbsp;&nbsp;First run</a></li>
+<li><a class="reference internal" href="#next-runs" id="id66">20.3.2&nbsp;&nbsp;&nbsp;Next runs</a></li>
+<li><a class="reference internal" href="#using-autotest-directly" id="id67">20.3.3&nbsp;&nbsp;&nbsp;Using autotest directly</a></li>
+<li><a class="reference internal" href="#running-a-single-test" id="id68">20.3.4&nbsp;&nbsp;&nbsp;Running a single test</a></li>
+<li><a class="reference internal" href="#skipping-tests" id="id69">20.3.5&nbsp;&nbsp;&nbsp;Skipping tests</a></li>
+<li><a class="reference internal" href="#marking-a-failing-test-as-good" id="id70">20.3.6&nbsp;&nbsp;&nbsp;Marking a failing test as good</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#getting-commit-rights" id="id71">20.4&nbsp;&nbsp;&nbsp;Getting commit rights</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#licenses" id="id72">21&nbsp;&nbsp;&nbsp;Licenses</a></li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h1><a class="toc-backref" href="#id8">1&nbsp;&nbsp;&nbsp;Introduction</a></h1>
+<p>This document explains how to use rst2pdf. Here is the very short version:</p>
+<pre class="literal-block">
+rst2pdf.py mydocument.txt -o mydocument.pdf
+</pre>
+<p>That will, as long as mydocument.txt is a valid Restructured Text (ReST)
+document, produce a file called mydocument.pdf which is a PDF
+version of your document.</p>
+<p>Of course, that means you just used default styles and settings. If it
+looks good enough for you, then you may stop reading this document,
+because you are done with it. If you are reading this in a PDF,
+it was generated using those default settings.</p>
+<p>However, if you want to customize the output, or are just curious to see
+what can be done, let's continue.</p>
+</div>
+<div class="section" id="command-line-options">
+<h1><a class="toc-backref" href="#id9">2&nbsp;&nbsp;&nbsp;Command line options</a></h1>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></td>
+<td>Show this help message and exit</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">--config=<var>FILE</var></span></kbd></td>
+<td>Config file to use. Default=~/.rst2pdf/config</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-o <var>FILE</var></span>, <span class="option">--output=<var>FILE</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Write the PDF to FILE</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-s <var>STYLESHEETS</var></span>, <span class="option">--stylesheets=<var>STYLESHEETS</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>A comma-separated list of custom stylesheets.
+Default=&quot;&quot;</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--stylesheet-path=<var>FOLDERLIST</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>A colon-separated list of folders to search for
+stylesheets. Default=&quot;&quot;</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-c</span>, <span class="option">--compressed</span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Create a compressed PDF. Default=False</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--print-stylesheet</span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Print the default stylesheet and exit</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--font-folder=<var>FOLDER</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Search this folder for fonts. (Deprecated)</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--font-path=<var>FOLDERLIST</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>A colon-separated list of folders to search for fonts.
+Default=&quot;&quot;</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">--baseurl=<var>URL</var></span></kbd></td>
+<td>The base URL for relative URLs.</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-l <var>LANG</var></span>, <span class="option">--language=<var>LANG</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Language to be used for hyphenation and docutils localization.
+Default=None</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--header=<var>HEADER</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Page header if not specified in the document.</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--footer=<var>FOOTER</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Page footer if not specified in the document.</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--section-header-depth=<var>N</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Sections up to this dept will be used in the header
+and footer's replacement of ###Section###. Default=2</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--smart-quotes=<var>VALUE</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Try to convert ASCII quotes, ellipsis and dashes to
+the typographically correct equivalent. Default=0</td></tr>
+</tbody>
+</table>
+<p>The possible values are:</p>
+<ol class="arabic simple" start="0">
+<li>Suppress all transformations. (Do nothing.)</li>
+<li>Performs default SmartyPants transformations: quotes (including backticks-style), em-dashes, and ellipses. &quot;--&quot; (dash dash) is used to signify an em-dash; there is no support for en-dashes.</li>
+<li>Same as --smart-quotes=1, except that it uses the old-school typewriter shorthand for dashes: &quot;--&quot; (dash dash) for en-dashes, &quot;---&quot; (dash dash dash) for em-dashes.</li>
+<li>Same as --smart-quotes=2, but inverts the shorthand for dashes: &quot;--&quot; (dash dash) for em-dashes, and &quot;---&quot; (dash dash dash) for en-dashes.</li>
+</ol>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--fit-literal-mode=<var>MODE</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>What to do when a literal is too wide.
+One of error,overflow,shrink,truncate.
+Default=&quot;shrink&quot;</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--fit-background-mode=<var>MODE</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>How to fit the background image to the page. One of
+scale, scale_width or center. Default=&quot;center&quot;</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">--inline-links</span></kbd></td>
+<td>Shows target between parenthesis instead of active link</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--repeat-table-rows</span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Repeats header row for each splitted table</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">--raw-html</span></kbd></td>
+<td>Support embeddig raw HTML. Default: False</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-q</span>, <span class="option">--quiet</span></kbd></td>
+<td>Print less information.</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-v</span>, <span class="option">--verbose</span></kbd></td>
+<td>Print debug information.</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">--very-verbose</span></kbd></td>
+<td>Print even more debug information.</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">--version</span></kbd></td>
+<td>Print version number and exit.</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--no-footnote-backlinks</span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Disable footnote backlinks. Default: False</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--inline-footnotes</span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Show footnotes inline. Default: True</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--default-dpi=<var>NUMBER</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>DPI for objects sized in pixels. Default=300</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--show-frame-boundary</span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Show frame borders (only useful for debugging).
+Default=False</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--disable-splittables</span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Don't use splittable flowables in some elements. Only
+try this if you can't process a document any other
+way.</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">-b <var>LEVEL</var></span>, <span class="option">--break-level=<var>LEVEL</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Maximum section level that starts in a new page. Default: 0</td></tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>--first-page-on-right When using double sided pages, the first page will start</dt>
+<dd>on the right hand side. (Book Style)</dd>
+</dl>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--blank-first-page</span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Add a blank page at the beginning of the document.</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--break-side=<var>VALUE</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>How section breaks work. Can be &quot;even&quot;, and sections
+start in an even page,&quot;odd&quot;, and sections start in odd
+pages, or &quot;any&quot; and sections start in the next page,be
+it even or odd. See also the -b option.</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--date-invariant</span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Don't store the current date in the PDF. Useful mainly
+for the test suite, where we don't want the PDFs to
+change.</td></tr>
+<tr><td class="option-group">
+<kbd><span class="option">-e <var>EXTENSIONS</var></span></kbd></td>
+<td>Alias for --extension-module</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--extension-module=<var>EXTENSIONS</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Add a helper extension module to this invocation of
+rst2pdf (module must end in .py and be on the python
+path)</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--custom-cover=<var>FILE</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Template file used for the cover page. Default:
+cover.tmpl</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--use-floating-images</span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Makes images with :aling: attribute work more like in
+rst2html. Default: False</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--use-numbered-links</span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>When using numbered sections, adds the numbers to all
+links referring to the section headers. Default: False</td></tr>
+<tr><td class="option-group" colspan="2">
+<kbd><span class="option">--strip-elements-with-class=<var>CLASS</var></span></kbd></td>
+</tr>
+<tr><td>&nbsp;</td><td>Remove elements with this CLASS from the output. Can
+be used multiple times.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="configuration-file">
+<h1><a class="toc-backref" href="#id10">3&nbsp;&nbsp;&nbsp;Configuration File</a></h1>
+<p>Since version 0.8, rst2pdf will read (if it is available) configuration files in
+<tt class="docutils literal">/etc/rst2pdf.conf</tt> and <tt class="docutils literal"><span class="pre">~/.rst2pdf/config</span></tt>.</p>
+<p>The user's file at <tt class="docutils literal"><span class="pre">~/.rst2pdf/config</span></tt> will have priority over the system's at
+<tt class="docutils literal">/etc/rst2pdf.conf</tt> <a class="footnote-reference" href="#id2" id="id1">[1]</a></p>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>The <tt class="docutils literal">/etc/rst2pdf.conf</tt> location makes sense for Linux and linux-like systems.
+if you are using rst2pdf in other systems, please contact me and tell me where
+the system-wide config file should be.</td></tr>
+</tbody>
+</table>
+<p>Here's an example file showing some of the currently available options:</p>
+<pre class="code ini literal-block">
+<span class="pygments-c1"># This is an example config file. Modify and place in ~/.rst2pdf/config</span>
+
+<span class="pygments-k">[general]</span>
+<span class="pygments-c1"># A comma-separated list of custom stylesheets. Example:</span>
+<span class="pygments-c1"># stylesheets=&quot;fruity.json,a4paper.json,verasans.json&quot;</span>
+
+<span class="pygments-na">stylesheets</span><span class="pygments-o">=</span><span class="pygments-s">&quot;&quot;</span>
+
+<span class="pygments-c1"># Create a compressed PDF</span>
+<span class="pygments-c1"># Use true/false (lower case) or 1/0</span>
+<span class="pygments-na">compressed</span><span class="pygments-o">=</span><span class="pygments-s">false</span>
+
+<span class="pygments-c1"># A colon-separated list of folders to search for fonts. Example:</span>
+<span class="pygments-c1"># font_path=&quot;/usr/share/fonts:/usr/share/texmf-dist/fonts/&quot;</span>
+
+<span class="pygments-na">font_path</span><span class="pygments-o">=</span><span class="pygments-s">&quot;&quot;</span>
+
+<span class="pygments-c1"># A colon-separated list of folders to search for stylesheets. Example:</span>
+<span class="pygments-c1"># stylesheet_path=&quot;~/styles:/usr/share/styles&quot;</span>
+<span class="pygments-na">stylesheet_path</span><span class="pygments-o">=</span><span class="pygments-s">&quot;&quot;</span>
+
+<span class="pygments-c1"># Language to be used for hyphenation support</span>
+
+<span class="pygments-na">language</span><span class="pygments-o">=</span><span class="pygments-s">&quot;en_US&quot;</span>
+
+<span class="pygments-c1"># Default page header and footer</span>
+<span class="pygments-na">header</span><span class="pygments-o">=</span><span class="pygments-s">null</span>
+<span class="pygments-na">footer</span><span class="pygments-o">=</span><span class="pygments-s">null</span>
+
+<span class="pygments-c1"># What to do if a literal block is too large. Can be</span>
+<span class="pygments-c1"># shrink/truncate/overflow</span>
+
+<span class="pygments-na">fit_mode</span><span class="pygments-o">=</span><span class="pygments-s">&quot;shrink&quot;</span>
+
+<span class="pygments-c1"># How to adjust the background image to the page.</span>
+<span class="pygments-c1"># Can be: &quot;scale&quot; and &quot;center&quot;</span>
+
+<span class="pygments-na">fit_background_mode</span><span class="pygments-o">=</span><span class="pygments-s">&quot;center&quot;</span>
+
+<span class="pygments-c1"># What is the maximum level of heading that starts in a new page.</span>
+<span class="pygments-c1"># 0 means no level starts in a new page.</span>
+
+<span class="pygments-na">break_level</span><span class="pygments-o">=</span><span class="pygments-s">0</span>
+
+<span class="pygments-c1"># How section breaks work. Can be &quot;even&quot;, and sections start in an </span>
+<span class="pygments-c1"># even page, &quot;odd&quot;, and sections start in odd pages, or &quot;any&quot; and </span>
+<span class="pygments-c1"># sections start in the next page, be it even or odd.</span>
+
+<span class="pygments-na">break_side</span><span class="pygments-o">=</span><span class="pygments-s">&quot;any&quot;</span>
+
+<span class="pygments-c1"># Add a blank page at the beginning of the document</span>
+
+<span class="pygments-na">blank_first_page</span><span class="pygments-o">=</span><span class="pygments-s">false</span>
+
+<span class="pygments-c1"># Treat the first page as even (default false, treat it as odd)</span>
+
+<span class="pygments-na">first_page_even</span><span class="pygments-o">=</span><span class="pygments-s">false</span>
+
+<span class="pygments-c1"># Smart quotes.</span>
+<span class="pygments-c1"># 0:  Suppress  all  transformations. (Do nothing.)</span>
+<span class="pygments-c1"># 1: Performs default SmartyPants transformations: quotes (including ‘‘backticks''</span>
+<span class="pygments-c1"># -style), em-dashes, and ellipses. &quot;--&quot; (dash dash) is used to signify an em-dash;</span>
+<span class="pygments-c1"># there is no support for en-dashes.</span>
+<span class="pygments-c1"># 2:  Same as 1, except that it uses the old-school typewriter shorthand for</span>
+<span class="pygments-c1"># dashes: &quot;--&quot; (dash dash) for en-dashes, &quot;---&quot; (dash dash dash) for em-dashes.</span>
+<span class="pygments-c1"># 3: Same as 2, but inverts the shorthand for dashes: &quot;--&quot; (dash dash) for</span>
+<span class="pygments-c1"># em-dashes,  and &quot;---&quot; (dash dash dash) for en-dashes.</span>
+
+<span class="pygments-na">smartquotes</span><span class="pygments-o">=</span><span class="pygments-s">0</span>
+
+<span class="pygments-c1"># Footnote backlinks enabled or not (default: enabled)</span>
+
+<span class="pygments-na">footnote_backlinks</span><span class="pygments-o">=</span><span class="pygments-s">true</span>
+
+<span class="pygments-c1"># Show footnotes inline instead of at the end of the document</span>
+
+<span class="pygments-na">inline_footnotes</span><span class="pygments-o">=</span><span class="pygments-s">false</span>
+
+<span class="pygments-c1"># Cover page template.</span>
+<span class="pygments-c1"># It will be searched in the document's folder, in ~/.rst2pdf/templates and </span>
+<span class="pygments-c1"># in the templates subfolder of the package folder</span>
+
+<span class="pygments-c1"># custom_cover = cover.tmpl </span>
+
+<span class="pygments-c1"># Use floating images.</span>
+<span class="pygments-c1"># Makes the behaviour of images with the :align: attribute more like rst2html's</span>
+
+<span class="pygments-na">floating_images</span> <span class="pygments-o">=</span> <span class="pygments-s">false</span>
+
+<span class="pygments-c1"># Support the ..raw:: html directive</span>
+<span class="pygments-na">raw_html</span> <span class="pygments-o">=</span> <span class="pygments-s">false</span>
+
+</pre>
+</div>
+<div class="section" id="pipe-usage">
+<h1><a class="toc-backref" href="#id11">4&nbsp;&nbsp;&nbsp;Pipe usage</a></h1>
+<p>If no input nor output are provided, stdin and stdout will be used respectively</p>
+<p>You may want to use rst2pdf in a linux pipe as such:</p>
+<pre class="literal-block">
+cat readme.txt | rst2pdf | gzip -c &gt; readme.pdf.gz
+</pre>
+<p>or:</p>
+<pre class="literal-block">
+curl http://docutils.sourceforge.net/docs/user/rst/quickstart.txt | rst2pdf &gt; quickstart.pdf
+</pre>
+<p>If no input argument is provided, stdin will be used:</p>
+<pre class="literal-block">
+cat readme.txt | rst2pdf -o readme.pdf
+</pre>
+<p>If output is set to dash '-', output goes to stdout:</p>
+<pre class="literal-block">
+rst2pdf -o - readme.txt &gt; output.pdf
+</pre>
+</div>
+<div class="section" id="headers-and-footers">
+<h1><a class="toc-backref" href="#id12">5&nbsp;&nbsp;&nbsp;Headers and Footers</a></h1>
+<p>ReST supports headers and footers, using the header and footer directive:</p>
+<pre class="literal-block">
+.. header::
+
+   This will be at the top of every page.
+</pre>
+<p>Often, you may want to put a page number there, or a section name.The following
+magic tokens will be replaced (More may be added as rst2pdf evolves):</p>
+<dl class="docutils">
+<dt>###Page###</dt>
+<dd>Replaced by the current page number.</dd>
+<dt>###Title###</dt>
+<dd>Replaced by the document title</dd>
+<dt>###Section###</dt>
+<dd>Replaced by the current section title</dd>
+<dt>###SectNum###</dt>
+<dd>Replaced by the current section number. <strong>Important:</strong> You must use the sectnum directive for this to work.</dd>
+<dt>###Total###</dt>
+<dd>Replaced by the total number of pages in the document. Keep in mind that this is the <strong>real</strong> number of pages, not the displayed number, so if you play with <a class="reference internal" href="#page-counters">page counters</a> this number will probably be wrong.</dd>
+</dl>
+<p>Headers and footers are visible by default but they can be disabled by specific
+<a class="reference internal" href="#page-templates">Page Templates</a> for example, cover pages. You can also set headers and footers
+via <cite>command line options</cite> or the <a class="reference internal" href="#configuration-file">configuration file</a>.</p>
+<p>If you want to do things like &quot;put the page number on the <em>out</em> side of the page, check <a class="reference internal" href="#the-oddeven-directive">The oddeven directive</a></p>
+</div>
+<div class="section" id="footnotes">
+<h1><a class="toc-backref" href="#id13">6&nbsp;&nbsp;&nbsp;Footnotes</a></h1>
+<p>Currently rst2pdf doesn't support real footnotes, and converts them to endnotes.
+There is a real complicated technical reason for this: I can't figure out a
+clean way to do it right.</p>
+<p>You can get the same behaviour as with rst2html by specifying --inline-footnotes,
+and then the footnotes will appear where you put them (in other words, not footnotes,
+but &quot;in-the-middle-of-text-notes&quot; or just plain notes.)</p>
+</div>
+<div class="section" id="images">
+<h1><a class="toc-backref" href="#id14">7&nbsp;&nbsp;&nbsp;Images</a></h1>
+<div class="section" id="inline">
+<h2><a class="toc-backref" href="#id15">7.1&nbsp;&nbsp;&nbsp;Inline</a></h2>
+<p>You can insert images in the middle of your text like this:</p>
+<pre class="literal-block">
+This |biohazard| means you have to run.
+
+.. |biohazard| image:: assets/biohazard.png
+</pre>
+<p>This <img alt="biohazard" src="assets/biohazard.png" /> means you have to run.</p>
+<p>This only works correctly with reportlab 2.2 or later.</p>
+</div>
+<div class="section" id="supported-image-types">
+<h2><a class="toc-backref" href="#id16">7.2&nbsp;&nbsp;&nbsp;Supported Image Types</a></h2>
+<p>For raster images, rst2pdf supports anything PIL (The Python Imaging Library) supports.
+The exact list of supported formats varies according to your PIL version and system.</p>
+<p>For SVG support, you need to install svg2rlg or use the inkscape extension.</p>
+<p>Some features will not work when using these images.For example, gradients will not
+display, and text may cause problems depending on font availability.</p>
+<p>You can also use PDF images, via pdfrw.</p>
+<p>If you can choose between raster and vectorial images, for non-photographic images,
+vector files are usually smaller and look better, specially when printed.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Image URLs</p>
+<p>Attempting to be more compatible with rst2html, rst2pdf will try
+to handle images specified as HTTP or FTP URLs by downloading them
+to a temporary file and including them in the PDF.</p>
+<p class="last">This is probably not a good idea unless you are <strong>really</strong> sure
+the image won't go away.</p>
+</div>
+</div>
+<div class="section" id="image-size">
+<h2><a class="toc-backref" href="#id17">7.3&nbsp;&nbsp;&nbsp;Image Size</a></h2>
+<p>PDFs are meant to reflect paper. A PDF has a specific size in centimeters or inches.</p>
+<p>Images usually are measured in pixels, which are meaningless in a PDF. To convert
+between pixels and inches or centimeters, we use a DPI (dots-per-inch) value.</p>
+<p>For example, 300 pixels, with a 300DPI, are exactly one inch. 300 pixels at 100DPI
+are 3 inches.</p>
+<p>For that reason, to achieve a nice layout of the page, it's usually a good idea
+to specify the size of your images in those units, or as a percentage of the
+available width and you can ignore all this DPI nonsense ;-)</p>
+<p>The rst2pdf default is 300DPI, but you can change it using the --default-dpi option
+or the default_dpi setting in the config file.</p>
+<p>Examples of images with specified sizes:</p>
+<pre class="literal-block">
+.. image:: home.png
+   :width: 3in
+
+.. image:: home.png
+   :width: 80%
+
+.. image:: home.png
+   :width: 7cm
+</pre>
+<p>The valid units you can use are:</p>
+<p>&quot;em&quot; &quot;ex&quot; &quot;px&quot; &quot;in&quot; &quot;cm&quot; &quot;mm&quot; &quot;pt&quot; &quot;pc&quot; &quot;%&quot; &quot;&quot;.</p>
+<ul class="simple">
+<li>px: Pixels. If you specify the size using this unit, rst2pdf will convert it to
+inches using the default DPI explained above.</li>
+<li>No unit. If you just use a number, it will be considered as pixels. (<strong>IMPORTANT:</strong>
+this used to default to points. It was changed to be more compatible with rst2html)</li>
+<li>em: This is the same as your base style's font size. By default: 10 points.</li>
+<li>ex: rst2pdf will use the same broken definition as IE: em/2. In truth this should
+be the height of the lower-case x character in your base style.</li>
+<li>in: Inches (1 inch = 2.54 cm).</li>
+<li>cm: centimeters (1cm = 0.39 inches)</li>
+<li>mm: millimeters (10mm = 1cm)</li>
+<li>pt: 1/72 inch</li>
+<li>pc: 1/6 inch</li>
+<li>%: percentage of available width in the frame. Setting a percentage as a height
+does <strong>not</strong> work and probably never will.</li>
+</ul>
+<p>If you don't specify a size at all, rst2pdf will do its best to figure out what it should do:</p>
+<p>Since there is no specified size, rst2pdf will try to convert the image's pixel size to
+inches using the DPI information available in the image itself. You can set that value
+using most image editors. For example, using Gimp, it's in the Image -&gt; Print Size menu.</p>
+<p>So, if your image is 6000 pixels wide, and is set to 1200DPI, it will be 5 inches wide.</p>
+<p>If your image doesn't have a DPI property set, and doesn't have it's desired size specified,
+rst2pdf will arbitrarily decide it should use 300DPI (or whatever you choose with
+the --default-dpi option).</p>
+</div>
+</div>
+<div class="section" id="styles">
+<h1><a class="toc-backref" href="#id18">8&nbsp;&nbsp;&nbsp;Styles</a></h1>
+<p>You can style paragraphs with a style using the class directive:</p>
+<pre class="literal-block">
+.. class:: special
+
+This paragraph is special.
+
+This one is not.
+</pre>
+<p>Or inline styles using custom interpreted roles:</p>
+<pre class="literal-block">
+.. role:: redtext
+
+I like color :redtext:`red`.
+</pre>
+<p>For more information about this, please check the ReST docs.</p>
+<p>The only special thing about using rst2pdf here is the syntax of
+the stylesheet.</p>
+<p>You can make rst2pdf print the default stylesheet:</p>
+<pre class="literal-block">
+rst2pdf --print-stylesheet
+</pre>
+<p>If you want to add styles, just create a stylesheet, (or take the standard
+stylesheet and modify it) and pass it with the -s option:</p>
+<pre class="literal-block">
+rst2pdf mydoc.txt -s mystyles.txt
+</pre>
+<p>Those styles will always be searched in these places, in order:</p>
+<ul class="simple">
+<li>What you specify using --stylesheet_path</li>
+<li>The option stylesheet_path in the config file</li>
+<li>The current folder</li>
+<li>~/.rst2pdf/styles</li>
+<li>The styles folder within rst2pdf's installation folder.</li>
+</ul>
+<p>You can use multiple -s options, or pass more than one stylesheet
+separated with commas. They are processed in the order you give them
+so the <em>last</em> one has priority.</p>
+<div class="section" id="included-stylesheets">
+<h2><a class="toc-backref" href="#id19">8.1&nbsp;&nbsp;&nbsp;Included StyleSheets</a></h2>
+<p>To make some of the more common adjustments easier, rst2pdf includes a
+collection of stylesheets you can use:</p>
+<dl class="docutils">
+<dt>Font styles</dt>
+<dd><p class="first">These stylesheets modify your font settings.</p>
+<ul class="last simple">
+<li><tt class="docutils literal">serif</tt> uses the PDF serif font (Times) instead of the default Sans
+Serif (Arial)</li>
+<li><tt class="docutils literal"><span class="pre">freetype-sans</span></tt> uses your system's default TrueType Sans Serif font</li>
+<li><tt class="docutils literal"><span class="pre">freetype-serif</span></tt> uses your system's default TrueType Serif font</li>
+<li><tt class="docutils literal">twelvepoint</tt> makes the base font 12pt (default is 10pt)</li>
+<li><tt class="docutils literal">tenpoint</tt> makes the base font 10pt</li>
+<li><tt class="docutils literal">eightpoint</tt> makes the base font 8pt</li>
+<li><tt class="docutils literal">kerning</tt> switches to document to DejaVu Sans font and enables kerning.</li>
+</ul>
+</dd>
+<dt>Page layout styles</dt>
+<dd><p class="first">These stylesheets modify your page layout.</p>
+<ul class="last simple">
+<li><tt class="docutils literal">twocolumn</tt> uses the twoColumn layout as the initial page layout.</li>
+<li><tt class="docutils literal"><span class="pre">double-sided</span></tt> adds a gutter margin (margin at the &quot;in side&quot; of the pages)</li>
+</ul>
+</dd>
+<dt>Page size styles</dt>
+<dd><p class="first">Stylesheets that change the paper size.</p>
+<p>The usual standard paper sizes are supported:</p>
+<ul class="simple">
+<li>A0</li>
+<li>A1</li>
+<li>A2</li>
+<li>A3</li>
+<li>A4 (default)</li>
+<li>A5</li>
+<li>A6</li>
+<li>B0</li>
+<li>B1</li>
+<li>B2</li>
+<li>B3</li>
+<li>B4</li>
+<li>B5</li>
+<li>B6</li>
+<li>Letter</li>
+<li>Legal</li>
+<li>11x17</li>
+</ul>
+<p class="last">The name of the stylesheet is lowercase.</p>
+</dd>
+<dt>Code block styles</dt>
+<dd>See <a class="reference internal" href="#syntax-highlighting">Syntax Highlighting</a></dd>
+</dl>
+<p>So, if you want to have a two-column, legal size, serif document with code in murphy style:</p>
+<pre class="literal-block">
+rst2pdf mydoc.txt -s twocolumn,serif,murphy,legal
+</pre>
+</div>
+<div class="section" id="stylesheet-syntax">
+<h2><a class="toc-backref" href="#id20">8.2&nbsp;&nbsp;&nbsp;StyleSheet Syntax</a></h2>
+<p>It's a JSON file with several elements in it.</p>
+</div>
+<div class="section" id="font-alias">
+<h2><a class="toc-backref" href="#id21">8.3&nbsp;&nbsp;&nbsp;Font Alias</a></h2>
+<p>This is the fontsAlias element. By default, it uses some of the standard PDF fonts:</p>
+<pre class="literal-block">
+&quot;fontsAlias&quot; : {
+  &quot;stdFont&quot;: &quot;Helvetica&quot;,
+  &quot;stdBold&quot;: &quot;Helvetica-Bold&quot;,
+  &quot;stdItalic&quot;: &quot;Helvetica-Oblique&quot;,
+  &quot;stdBoldItalic&quot;: &quot;Helvetica-BoldOblique&quot;,
+  &quot;stdMono&quot;: &quot;Courier&quot;
+},
+</pre>
+<p>This defines the fonts used in the styles. You can use, for example, Helvetica
+directly in a style, but if later you want to use another font all through
+your document, you will have to change it in each style. So, I suggest you
+use aliases.</p>
+<p>The standard PDF fonts are these:</p>
+<blockquote>
+Times_Roman
+Times-Bold
+Times-Italic
+Times-Bold-Italic
+Helvetica
+Helvetica_Bold
+Helvetica-Oblique
+Helvetica-Bold-Oblique
+Courier
+Courier-Bold
+Courier-Oblique
+Courier-Bold-Oblique
+Symbol
+Zapf-Dingbats</blockquote>
+</div>
+<div class="section" id="style-definition">
+<h2><a class="toc-backref" href="#id22">8.4&nbsp;&nbsp;&nbsp;Style Definition</a></h2>
+<p>Then you have a 'styles' which is a list of [ stylename, styleproperties ]. For example:</p>
+<pre class="literal-block">
+[&quot;normal&quot; , {
+  &quot;parent&quot;: &quot;base&quot;
+}],
+</pre>
+<p>This means that the style called &quot;normal&quot; inherits style &quot;base&quot;. So, each property
+not defined in the normal style will be taken from the base style.</p>
+<p>I suggest you do not remove any style from the default stylesheet. Add or modify at
+will, though.</p>
+<p>If your document requires a style that is not defined in your stylesheet, it will
+print a warning and use bodytext instead.</p>
+<p>Also, the order of the styles is important: if styleA is the parent of styleB,
+styleA should be earlier in the stylesheet.</p>
+<p>These are all the possible attributes for a style and their default values.
+Some of them, like alignment, apply only when used to paragraphs,
+and not on inline styles:</p>
+<pre class="literal-block">
+&quot;fontName&quot;:&quot;Helvetica&quot;,
+&quot;fontSize&quot;:10,
+&quot;leading&quot;:12,
+&quot;leftIndent&quot;:0,
+&quot;rightIndent&quot;:0,
+&quot;firstLineIndent&quot;:0,
+&quot;alignment&quot;:&quot;left&quot;,
+&quot;spaceBefore&quot;:0,
+&quot;spaceAfter&quot;:0,
+&quot;bulletFontName&quot;:&quot;Helvetica&quot;,
+&quot;bulletFontSize&quot;:10,
+&quot;bulletText&quot;: &quot;\u2022&quot;,
+&quot;bulletIndent&quot;:0,
+&quot;textColor&quot;: black,
+&quot;backColor&quot;:None,
+&quot;wordWrap&quot;:None,
+&quot;borderWidth&quot;: 0,
+&quot;borderPadding&quot;: 0,
+&quot;borderColor&quot;: None,
+&quot;borderRadius&quot;: None,
+&quot;allowWidows&quot;: 5,
+&quot;allowOrphans&quot;: 4
+</pre>
+<p>The following are the only attributes that work on styles when used for interpreted roles
+(inline styles):</p>
+<ul class="simple">
+<li>fontName</li>
+<li>fontSize</li>
+<li>textColor</li>
+<li>backColor (if your reportlab is version 2.3 or newer)</li>
+</ul>
+</div>
+<div class="section" id="widows-and-orphans">
+<h2><a class="toc-backref" href="#id23">8.5&nbsp;&nbsp;&nbsp;Widows and Orphans</a></h2>
+<dl class="docutils">
+<dt>Widow</dt>
+<dd>A paragraph-ending line that falls at the beginning of the following page/column, thus separated from the remainder of the text.</dd>
+<dt>Orphan</dt>
+<dd>A paragraph-opening line that appears by itself at the bottom of a page/column.</dd>
+</dl>
+<p>Rst2pdf has <em>some</em> widow/orphan control. Specifically, here's what's currently implemented:</p>
+<p>On ordinary paragraphs, allowWidows and allowOrphans is passed to reportlab, which is supposed to do something about it if they are non-zero. In practice, it doesn't seem to have much effect.</p>
+<p>The plan is to change the semantics of those settings, so that they mean the minimum number of lines that can be left alone at the beginning of a page (widows) or at the end (orphans).</p>
+<p>Currently, these semantics only work for literal blocks and code blocks.</p>
+<pre class="code rst literal-block">
+A literal block<span class="pygments-se">::</span>
+
+<span class="pygments-s">    This is a literal block.</span>
+<span class="pygments-s">
+</span>A code block:
+
+<span class="pygments-p">..</span> <span class="pygments-ow">code-block</span><span class="pygments-p">::</span> <span class="pygments-k">python</span>
+
+<span class="pygments-k"></span>    <span class="pygments-k">def</span> <span class="pygments-nf">x</span><span class="pygments-p">(</span><span class="pygments-n">y</span><span class="pygments-p">):</span>
+        <span class="pygments-k">print</span> <span class="pygments-n">y</span><span class="pygments-o">**</span><span class="pygments-mi">2</span>
+
+</pre>
+<p>In future versions this may extend to ordinary paragraphs.</p>
+</div>
+<div class="section" id="font-embedding">
+<h2><a class="toc-backref" href="#id24">8.6&nbsp;&nbsp;&nbsp;Font Embedding</a></h2>
+<p>There are thousands of excellent free True Type and Type 1 fonts available on the
+web, and you can use many of them in your documents by declaring them in your
+stylesheet.</p>
+<div class="section" id="the-easy-way">
+<h3><a class="toc-backref" href="#id25">8.6.1&nbsp;&nbsp;&nbsp;The Easy Way</a></h3>
+<p>Just use the font name in your style. For example, you can define this:</p>
+<pre class="literal-block">
+[&quot;normal&quot; , {
+  &quot;fontName&quot; : &quot;fonty&quot;
+}]
+</pre>
+<p>And then it <em>may</em> work.</p>
+<p>What would need to happen for this to work?</p>
+<div class="section" id="fonty-is-a-true-type-font">
+<h4><a class="toc-backref" href="#id26">8.6.1.1&nbsp;&nbsp;&nbsp;Fonty is a True Type font:</a></h4>
+<ol class="arabic">
+<li><dl class="first docutils">
+<dt>You need to have it installed in your system, and have the fc-match</dt>
+<dd><p class="first">utility available (it's part of <a class="reference external" href="http://www.freedesktop.org/fontconfig/">fontconfig</a>). You can test if it is
+so by running this command:</p>
+<pre class="literal-block">
+$ fc-match fonty
+fonty.ttf: &quot;Fonty&quot; &quot;Normal&quot;
+</pre>
+<p class="last">If you are in Windows, I need your help ;-) or you can use <a class="reference internal" href="#the-harder-way-true-type">The Harder Way (True Type)</a></p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>The folder where fonty.ttf is located needs to be in your font path. You can set it</dt>
+<dd><p class="first">using the --font-path option. For example:</p>
+<pre class="literal-block">
+rst2pdf mydoc.txt -s mystyle.style --font-path /usr/share/fonts
+</pre>
+<p class="last">You don't need to put the <em>exact</em> folder, just something that is above it. In my own case,
+fonty is in /usr/share/fonts/TTF</p>
+</dd>
+</dl>
+</li>
+</ol>
+<p>Whenever a font is embedded, you can refer to it in a style by its name, and
+to its variants by the aliases Name-Oblique, Name-Bold, Name-BoldOblique.</p>
+</div>
+<div class="section" id="fonty-is-a-type-1-font">
+<h4><a class="toc-backref" href="#id27">8.6.1.2&nbsp;&nbsp;&nbsp;Fonty is a Type 1 font:</a></h4>
+<p>You need it installed, and the folders where its font metric (.afm) and binary (.pfb) files
+are located need to be in your font fath.</p>
+<p>For example, the &quot;URW Palladio L&quot; font that came with my installation of TeX consists of
+the following files:</p>
+<pre class="literal-block">
+/usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb
+/usr/share/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb
+/usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb
+/usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb
+/usr/share/texmf-dist/fonts/afm/urw/palatino/uplb8a.afm
+/usr/share/texmf-dist/fonts/afm/urw/palatino/uplbi8a.afm
+/usr/share/texmf-dist/fonts/afm/urw/palatino/uplr8a.afm
+/usr/share/texmf-dist/fonts/afm/urw/palatino/uplri8a.afm
+</pre>
+<p>So, I can use it if I put <tt class="docutils literal"><span class="pre">/usr/share/texmf-dist/fonts</span></tt> in my font path:</p>
+<pre class="literal-block">
+rst2pdf mydoc.txt -s mystyle.style --font-path /usr/share/texmf-dist/fonts
+</pre>
+<p>And putting this in my stylesheet, for example:</p>
+<pre class="literal-block">
+[ &quot;title&quot;, { &quot;fontName&quot; : &quot;URWPalladioL-Bold&quot; } ]
+</pre>
+<p>There are some standard aliases defined so you can use other names:</p>
+<pre class="literal-block">
+'ITC Bookman'            : 'URW Bookman L',
+'ITC Avant Garde Gothic' : 'URW Gothic L',
+'Palatino'               : 'URW Palladio L',
+'New Century Schoolbook' : 'Century Schoolbook L',
+'ITC Zapf Chancery'      : 'URW Chancery L'
+</pre>
+<p>So, for example, you can use <tt class="docutils literal">Palatino</tt> or <tt class="docutils literal">New Century <span class="pre">SchoolBook-Oblique</span></tt> And it will mean
+<tt class="docutils literal">URWPalladioL</tt> or <tt class="docutils literal"><span class="pre">CenturySchL-Ital</span></tt>, respectively.</p>
+<p>Whenever a font is embedded, you can refer to it in a style by its name, and
+to its variants by the aliases Name-Oblique, Name-Bold, Name-BoldOblique.</p>
+</div>
+</div>
+<div class="section" id="the-harder-way-true-type">
+<h3><a class="toc-backref" href="#id28">8.6.2&nbsp;&nbsp;&nbsp;The Harder Way (True Type)</a></h3>
+<p>The stylesheet has an element is &quot;embeddedFonts&quot; that handles embedding True Type
+fonts in your PDF.</p>
+<p>Usually, it's empty, because with the default styles you are not using any font
+beyond the standard PDF fonts:</p>
+<pre class="literal-block">
+&quot;embeddedFonts&quot; : [ ],
+</pre>
+<p>You can put there the name of the font, and rst2pdf will try to embed it as described
+above. Example:</p>
+<pre class="literal-block">
+&quot;embeddedFonts&quot; : [ &quot;Tuffy&quot; ],
+</pre>
+<p>Or you can be explicit and tell rst2pdf the files that contain each variant of the
+font.</p>
+<p>Suppose you want to use the nice public domain <a class="reference external" href="http://tulrich.com/fonts/">Tuffy font</a>, then you need to give the
+filenames of all variants:</p>
+<pre class="literal-block">
+&quot;embeddedFonts&quot; : [ [&quot;Tuffy.ttf&quot;,&quot;Tuffy_Bold.ttf&quot;,&quot;Tuffy_Italic.ttf&quot;,&quot;Tuffy_Bold_Italic.ttf&quot;] ],
+</pre>
+<p>This will provide your styles with fonts called &quot;Tuffy&quot; &quot;Tuffy_Bold&quot; and so on. They will
+be available with the names based on the filenames (Tuffy_Bold) and also by standard
+aliases similar to those of the standard PDF fonts (Tuffy-Bold/Tuffy-Oblique/Tuffy-BoldOblique).</p>
+<p>Now, if you use <em>italics</em> in a paragraph whose style uses the Tuffy font, it will use
+Tuffy_Italic. That's why it's better if you use fonts that provide the four variants, and
+you should put them in <strong>that</strong> order. If your font lacks a variant, use the
+&quot;normal&quot; variant instead.</p>
+<p>For example, if you only had Tuffy.ttf:</p>
+<pre class="literal-block">
+&quot;embeddedFonts&quot; : [ [&quot;Tuffy.ttf&quot;,&quot;Tuffy.ttf&quot;,&quot;Tuffy.ttf&quot;,&quot;Tuffy.ttf&quot;] ],
+</pre>
+<p>However, that means that italics and bold in styles using Tuffy will not work correctly (they will
+display as regular text).</p>
+<p>If you want to use this as the base font for your document, you should change the fontsAlias
+section accordingly. For example:</p>
+<pre class="literal-block">
+&quot;fontsAlias&quot; : {
+  &quot;stdFont&quot;: &quot;Tuffy&quot;,
+  &quot;stdBold&quot;: &quot;Tuffy_Bold&quot;,
+  &quot;stdItalic&quot;: &quot;Tuffy_Italic&quot;,
+  &quot;stdBoldItalic&quot;: &quot;Tuffy_Bold_Italic&quot;,
+  &quot;stdMono&quot;: &quot;Courier&quot;
+},
+</pre>
+<p>If, on the other hand, you only want a specific style to use the Tuffy
+font, don't change the fontAlias, and set the fontName properties for
+that style. For example:</p>
+<pre class="literal-block">
+[&quot;heading1&quot; , {
+  &quot;parent&quot;: &quot;normal&quot;,
+  &quot;fontName&quot;: &quot;Tuffy_Bold&quot;,
+  &quot;fontSize&quot;: 18,
+  &quot;keepWithNext&quot;: true,
+  &quot;spaceAfter&quot;: 6
+}],
+</pre>
+<p>By default, rst2pdf will search for the fonts in its fonts folder and
+in the current folder. You can make it search another folder by passing
+the --font-folder option, or you can use absolute paths in your stylesheet.</p>
+</div>
+<div class="section" id="the-harder-way-type1">
+<h3><a class="toc-backref" href="#id29">8.6.3&nbsp;&nbsp;&nbsp;The Harder Way (Type1)</a></h3>
+<p>To be written (and implemented and tested)</p>
+</div>
+</div>
+<div class="section" id="page-size-and-margins">
+<h2><a class="toc-backref" href="#id30">8.7&nbsp;&nbsp;&nbsp;Page Size and Margins</a></h2>
+<p>In your stylesheet, the pageSetup element controls your page layout.</p>
+<p>Here's the default stylesheet's:</p>
+<pre class="literal-block">
+&quot;pageSetup&quot; : {
+  &quot;size&quot;: &quot;A4&quot;,
+  &quot;width&quot;: null,
+  &quot;height&quot;: null,
+  &quot;margin-top&quot;: &quot;2cm&quot;,
+  &quot;margin-bottom&quot;: &quot;2cm&quot;,
+  &quot;margin-left&quot;: &quot;2cm&quot;,
+  &quot;margin-right&quot;: &quot;2cm&quot;,
+  &quot;spacing-header&quot;: &quot;5mm&quot;,
+  &quot;spacing-footer&quot;: &quot;5mm&quot;,
+  &quot;margin-gutter&quot;: &quot;0cm&quot;
+},
+</pre>
+<p>Size is one of the standard paper sizes, like A4 or LETTER.</p>
+<p>Here's a list: A0, A1, A2, A3, A4, A5, A6, B0, B1, B2, B3, B4, B5, B6,
+LETTER, LEGAL, ELEVENSEVENTEEN.</p>
+<p>If you want a non-standard size, set size to null and use width and height.</p>
+<p>When specifying width, height or margins, you need to use units, like
+inch (inches) or cm (centimeters).</p>
+<p>When both width/height and size are specified, size will be used, and
+width/height ignored.</p>
+<p>All margins should be self-explanatory, except for margin-gutter. That's the
+margin in the center of a two-page spread.</p>
+<p>This value is added to the left margin of odd pages and the right margin of
+even pages, adding (or removing, if it's negative) space &quot;in the middle&quot; of
+opposing pages.</p>
+<p>If you intend to bound a printed copy, you may need extra space there. OTOH,
+if you will display it on-screen on a two-page format (common in many PDF
+readers, nice for ebooks), a negative value may be pleasant.</p>
+</div>
+<div class="section" id="advanced-table-styles">
+<h2><a class="toc-backref" href="#id31">8.8&nbsp;&nbsp;&nbsp;Advanced: table styles</a></h2>
+<p>This is new in 0.12.</p>
+<p>These are a few extra options in styles that are only used when the style is applied to a table.
+This happens in two cases:</p>
+<ol class="arabic simple">
+<li>You are using the class directive on a table:</li>
+</ol>
+<pre class="code rest literal-block">
+<span class="pygments-p">..</span> <span class="pygments-ow">class</span><span class="pygments-p">::</span> thick
+
++-------+---------+
+<span class="pygments-o">|</span>   A   |   B     |
++-----------------+
+
+</pre>
+<ol class="arabic simple" start="2">
+<li>It's a style that automatically applies to something that is <em>drawn</em> using a table.
+Currently these include:<ul>
+<li>Footnotes / endnotes (endnote style)</li>
+<li>Lists (item_list, bullet_list option_list and field_list styles)</li>
+</ul>
+</li>
+</ol>
+<p>The options are as follows:</p>
+<dl class="docutils">
+<dt>Commands</dt>
+<dd><p class="first">For a full reference of these, please check the Reportlab User Guide
+specifically the TableStyle Commands section (section 7.4 in the manual
+for version 2.3)</p>
+<p>Here, however, is a list of the possible commands:</p>
+<pre class="literal-block">
+BOX (or OUTLINE)
+FONT
+FONTNAME (or FACE)
+FONTSIZE (or SIZE)
+GRID
+INNERGRID
+LEADING
+LINEBELOW
+LINEABOVE
+LINEBEFORE
+LINEAFTER
+TEXTCOLOR
+ALIGNMENT (or ALIGN)
+LEFTPADDING
+RIGHTPADDING
+BOTTOMPADDING
+TOPPADDING
+BACKGROUND
+ROWBACKGROUNDS
+COLBACKGROUNDS
+VALIGN
+</pre>
+<p>Each takes as argument a couple of coordinates, where (0,0) is top-left, and (-1,-1) is
+bottom-right, and 0 or more extra arguments.</p>
+<p>For example, INNERGRID takes a linewidth and a color:</p>
+<pre class="literal-block">
+[ &quot;INNERGRID&quot;, [ 0, 0 ], [ -1, -1 ], 0.25, &quot;black&quot; ],
+</pre>
+<p class="last">That would mean &quot;draw all lines inside the table with .25pt black&quot;</p>
+</dd>
+<dt>colWidths</dt>
+<dd><p class="first">A list of the column widths you want, in the unit you prefer (default unit is pt).</p>
+<p>Example:</p>
+<pre class="literal-block">
+&quot;colWidths&quot;: [&quot;3cm&quot;,null]
+</pre>
+<p>If your colWidths has fewer values than columns in your table, the rest are autocalculated.
+A column width of null means &quot;guess&quot;.</p>
+<p class="last">If you don't specify column widths, the table will try to look proportional to the restructured
+text source.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="multiple-stylesheets">
+<h2><a class="toc-backref" href="#id32">8.9&nbsp;&nbsp;&nbsp;Multiple Stylesheets</a></h2>
+<p>When you use a custom stylesheet, you don't need to define <em>everything</em> in it.
+Whatever you don't define will be taken from the default stylesheet. For example,
+if you only want to change page size, default font and font size, this would
+be enough:</p>
+<pre class="code js literal-block">
+<span class="pygments-p">{</span>
+    <span class="pygments-s2">&quot;pageSetup&quot;</span> <span class="pygments-o">:</span> <span class="pygments-p">{</span>
+        <span class="pygments-s2">&quot;size&quot;</span><span class="pygments-o">:</span> <span class="pygments-s2">&quot;A5&quot;</span><span class="pygments-p">,</span>
+    <span class="pygments-p">},</span>
+    <span class="pygments-s2">&quot;fontsAlias&quot;</span> <span class="pygments-o">:</span> <span class="pygments-p">{</span>
+        <span class="pygments-s2">&quot;stdFont&quot;</span><span class="pygments-o">:</span> <span class="pygments-s2">&quot;Times-Roman&quot;</span><span class="pygments-p">,</span>
+    <span class="pygments-p">},</span>
+    <span class="pygments-s2">&quot;styles&quot;</span> <span class="pygments-o">:</span> <span class="pygments-p">[</span>
+        <span class="pygments-p">[</span><span class="pygments-s2">&quot;normal&quot;</span> <span class="pygments-p">,</span> <span class="pygments-p">{</span>
+        <span class="pygments-s2">&quot;fontSize&quot;</span><span class="pygments-o">:</span> <span class="pygments-mi">14</span>
+        <span class="pygments-p">}]</span>
+    <span class="pygments-p">]</span>
+<span class="pygments-p">}</span>
+
+</pre>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>The <tt class="docutils literal">command</tt> option used for table styles is not kept across stylesheets.
+For example, the default stylesheet defines endnote with this command list:</p>
+<pre class="literal-block">
+&quot;commands&quot;: [ [ &quot;VALIGN&quot;, [ 0, 0 ], [ -1, -1 ], &quot;TOP&quot; ] ]
+</pre>
+<p>If you redefine endnote in another stylesheet and use this to create a vertical line between
+the endnote's columns:</p>
+<pre class="literal-block">
+&quot;commands&quot;: [ [ &quot;LINEAFTER&quot;, [ 0, 0 ], [ 1, -1 ], .25, &quot;black&quot; ] ]
+</pre>
+<p>Then the footnotes will <strong>not</strong> have VALIGN TOP!</p>
+<p>To do that, you <strong>MUST</strong> use all commands in your stylesheet:</p>
+<pre class="last literal-block">
+&quot;commands&quot;: [
+    [ &quot;VALIGN&quot;, [ 0, 0 ], [ -1, -1 ], &quot;TOP&quot; ],
+    [ &quot;LINEAFTER&quot;, [ 0, 0 ], [ 1, -1 ], .25, &quot;black&quot; ]
+]
+</pre>
+</div>
+</div>
+<div class="section" id="styling-your-document">
+<h2><a class="toc-backref" href="#id33">8.10&nbsp;&nbsp;&nbsp;Styling Your Document</a></h2>
+<p>Which styles you need to modify to achieve your desired result is not obvious.
+In this section, you will see some hints and pointers to that effect.</p>
+<div class="section" id="the-base-styles">
+<h3><a class="toc-backref" href="#id34">8.10.1&nbsp;&nbsp;&nbsp;The Base Styles</a></h3>
+<p>There are three styles which have great effect, they are <tt class="docutils literal">base</tt>,
+<tt class="docutils literal">normal</tt> and <tt class="docutils literal">bodytext</tt>.</p>
+<p>Here's an example, the twelvepoint stylesheet:</p>
+<pre class="literal-block">
+{&quot;styles&quot;: [[&quot;base&quot;, {&quot;fontSize&quot;: 12}]]}
+</pre>
+<p>Since all other styles inherit <tt class="docutils literal">base</tt>, changing the fontSize changes the fontSize
+for everything in your document.</p>
+<p>The <tt class="docutils literal">normal</tt> style is meant for most elements, so usually it's the same as changing
+<tt class="docutils literal">base</tt>.</p>
+<p>The <tt class="docutils literal">bodytext</tt> style is for elements that form paragraphs. So, for example, you can set
+your document to be left-aligned like this:</p>
+<pre class="literal-block">
+{&quot;styles&quot;: [[&quot;bodytext&quot;, {&quot;alignment&quot;: &quot;left&quot;}]]}
+</pre>
+<p>There are elements, however, that don't inherit from bodytext, for example headings and the
+styles used in the table of contents. Those are elements that are not real paragraphs, so
+they should not follow the indentation and spacing you use for your document's main content.</p>
+<p>The <tt class="docutils literal">heading</tt> style is inherited by all sorts of titles: section titles, topic titles,
+admonition titles, etc.</p>
+</div>
+<div class="section" id="lists">
+<h3><a class="toc-backref" href="#id35">8.10.2&nbsp;&nbsp;&nbsp;Lists</a></h3>
+<p>Styling lists is mostly a matter of spacing and indentation.</p>
+<p>The space before and after a list is taken from the <tt class="docutils literal">item_list</tt> and <tt class="docutils literal">bullet_list</tt> styles:</p>
+<pre class="literal-block">
+[&quot;item_list&quot;, {
+  &quot;parent&quot;: &quot;bodytext&quot;,
+  &quot;spaceBefore&quot;: 0,
+  &quot;commands&quot;: [
+        [ &quot;VALIGN&quot;, [ 0, 0 ], [ -1, -1 ], &quot;TOP&quot; ],
+        [ &quot;RIGHTPADDING&quot;, [ 0, 0 ], [ 1, -1 ], 0 ]
+    ],
+    &quot;colWidths&quot;: [&quot;20pt&quot;,null]
+}]
+
+[&quot;bullet_list&quot;, {
+  &quot;parent&quot;: &quot;bodytext&quot;,
+  &quot;spaceBefore&quot;: 0,
+  &quot;commands&quot;: [
+        [ &quot;VALIGN&quot;, [ 0, 0 ], [ -1, -1 ], &quot;TOP&quot; ],
+        [ &quot;RIGHTPADDING&quot;, [ 0, 0 ], [ 1, -1 ], 0 ]
+    ],
+    &quot;colWidths&quot;: [&quot;20&quot;,null]
+}],
+</pre>
+<p>Yes, these are table styles, because they are implemented as tables. The RIGHTPADDING command
+and the colWidths option can be used to adjust the position of the bullet/item number.</p>
+<p>To control the separation between items, you use the item_list_item and
+<tt class="docutils literal">bullet_list_item</tt> styles' spaceBefore and spaceAfter options, for example:</p>
+<pre class="literal-block">
+[&quot;bullet_list_item&quot; , {
+  &quot;parent&quot;: &quot;bodytext&quot;,
+  &quot;spaceBefore&quot;: 20
+}]
+</pre>
+<p>Remember that this is only used <strong>between items</strong> and not before the first or after the
+last items.</p>
+</div>
+</div>
+</div>
+<div class="section" id="syntax-highlighting">
+<h1><a class="toc-backref" href="#id36">9&nbsp;&nbsp;&nbsp;Syntax Highlighting</a></h1>
+<p>Rst2pdf adds a non-standard directive, called code-block, which produces syntax
+highlighted for many languages using <a class="reference external" href="http://pygments.org/">Pygments</a>.</p>
+<p>For example, if you want to include a python fragment:</p>
+<pre class="literal-block">
+.. code-block:: python
+
+    def myFun(x,y):
+        print x+y
+</pre>
+<pre class="code python literal-block">
+<span class="pygments-k">def</span> <span class="pygments-nf">myFun</span><span class="pygments-p">(</span><span class="pygments-n">x</span><span class="pygments-p">,</span><span class="pygments-n">y</span><span class="pygments-p">):</span>
+    <span class="pygments-k">print</span> <span class="pygments-n">x</span><span class="pygments-o">+</span><span class="pygments-n">y</span>
+
+</pre>
+<p>Notice that you need to declare the language of the fragment. Here's a list of
+the currently <a class="reference external" href="http://pygments.org/docs/lexers/">supported</a>.</p>
+<p>You can use the <tt class="docutils literal">linenos</tt> option to display line numbers:</p>
+<pre class="code python literal-block">
+<span class="linenumber">1 </span><span class="pygments-k">def</span> <span class="pygments-nf">myFun</span><span class="pygments-p">(</span><span class="pygments-n">x</span><span class="pygments-p">,</span><span class="pygments-n">y</span><span class="pygments-p">):</span><span class="linenumber">
+2 </span>    <span class="pygments-k">print</span> <span class="pygments-n">x</span><span class="pygments-o">+</span><span class="pygments-n">y</span>
+</pre>
+<p>You can use the <tt class="docutils literal">hl_lines</tt> option to emphasize certain lines by dimming the
+other lines. This parameter takes a space separated list of line numbers. The
+other lines are then styled with the class <tt class="docutils literal">pygments_diml</tt> that defaults to
+gray. e.g. to highlight <tt class="docutils literal">print &quot;line a&quot;</tt> and <tt class="docutils literal">print &quot;line b&quot;</tt>:</p>
+<pre class="code python literal-block">
+<span class="pygments-diml">def</span><span class="pygments-diml"> </span><span class="pygments-diml">myFun</span><span class="pygments-diml">(</span><span class="pygments-diml">x</span><span class="pygments-diml">,</span><span class="pygments-diml">y</span><span class="pygments-diml">):</span><span class="pygments-diml">
+    </span><span class="pygments-k">print</span> <span class="pygments-s2">&quot;line a&quot;</span>
+    <span class="pygments-k">print</span> <span class="pygments-s2">&quot;line b&quot;</span>
+    <span class="pygments-diml">print</span><span class="pygments-diml"> </span><span class="pygments-diml">&quot;line c&quot;</span><span class="pygments-diml">
+</span>
+</pre>
+<p>Rst2pdf includes several stylesheets for highlighting code:</p>
+<ul class="simple">
+<li>autumn</li>
+<li>borland</li>
+<li>bw</li>
+<li>colorful</li>
+<li>emacs</li>
+<li>friendly</li>
+<li>fruity</li>
+<li>manni</li>
+<li>murphy</li>
+<li>native</li>
+<li>pastie</li>
+<li>perldoc</li>
+<li>trac</li>
+<li>vs</li>
+</ul>
+<p>You can use any of them instead of the default by adding, for example, a <tt class="docutils literal"><span class="pre">-s</span> murphy</tt> to
+the command line.</p>
+<p>If you already are using a custom stylesheet, use both:</p>
+<pre class="literal-block">
+rst2pdf mydoc.rst -o mydoc.pdf -s mystyle.json,murphy
+</pre>
+<p>The default is the same as &quot;emacs&quot;.</p>
+<p>There is an online demo of pygments showing these styles:</p>
+<blockquote>
+<a class="reference external" href="http://pygments.org/demo/1817/">http://pygments.org/demo/1817/</a></blockquote>
+<p>The overall look of a code box is controlled by the &quot;code&quot; style or by a class you apply to it using the <tt class="docutils literal">.. class::</tt> directive.
+Additionally, if you want to change some properties when using different languages, you can define styles with the name of the language.
+For example, a <tt class="docutils literal">python</tt> style will be applied to code blocks created with <tt class="docutils literal">.. <span class="pre">code-block::</span> python</tt>.</p>
+<p>The look of the line numbers is controlled by the &quot;linenumbers&quot; style.</p>
+<p>As rst2pdf is written in python let's see some examples and variations around python.</p>
+<p>Python in console</p>
+<pre class="code pycon literal-block">
+<span class="pygments-n"></span><span class="pygments-gp">&gt;&gt;&gt; </span><span class="pygments-n">my_string</span><span class="pygments-o">=</span><span class="pygments-s2">&quot;python is great&quot;</span>
+<span class="pygments-gp">&gt;&gt;&gt; </span><span class="pygments-n">my_string</span><span class="pygments-o">.</span><span class="pygments-n">find</span><span class="pygments-p">(</span><span class="pygments-s1">'great'</span><span class="pygments-p">)</span>
+<span class="pygments-go">10
+</span><span class="pygments-n"></span><span class="pygments-gp">&gt;&gt;&gt; </span><span class="pygments-n">my_string</span><span class="pygments-o">.</span><span class="pygments-n">startswith</span><span class="pygments-p">(</span><span class="pygments-s1">'py'</span><span class="pygments-p">)</span>
+<span class="pygments-go">True
+</span>
+</pre>
+<p>Python traceback</p>
+<pre class="code pytb literal-block">
+<span class="pygments-gt">Traceback (most recent call last):
+</span>    <span class="pygments-n">File</span> <span class="pygments-s2">&quot;error.py&quot;</span><span class="pygments-p">,</span> <span class="pygments-n">line</span> <span class="pygments-mi">9</span><span class="pygments-p">,</span> <span class="pygments-ow">in</span> <span class="pygments-err">?</span>
+    <span class="pygments-n">main</span><span class="pygments-p">()</span>
+    <span class="pygments-n">File</span> <span class="pygments-s2">&quot;error.py&quot;</span><span class="pygments-p">,</span> <span class="pygments-n">line</span> <span class="pygments-mi">6</span><span class="pygments-p">,</span> <span class="pygments-ow">in</span> <span class="pygments-n">main</span>
+    <span class="pygments-k">print</span> <span class="pygments-n">call_error</span><span class="pygments-p">()</span>
+    <span class="pygments-n">File</span> <span class="pygments-s2">&quot;error.py&quot;</span><span class="pygments-p">,</span> <span class="pygments-n">line</span> <span class="pygments-mi">2</span><span class="pygments-p">,</span> <span class="pygments-ow">in</span> <span class="pygments-n">call_error</span>
+    <span class="pygments-n">r</span> <span class="pygments-o">=</span> <span class="pygments-mi">1</span><span class="pygments-o">/</span><span class="pygments-mi">0</span>
+<span class="pygments-gr">ZeroDivisionError</span>: <span class="pygments-n">integer division or modulo by zero</span>
+<span class="pygments-x">Exit 1
+</span>
+</pre>
+<p>The code-block directive supports many options, that mirror pygments':</p>
+<pre class="literal-block">
+FIXME: fix this to really explain them all. This is a placeholder.
+
+                        'stripnl' : string_bool,
+                        'stripall': string_bool,
+                        'ensurenl': string_bool,
+                        'tabsize' : directives.positive_int,
+                        'encoding': directives.encoding,
+                        # Lua
+                        'func_name_hightlighting':string_bool,
+                        'disabled_modules': string_list,
+                        # Python Console
+                        'python3': string_bool,
+                        # Delphi
+                        'turbopascal':string_bool,
+                        'delphi' :string_bool,
+                        'freepascal': string_bool,
+                        'units': string_list,
+                        # Modula2
+                        'pim'   : string_bool,
+                        'iso'   : string_bool,
+                        'objm2' : string_bool,
+                        'gm2ext': string_bool,
+                        # CSharp
+                        'unicodelevel' : csharp_unicodelevel,
+                        # Literate haskell
+                        'litstyle' : lhs_litstyle,
+                        # Raw
+                        'compress': raw_compress,
+                        # Rst
+                        'handlecodeblocks': string_bool,
+                        # Php
+                        'startinline': string_bool,
+                        'funcnamehighlighting': string_bool,
+                        'disabledmodules': string_list,
+</pre>
+<p>You can find more information about them in the pygments manual.</p>
+<div class="section" id="file-inclusion">
+<h2><a class="toc-backref" href="#id37">9.1&nbsp;&nbsp;&nbsp;File inclusion</a></h2>
+<p>Also, you can use the code-block directive with an external file, using
+the :include: option:</p>
+<pre class="literal-block">
+.. code-block:: python
+   :include: setup.py
+</pre>
+<p>This will give a warning if setup.py doesn't exist or can't be opened.</p>
+<div class="section" id="include-with-boundaries">
+<h3><a class="toc-backref" href="#id38">9.1.1&nbsp;&nbsp;&nbsp;Include with Boundaries</a></h3>
+<p>you can add selectors to limit the inclusion to a portion of the file.
+the options are:</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">start-at:</th><td class="field-body">string
+will include file beginning at the first occurrence of string, string <strong>included</strong></td>
+</tr>
+<tr class="field"><th class="field-name">start-after:</th><td class="field-body">string
+will include file beginning at the first occurrence of string, string <strong>excluded</strong></td>
+</tr>
+<tr class="field"><th class="field-name">end-before:</th><td class="field-body">string
+will include file up to the first occurrence of string, string <strong>excluded</strong></td>
+</tr>
+<tr class="field"><th class="field-name">end-at:</th><td class="field-body">string
+will include file up to the first occurrence of string, string <strong>included</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Let's display a class from rst2pdf:</p>
+<pre class="literal-block">
+.. code-block:: python
+   :include: assets/flowables.py
+   :start-at: class Separation(Flowable):
+   :end-before: class Reference(Flowable):
+</pre>
+<p>this command gives</p>
+<pre class="code python literal-block">
+<span class="pygments-k">class</span> <span class="pygments-nc">Separation</span><span class="pygments-p">(</span><span class="pygments-n">Flowable</span><span class="pygments-p">):</span>
+    <span class="pygments-sd">&quot;&quot;&quot;A simple &lt;hr&gt;-like flowable&quot;&quot;&quot;</span>
+
+    <span class="pygments-k">def</span> <span class="pygments-nf">wrap</span><span class="pygments-p">(</span><span class="pygments-bp">self</span><span class="pygments-p">,</span> <span class="pygments-n">w</span><span class="pygments-p">,</span> <span class="pygments-n">h</span><span class="pygments-p">):</span>
+        <span class="pygments-bp">self</span><span class="pygments-o">.</span><span class="pygments-n">w</span> <span class="pygments-o">=</span> <span class="pygments-n">w</span>
+        <span class="pygments-k">return</span> <span class="pygments-n">w</span><span class="pygments-p">,</span> <span class="pygments-mi">1</span><span class="pygments-o">*</span><span class="pygments-n">cm</span>
+
+    <span class="pygments-k">def</span> <span class="pygments-nf">draw</span><span class="pygments-p">(</span><span class="pygments-bp">self</span><span class="pygments-p">):</span>
+        <span class="pygments-bp">self</span><span class="pygments-o">.</span><span class="pygments-n">canv</span><span class="pygments-o">.</span><span class="pygments-n">line</span><span class="pygments-p">(</span><span class="pygments-mi">0</span><span class="pygments-p">,</span> <span class="pygments-mf">0.5</span><span class="pygments-o">*</span><span class="pygments-n">cm</span><span class="pygments-p">,</span> <span class="pygments-bp">self</span><span class="pygments-o">.</span><span class="pygments-n">w</span><span class="pygments-p">,</span> <span class="pygments-mf">0.5</span><span class="pygments-o">*</span><span class="pygments-n">cm</span><span class="pygments-p">)</span>
+
+</pre>
+</div>
+<div class="section" id="options">
+<h3><a class="toc-backref" href="#id39">9.1.2&nbsp;&nbsp;&nbsp;Options</a></h3>
+<dl class="docutils">
+<dt>linenos</dt>
+<dd>Display line numbers along the code</dd>
+<dt>linenos_offset</dt>
+<dd>If you include a file and are skipping the beginning, using the linenos_offset
+makes the line count start from the real line number, instead of 1.</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="section" id="raw-directive">
+<h1><a class="toc-backref" href="#id40">10&nbsp;&nbsp;&nbsp;Raw Directive</a></h1>
+<div class="section" id="raw-pdf">
+<h2><a class="toc-backref" href="#id41">10.1&nbsp;&nbsp;&nbsp;Raw PDF</a></h2>
+<p>Rst2pdf has a very limited mechanism to pass commands to reportlab, the PDF generation library.
+You can use the raw directive to insert pagebreaks and spacers (other reportlab flowables
+may be added if there's interest), and set page transitions.</p>
+<p>The syntax is shell-like, here's an example:</p>
+<pre class="literal-block">
+One page
+
+.. raw:: pdf
+
+    PageBreak
+
+Another page. Now some space:
+
+.. raw:: pdf
+
+    Spacer 0,200
+    Spacer 0 200
+
+And another paragraph.
+</pre>
+<p>The unit used by the spacer by default is points, and using a space or a comma is the same thing
+in all cases.</p>
+</div>
+<div class="section" id="page-counters">
+<h2><a class="toc-backref" href="#id42">10.2&nbsp;&nbsp;&nbsp;Page Counters</a></h2>
+<p>In some documents, you may not want your page counter to start in the first page.</p>
+<p>For example, if the first pages are a coverpage and a table of contents, you want page 1 to be
+where your first section starts.</p>
+<p>To do that, you have to use the SetPageCounter command.</p>
+<p>Here is a syntax example:</p>
+<pre class="literal-block">
+.. raw:: pdf
+
+    SetPageCounter 0 lowerroman
+</pre>
+<p>This sets the counter to 0, and makes it display in lower roman characters (i, ii, iii, etc)
+which is a style often used for the pages before the document proper (for example, TOCs and
+abstracts).</p>
+<p>It can take zero or two arguments.</p>
+<dl class="docutils">
+<dt>SetPageCounter</dt>
+<dd>When used with no arguments, it sets the counter to 0, and the style to arabic numerals.</dd>
+<dt>SetPageCounter number style</dt>
+<dd><p class="first">When used with two arguments, the first argument must be a number, it sets the page counter
+to that number.</p>
+<p>The second number is a style of counter. Valid values are:</p>
+<ul class="last simple">
+<li>lowerroman: i, ii, iii, iv, v ...</li>
+<li>roman: I, II, III, IV, V ...</li>
+<li>arabic: 1, 2, 3, 4, 5 ...</li>
+<li>loweralpha: a, b, c, d, e ... [Don't use for numbers above 26]</li>
+<li>alpha: A, B, C, D, E ... [Don't use for numbers above 26]</li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Page counter changes take effect on the <strong>current</strong> page.</p>
+</div>
+</div>
+<div class="section" id="page-breaks">
+<h2><a class="toc-backref" href="#id43">10.3&nbsp;&nbsp;&nbsp;Page Breaks</a></h2>
+<p>There are three kinds of page breaks:</p>
+<dl class="docutils">
+<dt>PageBreak</dt>
+<dd>Break to the next page</dd>
+<dt>EvenPageBreak</dt>
+<dd>Break to the next <strong>even</strong> numbered page</dd>
+<dt>OddPageBreak</dt>
+<dd>Break to the next <strong>odd</strong> numbered page</dd>
+</dl>
+<p>Each of them can take an additional number which is the name of the next page template.</p>
+<p>For example:</p>
+<pre class="literal-block">
+PageBreak twoColumn
+</pre>
+</div>
+<div class="section" id="frame-breaks">
+<h2><a class="toc-backref" href="#id44">10.4&nbsp;&nbsp;&nbsp;Frame Breaks</a></h2>
+<p>If you want to jump to the next frame in the page (or the next page if the current
+frame is the last), you can use the FrameBreak command. It takes an optional
+height in points, and then it only breaks the frame if there is less than that
+vertical space available.</p>
+<p>For example, if you don't want a paragraph to begin if it's less than 50 points from the
+bottom of the frame:</p>
+<pre class="literal-block">
+.. raw:: pdf
+
+   FrameBreak 50
+
+This paragraph is so important that I don't want it at the very bottom of the page...
+</pre>
+</div>
+<div class="section" id="page-transitions">
+<h2><a class="toc-backref" href="#id45">10.5&nbsp;&nbsp;&nbsp;Page Transitions</a></h2>
+<p>Page transitions are effects used when you change pages in <em>Presentation</em> or <em>Full Screen</em> mode (depends on the viewer).
+You can use it when creating a presentation using PDF files.</p>
+<p>The syntax is this:</p>
+<pre class="literal-block">
+.. raw:: pdf
+
+   Transition effect duration [optional arguments]
+</pre>
+<p>The optional arguments are:</p>
+<dl class="docutils">
+<dt>direction:</dt>
+<dd>Can be 0,90,180 or 270 (top,right,bottom,left)</dd>
+<dt>dimension:</dt>
+<dd>Can be H or V</dd>
+<dt>motion:</dt>
+<dd>Can be I or O (Inside or Outside)</dd>
+</dl>
+<p>The effects with their arguments are:</p>
+<ul class="simple">
+<li>Split duration direction motion</li>
+<li>Blinds duration dimension</li>
+<li>Box duration motion</li>
+<li>Wipe duration direction</li>
+<li>Dissolve duration</li>
+<li>Glitter duration direction</li>
+</ul>
+<p>For example:</p>
+<pre class="literal-block">
+.. raw:: pdf
+
+   Transition Glitter 3 90
+</pre>
+<p>Uses the Glitter effect, for 3 seconds, at direction 90 degrees (from the right?)</p>
+<p>Keep in mind that Transition sets the transition <em>from this page to the next</em> so the
+natural thing is to use it before a PageBreak:</p>
+<pre class="literal-block">
+.. raw:: pdf
+
+   Transition Dissolve 1
+   PageBreak
+</pre>
+</div>
+<div class="section" id="text-annotations">
+<h2><a class="toc-backref" href="#id46">10.6&nbsp;&nbsp;&nbsp;Text Annotations</a></h2>
+<p>Text annotations are meta notes added to a page.</p>
+<p>The syntax is this:</p>
+<pre class="literal-block">
+.. raw:: pdf
+
+   TextAnnotation &quot;text to add&quot; [optional position]
+</pre>
+<p>The optional position is a set of 4 numbers for <tt class="docutils literal">x_begin</tt>, <tt class="docutils literal">y_begin`, ``x_end</tt> and <tt class="docutils literal">y_end</tt></p>
+</div>
+<div class="section" id="raw-html">
+<h2><a class="toc-backref" href="#id47">10.7&nbsp;&nbsp;&nbsp;Raw HTML</a></h2>
+<p>If you have a document that contains raw HTML, and have <tt class="docutils literal">xhtml2pdf</tt> installed,
+<tt class="docutils literal">rst2pdf</tt> will try to render that HTML inside your document. To enable this,
+use the <tt class="docutils literal"><span class="pre">--raw-html</span></tt> command line option.</p>
+</div>
+</div>
+<div class="section" id="the-counter-role">
+<h1><a class="toc-backref" href="#id48">11&nbsp;&nbsp;&nbsp;The counter role</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The counter role only works in PDF, if you're reading the HTML version of the manual then this section is broken. Sorry :/</p>
+</div>
+<p>This is a nonstandard interpreted text role, which means it will only work with <tt class="docutils literal">rst2pdf</tt>. It implements an unlimited number of counters you can use in your text.
+For example, you could use it to have numbered figures, or numbered tables.</p>
+<p>The syntax is this:</p>
+<pre class="code rst literal-block">
+Start a counter called seq1 that starts from 1: <span class="pygments-na">:counter:</span><span class="pygments-nv">`seq1`</span>
+Now this should print 2: <span class="pygments-na">:counter:</span><span class="pygments-nv">`seq1`</span>
+
+You can start counters from any number (this prints 12): <span class="pygments-na">:counter:</span><span class="pygments-nv">`seq2:12`</span>
+
+And have any number of counters with any name: <span class="pygments-na">:counter:</span><span class="pygments-nv">`figures`</span>
+
+So <span class="pygments-s">``#seq1-2``</span> should link to <span class="pygments-s">`the number 2 above </span><span class="pygments-si">&lt;#seq1-2&gt;</span><span class="pygments-s">`_</span>
+
+</pre>
+<p>The output is:</p>
+<p>Start a counter called seq1 that starts from 1: 
+Now this should print 2: </p>
+<p>You can start counters from any number (this prints 12): </p>
+<p>And have any number of counters with any name: </p>
+<p>Also, the counters create targets for links with this scheme: #countername-number.</p>
+<p>So <tt class="docutils literal"><span class="pre">#seq1-2</span></tt> should link to <a class="reference external" href="#seq1-2">the number 2 above</a></p>
+</div>
+<div class="section" id="the-oddeven-directive">
+<h1><a class="toc-backref" href="#id49">12&nbsp;&nbsp;&nbsp;The oddeven directive</a></h1>
+<p>This is a nonstandard directive, which means it will only work with rst2pdf, and not with rst2html or any other docutils tool.</p>
+<p>The contents of oddeven should consist of <strong>exactly</strong> two things (in this case, two paragraphs). The first will be used on odd pages, and the second one on even pages.</p>
+<p>If you want to use more complex content, you should wrap it with containers, like in this example:</p>
+<pre class="code rst literal-block">
+<span class="pygments-p">..</span> <span class="pygments-ow">oddeven</span><span class="pygments-p">::</span>
+
+<span class="pygments-p">    ..</span> <span class="pygments-ow">container</span><span class="pygments-p">::</span>
+
+        This will appear on odd pages.
+
+        Both paragraphs in the container are for odd pages.
+
+    This will appear on even pages. It's a single paragraph, so no need for containers.
+
+</pre>
+<p>This directive has several limitations.</p>
+<ul class="simple">
+<li>I intentionally have disabled splitting into pages for this, because I have
+no idea how that could make sense. That means that if its content is larger
+than a frame, you <strong>will</strong> make rst2pdf barf with one of those ugly errors.</li>
+<li>It will reserve the space of the larger of the two sets of contents. So if
+one is small and the other large, it <strong>will</strong> look wrong. I may be able to
+fix this though.</li>
+<li>If you try to generate HTML (or anything other than a PDF via rst2pdf) from a file
+containing this, it will not do what you want.</li>
+</ul>
+</div>
+<div class="section" id="mathematics">
+<h1><a class="toc-backref" href="#id50">13&nbsp;&nbsp;&nbsp;Mathematics</a></h1>
+<p>If you have <a class="reference external" href="http://matplotlib.sf.net">Matplotlib</a> installed, rst2pdf supports a math role and a math directive. You can use
+them to insert formulae and mathematical notation in your documents using a subset of LaTeX
+syntax, but doesn't require you have LaTeX installed.</p>
+<p>For example, here's how you use the math directive:</p>
+<pre class="literal-block">
+.. math::
+
+   \frac{2 \pm \sqrt{7}}{3}
+</pre>
+<p>And here's the result:</p>
+<div class="formula">
+<span class="fraction"><span class="ignored">(</span><span class="numerator">2±<span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">7</span><span class="ignored">)</span></span></span><span class="ignored">)/(</span><span class="denominator">3</span><span class="ignored">)</span></span>
+</div>
+<p>If you want to insert mathematical notation in your text like this: <span class="formula"><i>π</i></span> that is the job
+of the math <em>role</em>:</p>
+<pre class="literal-block">
+This is :math:`\pi`
+</pre>
+<p>Produces: This is <span class="formula"><i>π</i></span></p>
+<p>Currently, the math role is slightly buggy, and in some cases will produce misaligned and
+generally broken output. Also, while the math directive embeds fonts and draws your formula
+as text, the math role embeds an image. That means:</p>
+<ul class="simple">
+<li>You can't copy the text of inline math</li>
+<li>Inline math will look worse when printed, or make your file larger.</li>
+</ul>
+<p>So, use it only in emergencies ;-)</p>
+<p>You don't need to worry about fonts, the correct math fonts will be used and embedded in
+your PDF automatically (they are included with matplotlib).</p>
+<p>For an introduction to LaTeX syntax, see the &quot;Typesetting Mathematical Formulae&quot; chapter
+in &quot;The Not So Short Introduction to LaTeX 2e&quot;:</p>
+<p><a class="reference external" href="http://www.tex.ac.uk/tex-archive/info/lshort/english/lshort.pdf">http://www.tex.ac.uk/tex-archive/info/lshort/english/lshort.pdf</a></p>
+<p>Basically, the inline form <tt class="docutils literal">$a^2$</tt> is similar to the math role, and the display form
+is similar to the math directive.</p>
+<p>Rst2pdf doesn't support numbering equations yet.</p>
+<p>The math directive supports the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal">:fontsize:</tt></dt>
+<dd>Sets the font size used in the math directive. By default it will use the paragraph's
+font and size.</dd>
+<dt><tt class="docutils literal">:color:</tt></dt>
+<dd>Can change the color of the math directive's output. Can take either a color by name
+like <tt class="docutils literal">red</tt> or a hex code like <tt class="docutils literal">#4c050f</tt></dd>
+</dl>
+</div>
+<div class="section" id="hyphenation">
+<h1><a class="toc-backref" href="#id51">14&nbsp;&nbsp;&nbsp;Hyphenation</a></h1>
+<p>If you want good looking documents, you want to enable hyphenation.</p>
+<p>To do it, you need to install Wordaxe <a class="footnote-reference" href="#id4" id="id3">[2]</a>.</p>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[2]</a></td><td>Use Roberto Alsina's fork of Wordaxe from <a class="reference external" href="https://github.com/ralsina/wordaxe">https://github.com/ralsina/wordaxe</a> as
+this works with later versions of ReportLab.</td></tr>
+</tbody>
+</table>
+<p>If after installing it you get the letter &quot;s&quot; or a black square instead of a hyphen,
+that means you need to replace the rl_codecs.py file from reportlab with the one from
+wordaxe.</p>
+<p>For more information, see <a class="reference external" href="http://code.google.com/p/rst2pdf/issues/detail?id=5">this issue</a> in rst2pdf's bug tracker.</p>
+<p>Also, you may need to set hyphenation to true in one or more styles, and the language
+for hyphenation via the command line or paragraph styles.</p>
+<p>For english, this should be enough:</p>
+<pre class="literal-block">
+[&quot;bodytext&quot; , {
+  &quot;alignment&quot;: &quot;justify&quot;,
+  &quot;hyphenation&quot;: true
+}],
+</pre>
+<p>If you are not an english speaker, you need to change the language using
+the -l or --language option.</p>
+<p>Since Wordaxe version 0.2.6, it can use the PyHyphen library if it's
+available. PyHyphen can use any OpenOffice dictionary, and can even download
+them automatically. <a class="footnote-reference" href="#id6" id="id5">[3]</a></p>
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[3]</a></td><td>For more information, please check the PyHyphen website at <a class="reference external" href="http://pyhyphen.googlecode.com">http://pyhyphen.googlecode.com</a></td></tr>
+</tbody>
+</table>
+<p>For example, this will enable german hyphenation globally:</p>
+<blockquote>
+rst2pdf -l de_DE mydocument.txt</blockquote>
+<p>If you are creating a multilingual document, you can declare styles with specific languages.
+For example, you could inherit bodytext for Spanish:</p>
+<pre class="literal-block">
+[&quot;bodytext_es&quot; , {
+  &quot;parent&quot;: &quot;bodytext&quot;,
+  &quot;alignment&quot;: &quot;justify&quot;,
+  &quot;hyphenation&quot;: true,
+  &quot;language&quot;: &quot;es_ES&quot;
+}],
+</pre>
+<p>And all paragraphs declared of bodytext_es style would have Spanish hyphenation:</p>
+<pre class="literal-block">
+.. class:: bodytext_es
+
+Debo a la conjunción de un espejo y de una enciclopedia el descubrimiento de Uqbar.
+El espejo inquietaba el fondo de un corredor en una quinta de la calle Gaona,
+en Ramos Mejía; la enciclopedia falazmente se llama *The Anglo-American Cyclopaedía*
+(New York, 1917) y es una reimpresión literal, pero también morosa, de la
+*Encyclopaedia Britannica* de 1902.
+</pre>
+<p>Here is the result (made thinner to force hyphenation):</p>
+<p class="thin">Debo a la conjunción de un espejo y de una enciclopedia el descubrimiento de Uqbar.
+El espejo inquietaba el fondo de un corredor en una quinta de la calle Gaona,
+en Ramos Mejía; la enciclopedia falazmente se llama <em>The Anglo-American Cyclopaedía</em>
+(New York, 1917) y es una reimpresión literal, pero también morosa, de la
+<em>Encyclopaedia Britannica</em> de 1902.</p>
+<p>BTW: That's the beginning of &quot;Tlön, Uqbar, Orbis Tertius&quot;, read it, it's cool.</p>
+<p>If you explicitly configure a language in a paragraph style and also pass a
+language in the command line, the style has priority, so remember:</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p>If you configure the bodytext style to have a language, your document
+is supposed to be in that language, regardless of what the command line
+says.</p>
+<p class="last">If this is too confusing, let me know, I will try to figure out a simpler
+way.</p>
+</div>
+</div>
+<div class="section" id="page-layout">
+<h1><a class="toc-backref" href="#id52">15&nbsp;&nbsp;&nbsp;Page Layout</a></h1>
+<p>By default, your document will have a single column of text covering the space
+between the margins. You can change that, though, in fact you can do so even in
+the middle of your document!</p>
+<p id="page-templates">To do it, you need to define <em>Page Templates</em> in your stylesheet. The default
+stylesheet already has 3 of them:</p>
+<pre class="literal-block">
+&quot;pageTemplates&quot; : {
+  &quot;coverPage&quot;: {
+      &quot;frames&quot;: [
+          [&quot;0cm&quot;, &quot;0cm&quot;, &quot;100%&quot;, &quot;100%&quot;]
+      ],
+      &quot;showHeader&quot; : false,
+      &quot;showFooter&quot; : false
+  },
+  &quot;oneColumn&quot;: {
+      &quot;frames&quot;: [
+          [&quot;0cm&quot;, &quot;0cm&quot;, &quot;100%&quot;, &quot;100%&quot;]
+      ]
+  },
+  &quot;twoColumn&quot;: {
+      &quot;frames&quot;: [
+          [&quot;0cm&quot;, &quot;0cm&quot;, &quot;49%&quot;, &quot;100%&quot;],
+          [&quot;51%&quot;, &quot;0cm&quot;, &quot;49%&quot;, &quot;100%&quot;]
+      ]
+  }
+}
+</pre>
+<p>A page template has a name (oneColumn, twoColumn), some options, and a list of frames.
+A frame is a list containing this:</p>
+<pre class="literal-block">
+[ left position, bottom position, width, height ]
+</pre>
+<p>For example, this defines a frame &quot;at the very left&quot;, &quot;at the very bottom&quot;, &quot;a bit less than half
+a page wide&quot; and &quot;as tall as possible&quot;:</p>
+<pre class="literal-block">
+[&quot;0cm&quot;, &quot;0cm&quot;, &quot;49%&quot;, &quot;100%&quot;]
+</pre>
+<p>And this means &quot;the top third of the page&quot;:</p>
+<pre class="literal-block">
+[&quot;0cm&quot;, &quot;66.66%&quot;, &quot;100%&quot;, &quot;33.34%&quot;]
+</pre>
+<p>You can use all the usual units, cm, mm, inch, and % which means &quot;percentage of
+the page (excluding margins and headers or footers)&quot;. Using % is probably the smartest
+for columns and gives you a fluid layout, while the other units are better for more
+&quot;fixed&quot; elements.</p>
+<p>Since we can have more than one template, there is a way to specify which one we want
+to use, and a way to change from one to another.</p>
+<p>To specify the first template, do it in your stylesheet, in pageSetup (oneColumn is
+the default):</p>
+<pre class="literal-block">
+&quot;pageSetup&quot; : {
+  &quot;firstTemplate&quot;: &quot;oneColumn&quot;
+}
+</pre>
+<p>Then, to change to another template, in your document use this syntax (will change soon,
+though):</p>
+<pre class="code rst literal-block">
+<span class="pygments-p">..</span> <span class="pygments-ow">raw</span><span class="pygments-p">::</span> pdf
+
+   PageBreak twoColumn
+
+</pre>
+<p>That will trigger a page break, and the new page will use the twoColumn template.</p>
+<p>You can see an example of this in the <em>Montecristo</em> folder in the source package.</p>
+<p>The supported page template options and their defaults are:</p>
+<ul>
+<li><p class="first">showHeader : True</p>
+</li>
+<li><p class="first">defaultHeader : None</p>
+<p>Has the same effect as the header directive in the document.</p>
+</li>
+<li><p class="first">showFooter : True</p>
+</li>
+<li><p class="first">defaultFooter : None</p>
+<p>Has the same effect as the footer directive in the document.</p>
+</li>
+<li><p class="first">background: None</p>
+<p>The background should be an image, which will be centered in your page or
+stretched to match your page size, depending on the <tt class="docutils literal"><span class="pre">--fit-background-mode</span></tt>
+option, so use with caution.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="smart-quotes">
+<h1><a class="toc-backref" href="#id53">16&nbsp;&nbsp;&nbsp;Smart Quotes</a></h1>
+<p>Quoted from the <a class="reference external" href="http://web.chad.org/projects/smartypants.py/">smartypants</a> documentation:</p>
+<blockquote>
+<p>This feature can perform the following transformations:</p>
+<p>Straight quotes ( &quot; and ' ) into &quot;curly&quot; quote HTML entities
+Backticks-style quotes (``like this'') into &quot;curly&quot; quote HTML entities
+Dashes (-- and ---) into en- and em-dash entities
+Three consecutive dots (... or . . .) into an ellipsis entity
+This means you can write, edit, and save your posts using plain old ASCII straight
+quotes, plain dashes, and plain dots, but your published posts (and final PDF
+output) will appear with smart quotes, em-dashes, and proper ellipses.</p>
+</blockquote>
+<p>You can enable this by passing the <tt class="docutils literal"><span class="pre">--smart-quotes</span></tt> option in the command line.
+By default, it's disabled.
+Here are the different values you can use (again, from the smartypants docs):</p>
+<blockquote>
+<dl class="docutils">
+<dt>0</dt>
+<dd>Suppress all transformations. (Do nothing.)</dd>
+<dt>1</dt>
+<dd>Performs these transformations: quotes
+(including ``backticks'' -style), em-dashes, and ellipses.
+&quot;--&quot; (dash dash) is used to signify an em-dash; there is no
+support for en-dashes.</dd>
+<dt>2</dt>
+<dd>Same as smarty_pants=&quot;1&quot;, except that it uses the old-school
+typewriter shorthand for dashes: &quot;--&quot; (dash dash) for en-dashes,
+&quot;---&quot; (dash dash dash) for em-dashes.</dd>
+<dt>3</dt>
+<dd>Same as smarty_pants=&quot;2&quot;, but inverts the shorthand for dashes:
+&quot;--&quot; (dash dash) for em-dashes, and &quot;---&quot; (dash dash dash)
+for en-dashes.</dd>
+</dl>
+</blockquote>
+<p>Currently, even if you enable it, this transformation will only take place in
+regular paragraphs, titles, headers, footers and block quotes.</p>
+</div>
+<div class="section" id="kerning">
+<h1><a class="toc-backref" href="#id54">17&nbsp;&nbsp;&nbsp;Kerning</a></h1>
+<p>Kerning is the process of adjusting letter spacing. It is usually accepted that
+kerning makes your text look better.</p>
+<p>For example, if you are using proper kerning, the As and Ws in AWAWA will overlap
+slightly.</p>
+<p>If you want kerning in your PDFs, you need to do the following:</p>
+<ul class="simple">
+<li>Use wordaxe at least 1.0.0</li>
+<li>Use a TrueType font</li>
+<li>Set kerning to true in your style. For example, if you want <strong>all</strong>
+text to be kerned, you can set it in the &quot;base&quot; style.</li>
+</ul>
+<p>For convenience, a stylesheet that uses DejaVu fonts with kerning is provided
+as kerning.json, so you can copy and adapt to your needs, or just use it
+with the <tt class="docutils literal"><span class="pre">-s</span></tt> option.</p>
+</div>
+<div class="section" id="sphinx">
+<h1><a class="toc-backref" href="#id55">18&nbsp;&nbsp;&nbsp;Sphinx</a></h1>
+<p><a class="reference external" href="http://sphinx.pocoo.org">Sphinx</a> is a very popular tool. This is the description from its website:</p>
+<blockquote>
+<p>Sphinx is a tool that makes it easy to create intelligent and beautiful documentation,
+written by Georg Brandl and licensed under the BSD license.</p>
+<p>It was originally created to translate the new Python documentation, and it
+has excellent support for the documentation of Python projects, but other
+documents can be written with it too.</p>
+</blockquote>
+<p>Rst2pdf includes an experimental PDF extension for sphinx.</p>
+<p>To use it in your existing sphinx project you need to do the following:</p>
+<ol class="arabic">
+<li><p class="first">Add rst2pdf.pdfbuilder in your conf.py's extensions. For example:</p>
+<pre class="literal-block">
+extensions = ['sphinx.ext.autodoc','rst2pdf.pdfbuilder']
+</pre>
+</li>
+<li><p class="first">Add the PDF options at the end of conf.py, adapted to your project:</p>
+<pre class="literal-block">
+# -- Options for PDF output --------------------------------------------------
+
+# Grouping the document tree into PDF files. List of tuples
+# (source start file, target name, title, author, options).
+#
+# If there is more than one author, separate them with \\.
+# For example: r'Guido van Rossum\\Fred L. Drake, Jr., editor'
+#
+# The options element is a dictionary that lets you override
+# this config per-document.
+# For example,
+# ('index', u'MyProject', u'My Project', u'Author Name',
+#  dict(pdf_compressed = True))
+# would mean that specific document would be compressed
+# regardless of the global pdf_compressed setting.
+
+pdf_documents = [
+    ('index', u'MyProject', u'My Project', u'Author Name'),
+]
+
+# A comma-separated list of custom stylesheets. Example:
+pdf_stylesheets = ['sphinx','kerning','a4']
+
+# A list of folders to search for stylesheets. Example:
+pdf_style_path = ['.', '_styles']
+
+# Create a compressed PDF
+# Use True/False or 1/0
+# Example: compressed=True
+#pdf_compressed = False
+
+# A colon-separated list of folders to search for fonts. Example:
+# pdf_font_path = ['/usr/share/fonts', '/usr/share/texmf-dist/fonts/']
+
+# Language to be used for hyphenation support
+#pdf_language = &quot;en_US&quot;
+
+# Mode for literal blocks wider than the frame. Can be
+# overflow, shrink or truncate
+#pdf_fit_mode = &quot;shrink&quot;
+
+# Section level that forces a break page.
+# For example: 1 means top-level sections start in a new page
+# 0 means disabled
+#pdf_break_level = 0
+
+# When a section starts in a new page, force it to be 'even', 'odd',
+# or just use 'any'
+#pdf_breakside = 'any'
+
+# Insert footnotes where they are defined instead of
+# at the end.
+#pdf_inline_footnotes = True
+
+# verbosity level. 0 1 or 2
+#pdf_verbosity = 0
+
+# If false, no index is generated.
+#pdf_use_index = True
+
+# If false, no modindex is generated.
+#pdf_use_modindex = True
+
+# If false, no coverpage is generated.
+#pdf_use_coverpage = True
+
+# Name of the cover page template to use
+#pdf_cover_template = 'sphinxcover.tmpl'
+
+# Documents to append as an appendix to all manuals.
+#pdf_appendices = []
+
+# Enable experimental feature to split table cells. Use it
+# if you get &quot;DelayedTable too big&quot; errors
+#pdf_splittables = False
+
+# Set the default DPI for images
+#pdf_default_dpi = 72
+
+# Enable rst2pdf extension modules (default is only vectorpdf)
+# you need vectorpdf if you want to use sphinx's graphviz support
+#pdf_extensions = ['vectorpdf']
+
+# Page template name for &quot;regular&quot; pages
+#pdf_page_template = 'cutePage'
+
+# Show Table Of Contents at the beginning?
+#pdf_use_toc = True
+
+# How many levels deep should the table of contents be?
+pdf_toc_depth = 9999
+
+# Add section number to section references
+pdf_use_numbered_links = False
+
+# Background images fitting mode
+pdf_fit_background_mode = 'scale'
+
+# Repeat table header on tables that cross a page boundary?
+pdf_repeat_table_rows = True
+</pre>
+</li>
+<li><p class="first">(Maybe) add this in your Makefile (on unix-like systems):</p>
+<blockquote>
+<pre class="code makefile literal-block">
+<span class="pygments-nf">pdf</span><span class="pygments-o">:</span>
+    <span class="pygments-k">$(</span>SPHINXBUILD<span class="pygments-k">)</span> -b pdf <span class="pygments-k">$(</span>ALLSPHINXOPTS<span class="pygments-k">)</span> _build/pdf
+    &#64;echo
+    &#64;echo <span class="pygments-s2">&quot;Build finished. The PDF files are in _build/pdf.&quot;</span>
+
+</pre>
+</blockquote>
+</li>
+<li><p class="first">(Maybe) add this to your make.bat (on windows):</p>
+<blockquote>
+<pre class="code bat literal-block">
+<span class="pygments-k">if</span> <span class="pygments-s2">&quot;</span><span class="pygments-nv">%1</span><span class="pygments-s2">&quot;</span> <span class="pygments-o">==</span> <span class="pygments-s2">&quot;pdf&quot;</span> <span class="pygments-p">(</span>
+    <span class="pygments-nv">%SPHINXBUILD%</span> -b pdf <span class="pygments-nv">%ALLSPHINXOPTS%</span> <span class="pygments-nv">%BUILDDIR%</span>/pdf
+    <span class="pygments-k">echo</span>.
+    <span class="pygments-k">echo</span>.Build finished. The PDF files are in <span class="pygments-nv">%BUILDDIR%</span>/pdf
+    <span class="pygments-k">goto</span> <span class="pygments-nl">end</span>
+<span class="pygments-p">)</span>
+
+</pre>
+</blockquote>
+</li>
+</ol>
+<p>Then you can run <tt class="docutils literal">make pdf</tt> or <tt class="docutils literal"><span class="pre">sphinx-build</span> <span class="pre">-b</span> pdf ...</tt> similar
+to how you did it before.</p>
+</div>
+<div class="section" id="extensions">
+<h1><a class="toc-backref" href="#id56">19&nbsp;&nbsp;&nbsp;Extensions</a></h1>
+<p>Rst2pdf can get new features from <em>extensions</em>. Extensions are python modules that can be enabled with the -e option.</p>
+<p>Several are included with rst2pdf.</p>
+<div class="section" id="preprocess-e-preprocess">
+<h2><a class="toc-backref" href="#id57">19.1&nbsp;&nbsp;&nbsp;Preprocess (<tt class="docutils literal"><span class="pre">-e</span> preprocess</tt>)</a></h2>
+<p>preprocess is a rst2pdf extension module (invoked by -e preprocess
+on the rst2pdf command line.</p>
+<p>There is a testcase for this file at rst2pdf/tests/test_preprocess.txt</p>
+<p>This preprocesses the source text file before handing it to docutils.</p>
+<p>This module serves two purposes:</p>
+<ol class="arabic simple">
+<li>It demonstrates the technique and can be a starting point for similar
+user-written processing modules; and</li>
+<li>It provides a simplified syntax for documents which are targeted only
+at rst2pdf, rather than docutils in general.</li>
+</ol>
+<p>The design goal of &quot;base rst2pdf&quot; is to be completely compatible with
+docutils, such that a file which works as a PDF can also work as HTML,
+etc.</p>
+<p>Unfortunately, base docutils is a slow-moving target, and does not
+make this easy.  For example, SVG images do not work properly with
+the HTML backend unless you install a patch, and docutils has no
+concept of page breaks or additional vertical space (other than
+the &lt;hr&gt;).</p>
+<p>So, while it would be nice to have documents that render perfectly
+with any backend, this goal is hard to achieve for some documents,
+and once you are restricted to a particular transformation type,
+then you might as well have a slightly nicer syntax for your source
+document.</p>
+<hr class="docutils" />
+<p>Preprocessor extensions:</p>
+<p>All current extensions except style occupy a single line in the
+source file.</p>
+<p><tt class="docutils literal">.. include::</tt></p>
+<blockquote>
+Processes the include file as well.  An include file may
+either be a restructured text file, OR may be an RSON or
+JSON stylesheet.  The determination is made by trying to
+parse it as RSON.  If it passes, it is a stylesheet; if not,
+well, we'll let the docutils parser have its way with it.</blockquote>
+<p><tt class="docutils literal">.. page::</tt></p>
+<blockquote>
+Is translated into a raw PageBreak.</blockquote>
+<p><tt class="docutils literal">.. space::</tt></p>
+<blockquote>
+Is translated into a raw Spacer.  If only one number given, is
+used for vertical space.  This is the canonical use case, since
+horizontal space is ignored anyway!</blockquote>
+<p><tt class="docutils literal">.. style::</tt></p>
+<blockquote>
+Allows you to create in-line stylesheets.  As with other
+restructured text components, the stylesheet data must
+be indented.  Stylesheets are in RSON or JSON.</blockquote>
+<p><tt class="docutils literal">.. widths::</tt></p>
+<blockquote>
+creates a new table style (based on table or the first
+non-numeric token) and creates a class using that style
+specifically for the next table in the document. (Creates
+a .. class::, so you must specify .. widths:: immediately
+before the table it applies to.   Allows you to set the
+widths for the table, using percentages.</blockquote>
+<p><tt class="docutils literal">SingleWordAtLeftColumn</tt></p>
+<blockquote>
+If a single word at the left column is surrounded by
+blank lines, the singleword style is automatically applied to
+the word.  This is a workaround for the broken interaction
+between docutils subtitles and bibliographic metadata.  (I
+found that docutils was referencing my subtitles from inside
+the TOC, and that seemed silly.  Perhaps there is a better
+workaround at a lower level in rst2pdf.)</blockquote>
+<hr class="docutils" />
+<p>Preprocessor operation:</p>
+<p>The preprocessor generates a file that has the same name as the source
+file, with .build_temp. embedded in the name, and then passes that
+file to the restructured text parser.</p>
+<p>This file is left on the disk after operation, because any error
+messages from docutils will refer to line numbers in it, rather than
+in the original source, so debugging could be difficult if the
+file were automatically removed.</p>
+</div>
+<div class="section" id="inkscape-e-inkscape">
+<h2><a class="toc-backref" href="#id58">19.2&nbsp;&nbsp;&nbsp;Inkscape (<tt class="docutils literal"><span class="pre">-e</span> inkscape</tt>)</a></h2>
+<p>inkscape.py is an rst2pdf extension (e.g. rst2pdf -e inkscape xxx xxxx)
+which uses the inkscape program to convert an svg to a PDF, then uses
+the vectorpdf code to process the PDF.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The initial version is a proof of concept; uses subprocess in a naive way,
+and doesn't check return from inkscape for errors.</p>
+</div>
+</div>
+<div class="section" id="dotted-toc-e-dotted-toc">
+<h2><a class="toc-backref" href="#id59">19.3&nbsp;&nbsp;&nbsp;Dotted_TOC (<tt class="docutils literal"><span class="pre">-e</span> dotted_toc</tt>)</a></h2>
+<!-- NOTE:
+
+THIS IS A HUGE HACK HACK HACK -->
+<p>All I did was take the wrap() method from the stock reportlab TOC generator,
+and make the minimal changes to make it work on MY documents in rst2pdf.</p>
+<div class="section" id="history">
+<h3><a class="toc-backref" href="#id60">19.3.1&nbsp;&nbsp;&nbsp;History:</a></h3>
+<p>The reportlab TOC generator adds nice dots between the text and the page number.
+The rst2pdf one does not.</p>
+<p>A closer examination reveals that the rst2pdf one probably deliberately stripped
+this code, because the reportlab implementation only allowed a single TOC, and
+this is unacceptable for at least some rst2pdf users.</p>
+<p>There are other differences in the rst2pdf one I don't understand.  This module
+is a hack to add back dots between the lines. Maybe at some point we can figure
+out if this is right, or how to support dots in the TOC in the main code.</p>
+<p>Mind you, the original RL implementation is a complete hack in any case:</p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>It uses a callback to a nested function which doesn't even bother to</dt>
+<dd>assume the original enclosing scope is available at callback time.
+This leads it to do crazy things like eval()</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>It uses a single name in the canvas for the callback function</dt>
+<dd>(this is what kills multiple TOC capability) when it would be
+extremely easy to generate a unique name.</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="developers">
+<h1><a class="toc-backref" href="#id61">20&nbsp;&nbsp;&nbsp;Developers</a></h1>
+<div class="section" id="guidelines">
+<h2><a class="toc-backref" href="#id62">20.1&nbsp;&nbsp;&nbsp;Guidelines</a></h2>
+<p>In rst2pdf we want many things. We want ponies and icecream. But most of all, we want
+rst2pdf to kick ass. The best way to achieve that is making rst2pdf work right.
+The best way to do <em>that</em> is through testing and documenting.</p>
+<p>So, if you want to do something inside rst2pdf, you are welcome, but...</p>
+<ul>
+<li><p class="first">Create an Issue for the task. That's easy, just go to
+<a class="reference external" href="https://github.com/rst2pdf/rst2pdf/issues">https://github.com/rst2pdf/rst2pdf/issues</a> and do it.</p>
+</li>
+<li><p class="first">If you intend to fix a bug:</p>
+<ul>
+<li><p class="first">Create a <strong>minimal</strong> test case that shows the bug.</p>
+</li>
+<li><p class="first">Put it inside <tt class="docutils literal">rst2pdf/tests/input</tt> like the others:</p>
+<ul class="simple">
+<li><tt class="docutils literal">mytest.txt</tt> is the test itself</li>
+<li><tt class="docutils literal">mytest.cli</tt> is any needed command line arguments (if needed)</li>
+<li><tt class="docutils literal">mytest.style</tt> is a custom stylesheet (if needed)</li>
+</ul>
+</li>
+<li><p class="first">Run the test suite on it:</p>
+<pre class="literal-block">
+cd rst2pdf/tests
+./autotest.py input/mytest.txt
+</pre>
+</li>
+<li><p class="first">Check the output:</p>
+<pre class="literal-block">
+less output/mytest.log
+acroread output/mytest.pdf
+</pre>
+</li>
+<li><p class="first">If it's really a bug, mark the test as <em>bad</em> and save everything in git:</p>
+<pre class="literal-block">
+setmd5 bad input/mytest.txt
+git checkout -b issue-X
+git add input/mytest.*
+git add md5/mytest.json
+git commit -m &quot;Test case for Issue X&quot;
+git push -u origin issue-X # then open a Pull Request
+</pre>
+</li>
+</ul>
+</li>
+<li><p class="first">Always, when committing something, check for regressions running the full test suite,
+it takes only a minute or two. Keep in mind that regressions can be trivial!</p>
+<p>For example, if you change the spacing of definition lists, 3 or 4 tests will
+regress.</p>
+</li>
+<li><p class="first">Keep your Issues updated. If you are working on frobnozzing the gargles, then by
+all means post it in the issue. There's no issue about it? You were meant to
+create one, remember? ;-)</p>
+</li>
+<li><p class="first">If you added a command line option, document it in <tt class="docutils literal">doc/rst2pdf.txt</tt>.
+That will make it appear in the manual and in the man page.</p>
+<p>Maybe it should also be available for sphinx users, let me know about it.</p>
+</li>
+<li><p class="first">If you implemented a new feature, please document it in <tt class="docutils literal">manual.rst</tt>
+(or in a separate file and add an include in <tt class="docutils literal">manual.rst</tt>)</p>
+</li>
+<li><p class="first">If you implement an extension, make the docstring valid restructured text
+and link it to the manual like the others.</p>
+</li>
+</ul>
+<p>Why should you bother with all this?</p>
+<p>It's important that you do it this way because it means that the rest of us know what you are doing. It also means you don't break rst2pdf.</p>
+</div>
+<div class="section" id="continuous-integration">
+<h2><a class="toc-backref" href="#id63">20.2&nbsp;&nbsp;&nbsp;Continuous Integration</a></h2>
+<p>There's a Travis build - see <a class="reference external" href="https://github.com/rst2pdf/rst2pdf/issues/621">https://github.com/rst2pdf/rst2pdf/issues/621</a> for more information on the current status</p>
+</div>
+<div class="section" id="running-tests">
+<h2><a class="toc-backref" href="#id64">20.3&nbsp;&nbsp;&nbsp;Running tests</a></h2>
+<p>The rst2pdf test suite generates PDFs, then calculates a checksum (an md5) of the resulting file and checks it against known lists of good and bad md5s. These known outcomes are in <tt class="docutils literal"><span class="pre">rst2pdf/tests/md5/[test_name].json</span></tt> (warning, not actually a json file).</p>
+<div class="section" id="first-run">
+<h3><a class="toc-backref" href="#id65">20.3.1&nbsp;&nbsp;&nbsp;First run</a></h3>
+<p>To run the tests for the first time, you will need to do some setup (after this, you can just work on your given virtualenv each time).</p>
+<pre class="literal-block">
+virtualenv --python=/usr/local/bin/python2 env
+. env/bin/activate
+
+pip install nose coverage
+pip install -r requirements.txt
+pip install -e .[tests,sphinx,images,svgsupport,aafiguresupport,mathsupport,rawhtmlsupport]
+nosetests -v -i regulartest -i sphinxtest
+</pre>
+</div>
+<div class="section" id="next-runs">
+<h3><a class="toc-backref" href="#id66">20.3.2&nbsp;&nbsp;&nbsp;Next runs</a></h3>
+<p>While in project:</p>
+<pre class="literal-block">
+nosetests -v -i regulartest -i sphinxtest
+</pre>
+<p>To stop the tests on the first failure, use the <tt class="docutils literal"><span class="pre">-x</span></tt> switch:</p>
+<pre class="literal-block">
+nosetests -x -i regulartest -i sphinxtest
+</pre>
+</div>
+<div class="section" id="using-autotest-directly">
+<h3><a class="toc-backref" href="#id67">20.3.3&nbsp;&nbsp;&nbsp;Using autotest directly</a></h3>
+<p>You can also run the tests using autorun directly:</p>
+<pre class="literal-block">
+cd rst2pdf/tests
+./autotest.py -e -f &gt;&amp; /dev/null
+./parselogs.py &gt; log.txt
+</pre>
+<p>Now look at the output of <tt class="docutils literal">log.txt</tt></p>
+</div>
+<div class="section" id="running-a-single-test">
+<h3><a class="toc-backref" href="#id68">20.3.4&nbsp;&nbsp;&nbsp;Running a single test</a></h3>
+<p>To run one test only, try this:</p>
+<pre class="literal-block">
+cd rst2pdf/tests
+./autotest.py input/[test].txt
+</pre>
+<p>This will run one test and show the output.</p>
+</div>
+<div class="section" id="skipping-tests">
+<h3><a class="toc-backref" href="#id69">20.3.5&nbsp;&nbsp;&nbsp;Skipping tests</a></h3>
+<p>To skip a test, simply create a text file in the <tt class="docutils literal">tests/input</tt> directory called <tt class="docutils literal"><span class="pre">[test].ignore</span></tt> containing a note on why the test is skipped. This will mark the test as skipped when the test suite runs. This could be useful for inherited tests that we aren't confident of the correct output for, but where we don't want to delete/lose the test entirely.</p>
+</div>
+<div class="section" id="marking-a-failing-test-as-good">
+<h3><a class="toc-backref" href="#id70">20.3.6&nbsp;&nbsp;&nbsp;Marking a failing test as good</a></h3>
+<p>Sometimes the local combination of software versions will create the &quot;right&quot; PDF but the binary file will have some minor differences. If your file looks good, then you can store the checksum of it as a valid outcome with a command like this:</p>
+<pre class="literal-block">
+cd rst2pdf/tests
+./autotest.py -u good input/[test].txt
+</pre>
+<p>You'll see from <tt class="docutils literal">git diff</tt> that you now have a new entry in the related <tt class="docutils literal"><span class="pre">md5/[test].json</span></tt> file. Commit this to a new branch and open a pull request explaining what you did.</p>
+</div>
+</div>
+<div class="section" id="getting-commit-rights">
+<h2><a class="toc-backref" href="#id71">20.4&nbsp;&nbsp;&nbsp;Getting commit rights</a></h2>
+<p>Just ask in the mailing list.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">some tests require the execution of the <tt class="docutils literal">dot</tt> command, you should install the package graphviz from your packages manager.</p>
+</div>
+</div>
+</div>
+<div class="section" id="licenses">
+<h1><a class="toc-backref" href="#id72">21&nbsp;&nbsp;&nbsp;Licenses</a></h1>
+<p>This is the license for rst2pdf:</p>
+<pre class="literal-block">
+Copyright (c) 2007,2008,2009 Roberto Alsina
+Nicolas Laurance, Christoph Zwerschke, Yasushi Masuda, Josh VanderLinden,
+Patrick Maupin.
+
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &quot;Software&quot;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+</pre>
+<p>Some fragments of rstpdf are copied from ReportLab under the following license:</p>
+<pre class="literal-block">
+Copyright (c) 2000-2008, ReportLab Inc.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+        *       Redistributions of source code must retain the above copyright notice,
+                this list of conditions and the following disclaimer.
+        *       Redistributions in binary form must reproduce the above copyright notice,
+                this list of conditions and the following disclaimer in the documentation
+                and/or other materials provided with the distribution.
+        *       Neither the name of the company nor the names of its contributors may be
+                used to endorse or promote products derived from this software without
+                specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE OFFICERS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGE.
+</pre>
+</div>
+</div>
+</body>
+</html>
