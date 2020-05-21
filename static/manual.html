@@ -6,8 +6,8 @@
 <meta name="generator" content="Docutils 0.14: http://docutils.sourceforge.net/" />
 <title>How to use rst2pdf</title>
 <meta content="rst2pdf project &lt;https://rst2pdf.org&gt;; Roberto Alsina &lt;ralsina&#64;netmanagers.com.ar&gt;  and the contributors to the rst2pdf project;" name="authors" />
-<meta content="0.96" name="version" />
-<meta content="2020010500" name="revision" />
+<meta content="0.97" name="version" />
+<meta content="2020050900" name="revision" />
 <style type="text/css">
 
 /*
@@ -489,16 +489,14 @@ span.boxed, span.framebox {
 <li><a class="reference internal" href="#running-tests" id="id63">20.3&nbsp;&nbsp;&nbsp;Running tests</a><ul class="auto-toc">
 <li><a class="reference internal" href="#first-run" id="id64">20.3.1&nbsp;&nbsp;&nbsp;First run</a></li>
 <li><a class="reference internal" href="#next-runs" id="id65">20.3.2&nbsp;&nbsp;&nbsp;Next runs</a></li>
-<li><a class="reference internal" href="#using-autotest-directly" id="id66">20.3.3&nbsp;&nbsp;&nbsp;Using autotest directly</a></li>
-<li><a class="reference internal" href="#running-a-single-test" id="id67">20.3.4&nbsp;&nbsp;&nbsp;Running a single test</a></li>
-<li><a class="reference internal" href="#skipping-tests" id="id68">20.3.5&nbsp;&nbsp;&nbsp;Skipping tests</a></li>
-<li><a class="reference internal" href="#marking-a-failing-test-as-good" id="id69">20.3.6&nbsp;&nbsp;&nbsp;Marking a failing test as good</a></li>
+<li><a class="reference internal" href="#running-a-single-test" id="id66">20.3.3&nbsp;&nbsp;&nbsp;Running a single test</a></li>
+<li><a class="reference internal" href="#skipping-tests" id="id67">20.3.4&nbsp;&nbsp;&nbsp;Skipping tests</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#getting-commit-rights" id="id70">20.4&nbsp;&nbsp;&nbsp;Getting commit rights</a></li>
+<li><a class="reference internal" href="#getting-commit-rights" id="id68">20.4&nbsp;&nbsp;&nbsp;Getting commit rights</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#licenses" id="id71">21&nbsp;&nbsp;&nbsp;Licenses</a></li>
+<li><a class="reference internal" href="#licenses" id="id69">21&nbsp;&nbsp;&nbsp;Licenses</a></li>
 </ul>
 </div>
 <div class="section" id="introduction">
@@ -2542,22 +2540,25 @@ work right.  The best way to do <em>that</em> is through testing and documenting
 </li>
 <li><p class="first">Run the test suite on it:</p>
 <pre class="literal-block">
-cd rst2pdf/tests
-./autotest.py input/mytest.txt
+pytest rst2pdf/tests/input/mytest.txt
 </pre>
 </li>
 <li><p class="first">Check the output:</p>
 <pre class="literal-block">
-less output/mytest.log
-acroread output/mytest.pdf
+less rst2pdf/tests/output/mytest.log
+acroread rst2pdf/tests/output/mytest.pdf
 </pre>
 </li>
 <li><p class="first">If it's really a bug, mark the test as <em>bad</em> and save everything in git:</p>
 <pre class="literal-block">
-setmd5 bad input/mytest.txt
+echo &lt;&lt;&lt; EOF &gt; rst2pdf/tests/md5/mytest.json
+bad_md5 = [
+        # bad checksum here
+]
+EOF
 git checkout -b issue-X
-git add input/mytest.*
-git add md5/mytest.json
+git add rst2pdf/tests/input/mytest.*
+git add rst2pdf/tests/md5/mytest.json
 git commit -m &quot;Test case for Issue X&quot;
 git push -u origin issue-X # then open a Pull Request
 </pre>
@@ -2608,67 +2609,41 @@ this, you can just work on your given virtualenv each time):</p>
 virtualenv --python=/usr/local/bin/python2 env
 . env/bin/activate
 
-pip install nose coverage
-pip install -r requirements.txt
-pip install -e .[tests,sphinx,images,svgsupport,aafiguresupport,mathsupport,rawhtmlsupport]
-nosetests -v -i regulartest -i sphinxtest
+pip install pytest pytest-xdist
+pip install -c requirements.txt .[tests,sphinx,hyphenation,svgsupport,aafiguresupport,mathsupport,rawhtmlsupport]
+pytest
 </pre>
 </div>
 <div class="section" id="next-runs">
 <h3><a class="toc-backref" href="#id65">20.3.2&nbsp;&nbsp;&nbsp;Next runs</a></h3>
-<p>While in project:</p>
+<p>To run all tests, run:</p>
 <pre class="literal-block">
-nosetests -v -i regulartest -i sphinxtest
+pytest
 </pre>
-<p>To stop the tests on the first failure, use the <tt class="docutils literal"><span class="pre">-x</span></tt> switch:</p>
+<p>You can also run tests in parallel by passing the <tt class="docutils literal"><span class="pre">-n</span> auto</tt> flag:</p>
 <pre class="literal-block">
-nosetests -x -i regulartest -i sphinxtest
+pytest -n auto
 </pre>
-</div>
-<div class="section" id="using-autotest-directly">
-<h3><a class="toc-backref" href="#id66">20.3.3&nbsp;&nbsp;&nbsp;Using autotest directly</a></h3>
-<p>You can also run the tests using autorun directly:</p>
-<pre class="literal-block">
-cd rst2pdf/tests
-./autotest.py -e -f &gt;&amp; /dev/null
-./parselogs.py &gt; log.txt
-</pre>
-<p>Now look at the output of <tt class="docutils literal">log.txt</tt></p>
 </div>
 <div class="section" id="running-a-single-test">
-<h3><a class="toc-backref" href="#id67">20.3.4&nbsp;&nbsp;&nbsp;Running a single test</a></h3>
-<p>To run one test only, try this:</p>
+<h3><a class="toc-backref" href="#id66">20.3.3&nbsp;&nbsp;&nbsp;Running a single test</a></h3>
+<p>To run one test only, simply pass the file or directory to pytest. For example:</p>
 <pre class="literal-block">
-cd rst2pdf/tests
-./autotest.py input/[test].txt
+pytest rst2pdf/tests/input/sphinx-repeat-table-rows
 </pre>
 <p>This will run one test and show the output.</p>
 </div>
 <div class="section" id="skipping-tests">
-<h3><a class="toc-backref" href="#id68">20.3.5&nbsp;&nbsp;&nbsp;Skipping tests</a></h3>
+<h3><a class="toc-backref" href="#id67">20.3.4&nbsp;&nbsp;&nbsp;Skipping tests</a></h3>
 <p>To skip a test, simply create a text file in the <tt class="docutils literal">tests/input</tt> directory
 called <tt class="docutils literal"><span class="pre">[test].ignore</span></tt> containing a note on why the test is skipped. This
 will mark the test as skipped when the test suite runs. This could be useful
 for inherited tests that we aren't confident of the correct output for, but
 where we don't want to delete/lose the test entirely.</p>
 </div>
-<div class="section" id="marking-a-failing-test-as-good">
-<h3><a class="toc-backref" href="#id69">20.3.6&nbsp;&nbsp;&nbsp;Marking a failing test as good</a></h3>
-<p>Sometimes the local combination of software versions will create the &quot;right&quot;
-PDF but the binary file will have some minor differences. If your file looks
-good, then you can store the checksum of it as a valid outcome with a command
-like this:</p>
-<pre class="literal-block">
-cd rst2pdf/tests
-./autotest.py -u good input/[test].txt
-</pre>
-<p>You'll see from <tt class="docutils literal">git diff</tt> that you now have a new entry in the related
-<tt class="docutils literal"><span class="pre">md5/[test].json</span></tt> file. Commit this to a new branch and open a pull request
-explaining what you did.</p>
-</div>
 </div>
 <div class="section" id="getting-commit-rights">
-<h2><a class="toc-backref" href="#id70">20.4&nbsp;&nbsp;&nbsp;Getting commit rights</a></h2>
+<h2><a class="toc-backref" href="#id68">20.4&nbsp;&nbsp;&nbsp;Getting commit rights</a></h2>
 <p>Just ask in the mailing list.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -2678,7 +2653,7 @@ the package graphviz from your packages manager.</p>
 </div>
 </div>
 <div class="section" id="licenses">
-<h1><a class="toc-backref" href="#id71">21&nbsp;&nbsp;&nbsp;Licenses</a></h1>
+<h1><a class="toc-backref" href="#id69">21&nbsp;&nbsp;&nbsp;Licenses</a></h1>
 <p>This is the license for rst2pdf:</p>
 <pre class="literal-block">
 Copyright (c) 2007-2019 Roberto Alsina and the contributors to the rst2pdf project
