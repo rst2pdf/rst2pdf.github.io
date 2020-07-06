@@ -40,3 +40,17 @@ Here is a simple sample presentation (inspired by <https://github.com/akrabat/rs
 * **Style:** [light.style](../examples/presentation1/light.style) and [dark.style](../examples/presentation1/dark.style) (tip: the dark one also uses the built-in `fruity` stylesheet for code samples)
 * **Command (light):** `rst2pdf -s light.style -b1 presentation1.rst -o presentation1-light.pdf` 
 * **Command (dark):** `rst2pdf -s dark.style,fruity -b1 presentation1.rst -o presentation1-dark.pdf`
+
+## Code Samples
+
+A document with a few code samples (pull requests to expand the set are very welcome) to show how to use the syntax highlight. You can use any of the built in styles or create your own!
+
+<img src="../examples/code1/code1-thumbnail.png" />
+
+* **PDF:** [code1.pdf](../examples/code1/code1.pdf)
+* **Content:** [code1.rst](../examples/code1/code1.rst)
+* **Command:** `rst2pdf code1.rst` .... try using some of the built in stylesheets such as `murphy`, `solarized-light` or `xcode` to change the way the code looks.
+
+> Tip: to set the background, use the `backColor` directive in the `code` section of your style file.
+
+
