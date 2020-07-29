@@ -27,7 +27,7 @@ To create your first PDF, simply install the `rst2pdf` tool, write some text, an
 
 ### Install rst2pdf
 
-`rst2pdf` requires Python 2 (upgrade to Python 3 is a work in progress).
+`rst2pdf` requires Python 3.6 or greater.
 
 **Option 1: install with pip**
 
