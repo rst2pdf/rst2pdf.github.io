@@ -15,10 +15,8 @@ styles:
 
     title:
         parent: heading
-        fontName: stdBold
         fontSize: 200%
 
     heading1:
         parent: heading
         fontSize: 26
-        fontName: stdBold
