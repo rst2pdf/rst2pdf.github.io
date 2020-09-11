@@ -10,11 +10,13 @@ styles:
         alignment: TA_LEFT
 
     heading:
-        fontName: stdBold
         fontSize: 32
         textColor: #1a8099
+
+    title:
+        parent: heading
+        fontSize: 200%
 
     heading1:
         parent: heading
         fontSize: 26
-
