@@ -35,3 +35,21 @@ PHP example: Slim Framework minimal example
     });
 
     $app->run();
+
+Go example
+
+.. code:: go
+    
+    package main
+
+    import "fmt"
+
+    func main() {
+
+      var favoriteSnack string
+  
+      favoriteSnack = "Cheese"
+  
+      fmt.Println("My favorite snack is " + favoriteSnack)
+    
+    }
