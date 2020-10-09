@@ -42,7 +42,7 @@ endobj
 endobj
 8 0 obj
 <<
-/Author () /CreationDate (D:20200706195813+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20200706195813+00'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
+/Author () /CreationDate (D:20201008171629-01'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20201008171629-01'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
   /Subject (\(unspecified\)) /Title (Code Samples for Documents or Presentations) /Trapped /False
 >>
 endobj
@@ -53,7 +53,7 @@ endobj
 endobj
 10 0 obj
 <<
-/Length 9441
+/Length 10775
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
@@ -112,7 +112,11 @@ n 72 48 48 12 re f*
 .960784 .960784 .862745 rg
 n 120 48 6 12 re f*
 .960784 .960784 .862745 rg
-n 0 24 60 12 re f*
+n 0 24 24 12 re f*
+.960784 .960784 .862745 rg
+n 24 24 6 12 re f*
+.960784 .960784 .862745 rg
+n 30 24 30 12 re f*
 .960784 .960784 .862745 rg
 n 60 24 6 12 re f*
 .960784 .960784 .862745 rg
@@ -129,7 +133,7 @@ n 90 12 18 12 re f*
 n 24 0 36 12 re f*
 .960784 .960784 .862745 rg
 n 66 0 90 12 re f*
-BT 1 0 0 1 0 62 Tm 12 TL /F3 10 Tf .796078 .294118 .086275 rg (from) Tj /F4 10 Tf 0 0 0 rg ( ) Tj /F3 10 Tf .14902 .545098 .823529 rg (flask) Tj /F4 10 Tf 0 0 0 rg ( ) Tj /F3 10 Tf .796078 .294118 .086275 rg (import) Tj /F4 10 Tf 0 0 0 rg ( ) Tj .396078 .482353 .513725 rg (Flask) Tj 0 0 0 rg  T* .396078 .482353 .513725 rg (app) Tj 0 0 0 rg ( ) Tj .576471 .631373 .631373 rg (=) Tj 0 0 0 rg ( ) Tj .396078 .482353 .513725 rg (Flask) Tj (\() Tj .14902 .545098 .823529 rg (__name__) Tj .396078 .482353 .513725 rg (\)) Tj 0 0 0 rg  T*  T* .14902 .545098 .823529 rg (@app.route) Tj .396078 .482353 .513725 rg (\() Tj .164706 .631373 .596078 rg ('/') Tj .396078 .482353 .513725 rg (\)) Tj 0 0 0 rg  T* /F3 10 Tf .521569 .6 0 rg (def) Tj /F4 10 Tf 0 0 0 rg ( ) Tj .14902 .545098 .823529 rg (hello_world) Tj .396078 .482353 .513725 rg (\(\):) Tj 0 0 0 rg  T* (    ) Tj /F3 10 Tf .521569 .6 0 rg (return) Tj /F4 10 Tf 0 0 0 rg ( ) Tj .164706 .631373 .596078 rg ('Hello, World!') Tj T* ET
+BT 1 0 0 1 0 62 Tm 12 TL /F3 10 Tf 0 .501961 0 rg (from) Tj /F4 10 Tf 0 0 0 rg ( ) Tj /F3 10 Tf 0 0 1 rg (flask) Tj /F4 10 Tf 0 0 0 rg ( ) Tj /F3 10 Tf 0 .501961 0 rg (import) Tj /F4 10 Tf 0 0 0 rg ( ) Tj (Flask) Tj  T* (app) Tj ( ) Tj .4 .4 .4 rg (=) Tj 0 0 0 rg ( ) Tj (Flask) Tj (\() Tj .098039 .090196 .486275 rg (__name__) Tj 0 0 0 rg (\)) Tj  T*  T* .666667 .133333 1 rg (@app) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (route) Tj (\() Tj .729412 .129412 .129412 rg ('/') Tj 0 0 0 rg (\)) Tj  T* /F3 10 Tf 0 .501961 0 rg (def) Tj /F4 10 Tf 0 0 0 rg ( ) Tj 0 0 1 rg (hello_world) Tj 0 0 0 rg (\(\):) Tj  T* (    ) Tj /F3 10 Tf 0 .501961 0 rg (return) Tj /F4 10 Tf 0 0 0 rg ( ) Tj .729412 .129412 .129412 rg ('Hello, World!') Tj T* ET
 Q
 Q
 Q
@@ -302,7 +306,80 @@ n 30 0 6 12 re f*
 n 36 0 18 12 re f*
 .960784 .960784 .862745 rg
 n 54 0 18 12 re f*
-BT 1 0 0 1 0 182 Tm 12 TL /F4 10 Tf .827451 .211765 .509804 rg (<) Tj (?php) Tj 0 0 0 rg  T* /F3 10 Tf .521569 .6 0 rg (use) Tj /F4 10 Tf 0 0 0 rg ( ) Tj .396078 .482353 .513725 rg (Psr\\Http\\Message\\ResponseInterface) Tj 0 0 0 rg ( ) Tj /F3 10 Tf .521569 .6 0 rg (as) Tj /F4 10 Tf 0 0 0 rg ( ) Tj .396078 .482353 .513725 rg (Response) Tj (;) Tj 0 0 0 rg  T* /F3 10 Tf .521569 .6 0 rg (use) Tj /F4 10 Tf 0 0 0 rg ( ) Tj .396078 .482353 .513725 rg (Psr\\Http\\Message\\ServerRequestInterface) Tj 0 0 0 rg ( ) Tj /F3 10 Tf .521569 .6 0 rg (as) Tj /F4 10 Tf 0 0 0 rg ( ) Tj .396078 .482353 .513725 rg (Request) Tj (;) Tj 0 0 0 rg  T* /F3 10 Tf .521569 .6 0 rg (use) Tj /F4 10 Tf 0 0 0 rg ( ) Tj .396078 .482353 .513725 rg (Slim\\Factory\\AppFactory) Tj (;) Tj 0 0 0 rg  T*  T* /F3 10 Tf .521569 .6 0 rg (require) Tj /F4 10 Tf 0 0 0 rg ( ) Tj .14902 .545098 .823529 rg (__DIR__) Tj 0 0 0 rg ( ) Tj .576471 .631373 .631373 rg (.) Tj 0 0 0 rg ( ) Tj .164706 .631373 .596078 rg ('/../vendor/autoload.php') Tj .396078 .482353 .513725 rg (;) Tj 0 0 0 rg  T*  T* .14902 .545098 .823529 rg ($app) Tj 0 0 0 rg ( ) Tj .576471 .631373 .631373 rg (=) Tj 0 0 0 rg ( ) Tj .396078 .482353 .513725 rg (AppFactory) Tj .576471 .631373 .631373 rg (::) Tj .396078 .482353 .513725 rg (create) Tj (\(\);) Tj 0 0 0 rg  T*  T* .14902 .545098 .823529 rg ($app) Tj .576471 .631373 .631373 rg (-) Tj (>) Tj .396078 .482353 .513725 rg (get) Tj (\() Tj .164706 .631373 .596078 rg ('/hello/{name}') Tj .396078 .482353 .513725 rg (,) Tj 0 0 0 rg ( ) Tj /F3 10 Tf .521569 .6 0 rg (function) Tj /F4 10 Tf 0 0 0 rg ( ) Tj .396078 .482353 .513725 rg (\() Tj (Request) Tj 0 0 0 rg ( ) Tj .14902 .545098 .823529 rg ($request) Tj .396078 .482353 .513725 rg (,) Tj 0 0 0 rg ( ) Tj .396078 .482353 .513725 rg (Response) Tj 0 0 0 rg ( ) Tj .14902 .545098 .823529 rg ($response) Tj .396078 .482353 .513725 rg (,) Tj 0 0 0 rg ( ) Tj /F3 10 Tf .521569 .6 0 rg (array) Tj /F4 10 Tf 0 0 0 rg ( ) Tj .14902 .545098 .823529 rg ($args) Tj .396078 .482353 .513725 rg (\)) Tj 0 0 0 rg ( ) Tj .396078 .482353 .513725 rg ({) Tj 0 0 0 rg  T* (    ) Tj .14902 .545098 .823529 rg ($name) Tj 0 0 0 rg ( ) Tj .576471 .631373 .631373 rg (=) Tj 0 0 0 rg ( ) Tj .14902 .545098 .823529 rg ($args) Tj .396078 .482353 .513725 rg ([) Tj .164706 .631373 .596078 rg ('name') Tj .396078 .482353 .513725 rg (];) Tj 0 0 0 rg  T* (    ) Tj .14902 .545098 .823529 rg ($response) Tj .576471 .631373 .631373 rg (-) Tj (>) Tj .396078 .482353 .513725 rg (getBody) Tj (\(\)) Tj .576471 .631373 .631373 rg (-) Tj (>) Tj .396078 .482353 .513725 rg (write) Tj (\() Tj .164706 .631373 .596078 rg ("Hello, ) Tj /F3 10 Tf ($name) Tj /F4 10 Tf (") Tj .396078 .482353 .513725 rg (\);) Tj 0 0 0 rg  T* (    ) Tj /F3 10 Tf .521569 .6 0 rg (return) Tj /F4 10 Tf 0 0 0 rg ( ) Tj .14902 .545098 .823529 rg ($response) Tj .396078 .482353 .513725 rg (;) Tj 0 0 0 rg  T* .396078 .482353 .513725 rg (}\);) Tj 0 0 0 rg  T*  T* .14902 .545098 .823529 rg ($app) Tj .576471 .631373 .631373 rg (-) Tj (>) Tj .396078 .482353 .513725 rg (run) Tj (\(\);) Tj T* ET
+BT 1 0 0 1 0 182 Tm 12 TL /F4 10 Tf .737255 .478431 0 rg (<) Tj (?php) Tj 0 0 0 rg  T* /F3 10 Tf 0 .501961 0 rg (use) Tj /F4 10 Tf 0 0 0 rg ( ) Tj (Psr\\Http\\Message\\ResponseInterface) Tj ( ) Tj /F3 10 Tf 0 .501961 0 rg (as) Tj /F4 10 Tf 0 0 0 rg ( ) Tj (Response) Tj (;) Tj  T* /F3 10 Tf 0 .501961 0 rg (use) Tj /F4 10 Tf 0 0 0 rg ( ) Tj (Psr\\Http\\Message\\ServerRequestInterface) Tj ( ) Tj /F3 10 Tf 0 .501961 0 rg (as) Tj /F4 10 Tf 0 0 0 rg ( ) Tj (Request) Tj (;) Tj  T* /F3 10 Tf 0 .501961 0 rg (use) Tj /F4 10 Tf 0 0 0 rg ( ) Tj (Slim\\Factory\\AppFactory) Tj (;) Tj  T*  T* /F3 10 Tf 0 .501961 0 rg (require) Tj /F4 10 Tf 0 0 0 rg ( ) Tj .533333 0 0 rg (__DIR__) Tj 0 0 0 rg ( ) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg ( ) Tj .729412 .129412 .129412 rg ('/../vendor/autoload.php') Tj 0 0 0 rg (;) Tj  T*  T* .098039 .090196 .486275 rg ($app) Tj 0 0 0 rg ( ) Tj .4 .4 .4 rg (=) Tj 0 0 0 rg ( ) Tj (AppFactory) Tj .4 .4 .4 rg (::) Tj .490196 .564706 .160784 rg (create) Tj 0 0 0 rg (\(\);) Tj  T*  T* .098039 .090196 .486275 rg ($app) Tj .4 .4 .4 rg (-) Tj (>) Tj .490196 .564706 .160784 rg (get) Tj 0 0 0 rg (\() Tj .729412 .129412 .129412 rg ('/hello/{name}') Tj 0 0 0 rg (,) Tj ( ) Tj /F3 10 Tf 0 .501961 0 rg (function) Tj /F4 10 Tf 0 0 0 rg ( ) Tj (\() Tj (Request) Tj ( ) Tj .098039 .090196 .486275 rg ($request) Tj 0 0 0 rg (,) Tj ( ) Tj (Response) Tj ( ) Tj .098039 .090196 .486275 rg ($response) Tj 0 0 0 rg (,) Tj ( ) Tj /F3 10 Tf 0 .501961 0 rg (array) Tj /F4 10 Tf 0 0 0 rg ( ) Tj .098039 .090196 .486275 rg ($args) Tj 0 0 0 rg (\)) Tj ( ) Tj ({) Tj  T* (    ) Tj .098039 .090196 .486275 rg ($name) Tj 0 0 0 rg ( ) Tj .4 .4 .4 rg (=) Tj 0 0 0 rg ( ) Tj .098039 .090196 .486275 rg ($args) Tj 0 0 0 rg ([) Tj .729412 .129412 .129412 rg ('name') Tj 0 0 0 rg (];) Tj  T* (    ) Tj .098039 .090196 .486275 rg ($response) Tj .4 .4 .4 rg (-) Tj (>) Tj .490196 .564706 .160784 rg (getBody) Tj 0 0 0 rg (\(\)) Tj .4 .4 .4 rg (-) Tj (>) Tj .490196 .564706 .160784 rg (write) Tj 0 0 0 rg (\() Tj .729412 .129412 .129412 rg ("Hello, ) Tj /F3 10 Tf .733333 .4 .533333 rg ($name) Tj /F4 10 Tf .729412 .129412 .129412 rg (") Tj 0 0 0 rg (\);) Tj  T* (    ) Tj /F3 10 Tf 0 .501961 0 rg (return) Tj /F4 10 Tf 0 0 0 rg ( ) Tj .098039 .090196 .486275 rg ($response) Tj 0 0 0 rg (;) Tj  T* (}\);) Tj  T*  T* .098039 .090196 .486275 rg ($app) Tj .4 .4 .4 rg (-) Tj (>) Tj .490196 .564706 .160784 rg (run) Tj 0 0 0 rg (\(\);) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 371.615 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Go example) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 194.415 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 468.6898 168 re B*
+Q
+q
+.960784 .960784 .862745 rg
+n 0 144 42 12 re f*
+.960784 .960784 .862745 rg
+n 48 144 24 12 re f*
+.960784 .960784 .862745 rg
+n 0 120 36 12 re f*
+.960784 .960784 .862745 rg
+n 42 120 30 12 re f*
+.960784 .960784 .862745 rg
+n 0 96 24 12 re f*
+.960784 .960784 .862745 rg
+n 30 96 24 12 re f*
+.960784 .960784 .862745 rg
+n 54 96 12 12 re f*
+.960784 .960784 .862745 rg
+n 72 96 6 12 re f*
+.960784 .960784 .862745 rg
+n 12 72 18 12 re f*
+.960784 .960784 .862745 rg
+n 36 72 78 12 re f*
+.960784 .960784 .862745 rg
+n 120 72 36 12 re f*
+.960784 .960784 .862745 rg
+n 12 48 78 12 re f*
+.960784 .960784 .862745 rg
+n 96 48 6 12 re f*
+.960784 .960784 .862745 rg
+n 108 48 48 12 re f*
+.960784 .960784 .862745 rg
+n 12 24 18 12 re f*
+.960784 .960784 .862745 rg
+n 30 24 6 12 re f*
+.960784 .960784 .862745 rg
+n 36 24 42 12 re f*
+.960784 .960784 .862745 rg
+n 78 24 6 12 re f*
+.960784 .960784 .862745 rg
+n 84 24 138 12 re f*
+.960784 .960784 .862745 rg
+n 228 24 6 12 re f*
+.960784 .960784 .862745 rg
+n 240 24 78 12 re f*
+.960784 .960784 .862745 rg
+n 318 24 6 12 re f*
+.960784 .960784 .862745 rg
+n 0 0 6 12 re f*
+BT 1 0 0 1 0 146 Tm 12 TL /F3 10 Tf 0 .501961 0 rg (package) Tj /F4 10 Tf 0 0 0 rg ( ) Tj (main) Tj  T*  T* /F3 10 Tf 0 .501961 0 rg (import) Tj /F4 10 Tf 0 0 0 rg ( ) Tj .729412 .129412 .129412 rg ("fmt") Tj 0 0 0 rg  T*  T* /F3 10 Tf 0 .501961 0 rg (func) Tj /F4 10 Tf 0 0 0 rg ( ) Tj (main) Tj (\(\)) Tj ( ) Tj ({) Tj  T*  T* (  ) Tj /F3 10 Tf 0 .501961 0 rg (var) Tj /F4 10 Tf 0 0 0 rg ( ) Tj (favoriteSnack) Tj ( ) Tj .690196 0 .25098 rg (string) Tj 0 0 0 rg  T*  T* (  ) Tj (favoriteSnack) Tj ( ) Tj (=) Tj ( ) Tj .729412 .129412 .129412 rg ("Cheese") Tj 0 0 0 rg  T*  T* (  ) Tj (fmt) Tj (.) Tj (Println) Tj (\() Tj .729412 .129412 .129412 rg ("My favorite snack is ") Tj 0 0 0 rg ( ) Tj .4 .4 .4 rg (+) Tj 0 0 0 rg ( ) Tj (favoriteSnack) Tj (\)) Tj  T*  T* (}) Tj T* ET
 Q
 Q
 Q
@@ -334,12 +411,12 @@ xref
 0000000859 00000 n 
 0000001159 00000 n 
 0000001218 00000 n 
-0000010711 00000 n 
-0000010752 00000 n 
+0000012046 00000 n 
+0000012087 00000 n 
 trailer
 <<
 /ID 
-[<589d076260859a08a33698dc1c2b980d><589d076260859a08a33698dc1c2b980d>]
+[<ee1ded1a7a16197caa219f33736964b6><ee1ded1a7a16197caa219f33736964b6>]
 % ReportLab generated PDF document -- digest (http://www.reportlab.com)
 
 /Info 8 0 R
@@ -347,5 +424,5 @@ trailer
 /Size 13
 >>
 startxref
-10786
+12121
 %%EOF
