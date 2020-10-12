@@ -47,6 +47,8 @@ cd rst2pdf
 sudo python setup.py install
 ```
 
+Note that you may need to use `sudo python3 setup.py install` depending on your configuration.
+
 ### Start using rst2pdf
 
 Start with a text file.  `rst2pdf` uses [ReStructured Text](http://docutils.sourceforge.net/rst.html) which is a markup format similar to (but a bit more detailed than) markdown.  Here's an example file to get you started:
