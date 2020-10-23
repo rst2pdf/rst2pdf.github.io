@@ -53,4 +53,14 @@ A document with a few code samples (pull requests to expand the set are very wel
 
 > Tip: to set the background, use the `backColor` directive in the `code` section of your style file.
 
+## Structured Document
+
+This document has automatically numbered headings and a generated table of contents. These are ReStructuredText Directives, more info in the docs for that here: <https://docutils.sourceforge.io/docs/ref/rst/directives.html#document-parts>
+
+<img src="../examples/structured-document/structured-document-thumbnail.png" />
+
+* **PDF:** [structured-document.pdf](../examples/structured-document/structured-document.pdf)
+* **Content:** [structured-document.rst](../examples/structured-document/structured-document.rst)
+* **Command:** `rst2pdf structured-document.rst`
+
 
