@@ -81,6 +81,14 @@ Check for a new file called `sample.pdf` - and you are already on your `rst2pdf`
 
 There are a few other PDF tools that we use and love, they are included here in case you need them too!
 
+### Tools we use While Building
+
+**nodemon** <https://nodemon.io>
+
+Useful for watching for changed files and then automatically recompiling a PDF. For example:
+
+    nodemon --watch input.rst --watch *.style --exec rst2pdf input.rst
+
 ### Working with PDF Files
 
 **pdftk: The PDF Toolkit** [https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/](https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/)
