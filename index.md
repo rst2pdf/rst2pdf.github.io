@@ -87,7 +87,7 @@ There are a few other PDF tools that we use and love, they are included here in 
 
 Useful for watching for changed files and then automatically recompiling a PDF. For example:
 
-    nodemon --watch input.rst --watch *.style --exec rst2pdf input.rst
+    nodemon --ext rst,style --exec 'rst2pdf input.rst'
 
 ### Working with PDF Files
 
