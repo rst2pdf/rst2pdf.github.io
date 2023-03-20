@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<meta charset="utf-8"/>
+<meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <title>How to use rst2pdf</title>
 <meta content="rst2pdf project &lt;https://rst2pdf.org&gt;; Roberto Alsina &lt;ralsina&#64;netmanagers.com.ar&gt; and the contributors to the rst2pdf project." name="authors" />
 <style type="text/css">
@@ -125,6 +125,7 @@ kbd {
 *   math2html: convert LaTeX equations to HTML output.
 *
 *   Copyright (C) 2009,2010 Alex Fernández
+*                 2021      Günter Milde
 *
 *   Released under the terms of the `2-Clause BSD license'_, in short:
 *   Copying and distribution of this file, with or without modification,
@@ -136,16 +137,19 @@ kbd {
 *
 *   Based on eLyXer: convert LyX source files to HTML output.
 *   http://elyxer.nongnu.org/
-*/
-/* --end--
+*
+*
 * CSS file for LaTeX formulas.
+*
+* References: http://www.zipcon.net/~swhite/docs/math/math.html
+*             http://www.cs.tut.fi/~jkorpela/math/
 */
 
 /* Formulas */
 .formula {
 	text-align: center;
-	font-family: "Droid Serif", "DejaVu Serif", "STIX", serif;
 	margin: 1.2em 0;
+	line-height: 1.4;
 }
 span.formula {
 	white-space: nowrap;
@@ -169,6 +173,9 @@ span.unknown {
 span.ignored, span.arraydef {
 	display: none;
 }
+.phantom {
+	visibility: hidden;
+}
 .formula i {
 	letter-spacing: 0.1ex;
 }
@@ -185,33 +192,48 @@ span.ignored, span.arraydef {
 }
 
 /* Structures */
+span.hspace {
+	display: inline-block;
+}
 span.overline, span.bar {
 	text-decoration: overline;
 }
-.fraction, .fullfraction {
+.fraction, .fullfraction, .textfraction {
 	display: inline-block;
 	vertical-align: middle;
 	text-align: center;
 }
-.fraction .fraction {
+span.formula .fraction,
+.textfraction,
+span.smallmatrix {
 	font-size: 80%;
-	line-height: 100%;
+	line-height: 1;
 }
 span.numerator {
 	display: block;
+	line-height: 1;
 }
 span.denominator {
 	display: block;
+	line-height: 1;
 	padding: 0ex;
 	border-top: thin solid;
 }
+.formula sub, .formula sup {
+	font-size: 80%;
+}
 sup.numerator, sup.unit {
-	font-size: 70%;
 	vertical-align: 80%;
 }
 sub.denominator, sub.unit {
-	font-size: 70%;
 	vertical-align: -20%;
+}
+span.smallsymbol {
+	font-size: 75%;
+	line-height: 75%;
+}
+span.boldsymbol {
+	font-weight: bold;
 }
 span.sqrt {
 	display: inline-block;
@@ -219,39 +241,62 @@ span.sqrt {
 	padding: 0.1ex;
 }
 sup.root {
-	font-size: 70%;
 	position: relative;
 	left: 1.4ex;
 }
 span.radical {
 	display: inline-block;
 	padding: 0ex;
-	font-size: 150%;
+	/* font-size: 160%; for DejaVu, not required with STIX */
+	line-height: 100%;
 	vertical-align: top;
+	vertical-align: middle;
 }
+
 span.root {
 	display: inline-block;
 	border-top: thin solid;
 	padding: 0ex;
 	vertical-align: middle;
 }
-span.symbol {
-	line-height: 125%;
-	font-size: 125%;
+div.formula .bigoperator,
+.displaystyle .bigoperator,
+.displaystyle .bigoperator {
+	line-height: 120%;
+	font-size: 140%;
+	padding-right: 0.2ex;
 }
-span.bigsymbol {
-	line-height: 150%;
-	font-size: 150%;
+span.fraction .bigoperator,
+span.scriptstyle .bigoperator {
+	line-height: inherit;
+	font-size: inherit;
+	padding-right: 0;
 }
-span.largesymbol {
-	font-size: 175%;
+span.bigdelimiter {
+	display: inline-block;
 }
-span.hugesymbol {
-	font-size: 200%;
+span.bigdelimiter.size1 {
+	transform: scale(1, 1.2);
+	line-height: 1.2;
 }
+span.bigdelimiter.size2 {
+	transform: scale(1, 1.62);
+	line-height: 1.62%;
+
+}
+span.bigdelimiter.size3 {
+	transform: scale(1, 2.05);
+	line-height: 2.05%;
+}
+span.bigdelimiter.size4 {
+	transform: scale(1, 2.47);
+	line-height: 2.47%;
+}
+/* vertically stacked sub and superscript */
 span.scripts {
 	display: inline-table;
 	vertical-align: middle;
+	padding-right: 0.2ex;
 }
 .script {
 	display: table-row;
@@ -269,51 +314,42 @@ span.limits {
 sup.limit, sub.limit {
 	line-height: 100%;
 }
-span.symbolover {
-	display: inline-block;
-	text-align: center;
-	position: relative;
-	float: right;
-	right: 100%;
-	bottom: 0.5em;
-	width: 0px;
-}
-span.withsymbol {
+span.embellished,
+span.embellished > .base {
 	display: inline-block;
 }
-span.symbolunder {
+span.embellished > sup,
+span.embellished > sub {
 	display: inline-block;
-	text-align: center;
+	font-size: 100%;
 	position: relative;
-	float: right;
-	right: 80%;
-	top: 0.3em;
+	bottom: 0.3em;
 	width: 0px;
+}
+span.embellished > sub {
+	top: 0.4em;
 }
 
 /* Environments */
 span.array, span.bracketcases, span.binomial, span.environment {
 	display: inline-table;
 	text-align: center;
-	border-collapse: collapse;
-	margin: 0em;
 	vertical-align: middle;
 }
 span.arrayrow, span.binomrow {
 	display: table-row;
-	padding: 0ex;
-	border: 0ex;
+	padding: 0;
+	border: 0;
 }
 span.arraycell, span.bracket, span.case, span.binomcell, span.environmentcell {
 	display: table-cell;
 	padding: 0ex 0.2ex;
-	line-height: 99%;
+	line-height: 1; /* 99%; */
 	border: 0ex;
 }
-/*
-* CSS file for LaTeX formulas, extra stuff:
-* binomials, vertical braces, stackrel, fonts and colors.
-*/
+.environment.align > .arrayrow > .arraycell.align-l {
+	padding-right: 2em;
+}
 
 /* Inline binomials */
 span.binom {
@@ -356,19 +392,30 @@ span.downstackrel {
 }
 
 /* Fonts */
+.formula {
+	font-family: STIX, "DejaVu Serif", "DejaVu Math TeX Gyre", serif;
+}
+span.radical,   /* ensure correct size of square-root sign */
+span.integral { /* upright integral signs for better alignment of indices */
+	font-family: "STIXIntegralsUp", STIX;
+	/* font-size: 115%; match apparent size with DejaVu */
+}
+span.bracket {
+  /* some "STIX" and "DejaVu Math TeX Gyre" bracket pieces don't fit */
+	font-family: "DejaVu Serif", serif;
+}
 span.mathsf, span.textsf {
-	font-style: normal;
 	font-family: sans-serif;
 }
 span.mathrm, span.textrm {
-	font-style: normal;
-	font-family: serif;
+	font-family: STIX, "DejaVu Serif", "DejaVu Math TeX Gyre", serif;
 }
-span.text, span.textnormal {
-	font-style: normal;
+span.mathtt, span.texttt {
+	font-family: monospace;
 }
-span.textipa {
-	color: #008080;
+span.text, span.textnormal,
+span.mathsf, span.mathtt, span.mathrm {
+	font-style: normal;
 }
 span.fraktur {
 	font-family: "Lucida Blackletter", eufm10, blackletter;
@@ -379,6 +426,16 @@ span.blackboard {
 span.scriptfont {
 	font-family: "Monotype Corsiva", "Apple Chancery", "URW Chancery L", cursive;
 	font-style: italic;
+}
+span.mathscr {
+  font-family: MathJax_Script, rsfs10,  cursive;
+  font-style: italic;
+}
+span.textsc {
+	font-variant: small-caps;
+}
+span.textsl {
+	font-style: oblique;
 }
 
 /* Colors */
@@ -397,7 +454,6 @@ span.boxed, span.framebox {
 	padding: 5px;
 }
 
-
 </style>
 </head>
 <body class="with-toc">
@@ -406,136 +462,136 @@ span.boxed, span.framebox {
 <main id="how-to-use-rst2pdf">
 <h1 class="title">How to use rst2pdf</h1>
 
-<div class="contents toc-root topic" id="contents">
+<nav class="contents toc-root" id="contents" role="doc-toc">
 <p class="topic-title">Contents</p>
 <ul class="auto-toc simple">
-<li><p><a class="reference internal" href="#introduction" id="id9"><span class="sectnum">1</span> Introduction</a></p>
+<li><p><a class="reference internal" href="#introduction" id="toc-entry-1"><span class="sectnum">1 </span>Introduction</a></p>
 <ul class="auto-toc">
-<li><p><a class="reference internal" href="#related-reading" id="id10"><span class="sectnum">1.1</span> Related Reading</a></p></li>
+<li><p><a class="reference internal" href="#related-reading" id="toc-entry-2"><span class="sectnum">1.1 </span>Related Reading</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#command-line-options" id="id11"><span class="sectnum">2</span> Command line options</a></p></li>
-<li><p><a class="reference internal" href="#configuration-file" id="id12"><span class="sectnum">3</span> Configuration File</a></p></li>
-<li><p><a class="reference internal" href="#pipe-usage" id="id13"><span class="sectnum">4</span> Pipe usage</a></p></li>
-<li><p><a class="reference internal" href="#images" id="id14"><span class="sectnum">5</span> Images</a></p>
+<li><p><a class="reference internal" href="#command-line-options" id="toc-entry-3"><span class="sectnum">2 </span>Command line options</a></p></li>
+<li><p><a class="reference internal" href="#configuration-file" id="toc-entry-4"><span class="sectnum">3 </span>Configuration File</a></p></li>
+<li><p><a class="reference internal" href="#pipe-usage" id="toc-entry-5"><span class="sectnum">4 </span>Pipe usage</a></p></li>
+<li><p><a class="reference internal" href="#images" id="toc-entry-6"><span class="sectnum">5 </span>Images</a></p>
 <ul class="auto-toc">
-<li><p><a class="reference internal" href="#inline" id="id15"><span class="sectnum">5.1</span> Inline</a></p></li>
-<li><p><a class="reference internal" href="#supported-image-types" id="id16"><span class="sectnum">5.2</span> Supported Image Types</a></p></li>
-<li><p><a class="reference internal" href="#image-size" id="id17"><span class="sectnum">5.3</span> Image Size</a></p></li>
+<li><p><a class="reference internal" href="#inline" id="toc-entry-7"><span class="sectnum">5.1 </span>Inline</a></p></li>
+<li><p><a class="reference internal" href="#supported-image-types" id="toc-entry-8"><span class="sectnum">5.2 </span>Supported Image Types</a></p></li>
+<li><p><a class="reference internal" href="#image-size" id="toc-entry-9"><span class="sectnum">5.3 </span>Image Size</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#styling-restructuredtext" id="id18"><span class="sectnum">6</span> Styling ReStructuredText</a></p>
+<li><p><a class="reference internal" href="#styling-restructuredtext" id="toc-entry-10"><span class="sectnum">6 </span>Styling ReStructuredText</a></p>
 <ul class="auto-toc">
-<li><p><a class="reference internal" href="#applying-styles" id="id19"><span class="sectnum">6.1</span> Applying Styles</a></p></li>
-<li><p><a class="reference internal" href="#headers-and-footers" id="id20"><span class="sectnum">6.2</span> Headers and Footers</a></p></li>
-<li><p><a class="reference internal" href="#footnotes" id="id21"><span class="sectnum">6.3</span> Footnotes</a></p></li>
+<li><p><a class="reference internal" href="#applying-styles" id="toc-entry-11"><span class="sectnum">6.1 </span>Applying Styles</a></p></li>
+<li><p><a class="reference internal" href="#headers-and-footers" id="toc-entry-12"><span class="sectnum">6.2 </span>Headers and Footers</a></p></li>
+<li><p><a class="reference internal" href="#footnotes" id="toc-entry-13"><span class="sectnum">6.3 </span>Footnotes</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#customizing-pdf-output" id="id22"><span class="sectnum">7</span> Customizing PDF Output</a></p>
+<li><p><a class="reference internal" href="#customizing-pdf-output" id="toc-entry-14"><span class="sectnum">7 </span>Customizing PDF Output</a></p>
 <ul class="auto-toc">
-<li><p><a class="reference internal" href="#using-stylesheets" id="id23"><span class="sectnum">7.1</span> Using Stylesheets</a></p></li>
-<li><p><a class="reference internal" href="#included-stylesheets" id="id24"><span class="sectnum">7.2</span> Included StyleSheets</a></p></li>
-<li><p><a class="reference internal" href="#default-stylesheet" id="id25"><span class="sectnum">7.3</span> Default Stylesheet</a></p></li>
-<li><p><a class="reference internal" href="#migrating-stylesheet-format" id="id26"><span class="sectnum">7.4</span> Migrating Stylesheet Format</a></p></li>
-<li><p><a class="reference internal" href="#migrating-to-the-new-default-stylesheet" id="id27"><span class="sectnum">7.5</span> Migrating to the New Default Stylesheet</a></p>
+<li><p><a class="reference internal" href="#using-stylesheets" id="toc-entry-15"><span class="sectnum">7.1 </span>Using Stylesheets</a></p></li>
+<li><p><a class="reference internal" href="#included-stylesheets" id="toc-entry-16"><span class="sectnum">7.2 </span>Included StyleSheets</a></p></li>
+<li><p><a class="reference internal" href="#default-stylesheet" id="toc-entry-17"><span class="sectnum">7.3 </span>Default Stylesheet</a></p></li>
+<li><p><a class="reference internal" href="#migrating-stylesheet-format" id="toc-entry-18"><span class="sectnum">7.4 </span>Migrating Stylesheet Format</a></p></li>
+<li><p><a class="reference internal" href="#migrating-to-the-new-default-stylesheet" id="toc-entry-19"><span class="sectnum">7.5 </span>Migrating to the New Default Stylesheet</a></p>
 <ul class="auto-toc">
-<li><p><a class="reference internal" href="#updated-font-alias-names" id="id28"><span class="sectnum">7.5.1</span> Updated Font Alias Names</a></p></li>
-<li><p><a class="reference internal" href="#updated-pate-template-names" id="id29"><span class="sectnum">7.5.2</span> Updated Pate Template Names</a></p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#creating-stylesheets" id="id30"><span class="sectnum">8</span> Creating Stylesheets</a></p>
-<ul class="auto-toc">
-<li><p><a class="reference internal" href="#styles-in-detail" id="id31"><span class="sectnum">8.1</span> Styles in Detail</a></p></li>
-<li><p><a class="reference internal" href="#style-elements" id="id32"><span class="sectnum">8.2</span> Style Elements</a></p>
-<ul class="auto-toc">
-<li><p><a class="reference internal" href="#inline-styles" id="id33"><span class="sectnum">8.2.1</span> Inline Styles</a></p></li>
-<li><p><a class="reference internal" href="#lists" id="id34"><span class="sectnum">8.2.2</span> Lists</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#page-layout" id="id35"><span class="sectnum">8.3</span> Page Layout</a></p>
-<ul class="auto-toc">
-<li><p><a class="reference internal" href="#page-setup" id="id36"><span class="sectnum">8.3.1</span> Page Setup</a></p></li>
-<li><p><a class="reference internal" href="#page-templates" id="id37"><span class="sectnum">8.3.2</span> Page Templates</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#font-alias" id="id38"><span class="sectnum">8.4</span> Font Alias</a></p></li>
-<li><p><a class="reference internal" href="#widows-and-orphans" id="id39"><span class="sectnum">8.5</span> Widows and Orphans</a></p></li>
-<li><p><a class="reference internal" href="#table-styles" id="id40"><span class="sectnum">8.6</span> Table Styles</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#syntax-highlighting" id="id41"><span class="sectnum">9</span> Syntax Highlighting</a></p>
-<ul class="auto-toc">
-<li><p><a class="reference internal" href="#file-inclusion" id="id42"><span class="sectnum">9.1</span> File inclusion</a></p>
-<ul class="auto-toc">
-<li><p><a class="reference internal" href="#include-with-boundaries" id="id43"><span class="sectnum">9.1.1</span> Include with Boundaries</a></p></li>
-<li><p><a class="reference internal" href="#options" id="id44"><span class="sectnum">9.1.2</span> Options</a></p></li>
+<li><p><a class="reference internal" href="#updated-font-alias-names" id="toc-entry-20"><span class="sectnum">7.5.1 </span>Updated Font Alias Names</a></p></li>
+<li><p><a class="reference internal" href="#updated-pate-template-names" id="toc-entry-21"><span class="sectnum">7.5.2 </span>Updated Pate Template Names</a></p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#fonts" id="id45"><span class="sectnum">10</span> Fonts</a></p>
+<li><p><a class="reference internal" href="#creating-stylesheets" id="toc-entry-22"><span class="sectnum">8 </span>Creating Stylesheets</a></p>
 <ul class="auto-toc">
-<li><p><a class="reference internal" href="#standard-pdf-fonts" id="id46"><span class="sectnum">10.1</span> Standard PDF Fonts</a></p></li>
-<li><p><a class="reference internal" href="#font-embedding" id="id47"><span class="sectnum">10.2</span> Font Embedding</a></p>
+<li><p><a class="reference internal" href="#styles-in-detail" id="toc-entry-23"><span class="sectnum">8.1 </span>Styles in Detail</a></p></li>
+<li><p><a class="reference internal" href="#style-elements" id="toc-entry-24"><span class="sectnum">8.2 </span>Style Elements</a></p>
 <ul class="auto-toc">
-<li><p><a class="reference internal" href="#the-easy-way" id="id48"><span class="sectnum">10.2.1</span> The Easy Way</a></p>
-<ul class="auto-toc">
-<li><p><a class="reference internal" href="#fonty-is-a-true-type-font" id="id49"><span class="sectnum">10.2.1.1</span> Fonty is a True Type font:</a></p></li>
-<li><p><a class="reference internal" href="#fonty-is-a-type-1-font" id="id50"><span class="sectnum">10.2.1.2</span> Fonty is a Type 1 font:</a></p></li>
+<li><p><a class="reference internal" href="#inline-styles" id="toc-entry-25"><span class="sectnum">8.2.1 </span>Inline Styles</a></p></li>
+<li><p><a class="reference internal" href="#lists" id="toc-entry-26"><span class="sectnum">8.2.2 </span>Lists</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#the-harder-way-true-type" id="id51"><span class="sectnum">10.2.2</span> The Harder Way (True Type)</a></p></li>
+<li><p><a class="reference internal" href="#page-layout" id="toc-entry-27"><span class="sectnum">8.3 </span>Page Layout</a></p>
+<ul class="auto-toc">
+<li><p><a class="reference internal" href="#page-setup" id="toc-entry-28"><span class="sectnum">8.3.1 </span>Page Setup</a></p></li>
+<li><p><a class="reference internal" href="#page-templates" id="toc-entry-29"><span class="sectnum">8.3.2 </span>Page Templates</a></p></li>
 </ul>
 </li>
+<li><p><a class="reference internal" href="#font-alias" id="toc-entry-30"><span class="sectnum">8.4 </span>Font Alias</a></p></li>
+<li><p><a class="reference internal" href="#widows-and-orphans" id="toc-entry-31"><span class="sectnum">8.5 </span>Widows and Orphans</a></p></li>
+<li><p><a class="reference internal" href="#table-styles" id="toc-entry-32"><span class="sectnum">8.6 </span>Table Styles</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#raw-directive" id="id52"><span class="sectnum">11</span> Raw Directive</a></p>
+<li><p><a class="reference internal" href="#syntax-highlighting" id="toc-entry-33"><span class="sectnum">9 </span>Syntax Highlighting</a></p>
 <ul class="auto-toc">
-<li><p><a class="reference internal" href="#raw-pdf" id="id53"><span class="sectnum">11.1</span> Raw PDF</a></p></li>
-<li><p><a class="reference internal" href="#page-counters" id="id54"><span class="sectnum">11.2</span> Page Counters</a></p></li>
-<li><p><a class="reference internal" href="#page-breaks" id="id55"><span class="sectnum">11.3</span> Page Breaks</a></p></li>
-<li><p><a class="reference internal" href="#frame-breaks" id="id56"><span class="sectnum">11.4</span> Frame Breaks</a></p></li>
-<li><p><a class="reference internal" href="#page-transitions" id="id57"><span class="sectnum">11.5</span> Page Transitions</a></p></li>
-<li><p><a class="reference internal" href="#text-annotations" id="id58"><span class="sectnum">11.6</span> Text Annotations</a></p></li>
-<li><p><a class="reference internal" href="#raw-html" id="id59"><span class="sectnum">11.7</span> Raw HTML</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#the-counter-role" id="id60"><span class="sectnum">12</span> The counter role</a></p></li>
-<li><p><a class="reference internal" href="#the-version-revision-roles" id="id61"><span class="sectnum">13</span> The version, revision roles</a></p></li>
-<li><p><a class="reference internal" href="#the-oddeven-directive" id="id62"><span class="sectnum">14</span> The oddeven directive</a></p></li>
-<li><p><a class="reference internal" href="#mathematics" id="id63"><span class="sectnum">15</span> Mathematics</a></p></li>
-<li><p><a class="reference internal" href="#hyphenation" id="id64"><span class="sectnum">16</span> Hyphenation</a></p></li>
-<li><p><a class="reference internal" href="#smart-quotes" id="id65"><span class="sectnum">17</span> Smart Quotes</a></p></li>
-<li><p><a class="reference internal" href="#sphinx" id="id66"><span class="sectnum">18</span> Sphinx</a></p></li>
-<li><p><a class="reference internal" href="#extensions" id="id67"><span class="sectnum">19</span> Extensions</a></p>
+<li><p><a class="reference internal" href="#file-inclusion" id="toc-entry-34"><span class="sectnum">9.1 </span>File inclusion</a></p>
 <ul class="auto-toc">
-<li><p><a class="reference internal" href="#preprocess-e-preprocess" id="id68"><span class="sectnum">19.1</span> Preprocess (<span class="docutils literal"><span class="pre">-e</span> preprocess</span>)</a></p></li>
-<li><p><a class="reference internal" href="#dotted-toc-e-dotted-toc" id="id69"><span class="sectnum">19.2</span> Dotted_TOC (<span class="docutils literal"><span class="pre">-e</span> dotted_toc</span>)</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#developers" id="id70"><span class="sectnum">20</span> Developers</a></p>
-<ul class="auto-toc">
-<li><p><a class="reference internal" href="#guidelines" id="id71"><span class="sectnum">20.1</span> Guidelines</a></p></li>
-<li><p><a class="reference internal" href="#git-config" id="id72"><span class="sectnum">20.2</span> Git config</a></p></li>
-<li><p><a class="reference internal" href="#pre-commit" id="id73"><span class="sectnum">20.3</span> Pre-commit</a></p></li>
-<li><p><a class="reference internal" href="#continuous-integration" id="id74"><span class="sectnum">20.4</span> Continuous Integration</a></p></li>
-<li><p><a class="reference internal" href="#running-tests" id="id75"><span class="sectnum">20.5</span> Running tests</a></p>
-<ul class="auto-toc">
-<li><p><a class="reference internal" href="#first-run" id="id76"><span class="sectnum">20.5.1</span> First run</a></p></li>
-<li><p><a class="reference internal" href="#next-runs" id="id77"><span class="sectnum">20.5.2</span> Next runs</a></p></li>
-<li><p><a class="reference internal" href="#running-a-single-test" id="id78"><span class="sectnum">20.5.3</span> Running a single test</a></p></li>
-<li><p><a class="reference internal" href="#skipping-tests" id="id79"><span class="sectnum">20.5.4</span> Skipping tests</a></p></li>
+<li><p><a class="reference internal" href="#include-with-boundaries" id="toc-entry-35"><span class="sectnum">9.1.1 </span>Include with Boundaries</a></p></li>
+<li><p><a class="reference internal" href="#options" id="toc-entry-36"><span class="sectnum">9.1.2 </span>Options</a></p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#licenses" id="id80"><span class="sectnum">21</span> Licenses</a></p></li>
+<li><p><a class="reference internal" href="#fonts" id="toc-entry-37"><span class="sectnum">10 </span>Fonts</a></p>
+<ul class="auto-toc">
+<li><p><a class="reference internal" href="#standard-pdf-fonts" id="toc-entry-38"><span class="sectnum">10.1 </span>Standard PDF Fonts</a></p></li>
+<li><p><a class="reference internal" href="#font-embedding" id="toc-entry-39"><span class="sectnum">10.2 </span>Font Embedding</a></p>
+<ul class="auto-toc">
+<li><p><a class="reference internal" href="#the-easy-way" id="toc-entry-40"><span class="sectnum">10.2.1 </span>The Easy Way</a></p>
+<ul class="auto-toc">
+<li><p><a class="reference internal" href="#fonty-is-a-true-type-font" id="toc-entry-41"><span class="sectnum">10.2.1.1 </span>Fonty is a True Type font:</a></p></li>
+<li><p><a class="reference internal" href="#fonty-is-a-type-1-font" id="toc-entry-42"><span class="sectnum">10.2.1.2 </span>Fonty is a Type 1 font:</a></p></li>
 </ul>
-</div>
+</li>
+<li><p><a class="reference internal" href="#the-harder-way-true-type" id="toc-entry-43"><span class="sectnum">10.2.2 </span>The Harder Way (True Type)</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#raw-directive" id="toc-entry-44"><span class="sectnum">11 </span>Raw Directive</a></p>
+<ul class="auto-toc">
+<li><p><a class="reference internal" href="#raw-pdf" id="toc-entry-45"><span class="sectnum">11.1 </span>Raw PDF</a></p></li>
+<li><p><a class="reference internal" href="#page-counters" id="toc-entry-46"><span class="sectnum">11.2 </span>Page Counters</a></p></li>
+<li><p><a class="reference internal" href="#page-breaks" id="toc-entry-47"><span class="sectnum">11.3 </span>Page Breaks</a></p></li>
+<li><p><a class="reference internal" href="#frame-breaks" id="toc-entry-48"><span class="sectnum">11.4 </span>Frame Breaks</a></p></li>
+<li><p><a class="reference internal" href="#page-transitions" id="toc-entry-49"><span class="sectnum">11.5 </span>Page Transitions</a></p></li>
+<li><p><a class="reference internal" href="#text-annotations" id="toc-entry-50"><span class="sectnum">11.6 </span>Text Annotations</a></p></li>
+<li><p><a class="reference internal" href="#raw-html" id="toc-entry-51"><span class="sectnum">11.7 </span>Raw HTML</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#the-counter-role" id="toc-entry-52"><span class="sectnum">12 </span>The counter role</a></p></li>
+<li><p><a class="reference internal" href="#the-version-revision-roles" id="toc-entry-53"><span class="sectnum">13 </span>The version, revision roles</a></p></li>
+<li><p><a class="reference internal" href="#the-oddeven-directive" id="toc-entry-54"><span class="sectnum">14 </span>The oddeven directive</a></p></li>
+<li><p><a class="reference internal" href="#mathematics" id="toc-entry-55"><span class="sectnum">15 </span>Mathematics</a></p></li>
+<li><p><a class="reference internal" href="#hyphenation" id="toc-entry-56"><span class="sectnum">16 </span>Hyphenation</a></p></li>
+<li><p><a class="reference internal" href="#smart-quotes" id="toc-entry-57"><span class="sectnum">17 </span>Smart Quotes</a></p></li>
+<li><p><a class="reference internal" href="#sphinx" id="toc-entry-58"><span class="sectnum">18 </span>Sphinx</a></p></li>
+<li><p><a class="reference internal" href="#extensions" id="toc-entry-59"><span class="sectnum">19 </span>Extensions</a></p>
+<ul class="auto-toc">
+<li><p><a class="reference internal" href="#preprocess-e-preprocess" id="toc-entry-60"><span class="sectnum">19.1 </span>Preprocess (<span class="docutils literal"><span class="pre">-e</span> preprocess</span>)</a></p></li>
+<li><p><a class="reference internal" href="#dotted-toc-e-dotted-toc" id="toc-entry-61"><span class="sectnum">19.2 </span>Dotted_TOC (<span class="docutils literal"><span class="pre">-e</span> dotted_toc</span>)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#developers" id="toc-entry-62"><span class="sectnum">20 </span>Developers</a></p>
+<ul class="auto-toc">
+<li><p><a class="reference internal" href="#guidelines" id="toc-entry-63"><span class="sectnum">20.1 </span>Guidelines</a></p></li>
+<li><p><a class="reference internal" href="#git-config" id="toc-entry-64"><span class="sectnum">20.2 </span>Git config</a></p></li>
+<li><p><a class="reference internal" href="#pre-commit" id="toc-entry-65"><span class="sectnum">20.3 </span>Pre-commit</a></p></li>
+<li><p><a class="reference internal" href="#continuous-integration" id="toc-entry-66"><span class="sectnum">20.4 </span>Continuous Integration</a></p></li>
+<li><p><a class="reference internal" href="#running-tests" id="toc-entry-67"><span class="sectnum">20.5 </span>Running tests</a></p>
+<ul class="auto-toc">
+<li><p><a class="reference internal" href="#first-run" id="toc-entry-68"><span class="sectnum">20.5.1 </span>First run</a></p></li>
+<li><p><a class="reference internal" href="#next-runs" id="toc-entry-69"><span class="sectnum">20.5.2 </span>Next runs</a></p></li>
+<li><p><a class="reference internal" href="#running-a-single-test" id="toc-entry-70"><span class="sectnum">20.5.3 </span>Running a single test</a></p></li>
+<li><p><a class="reference internal" href="#skipping-tests" id="toc-entry-71"><span class="sectnum">20.5.4 </span>Skipping tests</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#licenses" id="toc-entry-72"><span class="sectnum">21 </span>Licenses</a></p></li>
+</ul>
+</nav>
 <section id="introduction">
-<h2><a class="toc-backref" href="#id9"><span class="sectnum">1</span> Introduction</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-1" role="doc-backlink"><span class="sectnum">1 </span>Introduction</a></h2>
 <p>This document explains how to use rst2pdf. Here is the very short version:</p>
 <pre class="literal-block">rst2pdf.py mydocument.txt -o mydocument.pdf</pre>
 <p>That will, as long as <span class="docutils literal">mydocument.txt</span> is a valid reStructured Text (rST)
@@ -548,7 +604,7 @@ default settings.</p>
 <p>However, if you want to customize the output, or are just curious to see what
 can be done, let's continue.</p>
 <section id="related-reading">
-<h3><a class="toc-backref" href="#id10"><span class="sectnum">1.1</span> Related Reading</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-2" role="doc-backlink"><span class="sectnum">1.1 </span>Related Reading</a></h3>
 <p>As well as the rst2pdf-specific features described in this manual, you many also find it useful to refer to the ReStructuredText manual and information about its directives:</p>
 <ul class="simple">
 <li><p>A ReStructureText Primer: <a class="reference external" href="https://docutils.sourceforge.io/docs/user/rst/quickstart.html">https://docutils.sourceforge.io/docs/user/rst/quickstart.html</a></p></li>
@@ -559,7 +615,7 @@ can be done, let's continue.</p>
 </section>
 </section>
 <section id="command-line-options">
-<h2><a class="toc-backref" href="#id11"><span class="sectnum">2</span> Command line options</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-3" role="doc-backlink"><span class="sectnum">2 </span>Command line options</a></h2>
 <dl class="option-list">
 <dt><kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></dt>
 <dd><p>Show this help message and exit</p>
@@ -717,117 +773,121 @@ links referring to the section headers. Default: False</p>
 <dd><p>Remove elements with this CLASS from the output. Can
 be used multiple times.</p>
 </dd>
+<dt><kbd><span class="option">--record-dependencies=<var>FILE</var></span></kbd></dt>
+<dd><p>Write output file dependencies to FILE.</p>
+</dd>
 </dl>
 </section>
 <section id="configuration-file">
-<h2><a class="toc-backref" href="#id12"><span class="sectnum">3</span> Configuration File</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-4" role="doc-backlink"><span class="sectnum">3 </span>Configuration File</a></h2>
 <p>Since version 0.8, rst2pdf will read (if it is available) configuration files in
 <span class="docutils literal">/etc/rst2pdf.conf</span> and <span class="docutils literal"><span class="pre">~/.rst2pdf/config</span></span>.</p>
 <p>The user's file at <span class="docutils literal"><span class="pre">~/.rst2pdf/config</span></span> will have priority over the system's at
-<span class="docutils literal">/etc/rst2pdf.conf</span> <a class="footnote-reference brackets" href="#id2" id="id1">1</a></p>
-<dl class="footnote brackets">
-<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>The <span class="docutils literal">/etc/rst2pdf.conf</span> location makes sense for Linux and linux-like
+<span class="docutils literal">/etc/rst2pdf.conf</span> <a class="footnote-reference brackets" href="#footnote-1" id="footnote-reference-1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="footnote-1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#footnote-reference-1">1</a><span class="fn-bracket">]</span></span>
+<p>The <span class="docutils literal">/etc/rst2pdf.conf</span> location makes sense for Linux and linux-like
 systems. if you are using rst2pdf in other systems, please contact me and
 tell me where the system-wide config file should be.</p>
-</dd>
-</dl>
+</aside>
+</aside>
 <p>Here's an example file showing some of the currently available options:</p>
-<pre class="code ini literal-block"><code><span class="pygments-c1"># This is an example config file. Modify and place in ~/.rst2pdf/config</span>
+<pre class="code ini literal-block"><code><span class="pygments-c1"># This is an example config file. Modify and place in ~/.rst2pdf/config</span><span class="pygments-w">
 
-<span class="pygments-k">[general]</span>
-<span class="pygments-c1"># A comma-separated list of custom stylesheets. Example:</span>
-<span class="pygments-c1"># stylesheets=&quot;fruity.json,a4paper.json,verasans.json&quot;</span>
+</span><span class="pygments-k">[general]</span><span class="pygments-w">
+</span><span class="pygments-c1"># A comma-separated list of custom stylesheets. Example:</span><span class="pygments-w">
+</span><span class="pygments-c1"># stylesheets=&quot;fruity.json,a4paper.json,verasans.json&quot;</span><span class="pygments-w">
 
-<span class="pygments-na">stylesheets</span><span class="pygments-o">=</span><span class="pygments-s">&quot;&quot;</span>
+</span><span class="pygments-na">stylesheets</span><span class="pygments-o">=</span><span class="pygments-s">&quot;&quot;</span><span class="pygments-w">
 
-<span class="pygments-c1"># Create a compressed PDF</span>
-<span class="pygments-c1"># Use true/false (lower case) or 1/0</span>
-<span class="pygments-na">compressed</span><span class="pygments-o">=</span><span class="pygments-s">false</span>
+</span><span class="pygments-c1"># Create a compressed PDF</span><span class="pygments-w">
+</span><span class="pygments-c1"># Use true/false (lower case) or 1/0</span><span class="pygments-w">
+</span><span class="pygments-na">compressed</span><span class="pygments-o">=</span><span class="pygments-s">false</span><span class="pygments-w">
 
-<span class="pygments-c1"># A colon-separated list of folders to search for fonts. Example:</span>
-<span class="pygments-c1"># font_path=&quot;/usr/share/fonts:/usr/share/texmf-dist/fonts/&quot;</span>
+</span><span class="pygments-c1"># A colon-separated list of folders to search for fonts. Example:</span><span class="pygments-w">
+</span><span class="pygments-c1"># font_path=&quot;/usr/share/fonts:/usr/share/texmf-dist/fonts/&quot;</span><span class="pygments-w">
 
-<span class="pygments-na">font_path</span><span class="pygments-o">=</span><span class="pygments-s">&quot;&quot;</span>
+</span><span class="pygments-na">font_path</span><span class="pygments-o">=</span><span class="pygments-s">&quot;&quot;</span><span class="pygments-w">
 
-<span class="pygments-c1"># A colon-separated list of folders to search for stylesheets. Example:</span>
-<span class="pygments-c1"># stylesheet_path=&quot;~/styles:/usr/share/styles&quot;</span>
-<span class="pygments-na">stylesheet_path</span><span class="pygments-o">=</span><span class="pygments-s">&quot;&quot;</span>
+</span><span class="pygments-c1"># A colon-separated list of folders to search for stylesheets. Example:</span><span class="pygments-w">
+</span><span class="pygments-c1"># stylesheet_path=&quot;~/styles:/usr/share/styles&quot;</span><span class="pygments-w">
+</span><span class="pygments-na">stylesheet_path</span><span class="pygments-o">=</span><span class="pygments-s">&quot;&quot;</span><span class="pygments-w">
 
-<span class="pygments-c1"># Language to be used for hyphenation support</span>
+</span><span class="pygments-c1"># Language to be used for hyphenation support</span><span class="pygments-w">
 
-<span class="pygments-na">language</span><span class="pygments-o">=</span><span class="pygments-s">&quot;en_US&quot;</span>
+</span><span class="pygments-na">language</span><span class="pygments-o">=</span><span class="pygments-s">&quot;en_US&quot;</span><span class="pygments-w">
 
-<span class="pygments-c1"># Default page header and footer</span>
-<span class="pygments-na">header</span><span class="pygments-o">=</span><span class="pygments-s">null</span>
-<span class="pygments-na">footer</span><span class="pygments-o">=</span><span class="pygments-s">null</span>
+</span><span class="pygments-c1"># Default page header and footer</span><span class="pygments-w">
+</span><span class="pygments-na">header</span><span class="pygments-o">=</span><span class="pygments-s">null</span><span class="pygments-w">
+</span><span class="pygments-na">footer</span><span class="pygments-o">=</span><span class="pygments-s">null</span><span class="pygments-w">
 
-<span class="pygments-c1"># What to do if a literal block is too large. Can be</span>
-<span class="pygments-c1"># shrink/truncate/overflow</span>
+</span><span class="pygments-c1"># What to do if a literal block is too large. Can be</span><span class="pygments-w">
+</span><span class="pygments-c1"># shrink/truncate/overflow</span><span class="pygments-w">
 
-<span class="pygments-na">fit_mode</span><span class="pygments-o">=</span><span class="pygments-s">&quot;shrink&quot;</span>
+</span><span class="pygments-na">fit_mode</span><span class="pygments-o">=</span><span class="pygments-s">&quot;shrink&quot;</span><span class="pygments-w">
 
-<span class="pygments-c1"># How to adjust the background image to the page.</span>
-<span class="pygments-c1"># Can be: &quot;scale&quot; and &quot;center&quot;</span>
+</span><span class="pygments-c1"># How to adjust the background image to the page.</span><span class="pygments-w">
+</span><span class="pygments-c1"># Can be: &quot;scale&quot; and &quot;center&quot;</span><span class="pygments-w">
 
-<span class="pygments-na">fit_background_mode</span><span class="pygments-o">=</span><span class="pygments-s">&quot;center&quot;</span>
+</span><span class="pygments-na">fit_background_mode</span><span class="pygments-o">=</span><span class="pygments-s">&quot;center&quot;</span><span class="pygments-w">
 
-<span class="pygments-c1"># What is the maximum level of heading that starts in a new page.</span>
-<span class="pygments-c1"># 0 means no level starts in a new page.</span>
+</span><span class="pygments-c1"># What is the maximum level of heading that starts in a new page.</span><span class="pygments-w">
+</span><span class="pygments-c1"># 0 means no level starts in a new page.</span><span class="pygments-w">
 
-<span class="pygments-na">break_level</span><span class="pygments-o">=</span><span class="pygments-s">0</span>
+</span><span class="pygments-na">break_level</span><span class="pygments-o">=</span><span class="pygments-s">0</span><span class="pygments-w">
 
-<span class="pygments-c1"># How section breaks work. Can be &quot;even&quot;, and sections start in an</span>
-<span class="pygments-c1"># even page, &quot;odd&quot;, and sections start in odd pages, or &quot;any&quot; and</span>
-<span class="pygments-c1"># sections start in the next page, be it even or odd.</span>
+</span><span class="pygments-c1"># How section breaks work. Can be &quot;even&quot;, and sections start in an</span><span class="pygments-w">
+</span><span class="pygments-c1"># even page, &quot;odd&quot;, and sections start in odd pages, or &quot;any&quot; and</span><span class="pygments-w">
+</span><span class="pygments-c1"># sections start in the next page, be it even or odd.</span><span class="pygments-w">
 
-<span class="pygments-na">break_side</span><span class="pygments-o">=</span><span class="pygments-s">&quot;any&quot;</span>
+</span><span class="pygments-na">break_side</span><span class="pygments-o">=</span><span class="pygments-s">&quot;any&quot;</span><span class="pygments-w">
 
-<span class="pygments-c1"># Add a blank page at the beginning of the document</span>
+</span><span class="pygments-c1"># Add a blank page at the beginning of the document</span><span class="pygments-w">
 
-<span class="pygments-na">blank_first_page</span><span class="pygments-o">=</span><span class="pygments-s">false</span>
+</span><span class="pygments-na">blank_first_page</span><span class="pygments-o">=</span><span class="pygments-s">false</span><span class="pygments-w">
 
-<span class="pygments-c1"># Treat the first page as even (default false, treat it as odd)</span>
+</span><span class="pygments-c1"># Treat the first page as even (default false, treat it as odd)</span><span class="pygments-w">
 
-<span class="pygments-na">first_page_even</span><span class="pygments-o">=</span><span class="pygments-s">false</span>
+</span><span class="pygments-na">first_page_even</span><span class="pygments-o">=</span><span class="pygments-s">false</span><span class="pygments-w">
 
-<span class="pygments-c1"># Smart quotes.</span>
-<span class="pygments-c1"># 0:  Suppress  all  transformations. (Do nothing.)</span>
-<span class="pygments-c1"># 1: Performs default SmartyPants transformations: quotes (including ‘‘backticks''</span>
-<span class="pygments-c1"># -style), em-dashes, and ellipses. &quot;--&quot; (dash dash) is used to signify an em-dash;</span>
-<span class="pygments-c1"># there is no support for en-dashes.</span>
-<span class="pygments-c1"># 2:  Same as 1, except that it uses the old-school typewriter shorthand for</span>
-<span class="pygments-c1"># dashes: &quot;--&quot; (dash dash) for en-dashes, &quot;---&quot; (dash dash dash) for em-dashes.</span>
-<span class="pygments-c1"># 3: Same as 2, but inverts the shorthand for dashes: &quot;--&quot; (dash dash) for</span>
-<span class="pygments-c1"># em-dashes,  and &quot;---&quot; (dash dash dash) for en-dashes.</span>
+</span><span class="pygments-c1"># Smart quotes.</span><span class="pygments-w">
+</span><span class="pygments-c1"># 0:  Suppress  all  transformations. (Do nothing.)</span><span class="pygments-w">
+</span><span class="pygments-c1"># 1: Performs default SmartyPants transformations: quotes (including ‘‘backticks''</span><span class="pygments-w">
+</span><span class="pygments-c1"># -style), em-dashes, and ellipses. &quot;--&quot; (dash dash) is used to signify an em-dash;</span><span class="pygments-w">
+</span><span class="pygments-c1"># there is no support for en-dashes.</span><span class="pygments-w">
+</span><span class="pygments-c1"># 2:  Same as 1, except that it uses the old-school typewriter shorthand for</span><span class="pygments-w">
+</span><span class="pygments-c1"># dashes: &quot;--&quot; (dash dash) for en-dashes, &quot;---&quot; (dash dash dash) for em-dashes.</span><span class="pygments-w">
+</span><span class="pygments-c1"># 3: Same as 2, but inverts the shorthand for dashes: &quot;--&quot; (dash dash) for</span><span class="pygments-w">
+</span><span class="pygments-c1"># em-dashes,  and &quot;---&quot; (dash dash dash) for en-dashes.</span><span class="pygments-w">
 
-<span class="pygments-na">smartquotes</span><span class="pygments-o">=</span><span class="pygments-s">0</span>
+</span><span class="pygments-na">smartquotes</span><span class="pygments-o">=</span><span class="pygments-s">0</span><span class="pygments-w">
 
-<span class="pygments-c1"># Footnote backlinks enabled or not (default: enabled)</span>
+</span><span class="pygments-c1"># Footnote backlinks enabled or not (default: enabled)</span><span class="pygments-w">
 
-<span class="pygments-na">footnote_backlinks</span><span class="pygments-o">=</span><span class="pygments-s">true</span>
+</span><span class="pygments-na">footnote_backlinks</span><span class="pygments-o">=</span><span class="pygments-s">true</span><span class="pygments-w">
 
-<span class="pygments-c1"># Show footnotes inline instead of at the end of the document</span>
+</span><span class="pygments-c1"># Show footnotes inline instead of at the end of the document</span><span class="pygments-w">
 
-<span class="pygments-na">inline_footnotes</span><span class="pygments-o">=</span><span class="pygments-s">false</span>
+</span><span class="pygments-na">inline_footnotes</span><span class="pygments-o">=</span><span class="pygments-s">false</span><span class="pygments-w">
 
-<span class="pygments-c1"># Cover page template.</span>
-<span class="pygments-c1"># It will be searched in the document's folder, in ~/.rst2pdf/templates and</span>
-<span class="pygments-c1"># in the templates subfolder of the package folder</span>
+</span><span class="pygments-c1"># Cover page template.</span><span class="pygments-w">
+</span><span class="pygments-c1"># It will be searched in the document's folder, in ~/.rst2pdf/templates and</span><span class="pygments-w">
+</span><span class="pygments-c1"># in the templates subfolder of the package folder</span><span class="pygments-w">
 
-<span class="pygments-c1"># custom_cover = cover.tmpl</span>
+</span><span class="pygments-c1"># custom_cover = cover.tmpl</span><span class="pygments-w">
 
-<span class="pygments-c1"># Use floating images.</span>
-<span class="pygments-c1"># Makes the behaviour of images with the :align: attribute more like rst2html's</span>
+</span><span class="pygments-c1"># Use floating images.</span><span class="pygments-w">
+</span><span class="pygments-c1"># Makes the behaviour of images with the :align: attribute more like rst2html's</span><span class="pygments-w">
 
-<span class="pygments-na">floating_images</span> <span class="pygments-o">=</span> <span class="pygments-s">false</span>
+</span><span class="pygments-na">floating_images</span><span class="pygments-w"> </span><span class="pygments-o">=</span><span class="pygments-w"> </span><span class="pygments-s">false</span><span class="pygments-w">
 
-<span class="pygments-c1"># Support the ..raw:: html directive</span>
-<span class="pygments-na">raw_html</span> <span class="pygments-o">=</span> <span class="pygments-s">false</span>
-</code></pre>
+</span><span class="pygments-c1"># Support the ..raw:: html directive</span><span class="pygments-w">
+</span><span class="pygments-na">raw_html</span><span class="pygments-w"> </span><span class="pygments-o">=</span><span class="pygments-w"> </span><span class="pygments-s">false</span><span class="pygments-w">
+</span></code></pre>
 </section>
 <section id="pipe-usage">
-<h2><a class="toc-backref" href="#id13"><span class="sectnum">4</span> Pipe usage</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-5" role="doc-backlink"><span class="sectnum">4 </span>Pipe usage</a></h2>
 <p>If no input nor output are provided, <span class="docutils literal">stdin</span> and <span class="docutils literal">stdout</span> will be used
 respectively.</p>
 <p>You may want to use rst2pdf in a linux pipe as such:</p>
@@ -840,9 +900,9 @@ respectively.</p>
 <pre class="literal-block">rst2pdf -o - readme.txt &gt; output.pdf</pre>
 </section>
 <section id="images">
-<h2><a class="toc-backref" href="#id14"><span class="sectnum">5</span> Images</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-6" role="doc-backlink"><span class="sectnum">5 </span>Images</a></h2>
 <section id="inline">
-<h3><a class="toc-backref" href="#id15"><span class="sectnum">5.1</span> Inline</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-7" role="doc-backlink"><span class="sectnum">5.1 </span>Inline</a></h3>
 <p>You can insert images in the middle of your text like this:</p>
 <pre class="literal-block">This |biohazard| means you have to run.
 
@@ -850,7 +910,7 @@ respectively.</p>
 <p>This <img alt="biohazard" src="assets/biohazard.png" /> means you have to run.</p>
 </section>
 <section id="supported-image-types">
-<h3><a class="toc-backref" href="#id16"><span class="sectnum">5.2</span> Supported Image Types</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-8" role="doc-backlink"><span class="sectnum">5.2 </span>Supported Image Types</a></h3>
 <p>For raster images, rst2pdf supports anything PIL (The Python Imaging Library)
 supports.  The exact list of supported formats varies according to your PIL
 version and system.</p>
@@ -860,7 +920,7 @@ not display, and text may cause problems depending on font availability.</p>
 <p>If you can choose between raster and vectorial images, for non-photographic
 images, vector files are usually smaller and look better, specially when
 printed.</p>
-<div class="admonition note">
+<aside class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Image URLs</p>
 <p>Attempting to be more compatible with rst2html, rst2pdf will try
@@ -868,10 +928,10 @@ to handle images specified as HTTP or FTP URLs by downloading them
 to a temporary file and including them in the PDF.</p>
 <p>This is probably not a good idea unless you are <strong>really</strong> sure the image
 won't go away.</p>
-</div>
+</aside>
 </section>
 <section id="image-size">
-<h3><a class="toc-backref" href="#id17"><span class="sectnum">5.3</span> Image Size</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-9" role="doc-backlink"><span class="sectnum">5.3 </span>Image Size</a></h3>
 <p>PDFs are meant to reflect paper. A PDF has a specific size in centimeters or
 inches.</p>
 <p>Images usually are measured in pixels, which are meaningless in a PDF. To
@@ -927,11 +987,11 @@ whatever you choose with the <span class="docutils literal"><span class="pre">--
 </section>
 </section>
 <section id="styling-restructuredtext">
-<h2><a class="toc-backref" href="#id18"><span class="sectnum">6</span> Styling ReStructuredText</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-10" role="doc-backlink"><span class="sectnum">6 </span>Styling ReStructuredText</a></h2>
 <p>For well-formatted and consistent PDFs, the best starting point is well-formatted and consistent markup. There are some excellent references for ReStructuredText which we won't reproduce here but they are highly recommended as a starting point for working with rst2pdf.</p>
 <p>In general, applying a stylesheet to a structured document will output a decent PDF with minimum fuss. That said, there are plenty of customisation and styling options available so read on if that sounds interesting.</p>
 <section id="applying-styles">
-<h3><a class="toc-backref" href="#id19"><span class="sectnum">6.1</span> Applying Styles</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-11" role="doc-backlink"><span class="sectnum">6.1 </span>Applying Styles</a></h3>
 <p>rst2pdf applies a default set of styles to the document. This default set can be viewed using <span class="docutils literal">rst2pdf <span class="pre">--print-stylesheet</span></span> which prints outh <span class="docutils literal">rst2pdf/styles/styles.yaml</span>.</p>
 <p>Each subsequent style within each style sheet file specified the <span class="docutils literal"><span class="pre">--stylesheets</span></span> CLI parameter is then registered in the the list of known styles known to rst2pdf. If the name of the style is already known, then the attributes specified in the style are applied &quot;on top&quot; of the already registered style.</p>
 <p>rst2pdf will then resolve the <span class="docutils literal">parent</span> style, which is why the order of inclusion matters per-style-name, not globally. That is, if you set the color of <span class="docutils literal">bodytext</span> first in a file and then set the color of <span class="docutils literal">normal</span> in a subsequent file, then the color you have set for <span class="docutils literal">bodytext</span> will be the color used for paragraphs (unless overridden by a <span class="docutils literal">class</span> directive. Further information on cereating stylesheet files is available in <a class="reference internal" href="#creating-stylesheets">Creating Stylesheets</a>.</p>
@@ -954,7 +1014,7 @@ I like color :redtext:`red`.</pre>
 <p>For more information about this, please check the rST docs, and for style information check the section in this manual on <a class="reference internal" href="#inline-styles">inline styles</a>.</p>
 </section>
 <section id="headers-and-footers">
-<h3><a class="toc-backref" href="#id20"><span class="sectnum">6.2</span> Headers and Footers</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-12" role="doc-backlink"><span class="sectnum">6.2 </span>Headers and Footers</a></h3>
 <p>rST supports headers and footers, using the header and footer directive:</p>
 <pre class="literal-block">.. header::
 
@@ -982,13 +1042,13 @@ play with <a class="reference internal" href="#page-counters">page counters</a> 
 </dd>
 </dl>
 <p>Headers and footers are visible by default but they can be disabled by specific
-<a class="reference internal" href="#id3">Page Templates</a> for example, cover pages. You can also set headers and footers
+<a class="reference internal" href="#page-templates-1">Page Templates</a> for example, cover pages. You can also set headers and footers
 via <cite>command line options</cite> or the <a class="reference internal" href="#configuration-file">configuration file</a>.</p>
 <p>If you want to do things like &quot;put the page number on the <em>out</em> side of the
 page, check <a class="reference internal" href="#the-oddeven-directive">The oddeven directive</a></p>
 </section>
 <section id="footnotes">
-<h3><a class="toc-backref" href="#id21"><span class="sectnum">6.3</span> Footnotes</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-13" role="doc-backlink"><span class="sectnum">6.3 </span>Footnotes</a></h3>
 <p>Currently rst2pdf doesn't support real footnotes, and converts them to endnotes.
 There is a real complicated technical reason for this: I can't figure out a
 clean way to do it right.</p>
@@ -999,7 +1059,7 @@ notes.)</p>
 </section>
 </section>
 <section id="customizing-pdf-output">
-<h2><a class="toc-backref" href="#id22"><span class="sectnum">7</span> Customizing PDF Output</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-14" role="doc-backlink"><span class="sectnum">7 </span>Customizing PDF Output</a></h2>
 <p>Stylesheets are used to control many aspects of the PDF output.</p>
 <blockquote>
 <ul class="simple">
@@ -1010,7 +1070,7 @@ notes.)</p>
 </blockquote>
 <p>The stylesheets use a YAML format (JSON is also supported). Older versions of this tool used an RSON format; this is also still supported but we recommend you check the section on <cite>migrating to yaml stylesheets</cite> and update them (it's painless!)</p>
 <section id="using-stylesheets">
-<h3><a class="toc-backref" href="#id23"><span class="sectnum">7.1</span> Using Stylesheets</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-15" role="doc-backlink"><span class="sectnum">7.1 </span>Using Stylesheets</a></h3>
 <p>Specify a stylesheet to use with -s:</p>
 <pre class="literal-block">rst2pdf mydoc.rst -s mystyles</pre>
 <p>Often it makes sense to specify multiple stylesheets, for example to set the page size, the main styles, and some syntax highlighting. In that case, use comma-separated values:</p>
@@ -1026,7 +1086,7 @@ notes.)</p>
 </ul>
 </section>
 <section id="included-stylesheets">
-<h3><a class="toc-backref" href="#id24"><span class="sectnum">7.2</span> Included StyleSheets</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-16" role="doc-backlink"><span class="sectnum">7.2 </span>Included StyleSheets</a></h3>
 <p>To make some of the more common adjustments easier, rst2pdf includes a
 collection of stylesheets you can use:</p>
 <dl>
@@ -1065,13 +1125,13 @@ Serif (Arial)</p></li>
 <pre class="literal-block">rst2pdf mydoc.txt -s twocolumn,serif,murphy,legal</pre>
 </section>
 <section id="default-stylesheet">
-<h3><a class="toc-backref" href="#id25"><span class="sectnum">7.3</span> Default Stylesheet</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-17" role="doc-backlink"><span class="sectnum">7.3 </span>Default Stylesheet</a></h3>
 <p>You can make rst2pdf print the default stylesheet:</p>
 <pre class="literal-block">rst2pdf --print-stylesheet</pre>
 <p>This makes an excellent starting point for creating a stylesheet. The default one is always included by default, so only the values that should be changed need to be included in the new stylesheet.</p>
 </section>
 <section id="migrating-stylesheet-format">
-<h3><a class="toc-backref" href="#id26"><span class="sectnum">7.4</span> Migrating Stylesheet Format</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-18" role="doc-backlink"><span class="sectnum">7.4 </span>Migrating Stylesheet Format</a></h3>
 <p>Historically, (version 0.98 and earlier) rst2pdf had support for JSON and RSON stylesheets. Those stylesheets should still work if you are still using them but a warning will be produced:</p>
 <pre class="literal-block">[WARNING] styles.py:617 Stylesheet &quot;./example.style&quot; in outdated format, recommend converting to YAML</pre>
 <p>To update your stylesheet, use the <span class="docutils literal">rst2pdf.style2yaml</span> utility:</p>
@@ -1079,19 +1139,15 @@ Serif (Arial)</p></li>
 <p>The command also accepts a list of paths, or wildcards, and by default will output the new stylesheet(s) to stdout. To write them to files instead, use the <span class="docutils literal"><span class="pre">--save</span></span> flag with the command above.</p>
 </section>
 <section id="migrating-to-the-new-default-stylesheet">
-<h3><a class="toc-backref" href="#id27"><span class="sectnum">7.5</span> Migrating to the New Default Stylesheet</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-19" role="doc-backlink"><span class="sectnum">7.5 </span>Migrating to the New Default Stylesheet</a></h3>
 <p>Historically (version 0.98 and earlier), rst2pdf used a different default style sheet. The updated default style file provide a more modern look to rst2pdf documents. To do this, it updates various spacing, margins and fonts. It also updates page template and font alias names and so you will need to make adjustments to derived style files.</p>
 <p>Until you make these adjustments, you can use the historical default style sheet using by adding the <span class="docutils literal"><span class="pre">rst2pdf-0-9</span></span> style using the <span class="docutils literal"><span class="pre">-s</span></span> command line switch. For example:</p>
 <pre class="literal-block">rst2pdf mydoc.rst -s rst2pdf-0-9,mystyle.yaml</pre>
 <section id="updated-font-alias-names">
-<h4><a class="toc-backref" href="#id28"><span class="sectnum">7.5.1</span> Updated Font Alias Names</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-20" role="doc-backlink"><span class="sectnum">7.5.1 </span>Updated Font Alias Names</a></h4>
 <p>The font aliases used for the standard fonts have changed from those used in the historical default style sheeet. As such, you will need to update to the new names in any derivative style files.</p>
 <p>This table shows the old name and the equivalent new name:</p>
 <table>
-<colgroup>
-<col style="width: 48%" />
-<col style="width: 52%" />
-</colgroup>
 <thead>
 <tr><th class="head"><p>Historical</p></th>
 <th class="head"><p>Current</p></th>
@@ -1141,14 +1197,10 @@ Serif (Arial)</p></li>
 </table>
 </section>
 <section id="updated-pate-template-names">
-<h4><a class="toc-backref" href="#id29"><span class="sectnum">7.5.2</span> Updated Pate Template Names</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-21" role="doc-backlink"><span class="sectnum">7.5.2 </span>Updated Pate Template Names</a></h4>
 <p>The page template names used in the new default style sheet are different from the historical default style sheeet. As such, you will need to update to the new names in any derivative style files.</p>
 <p>This table shows the old name and the equivalent new name:</p>
 <table>
-<colgroup>
-<col style="width: 27%" />
-<col style="width: 73%" />
-</colgroup>
 <thead>
 <tr><th class="head"><p>Historical</p></th>
 <th class="head"><p>Current</p></th>
@@ -1180,39 +1232,39 @@ Serif (Arial)</p></li>
 </section>
 </section>
 <section id="creating-stylesheets">
-<h2><a class="toc-backref" href="#id30"><span class="sectnum">8</span> Creating Stylesheets</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-22" role="doc-backlink"><span class="sectnum">8 </span>Creating Stylesheets</a></h2>
 <p>The stylesheets are YAML-formatted and give control over many aspects of how the PDF is rendered. The main aspects are the styles of the elements, the page setup and templates, and the fonts to use . These are described in the following sections.</p>
 <p>Only the settings that you want to change need to be included so for example, this would be a valid stylesheet:</p>
-<pre class="code yaml literal-block"><code><span class="pygments-nt">pageSetup</span><span class="pygments-p">:</span>
-  <span class="pygments-nt">size</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">A5</span>
-<span class="pygments-nt">fontsAlias</span><span class="pygments-p">:</span>
-  <span class="pygments-nt">stdFont</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">Times-Roman</span>
-<span class="pygments-nt">styles</span><span class="pygments-p">:</span>
-  <span class="pygments-nt">normal</span><span class="pygments-p">:</span>
-    <span class="pygments-nt">fontSize</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">14</span>
-</code></pre>
+<pre class="code yaml literal-block"><code><span class="pygments-nt">pageSetup</span><span class="pygments-p">:</span><span class="pygments-w">
+  </span><span class="pygments-nt">size</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">A5</span><span class="pygments-w">
+</span><span class="pygments-nt">fontsAlias</span><span class="pygments-p">:</span><span class="pygments-w">
+  </span><span class="pygments-nt">stdFont</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">Times-Roman</span><span class="pygments-w">
+</span><span class="pygments-nt">styles</span><span class="pygments-p">:</span><span class="pygments-w">
+  </span><span class="pygments-nt">normal</span><span class="pygments-p">:</span><span class="pygments-w">
+    </span><span class="pygments-nt">fontSize</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">14</span><span class="pygments-w">
+</span></code></pre>
 <section id="styles-in-detail">
-<h3><a class="toc-backref" href="#id31"><span class="sectnum">8.1</span> Styles in Detail</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-23" role="doc-backlink"><span class="sectnum">8.1 </span>Styles in Detail</a></h3>
 <p>At the top level there is a bit of an outlier: <span class="docutils literal">linkColor</span>. You can specify any color name or a hex value:</p>
 <pre class="literal-block">linkColor: #330099</pre>
 <p>Most of the other elements for colours and formatting are in the <cite>styles</cite> section.</p>
 <p>There are particular styles which have great effect, they are <span class="docutils literal">base</span>,
 <span class="docutils literal">normal</span> and <span class="docutils literal">bodytext</span>.</p>
 <p>Here's an example, the <span class="docutils literal">twelvepoint</span> stylesheet:</p>
-<pre class="code yaml literal-block"><code><span class="pygments-nt">styles</span><span class="pygments-p">:</span>
-  <span class="pygments-nt">base</span><span class="pygments-p">:</span>
-    <span class="pygments-nt">fontSize</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">12</span>
-</code></pre>
+<pre class="code yaml literal-block"><code><span class="pygments-nt">styles</span><span class="pygments-p">:</span><span class="pygments-w">
+  </span><span class="pygments-nt">base</span><span class="pygments-p">:</span><span class="pygments-w">
+    </span><span class="pygments-nt">fontSize</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">12</span><span class="pygments-w">
+</span></code></pre>
 <p>Since all other styles inherit <span class="docutils literal">base</span>, changing the <span class="docutils literal">fontSize</span> changes the
 <span class="docutils literal">fontSize</span> for everything in your document.</p>
 <p>The <span class="docutils literal">normal</span> style is meant for most elements, so usually it's the same as
 changing <span class="docutils literal">base</span>.</p>
 <p>The <span class="docutils literal">bodytext</span> style is for elements that form paragraphs. So, for example,
 you can set your document to be left-aligned like this:</p>
-<pre class="code yaml literal-block"><code><span class="pygments-nt">styles</span><span class="pygments-p">:</span>
- <span class="pygments-p-Indicator">-</span> <span class="pygments-nt">bodytext</span><span class="pygments-p">:</span>
-      <span class="pygments-nt">alignment</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">TA_LEFT</span>
-</code></pre>
+<pre class="code yaml literal-block"><code><span class="pygments-nt">styles</span><span class="pygments-p">:</span><span class="pygments-w">
+ </span><span class="pygments-p-Indicator">-</span><span class="pygments-w"> </span><span class="pygments-nt">bodytext</span><span class="pygments-p">:</span><span class="pygments-w">
+      </span><span class="pygments-nt">alignment</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">TA_LEFT</span><span class="pygments-w">
+</span></code></pre>
 <p>There are elements, however, that don't inherit from <span class="docutils literal">bodytext</span>, for example
 headings and the styles used in the table of contents. Those are elements that
 are not real paragraphs, so they should not follow the indentation and spacing
@@ -1225,7 +1277,7 @@ will print a warning and use <span class="docutils literal">bodytext</span> inst
 <span class="docutils literal">styleB</span>, <span class="docutils literal">styleA</span> should be earlier in the stylesheet.</p>
 </section>
 <section id="style-elements">
-<h3><a class="toc-backref" href="#id32"><span class="sectnum">8.2</span> Style Elements</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-24" role="doc-backlink"><span class="sectnum">8.2 </span>Style Elements</a></h3>
 <p>Within the <span class="docutils literal">styles</span> element, it is possible to configure each element type.
 The following section lays out the known options and examples of how to use them.
 (This list is known to be incomplete, we're working on it and accept any
@@ -1233,16 +1285,16 @@ additions you have).</p>
 <p><strong>parent</strong></p>
 <p>Each style property can inherit from another, for example the <span class="docutils literal">code</span> style inherits from the <span class="docutils literal">literal</span> style which sets the font used for fixed-width text throughout the document.</p>
 <p>Example:</p>
-<pre class="code yaml literal-block"><code><span class="pygments-nt">code</span><span class="pygments-p">:</span>
-  <span class="pygments-nt">parent</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">literal</span>
-</code></pre>
+<pre class="code yaml literal-block"><code><span class="pygments-nt">code</span><span class="pygments-p">:</span><span class="pygments-w">
+  </span><span class="pygments-nt">parent</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">literal</span><span class="pygments-w">
+</span></code></pre>
 <p><strong>fontName</strong></p>
 <p>The name of the font to use for this type of element. It can be either the name
 of a font on your system, or one of the aliased fonts. The default is Helvetica
 as shown in the example here.</p>
 <p>Example:</p>
-<pre class="code yaml literal-block"><code><span class="pygments-nt">fontName</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">Helvetica</span>
-</code></pre>
+<pre class="code yaml literal-block"><code><span class="pygments-nt">fontName</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">Helvetica</span><span class="pygments-w">
+</span></code></pre>
 <p>See also:</p>
 <blockquote>
 <ul class="simple">
@@ -1254,36 +1306,36 @@ as shown in the example here.</p>
 <p>Use either a number (meaning point size) or a percentage. The default size for
 bodytext is 10.</p>
 <p>Example:</p>
-<pre class="code yaml literal-block"><code><span class="pygments-nt">fontSize</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">150%</span>
-</code></pre>
+<pre class="code yaml literal-block"><code><span class="pygments-nt">fontSize</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">150%</span><span class="pygments-w">
+</span></code></pre>
 <p><strong>leftIndent</strong> and <strong>rightIndent</strong></p>
 <p>Example:</p>
-<pre class="code yaml literal-block"><code><span class="pygments-nt">leftIndent</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">0</span>
-<span class="pygments-nt">rightIndent</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">0</span>
-</code></pre>
+<pre class="code yaml literal-block"><code><span class="pygments-nt">leftIndent</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">0</span><span class="pygments-w">
+</span><span class="pygments-nt">rightIndent</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">0</span><span class="pygments-w">
+</span></code></pre>
 <p><strong>firstLineIndent</strong></p>
 <p>Example:</p>
-<pre class="code yaml literal-block"><code><span class="pygments-nt">firstLineIndent</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">0</span>
-</code></pre>
+<pre class="code yaml literal-block"><code><span class="pygments-nt">firstLineIndent</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">0</span><span class="pygments-w">
+</span></code></pre>
 <p><strong>alignment</strong></p>
 <p>The paragraph justification of the text. The values <span class="docutils literal">TA_LEFT</span> and <span class="docutils literal">TA_RIGHT</span> can be used.</p>
 <p>Example:</p>
-<pre class="code yaml literal-block"><code><span class="pygments-nt">alignment</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">TA_LEFT</span>
-</code></pre>
+<pre class="code yaml literal-block"><code><span class="pygments-nt">alignment</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">TA_LEFT</span><span class="pygments-w">
+</span></code></pre>
 <p><strong>spaceBefore</strong> and <strong>spaceAfter</strong></p>
 <p>The amount of vertical space included before or after an element. Especially useful when working with <span class="docutils literal"><span class="pre">bullet-list</span></span> and <span class="docutils literal"><span class="pre">bullet-list-item</span></span> elements.</p>
 <p>Example:</p>
-<pre class="code yaml literal-block"><code><span class="pygments-nt">spaceBefore</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">4</span>
-<span class="pygments-nt">spaceAfter</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">8</span>
-</code></pre>
+<pre class="code yaml literal-block"><code><span class="pygments-nt">spaceBefore</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">4</span><span class="pygments-w">
+</span><span class="pygments-nt">spaceAfter</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">8</span><span class="pygments-w">
+</span></code></pre>
 <p><strong>bullet</strong> -related styles</p>
 <p>The bullets can be complex to style, but there are some tricks that might help. The vertical space before and after the list and item elements are controlled by the <span class="docutils literal">spaceBefore</span> and <span class="docutils literal">spaceAfter</span> properties. Also these lists are <em>tables</em> so those styles also apply.</p>
 <p>Example:</p>
-<pre class="code yaml literal-block"><code><span class="pygments-nt">bulletFontName</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">Helvetica</span>
-<span class="pygments-nt">bulletFontSize</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">10</span>
-<span class="pygments-nt">bulletText</span><span class="pygments-p">:</span> <span class="pygments-s">&quot;</span><span class="pygments-se">\u2022</span><span class="pygments-s">&quot;</span>
-<span class="pygments-nt">bulletIndent</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">0</span>
-</code></pre>
+<pre class="code yaml literal-block"><code><span class="pygments-nt">bulletFontName</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">Helvetica</span><span class="pygments-w">
+</span><span class="pygments-nt">bulletFontSize</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">10</span><span class="pygments-w">
+</span><span class="pygments-nt">bulletText</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-s">&quot;</span><span class="pygments-se">\u2022</span><span class="pygments-s">&quot;</span><span class="pygments-w">
+</span><span class="pygments-nt">bulletIndent</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">0</span><span class="pygments-w">
+</span></code></pre>
 <p>See also:</p>
 <blockquote>
 <ul class="simple">
@@ -1293,32 +1345,32 @@ bodytext is 10.</p>
 <p><strong>textColor</strong></p>
 <p>Use either a color name, or a hex value including the <span class="docutils literal">#</span> character at the start.</p>
 <p>Example:</p>
-<pre class="code yaml literal-block"><code><span class="pygments-nt">textColor</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">black</span>
-</code></pre>
+<pre class="code yaml literal-block"><code><span class="pygments-nt">textColor</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">black</span><span class="pygments-w">
+</span></code></pre>
 <p><strong>backColor</strong></p>
 <p>Use either the value <span class="docutils literal">None</span>, a color name, or a hex value including the <span class="docutils literal">#</span> character at the start. Sets the background color of the element.</p>
 <p>Example:</p>
-<pre class="code yaml literal-block"><code><span class="pygments-nt">backColor</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">beige</span>
-</code></pre>
+<pre class="code yaml literal-block"><code><span class="pygments-nt">backColor</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">beige</span><span class="pygments-w">
+</span></code></pre>
 <p><strong>wordWrap</strong></p>
 <p>Can be set to <span class="docutils literal">None</span>.</p>
 <p>Example:</p>
-<pre class="code yaml literal-block"><code><span class="pygments-nt">wordWrap</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">None</span>
-</code></pre>
+<pre class="code yaml literal-block"><code><span class="pygments-nt">wordWrap</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">None</span><span class="pygments-w">
+</span></code></pre>
 <p><strong>border</strong> -related styles</p>
 <p>Setting and styling the border for an element. The example is from the default code block style.</p>
 <p>Example:</p>
-<pre class="code yaml literal-block"><code><span class="pygments-nt">borderColor</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">darkgray</span>
-<span class="pygments-nt">borderPadding</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">6</span>
-<span class="pygments-nt">borderWidth</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">0.5</span>
-<span class="pygments-nt">borderRadius</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">None</span>
-</code></pre>
+<pre class="code yaml literal-block"><code><span class="pygments-nt">borderColor</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">darkgray</span><span class="pygments-w">
+</span><span class="pygments-nt">borderPadding</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">6</span><span class="pygments-w">
+</span><span class="pygments-nt">borderWidth</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">0.5</span><span class="pygments-w">
+</span><span class="pygments-nt">borderRadius</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">None</span><span class="pygments-w">
+</span></code></pre>
 <p><strong>allowWidows</strong> and <strong>allowOrphans</strong></p>
 <p>These directives are passed to ReportLab if they are present. Currently only implemented for paragraph styles.</p>
 <p>Example:</p>
-<pre class="code yaml literal-block"><code><span class="pygments-nt">allowWidows</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">5</span>
-<span class="pygments-nt">allowOrphans</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">4</span>
-</code></pre>
+<pre class="code yaml literal-block"><code><span class="pygments-nt">allowWidows</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">5</span><span class="pygments-w">
+</span><span class="pygments-nt">allowOrphans</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">4</span><span class="pygments-w">
+</span></code></pre>
 <p>See also:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#widows-and-orphans">Widows and Orphans</a></p></li>
@@ -1327,14 +1379,14 @@ bodytext is 10.</p>
 <p>This sets the margins of the element. On the <span class="docutils literal">pageSetup</span> itself, you can use <span class="docutils literal"><span class="pre">margin-gutter</span></span>. That's the
 margin in the center of a two-page spread.  This value is added to the left margin of odd pages and the right margin of even pages, adding (or removing, if it's negative) space &quot;in the middle&quot; of opposing pages.  If you intend to bound a printed copy, you may need extra space there. OTOH, if you will display it on-screen on a two-page format (common in many PDF readers, nice for ebooks), a negative value may be pleasant.</p>
 <p>Example:</p>
-<pre class="code yaml literal-block"><code><span class="pygments-nt">margin-top</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">2cm</span>
-<span class="pygments-nt">margin-bottom</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">2cm</span>
-<span class="pygments-nt">margin-left</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">2cm</span>
-<span class="pygments-nt">margin-right</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">2cm</span>
-<span class="pygments-nt">margin-gutter</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">0cm</span>
-</code></pre>
+<pre class="code yaml literal-block"><code><span class="pygments-nt">margin-top</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">2cm</span><span class="pygments-w">
+</span><span class="pygments-nt">margin-bottom</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">2cm</span><span class="pygments-w">
+</span><span class="pygments-nt">margin-left</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">2cm</span><span class="pygments-w">
+</span><span class="pygments-nt">margin-right</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">2cm</span><span class="pygments-w">
+</span><span class="pygments-nt">margin-gutter</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">0cm</span><span class="pygments-w">
+</span></code></pre>
 <section id="inline-styles">
-<h4><a class="toc-backref" href="#id33"><span class="sectnum">8.2.1</span> Inline Styles</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-25" role="doc-backlink"><span class="sectnum">8.2.1 </span>Inline Styles</a></h4>
 <p>The following are the only attributes that work on styles when used for
 interpreted roles (inline styles):</p>
 <ul class="simple">
@@ -1345,7 +1397,7 @@ interpreted roles (inline styles):</p>
 </ul>
 </section>
 <section id="lists">
-<h4><a class="toc-backref" href="#id34"><span class="sectnum">8.2.2</span> Lists</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-26" role="doc-backlink"><span class="sectnum">8.2.2 </span>Lists</a></h4>
 <p>Styling lists is mostly a matter of spacing and indentation.</p>
 <p>The space before and after a list is taken from the <span class="docutils literal"><span class="pre">item-list</span></span> and
 <span class="docutils literal"><span class="pre">bullet-list</span></span> styles:</p>
@@ -1382,10 +1434,10 @@ after the last items.</p>
 </section>
 </section>
 <section id="page-layout">
-<h3><a class="toc-backref" href="#id35"><span class="sectnum">8.3</span> Page Layout</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-27" role="doc-backlink"><span class="sectnum">8.3 </span>Page Layout</a></h3>
 <p>There are some layouts available as standard stylesheets, but it is likely that you will also want to describe your own templates.</p>
 <section id="page-setup">
-<h4><a class="toc-backref" href="#id36"><span class="sectnum">8.3.1</span> Page Setup</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-28" role="doc-backlink"><span class="sectnum">8.3.1 </span>Page Setup</a></h4>
 <p>In your stylesheet, the <span class="docutils literal">pageSetup</span> element controls your page layout.</p>
 <p>Here's the default stylesheet's element:</p>
 <pre class="literal-block">pageSetup:
@@ -1412,26 +1464,26 @@ after the last items.</p>
 width/height ignored.</p>
 </section>
 <section id="page-templates">
-<h4><a class="toc-backref" href="#id37"><span class="sectnum">8.3.2</span> Page Templates</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-29" role="doc-backlink"><span class="sectnum">8.3.2 </span>Page Templates</a></h4>
 <p>By default, your document will have a single column of text covering the space
 between the margins. You can change that, though, in fact you can do so even in
 the middle of your document!</p>
-<p id="id3">To do it, you need to define <em>Page Templates</em> in your stylesheet. The default
+<p id="page-templates-1">To do it, you need to define <em>Page Templates</em> in your stylesheet. The default
 stylesheet already has three of them:</p>
-<pre class="code yaml literal-block"><code><span class="pygments-nt">pageTemplates</span><span class="pygments-p">:</span>
-  <span class="pygments-nt">coverPage</span><span class="pygments-p">:</span>
-    <span class="pygments-nt">frames</span><span class="pygments-p">:</span>
-    <span class="pygments-p-Indicator">-</span> <span class="pygments-p-Indicator">[</span><span class="pygments-nv">0cm</span><span class="pygments-p-Indicator">,</span> <span class="pygments-nv">0cm</span><span class="pygments-p-Indicator">,</span> <span class="pygments-nv">100%</span><span class="pygments-p-Indicator">,</span> <span class="pygments-nv">100%</span><span class="pygments-p-Indicator">]</span>
-    <span class="pygments-nt">showHeader</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">false</span>
-    <span class="pygments-nt">showFooter</span><span class="pygments-p">:</span> <span class="pygments-l-Scalar-Plain">false</span>
-  <span class="pygments-nt">oneColumn</span><span class="pygments-p">:</span>
-    <span class="pygments-nt">frames</span><span class="pygments-p">:</span>
-    <span class="pygments-p-Indicator">-</span> <span class="pygments-p-Indicator">[</span><span class="pygments-nv">0cm</span><span class="pygments-p-Indicator">,</span> <span class="pygments-nv">0cm</span><span class="pygments-p-Indicator">,</span> <span class="pygments-nv">100%</span><span class="pygments-p-Indicator">,</span> <span class="pygments-nv">100%</span><span class="pygments-p-Indicator">]</span>
-  <span class="pygments-nt">twoColumn</span><span class="pygments-p">:</span>
-    <span class="pygments-nt">frames</span><span class="pygments-p">:</span>
-    <span class="pygments-p-Indicator">-</span> <span class="pygments-p-Indicator">[</span><span class="pygments-nv">0cm</span><span class="pygments-p-Indicator">,</span> <span class="pygments-nv">0cm</span><span class="pygments-p-Indicator">,</span> <span class="pygments-nv">49%</span><span class="pygments-p-Indicator">,</span> <span class="pygments-nv">100%</span><span class="pygments-p-Indicator">]</span>
-    <span class="pygments-p-Indicator">-</span> <span class="pygments-p-Indicator">[</span><span class="pygments-nv">51%</span><span class="pygments-p-Indicator">,</span> <span class="pygments-nv">0cm</span><span class="pygments-p-Indicator">,</span> <span class="pygments-nv">49%</span><span class="pygments-p-Indicator">,</span> <span class="pygments-nv">100%</span><span class="pygments-p-Indicator">]</span>
-</code></pre>
+<pre class="code yaml literal-block"><code><span class="pygments-nt">pageTemplates</span><span class="pygments-p">:</span><span class="pygments-w">
+  </span><span class="pygments-nt">coverPage</span><span class="pygments-p">:</span><span class="pygments-w">
+    </span><span class="pygments-nt">frames</span><span class="pygments-p">:</span><span class="pygments-w">
+    </span><span class="pygments-p-Indicator">-</span><span class="pygments-w"> </span><span class="pygments-p-Indicator">[</span><span class="pygments-nv">0cm</span><span class="pygments-p-Indicator">,</span><span class="pygments-w"> </span><span class="pygments-nv">0cm</span><span class="pygments-p-Indicator">,</span><span class="pygments-w"> </span><span class="pygments-nv">100%</span><span class="pygments-p-Indicator">,</span><span class="pygments-w"> </span><span class="pygments-nv">100%</span><span class="pygments-p-Indicator">]</span><span class="pygments-w">
+    </span><span class="pygments-nt">showHeader</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">false</span><span class="pygments-w">
+    </span><span class="pygments-nt">showFooter</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">false</span><span class="pygments-w">
+  </span><span class="pygments-nt">oneColumn</span><span class="pygments-p">:</span><span class="pygments-w">
+    </span><span class="pygments-nt">frames</span><span class="pygments-p">:</span><span class="pygments-w">
+    </span><span class="pygments-p-Indicator">-</span><span class="pygments-w"> </span><span class="pygments-p-Indicator">[</span><span class="pygments-nv">0cm</span><span class="pygments-p-Indicator">,</span><span class="pygments-w"> </span><span class="pygments-nv">0cm</span><span class="pygments-p-Indicator">,</span><span class="pygments-w"> </span><span class="pygments-nv">100%</span><span class="pygments-p-Indicator">,</span><span class="pygments-w"> </span><span class="pygments-nv">100%</span><span class="pygments-p-Indicator">]</span><span class="pygments-w">
+  </span><span class="pygments-nt">twoColumn</span><span class="pygments-p">:</span><span class="pygments-w">
+    </span><span class="pygments-nt">frames</span><span class="pygments-p">:</span><span class="pygments-w">
+    </span><span class="pygments-p-Indicator">-</span><span class="pygments-w"> </span><span class="pygments-p-Indicator">[</span><span class="pygments-nv">0cm</span><span class="pygments-p-Indicator">,</span><span class="pygments-w"> </span><span class="pygments-nv">0cm</span><span class="pygments-p-Indicator">,</span><span class="pygments-w"> </span><span class="pygments-nv">49%</span><span class="pygments-p-Indicator">,</span><span class="pygments-w"> </span><span class="pygments-nv">100%</span><span class="pygments-p-Indicator">]</span><span class="pygments-w">
+    </span><span class="pygments-p-Indicator">-</span><span class="pygments-w"> </span><span class="pygments-p-Indicator">[</span><span class="pygments-nv">51%</span><span class="pygments-p-Indicator">,</span><span class="pygments-w"> </span><span class="pygments-nv">0cm</span><span class="pygments-p-Indicator">,</span><span class="pygments-w"> </span><span class="pygments-nv">49%</span><span class="pygments-p-Indicator">,</span><span class="pygments-w"> </span><span class="pygments-nv">100%</span><span class="pygments-p-Indicator">]</span><span class="pygments-w">
+</span></code></pre>
 <p>A page template has a name (<span class="docutils literal">oneColumn</span>, <span class="docutils literal">twoColumn</span>), some options, and a
 list of frames.  A frame is a list containing this:</p>
 <pre class="literal-block">[ left position, bottom position, width, height, left padding, bottom padding, right padding, top padding]</pre>
@@ -1453,10 +1505,10 @@ want to use, and a way to change from one to another.</p>
   firstTemplate: oneColumn</pre>
 <p>Then, to change to another template, in your document use this syntax (will
 change soon, though):</p>
-<pre class="code rst literal-block"><code><span class="pygments-p">..</span> <span class="pygments-ow">raw</span><span class="pygments-p">::</span> pdf
+<pre class="code rst literal-block"><code><span class="pygments-p">..</span> <span class="pygments-ow">raw</span><span class="pygments-p">::</span> pdf<span class="pygments-w">
 
-   PageBreak twoColumn
-</code></pre>
+</span>   PageBreak twoColumn<span class="pygments-w">
+</span></code></pre>
 <p>That will trigger a page break, and the new page will use the twoColumn
 template.</p>
 <p>You can see an example of this in the <em>Montecristo</em> folder in the source
@@ -1480,7 +1532,7 @@ option, so use with caution.</p>
 </section>
 </section>
 <section id="font-alias">
-<h3><a class="toc-backref" href="#id38"><span class="sectnum">8.4</span> Font Alias</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-30" role="doc-backlink"><span class="sectnum">8.4 </span>Font Alias</a></h3>
 <p>This is the <span class="docutils literal">fontsAlias</span> element. By default, it uses some of the standard PDF
 fonts:</p>
 <pre class="literal-block">fontsAlias:
@@ -1496,7 +1548,7 @@ use aliases.</p>
 <p>More information in the dedicated <a class="reference internal" href="#fonts">Fonts</a> section.</p>
 </section>
 <section id="widows-and-orphans">
-<h3><a class="toc-backref" href="#id39"><span class="sectnum">8.5</span> Widows and Orphans</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-31" role="doc-backlink"><span class="sectnum">8.5 </span>Widows and Orphans</a></h3>
 <dl class="simple">
 <dt><span class="docutils literal">Widow</span></dt>
 <dd><p>A paragraph-ending line that falls at the beginning of the following
@@ -1519,28 +1571,28 @@ minimum number of lines that can be left alone at the beginning of a page
 
 <span class="pygments-s">    This is a literal block.</span>
 <span class="pygments-s">
-</span>A code block:
+</span>A code block:<span class="pygments-w">
 
-<span class="pygments-p">..</span> <span class="pygments-ow">code-block</span><span class="pygments-p">::</span> <span class="pygments-k">python</span>
+</span><span class="pygments-p">..</span> <span class="pygments-ow">code-block</span><span class="pygments-p">::</span> <span class="pygments-k">python</span>
 
-    <span class="pygments-k">def</span> <span class="pygments-nf">x</span><span class="pygments-p">(</span><span class="pygments-n">y</span><span class="pygments-p">):</span>
-        <span class="pygments-nb">print</span> <span class="pygments-n">y</span><span class="pygments-o">**</span><span class="pygments-mi">2</span>
-</code></pre>
+    <span class="pygments-k">def</span> <span class="pygments-nf">x</span><span class="pygments-p">(</span><span class="pygments-n">y</span><span class="pygments-p">):</span><span class="pygments-w">
+</span>        <span class="pygments-nb">print</span> <span class="pygments-n">y</span><span class="pygments-o">**</span><span class="pygments-mi">2</span><span class="pygments-w">
+</span></code></pre>
 <p>In future versions this may extend to ordinary paragraphs.</p>
 </section>
 <section id="table-styles">
-<h3><a class="toc-backref" href="#id40"><span class="sectnum">8.6</span> Table Styles</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-32" role="doc-backlink"><span class="sectnum">8.6 </span>Table Styles</a></h3>
 <p>These are a few extra options in styles that are only used when the style is
 applied to a table. This happens in two cases:</p>
 <ol class="arabic simple">
 <li><p>You are using the class directive on a table:</p></li>
 </ol>
-<pre class="code rst literal-block"><code><span class="pygments-p">..</span> <span class="pygments-ow">class</span><span class="pygments-p">::</span> thick
+<pre class="code rst literal-block"><code><span class="pygments-p">..</span> <span class="pygments-ow">class</span><span class="pygments-p">::</span> thick<span class="pygments-w">
 
-+-------+---------+
-<span class="pygments-o">|</span>   A   |   B     |
-+-----------------+
-</code></pre>
+</span>+-------+---------+<span class="pygments-w">
+</span><span class="pygments-o">|</span>   A   |   B     |<span class="pygments-w">
+</span>+-----------------+<span class="pygments-w">
+</span></code></pre>
 <ol class="arabic simple" start="2">
 <li><p>It's a style that automatically applies to something that is <em>drawn</em> using a
 table. Currently these include:</p>
@@ -1595,7 +1647,7 @@ are auto-calculated.  A column width of null means &quot;guess&quot;.</p>
 to the restructured text source.</p>
 </dd>
 </dl>
-<div class="admonition note">
+<aside class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <span class="docutils literal">command</span> option used for table styles is not kept across stylesheets.
 For example, the default stylesheet defines endnote with this command list:</p>
@@ -1609,11 +1661,11 @@ vertical line between the endnote's columns:</p>
     [ &quot;VALIGN&quot;, [ 0, 0 ], [ -1, -1 ], &quot;TOP&quot; ],
     [ &quot;LINEAFTER&quot;, [ 0, 0 ], [ 1, -1 ], .25, &quot;black&quot; ]
 ]</pre>
-</div>
+</aside>
 </section>
 </section>
 <section id="syntax-highlighting">
-<h2><a class="toc-backref" href="#id41"><span class="sectnum">9</span> Syntax Highlighting</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-33" role="doc-backlink"><span class="sectnum">9 </span>Syntax Highlighting</a></h2>
 <p>rst2pdf adds a non-standard directive, called <span class="docutils literal"><span class="pre">code-block</span></span>, which produces
 syntax highlighted for many languages using <a class="reference external" href="http://pygments.org/">Pygments</a>.</p>
 <p>For example, if you want to include a Python fragment:</p>
@@ -1621,9 +1673,9 @@ syntax highlighted for many languages using <a class="reference external" href="
 
     def myFun(x,y):
         print x+y</pre>
-<pre class="code python literal-block"><code><span class="pygments-k">def</span> <span class="pygments-nf">myFun</span><span class="pygments-p">(</span><span class="pygments-n">x</span><span class="pygments-p">,</span><span class="pygments-n">y</span><span class="pygments-p">):</span>
-    <span class="pygments-nb">print</span> <span class="pygments-n">x</span><span class="pygments-o">+</span><span class="pygments-n">y</span>
-</code></pre>
+<pre class="code python literal-block"><code><span class="pygments-k">def</span> <span class="pygments-nf">myFun</span><span class="pygments-p">(</span><span class="pygments-n">x</span><span class="pygments-p">,</span><span class="pygments-n">y</span><span class="pygments-p">):</span><span class="pygments-w">
+</span>    <span class="pygments-nb">print</span> <span class="pygments-n">x</span><span class="pygments-o">+</span><span class="pygments-n">y</span><span class="pygments-w">
+</span></code></pre>
 <p>Notice that you need to declare the language of the fragment. Here's a list of
 the currently <a class="reference external" href="http://pygments.org/docs/lexers/">supported</a>.</p>
 <p>You can use the <span class="docutils literal">linenos</span> option to display line numbers:</p>
@@ -1634,9 +1686,9 @@ other lines. This parameter takes a space separated list of line numbers. The
 other lines are then styled with the class <span class="docutils literal">pygments_diml</span> that defaults to
 gray. For example, to highlight <span class="docutils literal">print &quot;line a&quot;</span> and <span class="docutils literal">print &quot;line b&quot;</span>:</p>
 <pre class="code python literal-block"><code><span class="pygments-diml">def</span><span class="pygments-diml"> </span><span class="pygments-diml">myFun</span><span class="pygments-diml">(</span><span class="pygments-diml">x</span><span class="pygments-diml">,</span><span class="pygments-diml">y</span><span class="pygments-diml">):</span><span class="pygments-diml">
-    </span><span class="pygments-nb">print</span> <span class="pygments-s2">&quot;line a&quot;</span>
-    <span class="pygments-nb">print</span> <span class="pygments-s2">&quot;line b&quot;</span>
-    <span class="pygments-diml">print</span><span class="pygments-diml"> </span><span class="pygments-diml">&quot;line c&quot;</span><span class="pygments-diml">
+</span>    <span class="pygments-nb">print</span> <span class="pygments-s2">&quot;line a&quot;</span><span class="pygments-w">
+</span>    <span class="pygments-nb">print</span> <span class="pygments-s2">&quot;line b&quot;</span><span class="pygments-w">
+</span><span class="pygments-diml">    </span><span class="pygments-diml">print</span><span class="pygments-diml"> </span><span class="pygments-diml">&quot;line c&quot;</span><span class="pygments-diml">
 </span></code></pre>
 <p>rst2pdf includes several stylesheets for highlighting code:</p>
 <ul class="simple">
@@ -1695,22 +1747,22 @@ to code blocks created with <span class="docutils literal">.. <span class="pre">
 <p>As rst2pdf is written in Python, let's see some examples and variations around
 Python.</p>
 <p>Python in console</p>
-<pre class="code pycon literal-block"><code><span class="pygments-gp">&gt;&gt;&gt; </span><span class="pygments-n">my_string</span><span class="pygments-o">=</span><span class="pygments-s2">&quot;python is great&quot;</span>
-<span class="pygments-gp">&gt;&gt;&gt; </span><span class="pygments-n">my_string</span><span class="pygments-o">.</span><span class="pygments-n">find</span><span class="pygments-p">(</span><span class="pygments-s1">'great'</span><span class="pygments-p">)</span>
-<span class="pygments-go">10
-</span><span class="pygments-gp">&gt;&gt;&gt; </span><span class="pygments-n">my_string</span><span class="pygments-o">.</span><span class="pygments-n">startswith</span><span class="pygments-p">(</span><span class="pygments-s1">'py'</span><span class="pygments-p">)</span>
-<span class="pygments-go">True
+<pre class="code pycon literal-block"><code><span class="pygments-gp">&gt;&gt;&gt; </span><span class="pygments-n">my_string</span><span class="pygments-o">=</span><span class="pygments-s2">&quot;python is great&quot;</span><span class="pygments-w">
+</span><span class="pygments-gp">&gt;&gt;&gt; </span><span class="pygments-n">my_string</span><span class="pygments-o">.</span><span class="pygments-n">find</span><span class="pygments-p">(</span><span class="pygments-s1">'great'</span><span class="pygments-p">)</span><span class="pygments-w">
+</span><span class="pygments-go">10
+</span><span class="pygments-gp">&gt;&gt;&gt; </span><span class="pygments-n">my_string</span><span class="pygments-o">.</span><span class="pygments-n">startswith</span><span class="pygments-p">(</span><span class="pygments-s1">'py'</span><span class="pygments-p">)</span><span class="pygments-w">
+</span><span class="pygments-go">True
 </span></code></pre>
 <p>Python traceback</p>
 <pre class="code pytb literal-block"><code><span class="pygments-gt">Traceback (most recent call last):
-</span>    <span class="pygments-n">File</span> <span class="pygments-s2">&quot;error.py&quot;</span><span class="pygments-p">,</span> <span class="pygments-n">line</span> <span class="pygments-mi">9</span><span class="pygments-p">,</span> <span class="pygments-ow">in</span> <span class="pygments-err">?</span>
-    <span class="pygments-n">main</span><span class="pygments-p">()</span>
-    <span class="pygments-n">File</span> <span class="pygments-s2">&quot;error.py&quot;</span><span class="pygments-p">,</span> <span class="pygments-n">line</span> <span class="pygments-mi">6</span><span class="pygments-p">,</span> <span class="pygments-ow">in</span> <span class="pygments-n">main</span>
-    <span class="pygments-nb">print</span> <span class="pygments-n">call_error</span><span class="pygments-p">()</span>
-    <span class="pygments-n">File</span> <span class="pygments-s2">&quot;error.py&quot;</span><span class="pygments-p">,</span> <span class="pygments-n">line</span> <span class="pygments-mi">2</span><span class="pygments-p">,</span> <span class="pygments-ow">in</span> <span class="pygments-n">call_error</span>
-    <span class="pygments-n">r</span> <span class="pygments-o">=</span> <span class="pygments-mi">1</span><span class="pygments-o">/</span><span class="pygments-mi">0</span>
-<span class="pygments-gr">ZeroDivisionError</span>: <span class="pygments-n">integer division or modulo by zero</span>
-<span class="pygments-x">Exit 1
+</span><span class="pygments-w">    </span><span class="pygments-n">File</span> <span class="pygments-s2">&quot;error.py&quot;</span><span class="pygments-p">,</span> <span class="pygments-n">line</span> <span class="pygments-mi">9</span><span class="pygments-p">,</span> <span class="pygments-ow">in</span> <span class="pygments-err">?</span><span class="pygments-w">
+    </span><span class="pygments-n">main</span><span class="pygments-p">()</span><span class="pygments-w">
+    </span><span class="pygments-n">File</span> <span class="pygments-s2">&quot;error.py&quot;</span><span class="pygments-p">,</span> <span class="pygments-n">line</span> <span class="pygments-mi">6</span><span class="pygments-p">,</span> <span class="pygments-ow">in</span> <span class="pygments-n">main</span><span class="pygments-w">
+    </span><span class="pygments-nb">print</span> <span class="pygments-n">call_error</span><span class="pygments-p">()</span><span class="pygments-w">
+    </span><span class="pygments-n">File</span> <span class="pygments-s2">&quot;error.py&quot;</span><span class="pygments-p">,</span> <span class="pygments-n">line</span> <span class="pygments-mi">2</span><span class="pygments-p">,</span> <span class="pygments-ow">in</span> <span class="pygments-n">call_error</span><span class="pygments-w">
+    </span><span class="pygments-n">r</span> <span class="pygments-o">=</span> <span class="pygments-mi">1</span><span class="pygments-o">/</span><span class="pygments-mi">0</span><span class="pygments-w">
+</span><span class="pygments-gr">ZeroDivisionError</span>: <span class="pygments-n">integer division or modulo by zero</span><span class="pygments-w">
+</span><span class="pygments-x">Exit 1
 </span></code></pre>
 <p>The code-block directive supports many options, that mirror Pygments':</p>
 <pre class="literal-block">FIXME: fix this to really explain them all. This is a placeholder.
@@ -1749,14 +1801,14 @@ Python.</p>
                             'disabledmodules': string_list,</pre>
 <p>You can find more information about them in the pygments manual.</p>
 <section id="file-inclusion">
-<h3><a class="toc-backref" href="#id42"><span class="sectnum">9.1</span> File inclusion</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-34" role="doc-backlink"><span class="sectnum">9.1 </span>File inclusion</a></h3>
 <p>You can use the <span class="docutils literal"><span class="pre">code-block</span></span> directive with an external file, using the
 <span class="docutils literal">:include:</span> option:</p>
 <pre class="literal-block">.. code-block:: python
    :include: setup.py</pre>
 <p>This will give a warning if <span class="docutils literal">setup.py</span> doesn't exist or can't be opened.</p>
 <section id="include-with-boundaries">
-<h4><a class="toc-backref" href="#id43"><span class="sectnum">9.1.1</span> Include with Boundaries</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-35" role="doc-backlink"><span class="sectnum">9.1.1 </span>Include with Boundaries</a></h4>
 <p>You can add selectors to limit the inclusion to a portion of the file.
 The options are:</p>
 <dl class="simple">
@@ -1781,19 +1833,19 @@ The options are:</p>
    :start-at: class Separation(Flowable):
    :end-before: class Reference(Flowable):</pre>
 <p>This command gives</p>
-<pre class="code python literal-block"><code><span class="pygments-k">class</span> <span class="pygments-nc">Separation</span><span class="pygments-p">(</span><span class="pygments-n">Flowable</span><span class="pygments-p">):</span>
-    <span class="pygments-sd">&quot;&quot;&quot;A simple &lt;hr&gt;-like flowable&quot;&quot;&quot;</span>
+<pre class="code python literal-block"><code><span class="pygments-k">class</span> <span class="pygments-nc">Separation</span><span class="pygments-p">(</span><span class="pygments-n">Flowable</span><span class="pygments-p">):</span><span class="pygments-w">
+    </span><span class="pygments-sd">&quot;&quot;&quot;A simple &lt;hr&gt;-like flowable&quot;&quot;&quot;</span><span class="pygments-w">
 
-    <span class="pygments-k">def</span> <span class="pygments-nf">wrap</span><span class="pygments-p">(</span><span class="pygments-bp">self</span><span class="pygments-p">,</span> <span class="pygments-n">w</span><span class="pygments-p">,</span> <span class="pygments-n">h</span><span class="pygments-p">):</span>
-        <span class="pygments-bp">self</span><span class="pygments-o">.</span><span class="pygments-n">w</span> <span class="pygments-o">=</span> <span class="pygments-n">w</span>
-        <span class="pygments-k">return</span> <span class="pygments-n">w</span><span class="pygments-p">,</span> <span class="pygments-mi">1</span> <span class="pygments-o">*</span> <span class="pygments-n">cm</span>
+</span>    <span class="pygments-k">def</span> <span class="pygments-nf">wrap</span><span class="pygments-p">(</span><span class="pygments-bp">self</span><span class="pygments-p">,</span> <span class="pygments-n">w</span><span class="pygments-p">,</span> <span class="pygments-n">h</span><span class="pygments-p">):</span><span class="pygments-w">
+</span>        <span class="pygments-bp">self</span><span class="pygments-o">.</span><span class="pygments-n">w</span> <span class="pygments-o">=</span> <span class="pygments-n">w</span><span class="pygments-w">
+</span>        <span class="pygments-k">return</span> <span class="pygments-n">w</span><span class="pygments-p">,</span> <span class="pygments-mi">1</span> <span class="pygments-o">*</span> <span class="pygments-n">cm</span><span class="pygments-w">
 
-    <span class="pygments-k">def</span> <span class="pygments-nf">draw</span><span class="pygments-p">(</span><span class="pygments-bp">self</span><span class="pygments-p">):</span>
-        <span class="pygments-bp">self</span><span class="pygments-o">.</span><span class="pygments-n">canv</span><span class="pygments-o">.</span><span class="pygments-n">line</span><span class="pygments-p">(</span><span class="pygments-mi">0</span><span class="pygments-p">,</span> <span class="pygments-mf">0.5</span> <span class="pygments-o">*</span> <span class="pygments-n">cm</span><span class="pygments-p">,</span> <span class="pygments-bp">self</span><span class="pygments-o">.</span><span class="pygments-n">w</span><span class="pygments-p">,</span> <span class="pygments-mf">0.5</span> <span class="pygments-o">*</span> <span class="pygments-n">cm</span><span class="pygments-p">)</span>
-</code></pre>
+</span>    <span class="pygments-k">def</span> <span class="pygments-nf">draw</span><span class="pygments-p">(</span><span class="pygments-bp">self</span><span class="pygments-p">):</span><span class="pygments-w">
+</span>        <span class="pygments-bp">self</span><span class="pygments-o">.</span><span class="pygments-n">canv</span><span class="pygments-o">.</span><span class="pygments-n">line</span><span class="pygments-p">(</span><span class="pygments-mi">0</span><span class="pygments-p">,</span> <span class="pygments-mf">0.5</span> <span class="pygments-o">*</span> <span class="pygments-n">cm</span><span class="pygments-p">,</span> <span class="pygments-bp">self</span><span class="pygments-o">.</span><span class="pygments-n">w</span><span class="pygments-p">,</span> <span class="pygments-mf">0.5</span> <span class="pygments-o">*</span> <span class="pygments-n">cm</span><span class="pygments-p">)</span><span class="pygments-w">
+</span></code></pre>
 </section>
 <section id="options">
-<h4><a class="toc-backref" href="#id44"><span class="sectnum">9.1.2</span> Options</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-36" role="doc-backlink"><span class="sectnum">9.1.2 </span>Options</a></h4>
 <dl class="simple">
 <dt><span class="docutils literal">linenos</span></dt>
 <dd><p>Display line numbers along the code</p>
@@ -1808,10 +1860,10 @@ instead of 1.</p>
 </section>
 </section>
 <section id="fonts">
-<h2><a class="toc-backref" href="#id45"><span class="sectnum">10</span> Fonts</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-37" role="doc-backlink"><span class="sectnum">10 </span>Fonts</a></h2>
 <p>Working with fonts on many different platforms is a challenge. Here you will find the best information we have, but questions and updates are always welcome.</p>
 <section id="standard-pdf-fonts">
-<h3><a class="toc-backref" href="#id46"><span class="sectnum">10.1</span> Standard PDF Fonts</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-38" role="doc-backlink"><span class="sectnum">10.1 </span>Standard PDF Fonts</a></h3>
 <p>The standard PDF fonts are always available, here is the list:</p>
 <ul class="simple">
 <li><p><span class="docutils literal">Times_Roman</span></p></li>
@@ -1831,19 +1883,19 @@ instead of 1.</p>
 </ul>
 </section>
 <section id="font-embedding">
-<h3><a class="toc-backref" href="#id47"><span class="sectnum">10.2</span> Font Embedding</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-39" role="doc-backlink"><span class="sectnum">10.2 </span>Font Embedding</a></h3>
 <p>There are thousands of excellent free True Type and Type 1 fonts available on
 the web, and you can use many of them in your documents by declaring them in
 your stylesheet.</p>
 <section id="the-easy-way">
-<h4><a class="toc-backref" href="#id48"><span class="sectnum">10.2.1</span> The Easy Way</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-40" role="doc-backlink"><span class="sectnum">10.2.1 </span>The Easy Way</a></h4>
 <p>Just use the font name in your style. For example, you can define this:</p>
 <pre class="literal-block">normal:
   fontName: fonty</pre>
 <p>And then it <em>may</em> work.</p>
 <p>What would need to happen for this to work?</p>
 <section id="fonty-is-a-true-type-font">
-<h5><a class="toc-backref" href="#id49"><span class="sectnum">10.2.1.1</span> Fonty is a True Type font:</a></h5>
+<h5><a class="toc-backref" href="#toc-entry-41" role="doc-backlink"><span class="sectnum">10.2.1.1 </span>Fonty is a True Type font:</a></h5>
 <ol class="arabic">
 <li><p>You need to have it installed in your system, and have the fc-match
 utility available (it's part of <a class="reference external" href="http://www.freedesktop.org/fontconfig/">fontconfig</a>). You can test if it is
@@ -1864,7 +1916,7 @@ its variants by the aliases <span class="docutils literal"><span class="pre">Nam
 <span class="docutils literal"><span class="pre">Name-BoldOblique</span></span>.</p>
 </section>
 <section id="fonty-is-a-type-1-font">
-<h5><a class="toc-backref" href="#id50"><span class="sectnum">10.2.1.2</span> Fonty is a Type 1 font:</a></h5>
+<h5><a class="toc-backref" href="#toc-entry-42" role="doc-backlink"><span class="sectnum">10.2.1.2 </span>Fonty is a Type 1 font:</a></h5>
 <p>You need it installed, and the folders where its font metric (<span class="docutils literal">.afm</span>) and
 binary (<span class="docutils literal">.pfb</span>) files are located need to be in your font fath.</p>
 <p>For example, the &quot;URW Palladio L&quot; font that came with my installation of TeX
@@ -1895,7 +1947,7 @@ its variants by the aliases Name-Oblique, Name-Bold, Name-BoldOblique.</p>
 </section>
 </section>
 <section id="the-harder-way-true-type">
-<h4><a class="toc-backref" href="#id51"><span class="sectnum">10.2.2</span> The Harder Way (True Type)</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-43" role="doc-backlink"><span class="sectnum">10.2.2 </span>The Harder Way (True Type)</a></h4>
 <p>The stylesheet has an element is <span class="docutils literal">embeddedFonts</span> that handles embedding True
 Type fonts in your PDF. Usually, it's empty, because with the default styles you
 are not using any font beyond the standard PDF fonts:</p>
@@ -1944,9 +1996,9 @@ current folder. You can make it search another folder by passing the
 </section>
 </section>
 <section id="raw-directive">
-<h2><a class="toc-backref" href="#id52"><span class="sectnum">11</span> Raw Directive</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-44" role="doc-backlink"><span class="sectnum">11 </span>Raw Directive</a></h2>
 <section id="raw-pdf">
-<h3><a class="toc-backref" href="#id53"><span class="sectnum">11.1</span> Raw PDF</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-45" role="doc-backlink"><span class="sectnum">11.1 </span>Raw PDF</a></h3>
 <p>rst2pdf has a very limited mechanism to pass commands to reportlab, the PDF
 generation library.  You can use the raw directive to insert pagebreaks and
 spacers (other reportlab flowables may be added if there's interest), and set
@@ -1970,7 +2022,7 @@ And another paragraph.</pre>
 is the same thing in all cases.</p>
 </section>
 <section id="page-counters">
-<h3><a class="toc-backref" href="#id54"><span class="sectnum">11.2</span> Page Counters</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-46" role="doc-backlink"><span class="sectnum">11.2 </span>Page Counters</a></h3>
 <p>In some documents, you may not want your page counter to start in the first
 page.</p>
 <p>For example, if the first pages are a coverpage and a table of contents, you
@@ -2002,13 +2054,13 @@ the page counter to that number.</p>
 </ul>
 </dd>
 </dl>
-<div class="admonition note">
+<aside class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Page counter changes take effect on the <strong>current</strong> page.</p>
-</div>
+</aside>
 </section>
 <section id="page-breaks">
-<h3><a class="toc-backref" href="#id55"><span class="sectnum">11.3</span> Page Breaks</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-47" role="doc-backlink"><span class="sectnum">11.3 </span>Page Breaks</a></h3>
 <p>There are three kinds of page breaks:</p>
 <dl class="simple">
 <dt><span class="docutils literal">PageBreak</span></dt>
@@ -2030,7 +2082,7 @@ setting the background image for this page and how to fit it (One of scale, scal
 <pre class="literal-block">PageBreak background=images/background.jpg fit-background-mode=scale</pre>
 </section>
 <section id="frame-breaks">
-<h3><a class="toc-backref" href="#id56"><span class="sectnum">11.4</span> Frame Breaks</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-48" role="doc-backlink"><span class="sectnum">11.4 </span>Frame Breaks</a></h3>
 <p>If you want to jump to the next frame in the page (or the next page if the
 current frame is the last), you can use the <span class="docutils literal">FrameBreak</span> command. It takes an
 optional height in points, and then it only breaks the frame if there is less
@@ -2045,7 +2097,7 @@ This paragraph is so important that I don't want it at the very bottom of
 the page...</pre>
 </section>
 <section id="page-transitions">
-<h3><a class="toc-backref" href="#id57"><span class="sectnum">11.5</span> Page Transitions</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-49" role="doc-backlink"><span class="sectnum">11.5 </span>Page Transitions</a></h3>
 <p>Page transitions are effects used when you change pages in <em>Presentation</em> or
 <em>Full Screen</em> mode (depends on the viewer).  You can use it when creating a
 presentation using PDF files.</p>
@@ -2088,7 +2140,7 @@ next</em> so the natural thing is to use it before a <span class="docutils liter
    PageBreak</pre>
 </section>
 <section id="text-annotations">
-<h3><a class="toc-backref" href="#id58"><span class="sectnum">11.6</span> Text Annotations</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-50" role="doc-backlink"><span class="sectnum">11.6 </span>Text Annotations</a></h3>
 <p>Text annotations are meta notes added to a page.</p>
 <p>The syntax is this:</p>
 <pre class="literal-block">.. raw:: pdf
@@ -2097,33 +2149,33 @@ next</em> so the natural thing is to use it before a <span class="docutils liter
 <p>The optional position is a set of 4 numbers for <span class="docutils literal">x_begin</span>, <span class="docutils literal">y_begin`, ``x_end</span> and <span class="docutils literal">y_end</span></p>
 </section>
 <section id="raw-html">
-<h3><a class="toc-backref" href="#id59"><span class="sectnum">11.7</span> Raw HTML</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-51" role="doc-backlink"><span class="sectnum">11.7 </span>Raw HTML</a></h3>
 <p>If you have a document that contains raw HTML, and have <span class="docutils literal">xhtml2pdf</span> installed,
 <span class="docutils literal">rst2pdf</span> will try to render that HTML inside your document. To enable this,
 use the <span class="docutils literal"><span class="pre">--raw-html</span></span> command line option.</p>
 </section>
 </section>
 <section id="the-counter-role">
-<h2><a class="toc-backref" href="#id60"><span class="sectnum">12</span> The counter role</a></h2>
-<div class="admonition note">
+<h2><a class="toc-backref" href="#toc-entry-52" role="doc-backlink"><span class="sectnum">12 </span>The counter role</a></h2>
+<aside class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The counter role only works in PDF, if you're reading the HTML version of
 the manual then this section is broken. Sorry :/</p>
-</div>
+</aside>
 <p>This is a nonstandard interpreted text role, which means it will only work with
 <span class="docutils literal">rst2pdf</span>. It implements an unlimited number of counters you can use in your
 text.  For example, you could use it to have numbered figures, or numbered
 tables.</p>
 <p>The syntax is this:</p>
-<pre class="code rst literal-block"><code>Start a counter called seq1 that starts from 1: <span class="pygments-na">:counter:</span><span class="pygments-nv">`seq1`</span>
-Now this should print 2: <span class="pygments-na">:counter:</span><span class="pygments-nv">`seq1`</span>
+<pre class="code rst literal-block"><code>Start a counter called seq1 that starts from 1: <span class="pygments-na">:counter:</span><span class="pygments-nv">`seq1`</span><span class="pygments-w">
+</span>Now this should print 2: <span class="pygments-na">:counter:</span><span class="pygments-nv">`seq1`</span><span class="pygments-w">
 
-You can start counters from any number (this prints 12): <span class="pygments-na">:counter:</span><span class="pygments-nv">`seq2:12`</span>
+</span>You can start counters from any number (this prints 12): <span class="pygments-na">:counter:</span><span class="pygments-nv">`seq2:12`</span><span class="pygments-w">
 
-And have any number of counters with any name: <span class="pygments-na">:counter:</span><span class="pygments-nv">`figures`</span>
+</span>And have any number of counters with any name: <span class="pygments-na">:counter:</span><span class="pygments-nv">`figures`</span><span class="pygments-w">
 
-So <span class="pygments-s">``#seq1-2``</span> should link to <span class="pygments-s">`the number 2 above </span><span class="pygments-si">&lt;#seq1-2&gt;</span><span class="pygments-s">`_</span>
-</code></pre>
+</span>So <span class="pygments-s">``#seq1-2``</span> should link to <span class="pygments-s">`the number 2 above </span><span class="pygments-si">&lt;#seq1-2&gt;</span><span class="pygments-s">`_</span><span class="pygments-w">
+</span></code></pre>
 <p>The output is:</p>
 <p>Start a counter called seq1 that starts from 1:  Now this should
 print 2: </p>
@@ -2134,24 +2186,24 @@ print 2: </p>
 <p>So <span class="docutils literal"><span class="pre">#seq1-2</span></span> should link to <a class="reference external" href="#seq1-2">the number 2 above</a></p>
 </section>
 <section id="the-version-revision-roles">
-<h2><a class="toc-backref" href="#id61"><span class="sectnum">13</span> The version, revision roles</a></h2>
-<div class="admonition note">
+<h2><a class="toc-backref" href="#toc-entry-53" role="doc-backlink"><span class="sectnum">13 </span>The version, revision roles</a></h2>
+<aside class="admonition note">
 <p class="admonition-title">Note</p>
 <p>These are non-standard roles, which means they will only work with rst2pdf
 and not with rst2html or any other docutils tools.</p>
-</div>
+</aside>
 <p>The <span class="docutils literal">version</span> and <span class="docutils literal">revision</span> roles can be used to get the version and
 revision of an installed Python package. For example:</p>
-<pre class="code rst literal-block"><code>Welcome to rst2pdf <span class="pygments-na">:version:</span><span class="pygments-nv">`rst2pdf`</span> (<span class="pygments-na">:revision:</span><span class="pygments-nv">`rst2pdf`</span>)!
-</code></pre>
-<div class="admonition important">
+<pre class="code rst literal-block"><code>Welcome to rst2pdf <span class="pygments-na">:version:</span><span class="pygments-nv">`rst2pdf`</span> (<span class="pygments-na">:revision:</span><span class="pygments-nv">`rst2pdf`</span>)!<span class="pygments-w">
+</span></code></pre>
+<aside class="admonition important">
 <p class="admonition-title">Important</p>
 <p>The package in question must be installed in the same environment that you
 are running rst2pdf in.</p>
-</div>
+</aside>
 </section>
 <section id="the-oddeven-directive">
-<h2><a class="toc-backref" href="#id62"><span class="sectnum">14</span> The oddeven directive</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-54" role="doc-backlink"><span class="sectnum">14 </span>The oddeven directive</a></h2>
 <p>This is a nonstandard directive, which means it will only work with rst2pdf, and
 not with rst2html or any other docutils tool.</p>
 <p>The contents of oddeven should consist of <strong>exactly</strong> two things (in this case,
@@ -2159,17 +2211,17 @@ two paragraphs). The first will be used on odd pages, and the second one on even
 pages.</p>
 <p>If you want to use more complex content, you should wrap it with containers,
 like in this example:</p>
-<pre class="code rst literal-block"><code><span class="pygments-p">..</span> <span class="pygments-ow">oddeven</span><span class="pygments-p">::</span>
+<pre class="code rst literal-block"><code><span class="pygments-p">..</span> <span class="pygments-ow">oddeven</span><span class="pygments-p">::</span><span class="pygments-w">
 
-<span class="pygments-p">    ..</span> <span class="pygments-ow">container</span><span class="pygments-p">::</span>
+</span><span class="pygments-p">    ..</span> <span class="pygments-ow">container</span><span class="pygments-p">::</span><span class="pygments-w">
 
-        This will appear on odd pages.
+</span>        This will appear on odd pages.<span class="pygments-w">
 
-        Both paragraphs in the container are for odd pages.
+</span>        Both paragraphs in the container are for odd pages.<span class="pygments-w">
 
-    This will appear on even pages. It's a single paragraph, so no need for
-    containers.
-</code></pre>
+</span>    This will appear on even pages. It's a single paragraph, so no need for<span class="pygments-w">
+</span>    containers.<span class="pygments-w">
+</span></code></pre>
 <p>This directive has several limitations.</p>
 <ul class="simple">
 <li><p>I intentionally have disabled splitting into pages for this, because I have
@@ -2183,7 +2235,7 @@ file containing this, it will not do what you want.</p></li>
 </ul>
 </section>
 <section id="mathematics">
-<h2><a class="toc-backref" href="#id63"><span class="sectnum">15</span> Mathematics</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-55" role="doc-backlink"><span class="sectnum">15 </span>Mathematics</a></h2>
 <p>If you have <a class="reference external" href="http://matplotlib.sf.net">Matplotlib</a> installed, rst2pdf supports a math role and a math
 directive. You can use them to insert formulae and mathematical notation in your
 documents using a subset of LaTeX syntax, but doesn't require you have LaTeX
@@ -2215,7 +2267,7 @@ chapter in &quot;The Not So Short Introduction to LaTeX 2e&quot; at <a class="re
 display form is similar to the math directive.</p>
 </section>
 <section id="hyphenation">
-<h2><a class="toc-backref" href="#id64"><span class="sectnum">16</span> Hyphenation</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-56" role="doc-backlink"><span class="sectnum">16 </span>Hyphenation</a></h2>
 <p>If you want good looking documents, you want to enable hyphenation.</p>
 <p>To do it, you first need to install the <span class="docutils literal">pyphen</span> python module.</p>
 <p>Then, you need to specify the language in each style that you want hyphenation
@@ -2248,7 +2300,7 @@ en Ramos Mejía; la enciclopedia falazmente se llama *The Anglo-American Cyclopa
 from its parent, you can do so by setting <span class="docutils literal">hyphenationLang</span> to <span class="docutils literal">0</span>.</p>
 </section>
 <section id="smart-quotes">
-<h2><a class="toc-backref" href="#id65"><span class="sectnum">17</span> Smart Quotes</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-57" role="doc-backlink"><span class="sectnum">17 </span>Smart Quotes</a></h2>
 <p>Quoted from the <a class="reference external" href="http://web.chad.org/projects/smartypants.py/">smartypants</a> documentation:</p>
 <blockquote>
 <p>This feature can perform the following transformations:</p>
@@ -2291,7 +2343,7 @@ for en-dashes.</p>
 regular paragraphs, titles, headers, footers and block quotes.</p>
 </section>
 <section id="sphinx">
-<h2><a class="toc-backref" href="#id66"><span class="sectnum">18</span> Sphinx</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-58" role="doc-backlink"><span class="sectnum">18 </span>Sphinx</a></h2>
 <p><a class="reference external" href="http://sphinx.pocoo.org">Sphinx</a> is a very popular tool. This is the description from its website:</p>
 <blockquote>
 <p>Sphinx is a tool that makes it easy to create intelligent and beautiful
@@ -2414,11 +2466,11 @@ pdf_smartquotes = 0</pre>
 <li><p>(Optional) Modify your <span class="docutils literal">Makefile</span> or <span class="docutils literal">make.bat</span> file</p>
 <blockquote>
 <p>For <span class="docutils literal">Makefile</span> (on *nix systems)</p>
-<pre class="code makefile literal-block"><code><span class="pygments-nf">pdf</span><span class="pygments-o">:</span>
-    <span class="pygments-k">$(</span>SPHINXBUILD<span class="pygments-k">)</span> -b pdf <span class="pygments-k">$(</span>ALLSPHINXOPTS<span class="pygments-k">)</span> _build/pdf
-    &#64;echo
-    &#64;echo <span class="pygments-s2">&quot;Build finished. The PDF files are in _build/pdf.&quot;</span>
-</code></pre>
+<pre class="code makefile literal-block"><code><span class="pygments-nf">pdf</span><span class="pygments-o">:</span><span class="pygments-w">
+    </span><span class="pygments-k">$(</span>SPHINXBUILD<span class="pygments-k">)</span><span class="pygments-w"> </span>-b<span class="pygments-w"> </span>pdf<span class="pygments-w"> </span><span class="pygments-k">$(</span>ALLSPHINXOPTS<span class="pygments-k">)</span><span class="pygments-w"> </span>_build/pdf<span class="pygments-w">
+    </span>&#64;echo<span class="pygments-w">
+    </span>&#64;echo<span class="pygments-w"> </span><span class="pygments-s2">&quot;Build finished. The PDF files are in _build/pdf.&quot;</span><span class="pygments-w">
+</span></code></pre>
 <p>For <span class="docutils literal">make.bat</span> (on Windows):</p>
 <pre class="code bat literal-block"><code><span class="pygments-k">if</span> <span class="pygments-s2">&quot;</span><span class="pygments-nv">%1</span><span class="pygments-s2">&quot;</span> <span class="pygments-o">==</span> <span class="pygments-s2">&quot;pdf&quot;</span> <span class="pygments-p">(</span>
     <span class="pygments-nv">%SPHINXBUILD%</span> -b pdf <span class="pygments-nv">%ALLSPHINXOPTS%</span> <span class="pygments-nv">%BUILDDIR%</span>/pdf
@@ -2434,15 +2486,15 @@ pdf_smartquotes = 0</pre>
 did it before.</p>
 </section>
 <section id="extensions">
-<h2><a class="toc-backref" href="#id67"><span class="sectnum">19</span> Extensions</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-59" role="doc-backlink"><span class="sectnum">19 </span>Extensions</a></h2>
 <p>rst2pdf can get new features from <em>extensions</em>. Extensions are python modules
 that can be enabled with the <span class="docutils literal"><span class="pre">-e</span></span> option.</p>
 <p>Several are included with rst2pdf.</p>
 <section id="preprocess-e-preprocess">
-<h3><a class="toc-backref" href="#id68"><span class="sectnum">19.1</span> Preprocess (<span class="docutils literal"><span class="pre">-e</span> preprocess</span>)</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-60" role="doc-backlink"><span class="sectnum">19.1 </span>Preprocess (<span class="docutils literal"><span class="pre">-e</span> preprocess</span>)</a></h3>
 <p>preprocess is a rst2pdf extension module (invoked by <span class="docutils literal"><span class="pre">-e</span> preprocess</span>
 on the rst2pdf command line).</p>
-<p>There is a testcase for this file at rst2pdf/tests/test_preprocess.txt</p>
+<p>There is a testcase for this file at tests/test_preprocess.txt</p>
 <p>This preprocesses the source text file before handing it to docutils.</p>
 <p>This module serves two purposes:</p>
 <ol class="arabic simple">
@@ -2522,7 +2574,7 @@ in the original source, so debugging could be difficult if the
 file were automatically removed.</p>
 </section>
 <section id="dotted-toc-e-dotted-toc">
-<h3><a class="toc-backref" href="#id69"><span class="sectnum">19.2</span> Dotted_TOC (<span class="docutils literal"><span class="pre">-e</span> dotted_toc</span>)</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-61" role="doc-backlink"><span class="sectnum">19.2 </span>Dotted_TOC (<span class="docutils literal"><span class="pre">-e</span> dotted_toc</span>)</a></h3>
 <!-- NOTE:
 
 THIS IS A HUGE HACK HACK HACK -->
@@ -2549,27 +2601,27 @@ extremely easy to generate a unique name.</p></li>
 </section>
 </section>
 <section id="developers">
-<h2><a class="toc-backref" href="#id70"><span class="sectnum">20</span> Developers</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-62" role="doc-backlink"><span class="sectnum">20 </span>Developers</a></h2>
 <section id="guidelines">
-<h3><a class="toc-backref" href="#id71"><span class="sectnum">20.1</span> Guidelines</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-63" role="doc-backlink"><span class="sectnum">20.1 </span>Guidelines</a></h3>
 <p>If you want to do something inside rst2pdf, you are welcome! The process looks something like this:</p>
 <ul>
 <li><p>Create an Issue for the task at <a class="reference external" href="https://github.com/rst2pdf/rst2pdf/issues">https://github.com/rst2pdf/rst2pdf/issues</a></p></li>
 <li><p>If you intend to fix a bug:</p>
 <ul>
 <li><p>Create a <strong>minimal</strong> test case that shows the bug.</p></li>
-<li><p>Put it inside <span class="docutils literal">rst2pdf/tests/input</span> like the others:</p></li>
+<li><p>Put it inside <span class="docutils literal">tests/input</span> like the others:</p></li>
 <li><p>Fix the bug</p>
 <p>During this process, you can run the individual test case to quickly
 iterate. For example:</p>
-<pre class="literal-block">pytest rst2pdf/tests/input/test_issue_NNN.txt</pre>
+<pre class="literal-block">pytest tests/input/test_issue_NNN.txt</pre>
 <p>You may also wish to check the logs and output:</p>
-<pre class="literal-block">less rst2pdf/tests/output/test_issue_NNN.log
-xdg-open rst2pdf/tests/output/test_issue_NNN.pdf  # or 'open' on MacOS</pre>
+<pre class="literal-block">less tests/output/test_issue_NNN.log
+xdg-open tests/output/test_issue_NNN.pdf  # or 'open' on MacOS</pre>
 </li>
 <li><p>Once resolved, copy the generated output PDF, if any, to
-<span class="docutils literal">rst2pdf/tests/reference</span> and commit this along with the files in
-<span class="docutils literal">rst2pdf/tests/input</span>.</p></li>
+<span class="docutils literal">tests/reference</span> and commit this along with the files in
+<span class="docutils literal">tests/input</span>.</p></li>
 <li><p>Submit a pull request.</p></li>
 </ul>
 </li>
@@ -2582,7 +2634,7 @@ link it to the manual like the others.</p></li>
 </ul>
 </section>
 <section id="git-config">
-<h3><a class="toc-backref" href="#id72"><span class="sectnum">20.2</span> Git config</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-64" role="doc-backlink"><span class="sectnum">20.2 </span>Git config</a></h3>
 <p>After the mass-reformatting in PR 877, it is helpful to ignore the relevant
 commits that simply reformatted the code when using git blame.</p>
 <p>The <span class="docutils literal"><span class="pre">..git-blame-ignore-revs</span></span> file contains the list of commits to ignore
@@ -2590,7 +2642,7 @@ and you can use this git config line to make <span class="docutils literal">git 
 <pre class="literal-block">git config blame.ignoreRevsFile .git-blame-ignore-revs</pre>
 </section>
 <section id="pre-commit">
-<h3><a class="toc-backref" href="#id73"><span class="sectnum">20.3</span> Pre-commit</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-65" role="doc-backlink"><span class="sectnum">20.3 </span>Pre-commit</a></h3>
 <p><em>rst2pdf</em> uses the <a class="reference external" href="https://pre-commit.com/">pre-commit</a> framework to automate various style checkers.
 This must be enabled locally. You can install this using <em>pip</em> or your local
 package manager. For example, to install using <em>pip</em>:</p>
@@ -2601,21 +2653,21 @@ package manager. For example, to install using <em>pip</em>:</p>
 clear your cache before further investigation.</p>
 </section>
 <section id="continuous-integration">
-<h3><a class="toc-backref" href="#id74"><span class="sectnum">20.4</span> Continuous Integration</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-66" role="doc-backlink"><span class="sectnum">20.4 </span>Continuous Integration</a></h3>
 <p>There's a Travis build that runs when we open a pull request or merge to master, it does some style checks and runs the test suite.</p>
 </section>
 <section id="running-tests">
-<h3><a class="toc-backref" href="#id75"><span class="sectnum">20.5</span> Running tests</a></h3>
-<p>The <em>rst2pdf</em> test suite generates PDFs - stored in <span class="docutils literal">rst2pdf/tests/output</span> -
+<h3><a class="toc-backref" href="#toc-entry-67" role="doc-backlink"><span class="sectnum">20.5 </span>Running tests</a></h3>
+<p>The <em>rst2pdf</em> test suite generates PDFs - stored in <span class="docutils literal">tests/output</span> -
 which are then compared against reference PDFs - stored in
-<span class="docutils literal">rst2pdf/tests/reference</span> - using the <a class="reference external" href="https://pymupdf.readthedocs.io/en/latest/">PyMuPDF</a> Python bindings for the
+<span class="docutils literal">tests/reference</span> - using the <a class="reference external" href="https://pymupdf.readthedocs.io/en/latest/">PyMuPDF</a> Python bindings for the
 <a class="reference external" href="https://mupdf.com/">MuPDF</a> library. <em>rst2pdf</em> depends on a number of different tools and
 libraries, such as <a class="reference external" href="https://www.reportlab.com/">ReportLab</a>, and the output of these can vary slightly
 between releases. The <em>PyMuPDF</em> library allows us to compare the structure
 of the PDFs, with a minor amount of fuzzing to allow for minor differences
 caused by these changes in underlying dependencies.</p>
 <section id="first-run">
-<h4><a class="toc-backref" href="#id76"><span class="sectnum">20.5.1</span> First run</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-68" role="doc-backlink"><span class="sectnum">20.5.1 </span>First run</a></h4>
 <p>To run the tests for the first time, you will need to do some setup (after
 this, you can just work on your given virtualenv each time):</p>
 <pre class="literal-block">python -m venv env
@@ -2626,35 +2678,35 @@ pip install -c requirements.txt .[tests,sphinx,hyphenation,svgsupport,aafiguresu
 pytest</pre>
 </section>
 <section id="next-runs">
-<h4><a class="toc-backref" href="#id77"><span class="sectnum">20.5.2</span> Next runs</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-69" role="doc-backlink"><span class="sectnum">20.5.2 </span>Next runs</a></h4>
 <p>To run all tests, run:</p>
 <pre class="literal-block">pytest</pre>
 <p>You can also run tests in parallel by passing the <span class="docutils literal"><span class="pre">-n</span> auto</span> flag:</p>
 <pre class="literal-block">pytest -n auto</pre>
 </section>
 <section id="running-a-single-test">
-<h4><a class="toc-backref" href="#id78"><span class="sectnum">20.5.3</span> Running a single test</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-70" role="doc-backlink"><span class="sectnum">20.5.3 </span>Running a single test</a></h4>
 <p>To run one test only, simply pass the file or directory to pytest. For example:</p>
-<pre class="literal-block">pytest rst2pdf/tests/input/sphinx-repeat-table-rows</pre>
+<pre class="literal-block">pytest tests/input/sphinx-repeat-table-rows</pre>
 <p>This will run one test and show the output.</p>
 </section>
 <section id="skipping-tests">
-<h4><a class="toc-backref" href="#id79"><span class="sectnum">20.5.4</span> Skipping tests</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-71" role="doc-backlink"><span class="sectnum">20.5.4 </span>Skipping tests</a></h4>
 <p>To skip a test, simply create a text file in the <span class="docutils literal">tests/input</span> directory
 called <span class="docutils literal"><span class="pre">[test].ignore</span></span> containing a note on why the test is skipped. This
 will mark the test as skipped when the test suite runs. This could be useful
 for inherited tests that we aren't confident of the correct output for, but
 where we don't want to delete/lose the test entirely.</p>
-<div class="admonition note">
+<aside class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Some tests require the execution of the <span class="docutils literal">dot</span> command, you should install
 the package graphviz from your packages manager.</p>
-</div>
+</aside>
 </section>
 </section>
 </section>
 <section id="licenses">
-<h2><a class="toc-backref" href="#id80"><span class="sectnum">21</span> Licenses</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-72" role="doc-backlink"><span class="sectnum">21 </span>Licenses</a></h2>
 <p>This is the license for rst2pdf:</p>
 <pre class="literal-block">Copyright (c) 2007-2020 Roberto Alsina and the contributors to the rst2pdf project
 
