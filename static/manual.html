@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta charset="utf-8" />
+<meta name="generator" content="Docutils 0.20.1: https://docutils.sourceforge.io/" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<title>How to use rst2pdf</title>
 <meta content="rst2pdf project &lt;https://rst2pdf.org&gt;; Roberto Alsina &lt;ralsina&#64;netmanagers.com.ar&gt; and the contributors to the rst2pdf project." name="authors" />
+<title>How to use rst2pdf</title>
 <style type="text/css">
 
 /*
@@ -574,20 +574,22 @@ span.boxed, span.framebox {
 <li><p><a class="reference internal" href="#developers" id="toc-entry-62"><span class="sectnum">20 </span>Developers</a></p>
 <ul class="auto-toc">
 <li><p><a class="reference internal" href="#guidelines" id="toc-entry-63"><span class="sectnum">20.1 </span>Guidelines</a></p></li>
-<li><p><a class="reference internal" href="#git-config" id="toc-entry-64"><span class="sectnum">20.2 </span>Git config</a></p></li>
-<li><p><a class="reference internal" href="#pre-commit" id="toc-entry-65"><span class="sectnum">20.3 </span>Pre-commit</a></p></li>
-<li><p><a class="reference internal" href="#continuous-integration" id="toc-entry-66"><span class="sectnum">20.4 </span>Continuous Integration</a></p></li>
-<li><p><a class="reference internal" href="#running-tests" id="toc-entry-67"><span class="sectnum">20.5 </span>Running tests</a></p>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#initial-checkout" id="toc-entry-64"><span class="sectnum">21 </span>Initial checkout</a></p>
 <ul class="auto-toc">
-<li><p><a class="reference internal" href="#first-run" id="toc-entry-68"><span class="sectnum">20.5.1 </span>First run</a></p></li>
-<li><p><a class="reference internal" href="#next-runs" id="toc-entry-69"><span class="sectnum">20.5.2 </span>Next runs</a></p></li>
-<li><p><a class="reference internal" href="#running-a-single-test" id="toc-entry-70"><span class="sectnum">20.5.3 </span>Running a single test</a></p></li>
-<li><p><a class="reference internal" href="#skipping-tests" id="toc-entry-71"><span class="sectnum">20.5.4 </span>Skipping tests</a></p></li>
+<li><p><a class="reference internal" href="#git-config" id="toc-entry-65"><span class="sectnum">21.1 </span>Git config</a></p></li>
+<li><p><a class="reference internal" href="#pre-commit" id="toc-entry-66"><span class="sectnum">21.2 </span>Pre-commit</a></p></li>
+<li><p><a class="reference internal" href="#continuous-integration" id="toc-entry-67"><span class="sectnum">21.3 </span>Continuous Integration</a></p></li>
+<li><p><a class="reference internal" href="#running-tests" id="toc-entry-68"><span class="sectnum">21.4 </span>Running tests</a></p>
+<ul class="auto-toc">
+<li><p><a class="reference internal" href="#running-a-single-test" id="toc-entry-69"><span class="sectnum">21.4.1 </span>Running a single test</a></p></li>
+<li><p><a class="reference internal" href="#skipping-tests" id="toc-entry-70"><span class="sectnum">21.4.2 </span>Skipping tests</a></p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#licenses" id="toc-entry-72"><span class="sectnum">21 </span>Licenses</a></p></li>
+<li><p><a class="reference internal" href="#licenses" id="toc-entry-71"><span class="sectnum">22 </span>Licenses</a></p></li>
 </ul>
 </nav>
 <section id="introduction">
@@ -785,7 +787,7 @@ be used multiple times.</p>
 <p>The user's file at <span class="docutils literal"><span class="pre">~/.rst2pdf/config</span></span> will have priority over the system's at
 <span class="docutils literal">/etc/rst2pdf.conf</span> <a class="footnote-reference brackets" href="#footnote-1" id="footnote-reference-1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <aside class="footnote-list brackets">
-<aside class="footnote brackets" id="footnote-1" role="note">
+<aside class="footnote brackets" id="footnote-1" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#footnote-reference-1">1</a><span class="fn-bracket">]</span></span>
 <p>The <span class="docutils literal">/etc/rst2pdf.conf</span> location makes sense for Linux and linux-like
 systems. if you are using rst2pdf in other systems, please contact me and
@@ -1238,7 +1240,7 @@ Serif (Arial)</p></li>
 <pre class="code yaml literal-block"><code><span class="pygments-nt">pageSetup</span><span class="pygments-p">:</span><span class="pygments-w">
   </span><span class="pygments-nt">size</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">A5</span><span class="pygments-w">
 </span><span class="pygments-nt">fontsAlias</span><span class="pygments-p">:</span><span class="pygments-w">
-  </span><span class="pygments-nt">stdFont</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">Times-Roman</span><span class="pygments-w">
+  </span><span class="pygments-nt">fontSerif</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">Times-Roman</span><span class="pygments-w">
 </span><span class="pygments-nt">styles</span><span class="pygments-p">:</span><span class="pygments-w">
   </span><span class="pygments-nt">normal</span><span class="pygments-p">:</span><span class="pygments-w">
     </span><span class="pygments-nt">fontSize</span><span class="pygments-p">:</span><span class="pygments-w"> </span><span class="pygments-l-Scalar-Plain">14</span><span class="pygments-w">
@@ -1536,10 +1538,10 @@ option, so use with caution.</p>
 <p>This is the <span class="docutils literal">fontsAlias</span> element. By default, it uses some of the standard PDF
 fonts:</p>
 <pre class="literal-block">fontsAlias:
-  stdFont: Helvetica
-  stdBold: Helvetica-Bold
-  stdItalic: Helvetica-Oblique
-  stdBoldItalic: Helvetica-BoldOblique
+  fontSerif: Helvetica
+  fontSerifBold: Helvetica-Bold
+  fontSerifItalic: Helvetica-Oblique
+  fontSerifBoldItalic: Helvetica-BoldOblique
   fontMono: Courier</pre>
 <p>This defines the fonts used in the styles. You can use, for example, Helvetica
 directly in a style, but if later you want to use another font all through
@@ -1952,33 +1954,33 @@ its variants by the aliases Name-Oblique, Name-Bold, Name-BoldOblique.</p>
 Type fonts in your PDF. Usually, it's empty, because with the default styles you
 are not using any font beyond the standard PDF fonts:</p>
 <pre class="literal-block">embeddedFonts: []</pre>
-<p>You can put there the name of the font, and rst2pdf will try to embed it as
-described above. Example:</p>
-<pre class="literal-block">embeddedFonts: [Tuffy]</pre>
-<p>Or you can be explicit and tell rst2pdf the files that contain each variant of
-the font.</p>
-<p>Suppose you want to use the nice public domain <a class="reference external" href="http://tulrich.com/fonts/">Tuffy font</a>, then you need to
-give the filenames of all variants:</p>
-<pre class="literal-block">embeddedFonts: [Tuffy.ttf, Tuffy_Bold.ttf, Tuffy_Italic.ttf, Tuffy_Bold_Italic.ttf]</pre>
+<p>The <cite>embeddedFonts</cite> element is a list of the font files that you want to embed
+into your PDF document. For each font, you provide the filenames of the four
+variants of the file (normal, bold, italic, bold italic).</p>
+<p>For example, suppose you want to use the nice public domain <a class="reference external" href="http://tulrich.com/fonts/">Tuffy font</a>, then
+you need to give the filenames of all variants:</p>
+<pre class="literal-block">embeddedFonts:
+  - [Tuffy.ttf, Tuffy_Bold.ttf, Tuffy_Italic.ttf, Tuffy_Bold_Italic.ttf]</pre>
 <p>This will provide your styles with fonts called <span class="docutils literal">Tuffy</span>, <span class="docutils literal">Tuffy_Bold</span> and so
 on.  They will be available with the names based on the filenames
 (<span class="docutils literal">Tuffy_Bold</span>) and also by standard aliases similar to those of the standard
 PDF fonts (<span class="docutils literal"><span class="pre">Tuffy-Bold</span></span>, <span class="docutils literal"><span class="pre">Tuffy-Oblique</span></span>, <span class="docutils literal"><span class="pre">Tuffy-BoldOblique</span></span>, etc..)</p>
 <p>Now, if you use <em>italics</em> in a paragraph whose style uses the Tuffy font, it
 will use <span class="docutils literal">Tuffy_Italic</span>. That's why it's better if you use fonts that provide
-the four variants, and you should put them in <strong>that</strong> order. If your font lacks
-a variant, use the &quot;normal&quot; variant instead.</p>
+the four variants, and that you lsit them in the correct order.</p>
+<p>If your font lacks a variant, use the &quot;normal&quot; variant instead.</p>
 <p>For example, if you only had <span class="docutils literal">Tuffy.ttf</span>:</p>
-<pre class="literal-block">embeddedFonts: [Tuffy.ttf, Tuffy.ttf, Tuffy.ttf, Tuffy.ttf]</pre>
+<pre class="literal-block">embeddedFonts:
+  - [Tuffy.ttf, Tuffy.ttf, Tuffy.ttf, Tuffy.ttf]</pre>
 <p>However, that means that italics and bold in styles using Tuffy will not work
 correctly (they will display as regular text).</p>
 <p>If you want to use this as the base font for your document, you should change
 the <span class="docutils literal">fontsAlias</span> section accordingly. For example:</p>
 <pre class="literal-block">fontsAlias:
-  stdFont: Tuffy
-  stdBold: Tuffy_Bold
-  stdItalic: Tuffy_Italic
-  stdBoldItalic: Tuffy_Bold_Italic
+  fontSans: Tuffy
+  fontSansBoldfontSansBold: Tuffy_Bold
+  fontSansItalic: Tuffy_Italic
+  fontSansBoldItalic: Tuffy_Bold_Italic
   fontMono: Courier</pre>
 <p>If, on the other hand, you only want a specific style to use the Tuffy font,
 don't change the <span class="docutils literal">fontAlias</span> but rather set the <span class="docutils literal">fontName</span> properties for
@@ -2614,10 +2616,10 @@ extremely easy to generate a unique name.</p></li>
 <li><p>Fix the bug</p>
 <p>During this process, you can run the individual test case to quickly
 iterate. For example:</p>
-<pre class="literal-block">pytest tests/input/test_issue_NNN.txt</pre>
+<pre class="literal-block">pytest tests/input/test_summary_of_test.txt</pre>
 <p>You may also wish to check the logs and output:</p>
-<pre class="literal-block">less tests/output/test_issue_NNN.log
-xdg-open tests/output/test_issue_NNN.pdf  # or 'open' on MacOS</pre>
+<pre class="literal-block">less tests/output/test_summary_of_test.log
+xdg-open tests/output/test_summary_of_test.pdf  # or 'open' on macOS</pre>
 </li>
 <li><p>Once resolved, copy the generated output PDF, if any, to
 <span class="docutils literal">tests/reference</span> and commit this along with the files in
@@ -2633,8 +2635,26 @@ a separate file and add an include in <span class="docutils literal">manual.rst<
 link it to the manual like the others.</p></li>
 </ul>
 </section>
+</section>
+<section id="initial-checkout">
+<h2><a class="toc-backref" href="#toc-entry-64" role="doc-backlink"><span class="sectnum">21 </span>Initial checkout</a></h2>
+<p>Clone the repo from <a class="reference external" href="https://github.com/rst2pdf/rst2pdf">https://github.com/rst2pdf/rst2pdf</a>, then install and
+activate a venv:</p>
+<pre class="literal-block">git clone https://github.com/rst2pdf/rst2pdf
+cd rst2pdf
+python3 -m venv .venv
+. .venv/bin/activate</pre>
+<p>Ensure that setuptools and pip are up to date:</p>
+<pre class="literal-block">pip install --upgrade setuptools pip</pre>
+<p>Now you can install rst2pdf from this source code:</p>
+<pre class="literal-block">pip install  -c requirements.txt -e .[aafiguresupport,mathsupport,rawhtmlsupport,sphinx,svgsupport,tests]</pre>
+<p>Note, that on Apple Silicon Macs, you may need this to get tests passing:</p>
+<pre class="literal-block">pip install reportlab==3.6.12 --force-reinstall --no-cache-dir --global-option=build_ext</pre>
+<p>(Look in <span class="docutils literal">requirements.txt</span> for the version of reportlab to use.)</p>
+<p>You can now work on rst2pdf development. Once complete, you can deactivate the
+venv with <span class="docutils literal">deactivate</span>.</p>
 <section id="git-config">
-<h3><a class="toc-backref" href="#toc-entry-64" role="doc-backlink"><span class="sectnum">20.2 </span>Git config</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-65" role="doc-backlink"><span class="sectnum">21.1 </span>Git config</a></h3>
 <p>After the mass-reformatting in PR 877, it is helpful to ignore the relevant
 commits that simply reformatted the code when using git blame.</p>
 <p>The <span class="docutils literal"><span class="pre">..git-blame-ignore-revs</span></span> file contains the list of commits to ignore
@@ -2642,7 +2662,7 @@ and you can use this git config line to make <span class="docutils literal">git 
 <pre class="literal-block">git config blame.ignoreRevsFile .git-blame-ignore-revs</pre>
 </section>
 <section id="pre-commit">
-<h3><a class="toc-backref" href="#toc-entry-65" role="doc-backlink"><span class="sectnum">20.3 </span>Pre-commit</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-66" role="doc-backlink"><span class="sectnum">21.2 </span>Pre-commit</a></h3>
 <p><em>rst2pdf</em> uses the <a class="reference external" href="https://pre-commit.com/">pre-commit</a> framework to automate various style checkers.
 This must be enabled locally. You can install this using <em>pip</em> or your local
 package manager. For example, to install using <em>pip</em>:</p>
@@ -2653,11 +2673,12 @@ package manager. For example, to install using <em>pip</em>:</p>
 clear your cache before further investigation.</p>
 </section>
 <section id="continuous-integration">
-<h3><a class="toc-backref" href="#toc-entry-66" role="doc-backlink"><span class="sectnum">20.4 </span>Continuous Integration</a></h3>
-<p>There's a Travis build that runs when we open a pull request or merge to master, it does some style checks and runs the test suite.</p>
+<h3><a class="toc-backref" href="#toc-entry-67" role="doc-backlink"><span class="sectnum">21.3 </span>Continuous Integration</a></h3>
+<p>There's a GitHub Actions workflow that runs when we open a pull request or
+merge to main, it does some style checks and runs the test suite.</p>
 </section>
 <section id="running-tests">
-<h3><a class="toc-backref" href="#toc-entry-67" role="doc-backlink"><span class="sectnum">20.5 </span>Running tests</a></h3>
+<h3><a class="toc-backref" href="#toc-entry-68" role="doc-backlink"><span class="sectnum">21.4 </span>Running tests</a></h3>
 <p>The <em>rst2pdf</em> test suite generates PDFs - stored in <span class="docutils literal">tests/output</span> -
 which are then compared against reference PDFs - stored in
 <span class="docutils literal">tests/reference</span> - using the <a class="reference external" href="https://pymupdf.readthedocs.io/en/latest/">PyMuPDF</a> Python bindings for the
@@ -2666,32 +2687,21 @@ libraries, such as <a class="reference external" href="https://www.reportlab.com
 between releases. The <em>PyMuPDF</em> library allows us to compare the structure
 of the PDFs, with a minor amount of fuzzing to allow for minor differences
 caused by these changes in underlying dependencies.</p>
-<section id="first-run">
-<h4><a class="toc-backref" href="#toc-entry-68" role="doc-backlink"><span class="sectnum">20.5.1 </span>First run</a></h4>
-<p>To run the tests for the first time, you will need to do some setup (after
-this, you can just work on your given virtualenv each time):</p>
-<pre class="literal-block">python -m venv env
-. env/bin/activate
-
-pip install pytest pytest-xdist
-pip install -c requirements.txt .[tests,sphinx,hyphenation,svgsupport,aafiguresupport,mathsupport,rawhtmlsupport]
-pytest</pre>
-</section>
-<section id="next-runs">
-<h4><a class="toc-backref" href="#toc-entry-69" role="doc-backlink"><span class="sectnum">20.5.2 </span>Next runs</a></h4>
-<p>To run all tests, run:</p>
+<p>To run all the tests enable your venv first if it's not enabled and then call <span class="docutils literal">pytest</span>:</p>
 <pre class="literal-block">pytest</pre>
-<p>You can also run tests in parallel by passing the <span class="docutils literal"><span class="pre">-n</span> auto</span> flag:</p>
+<p>You can also run tests in parallel using <span class="docutils literal"><span class="pre">pytest-xdist</span></span> by passing the <span class="docutils literal"><span class="pre">-n</span> auto</span> flag.</p>
+<p>Firstly install:</p>
+<pre class="literal-block">pip install pytest-xdist</pre>
+<p>Then run the tests in parallel:</p>
 <pre class="literal-block">pytest -n auto</pre>
-</section>
 <section id="running-a-single-test">
-<h4><a class="toc-backref" href="#toc-entry-70" role="doc-backlink"><span class="sectnum">20.5.3 </span>Running a single test</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-69" role="doc-backlink"><span class="sectnum">21.4.1 </span>Running a single test</a></h4>
 <p>To run one test only, simply pass the file or directory to pytest. For example:</p>
 <pre class="literal-block">pytest tests/input/sphinx-repeat-table-rows</pre>
 <p>This will run one test and show the output.</p>
 </section>
 <section id="skipping-tests">
-<h4><a class="toc-backref" href="#toc-entry-71" role="doc-backlink"><span class="sectnum">20.5.4 </span>Skipping tests</a></h4>
+<h4><a class="toc-backref" href="#toc-entry-70" role="doc-backlink"><span class="sectnum">21.4.2 </span>Skipping tests</a></h4>
 <p>To skip a test, simply create a text file in the <span class="docutils literal">tests/input</span> directory
 called <span class="docutils literal"><span class="pre">[test].ignore</span></span> containing a note on why the test is skipped. This
 will mark the test as skipped when the test suite runs. This could be useful
@@ -2706,7 +2716,7 @@ the package graphviz from your packages manager.</p>
 </section>
 </section>
 <section id="licenses">
-<h2><a class="toc-backref" href="#toc-entry-72" role="doc-backlink"><span class="sectnum">21 </span>Licenses</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-71" role="doc-backlink"><span class="sectnum">22 </span>Licenses</a></h2>
 <p>This is the license for rst2pdf:</p>
 <pre class="literal-block">Copyright (c) 2007-2020 Roberto Alsina and the contributors to the rst2pdf project
 
