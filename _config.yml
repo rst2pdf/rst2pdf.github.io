@@ -5,3 +5,8 @@ title: "rst2pdf"
 description: "Use a text editor. Make a PDF"
 twitter:
   username: rst2pdf
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /images/rst2pdf-header.png
