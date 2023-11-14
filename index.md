@@ -41,7 +41,6 @@ rst2pdf also has support for a number of features that require additional depend
 
 ```
 pipx install rst2pdf[aafiguresupport,mathsupport,plantumlsupport,rawhtmlsupport,sphinx,svgsupport]
-
 ```
 
 **Option 2: install with snap**
