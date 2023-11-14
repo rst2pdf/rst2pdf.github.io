@@ -27,27 +27,42 @@ To create your first PDF, simply install the `rst2pdf` tool, write some text, an
 
 ### Install rst2pdf
 
-`rst2pdf` requires Python 3.6 or greater.
+`rst2pdf` requires Python 3.8 or greater.
 
-**Option 1: install with pip**
+**Option 1: install with pipx**
 
 This is the easiest option and will give the most recent stable release.
 
 ```
-sudo pip install rst2pdf
+pipx install rst2pdf
 ```
 
-**Option 2: install from source**
+**Option 2: install with snap**
+
+If you are using a system that supports [snaps](https://snapcraft.io/)
+then you can install from there with:
+
+```
+snap install rst2pdf
+```
+
+rst2pdf also has support for a number of features that require additional dependencies. Installation of all the required dependencies using pipx may be installed using:
+
+
+```
+pipx install rst2pdf[aafiguresupport,mathsupport,plantumlsupport,rawhtmlsupport,sphinx,svgsupport]
+
+```
+
+**Option 3: install from source**
 
 Choose this option if you want the newest features, or to contribute to the project.
 
 ```
 git clone https://github.com/rst2pdf/rst2pdf
 cd rst2pdf
-sudo python setup.py install
+pipx install .[aafiguresupport,mathsupport,plantumlsupport,rawhtmlsupport,sphinx,svgsupport]
 ```
-
-Note that you may need to use `sudo python3 setup.py install` depending on your configuration.
 
 ### Start using rst2pdf
 
