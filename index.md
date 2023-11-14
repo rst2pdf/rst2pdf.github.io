@@ -37,6 +37,13 @@ This is the easiest option and will give the most recent stable release.
 pipx install rst2pdf
 ```
 
+rst2pdf also has support for a number of features that require additional dependencies. Installation of all the required dependencies using pipx may be installed using:
+
+```
+pipx install rst2pdf[aafiguresupport,mathsupport,plantumlsupport,rawhtmlsupport,sphinx,svgsupport]
+
+```
+
 **Option 2: install with snap**
 
 If you are using a system that supports [snaps](https://snapcraft.io/)
@@ -44,14 +51,6 @@ then you can install from there with:
 
 ```
 snap install rst2pdf
-```
-
-rst2pdf also has support for a number of features that require additional dependencies. Installation of all the required dependencies using pipx may be installed using:
-
-
-```
-pipx install rst2pdf[aafiguresupport,mathsupport,plantumlsupport,rawhtmlsupport,sphinx,svgsupport]
-
 ```
 
 **Option 3: install from source**
