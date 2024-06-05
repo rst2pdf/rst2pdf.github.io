@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="generator" content="Docutils 0.20.1: https://docutils.sourceforge.io/" />
+<meta name="generator" content="Docutils 0.21.2: https://docutils.sourceforge.io/" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta content="rst2pdf project &lt;https://rst2pdf.org&gt;; Roberto Alsina &lt;ralsina&#64;netmanagers.com.ar&gt; and the contributors to the rst2pdf project." name="authors" />
 <title>How to use rst2pdf</title>
@@ -181,13 +181,13 @@ span.ignored, span.arraydef {
 }
 
 /* Alignment */
-.align-left, .align-l {
+.align-l {
 	text-align: left;
 }
-.align-right, .align-r {
+.align-r {
 	text-align: right;
 }
-.align-center, .align-c {
+.align-c {
 	text-align: center;
 }
 
@@ -463,7 +463,7 @@ span.boxed, span.framebox {
 <h1 class="title">How to use rst2pdf</h1>
 
 <nav class="contents toc-root" id="contents" role="doc-toc">
-<p class="topic-title">Contents</p>
+<p class="topic-title"><a class="reference internal" href="#top">Contents</a></p>
 <ul class="auto-toc simple">
 <li><p><a class="reference internal" href="#introduction" id="toc-entry-1"><span class="sectnum">1 </span>Introduction</a></p>
 <ul class="auto-toc">
@@ -785,7 +785,7 @@ be used multiple times.</p>
 <p>Since version 0.8, rst2pdf will read (if it is available) configuration files in
 <span class="docutils literal">/etc/rst2pdf.conf</span> and <span class="docutils literal"><span class="pre">~/.rst2pdf/config</span></span>.</p>
 <p>The user's file at <span class="docutils literal"><span class="pre">~/.rst2pdf/config</span></span> will have priority over the system's at
-<span class="docutils literal">/etc/rst2pdf.conf</span> <a class="footnote-reference brackets" href="#footnote-1" id="footnote-reference-1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<span class="docutils literal">/etc/rst2pdf.conf</span> <a class="brackets" href="#footnote-1" id="footnote-reference-1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="footnote-1" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#footnote-reference-1">1</a><span class="fn-bracket">]</span></span>
@@ -1681,8 +1681,8 @@ syntax highlighted for many languages using <a class="reference external" href="
 <p>Notice that you need to declare the language of the fragment. Here's a list of
 the currently <a class="reference external" href="http://pygments.org/docs/lexers/">supported</a>.</p>
 <p>You can use the <span class="docutils literal">linenos</span> option to display line numbers:</p>
-<pre class="code python literal-block"><code><span class="linenumber">1 </span><span class="pygments-k">def</span> <span class="pygments-nf">myFun</span><span class="pygments-p">(</span><span class="pygments-n">x</span><span class="pygments-p">,</span><span class="pygments-n">y</span><span class="pygments-p">):</span><span class="linenumber">
-2 </span>    <span class="pygments-nb">print</span> <span class="pygments-n">x</span><span class="pygments-o">+</span><span class="pygments-n">y</span></code></pre>
+<pre class="code python literal-block"><code><span class="linenumber">1 </span><span class="pygments-k">def</span> <span class="pygments-nf">myFun</span><span class="pygments-p">(</span><span class="pygments-n">x</span><span class="pygments-p">,</span><span class="pygments-n">y</span><span class="pygments-p">):</span><span class="pygments-diml"></span><span class="linenumber">
+2 </span><span></span>    <span class="pygments-nb">print</span> <span class="pygments-n">x</span><span class="pygments-o">+</span><span class="pygments-n">y</span><span class="pygments-diml"></span></code></pre>
 <p>You can use the <span class="docutils literal">hl_lines</span> option to emphasize certain lines by dimming the
 other lines. This parameter takes a space separated list of line numbers. The
 other lines are then styled with the class <span class="docutils literal">pygments_diml</span> that defaults to
@@ -1967,7 +1967,7 @@ on.  They will be available with the names based on the filenames
 PDF fonts (<span class="docutils literal"><span class="pre">Tuffy-Bold</span></span>, <span class="docutils literal"><span class="pre">Tuffy-Oblique</span></span>, <span class="docutils literal"><span class="pre">Tuffy-BoldOblique</span></span>, etc..)</p>
 <p>Now, if you use <em>italics</em> in a paragraph whose style uses the Tuffy font, it
 will use <span class="docutils literal">Tuffy_Italic</span>. That's why it's better if you use fonts that provide
-the four variants, and that you lsit them in the correct order.</p>
+the four variants, and that you list them in the correct order.</p>
 <p>If your font lacks a variant, use the &quot;normal&quot; variant instead.</p>
 <p>For example, if you only had <span class="docutils literal">Tuffy.ttf</span>:</p>
 <pre class="literal-block">embeddedFonts:
@@ -2247,13 +2247,13 @@ installed.</p>
 
    \frac{2 \pm \sqrt{7}}{3}</pre>
 <p>And here's the result:</p>
-<div class="mathformula formula">
+<div class="formula mathformula">
 <span class="fraction"><span class="ignored">(</span><span class="numerator">2±<span class="sqrt"><span class="radical">√</span><span class="ignored">(</span><span class="root">7</span><span class="ignored">)</span></span></span><span class="ignored">)/(</span><span class="denominator">3</span><span class="ignored">)</span></span>
 </div>
-<p>If you want to insert mathematical notation in your text like this: <span class="formula"><i>π</i></span>
+<p>If you want to insert mathematical notation in your text like this: <span class="formula mathformula"><i>π</i></span>
 that is the job of the math <em>role</em>:</p>
 <pre class="literal-block">This is :math:`\pi`</pre>
-<p>Produces: This is <span class="formula"><i>π</i></span></p>
+<p>Produces: This is <span class="formula mathformula"><i>π</i></span></p>
 <p>Note that while the math directive embeds fonts and draws your formula as text,
 the math role embeds an image. That means:</p>
 <ul class="simple">
@@ -2430,6 +2430,9 @@ pdf_style_path = ['.', '_styles']
 
 # Name of the cover page template to use
 # pdf_cover_template = 'sphinxcover.tmpl'
+
+# Label to use as a prefix for the subtitle on the cover page
+# subtitle_prefix = 'version'
 
 # Documents to append as an appendix to all manuals.
 # pdf_appendices = []
