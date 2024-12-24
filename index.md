@@ -27,7 +27,7 @@ To create your first PDF, simply install the `rst2pdf` tool, write some text, an
 
 ### Install rst2pdf
 
-`rst2pdf` requires Python 3.8 or greater.
+`rst2pdf` requires Python 3.9 or greater.
 
 **Option 1: install with pipx**
 
@@ -50,8 +50,11 @@ Choose this option if you want the newest features, or to contribute to the proj
 ```
 git clone https://github.com/rst2pdf/rst2pdf
 cd rst2pdf
-pipx install .[aafiguresupport,mathsupport,plantumlsupport,rawhtmlsupport,sphinx,svgsupport]
+uv sync --all-extras
 ```
+
+If you don't have `uv`, please see [the uv installation docs](https://docs.astral.sh/uv/getting-started/installation/).
+
 
 ### Start using rst2pdf
 
