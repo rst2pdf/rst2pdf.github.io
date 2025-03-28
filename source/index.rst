@@ -24,9 +24,8 @@ you use, it’s all yours!
 Quick Links for the Impatient
 -----------------------------
 
--  The fine
-   `manual <%7B%7B%20site.base_url%20%7D%7D/static/manual.html>`__
-   (`PDF <%7B%7B%20site.base_url%20%7D%7D/static/manual.pdf>`__)
+- `HTML manual <./manual.html>`__
+- :download:`PDF manual <./assets/manual.pdf>`
 -  `github project <https://github.com/rst2pdf/rst2pdf>`__
 -  `some examples </examples>`__
 

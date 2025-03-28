@@ -30,6 +30,6 @@ you don’t have them already.
 
       make html
 
-   The output files are in the ``build/`` directory as HTML.
+   The output files are in the ``build/html/`` directory as HTML.
 
-3. (optional) Preview the files with ``python -m http.server``.
+3. (optional) Preview the files with ``python -m http.server -d build/html/``.
