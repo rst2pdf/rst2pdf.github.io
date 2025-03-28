@@ -11,6 +11,8 @@ own examples - follow the ``CONTRIBUTING.md`` file for more information.
 Basic Document
 --------------
 
+.. image:: examples/document1/document1-thumbnail.png
+
 A simple document with some headings and the basic rst2pdf styling.
 
 -  **PDF:** :download:`document1.pdf <examples/document1/document1.pdf>`
@@ -21,6 +23,8 @@ A simple document with some headings and the basic rst2pdf styling.
 Document with Simple Styling
 ----------------------------
 
+.. image:: examples/document1/document1-simple-thumbnail.png
+
 The same basic document with some styles added.
 
 -  **PDF:** :download:`document1-simple.pdf <examples/document1/document1-simple.pdf>`
@@ -30,6 +34,9 @@ The same basic document with some styles added.
 
 Basic Presentation: Dark and Light Themes
 -----------------------------------------
+
+.. image:: examples/presentation1/presentation1-light-thumbnail.png
+.. image:: examples/presentation1/presentation1-dark-thumbnail.png
 
 Here is a simple sample presentation (inspired by
 https://github.com/akrabat/rst2pdf_example_presentation), with both dark
@@ -52,6 +59,8 @@ presentations.
 Code Samples
 ------------
 
+.. image:: examples/code1/code1-thumbnail.png
+
 A document with a few code samples (pull requests to expand the set are
 very welcome) to show how to use the syntax highlight. You can use any
 of the built in styles or create your own!
@@ -69,6 +78,8 @@ of the built in styles or create your own!
 
 Structured Document
 -------------------
+
+.. image:: examples/structured-document/structured-document-thumbnail.png
 
 This document has automatically numbered headings and a generated table
 of contents. These are ReStructuredText Directives, more info in the

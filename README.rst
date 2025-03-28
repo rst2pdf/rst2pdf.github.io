@@ -32,4 +32,6 @@ you don’t have them already.
 
    The output files are in the ``build/html/`` directory as HTML.
 
+   Some warnings may be visible, but if the output ends with "build succeeded" then the website was built.
+
 3. (optional) Preview the files with ``python -m http.server -d build/html/``.
