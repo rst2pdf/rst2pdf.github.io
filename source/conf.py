@@ -35,8 +35,8 @@ exclude_patterns = ['examples/*']
 
 html_theme = 'furo'
 html_logo = 'assets/rst2pdf-logo.png'
+html_favicon = 'assets/favicon.ico'
 
 # -- Options for PDF output --------------------------------------------------
 
 pdf_documents = [('manual', u'rst2pdf', u'rst2pdf documentation', u'rst2pdf project'),]
-
