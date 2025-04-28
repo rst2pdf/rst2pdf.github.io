@@ -6,7 +6,7 @@ This repo holds the website content for https://rst2pdf.github.io.
 Contributing
 ------------
 
-To contribute to this repo, make sure that your master branch is up to
+To contribute to this repo, make sure that your main branch is up to
 date and create a new branch from there.
 
 The website content is in ``source/``.
