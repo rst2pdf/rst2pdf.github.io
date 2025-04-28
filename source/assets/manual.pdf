@@ -2,8 +2,13 @@
 %ìåãû ReportLab Generated PDF document http://www.reportlab.com
 1 0 obj
 <<
+<<<<<<< HEAD
 /F1 2 0 R /F10+0 245 0 R /F2+0 237 0 R /F3 5 0 R /F4 6 0 R /F5 147 0 R 
   /F6 153 0 R /F7 158 0 R /F8 159 0 R /F9+0 241 0 R
+=======
+/F1 2 0 R /F2+0 237 0 R /F3 5 0 R /F4 6 0 R /F5 147 0 R /F6 153 0 R 
+  /F7 158 0 R /F8 159 0 R
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 2 0 obj
@@ -21,9 +26,13 @@ s4IA1!#S.LBk@>F8P(B3#QOi)zzs6K^t7!3!TGlRjF"98E%A,lW0i<(]GFEDI_0/%3a/n&:/@V%0%Df%
 endobj
 4 0 obj
 <<
+<<<<<<< HEAD
 /Contents 319 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 311 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] /XObject <<
-/FormXob.b1bf2fe7e90e108a689158f75eca11cc 3 0 R
+/FormXob.3cd1c2f0e47c6b40dca548e4f498806a 3 0 R
 >>
 >> /Rotate 0 /Trans <<
 
@@ -450,7 +459,11 @@ endobj
   47 0 R 48 0 R 49 0 R 50 0 R 51 0 R 52 0 R 53 0 R 54 0 R 55 0 R 56 0 R 
   57 0 R 58 0 R 59 0 R 60 0 R 61 0 R 62 0 R 63 0 R 64 0 R 65 0 R 66 0 R 
   67 0 R 68 0 R 69 0 R 70 0 R 71 0 R 72 0 R 73 0 R 74 0 R 75 0 R 76 0 R 
+<<<<<<< HEAD
   77 0 R 78 0 R 79 0 R 80 0 R 81 0 R 82 0 R 83 0 R 84 0 R 85 0 R 86 0 R ] /Contents 320 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+  77 0 R 78 0 R 79 0 R 80 0 R 81 0 R 82 0 R 83 0 R 84 0 R 85 0 R 86 0 R ] /Contents 312 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -755,7 +768,11 @@ endobj
   108 0 R 109 0 R 110 0 R 111 0 R 112 0 R 113 0 R 114 0 R 115 0 R 116 0 R 117 0 R 
   118 0 R 119 0 R 120 0 R 121 0 R 122 0 R 123 0 R 124 0 R 125 0 R 126 0 R 127 0 R 
   128 0 R 129 0 R 130 0 R 131 0 R 132 0 R 133 0 R 134 0 R 135 0 R 136 0 R 137 0 R 
+<<<<<<< HEAD
   138 0 R 139 0 R 140 0 R 141 0 R 142 0 R 143 0 R 144 0 R 145 0 R ] /Contents 321 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+  138 0 R 139 0 R 140 0 R 141 0 R 142 0 R 143 0 R 144 0 R 145 0 R ] /Contents 313 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -798,7 +815,11 @@ endobj
 endobj
 152 0 obj
 <<
+<<<<<<< HEAD
 /Annots [ 148 0 R 149 0 R 150 0 R 151 0 R ] /Contents 322 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Annots [ 148 0 R 149 0 R 150 0 R 151 0 R ] /Contents 314 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -813,7 +834,11 @@ endobj
 endobj
 154 0 obj
 <<
+<<<<<<< HEAD
 /Contents 323 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 315 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -823,7 +848,11 @@ endobj
 endobj
 155 0 obj
 <<
+<<<<<<< HEAD
 /Contents 324 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 316 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -838,7 +867,11 @@ endobj
 endobj
 157 0 obj
 <<
+<<<<<<< HEAD
 /Annots [ 156 0 R ] /Contents 325 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Annots [ 156 0 R ] /Contents 317 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -858,7 +891,11 @@ endobj
 endobj
 160 0 obj
 <<
+<<<<<<< HEAD
 /Contents 326 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 318 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -868,7 +905,11 @@ endobj
 endobj
 161 0 obj
 <<
+<<<<<<< HEAD
 /Contents 327 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 319 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -901,7 +942,11 @@ endobj
 endobj
 165 0 obj
 <<
+<<<<<<< HEAD
 /Annots [ 164 0 R ] /Contents 328 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Annots [ 164 0 R ] /Contents 320 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] /XObject <<
 /FormXob.4afb2edf7d2506d7a99dd1a3ec07592d 162 0 R
 >>
@@ -913,7 +958,11 @@ endobj
 endobj
 166 0 obj
 <<
+<<<<<<< HEAD
 /Contents 329 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 321 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -938,7 +987,11 @@ endobj
 endobj
 170 0 obj
 <<
+<<<<<<< HEAD
 /Annots [ 167 0 R 168 0 R 169 0 R ] /Contents 330 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Annots [ 167 0 R 168 0 R 169 0 R ] /Contents 322 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -968,7 +1021,11 @@ endobj
 endobj
 175 0 obj
 <<
+<<<<<<< HEAD
 /Annots [ 171 0 R 172 0 R 173 0 R 174 0 R ] /Contents 331 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Annots [ 171 0 R 172 0 R 173 0 R 174 0 R ] /Contents 323 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -978,7 +1035,11 @@ endobj
 endobj
 176 0 obj
 <<
+<<<<<<< HEAD
 /Contents 332 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 324 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -993,7 +1054,11 @@ endobj
 endobj
 178 0 obj
 <<
+<<<<<<< HEAD
 /Annots [ 177 0 R ] /Contents 333 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Annots [ 177 0 R ] /Contents 325 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -1003,7 +1068,11 @@ endobj
 endobj
 179 0 obj
 <<
+<<<<<<< HEAD
 /Contents 334 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 326 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -1013,7 +1082,11 @@ endobj
 endobj
 180 0 obj
 <<
+<<<<<<< HEAD
 /Contents 335 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 327 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -1033,7 +1106,11 @@ endobj
 endobj
 183 0 obj
 <<
+<<<<<<< HEAD
 /Annots [ 181 0 R 182 0 R ] /Contents 336 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Annots [ 181 0 R 182 0 R ] /Contents 328 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -1048,7 +1125,11 @@ endobj
 endobj
 185 0 obj
 <<
+<<<<<<< HEAD
 /Annots [ 184 0 R ] /Contents 337 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Annots [ 184 0 R ] /Contents 329 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -1063,7 +1144,11 @@ endobj
 endobj
 187 0 obj
 <<
+<<<<<<< HEAD
 /Annots [ 186 0 R ] /Contents 338 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Annots [ 186 0 R ] /Contents 330 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -1073,7 +1158,11 @@ endobj
 endobj
 188 0 obj
 <<
+<<<<<<< HEAD
 /Contents 339 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 331 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -1083,7 +1172,11 @@ endobj
 endobj
 189 0 obj
 <<
+<<<<<<< HEAD
 /Contents 340 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 332 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -1098,7 +1191,11 @@ endobj
 endobj
 191 0 obj
 <<
+<<<<<<< HEAD
 /Annots [ 190 0 R ] /Contents 341 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Annots [ 190 0 R ] /Contents 333 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -1108,7 +1205,11 @@ endobj
 endobj
 192 0 obj
 <<
+<<<<<<< HEAD
 /Contents 342 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 334 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -1118,7 +1219,11 @@ endobj
 endobj
 193 0 obj
 <<
+<<<<<<< HEAD
 /Contents 343 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 335 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -1142,7 +1247,11 @@ endobj
 endobj
 196 0 obj
 <<
+<<<<<<< HEAD
 /Annots [ 194 0 R 195 0 R ] /Contents 344 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Annots [ 194 0 R 195 0 R ] /Contents 336 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -1159,7 +1268,11 @@ endobj
 endobj
 198 0 obj
 <<
+<<<<<<< HEAD
 /Annots [ 197 0 R ] /Contents 345 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Annots [ 197 0 R ] /Contents 337 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -1169,7 +1282,11 @@ endobj
 endobj
 199 0 obj
 <<
+<<<<<<< HEAD
 /Contents 346 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 338 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -1179,7 +1296,11 @@ endobj
 endobj
 200 0 obj
 <<
+<<<<<<< HEAD
 /Contents 347 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 339 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -1201,7 +1322,11 @@ endobj
 endobj
 203 0 obj
 <<
+<<<<<<< HEAD
 /Annots [ 201 0 R 202 0 R ] /Contents 348 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Annots [ 201 0 R 202 0 R ] /Contents 340 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -1211,7 +1336,11 @@ endobj
 endobj
 204 0 obj
 <<
+<<<<<<< HEAD
 /Contents 349 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 341 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -1228,7 +1357,11 @@ endobj
 endobj
 206 0 obj
 <<
+<<<<<<< HEAD
 /Annots [ 205 0 R ] /Contents 350 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Annots [ 205 0 R ] /Contents 342 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -1238,7 +1371,11 @@ endobj
 endobj
 207 0 obj
 <<
+<<<<<<< HEAD
 /Contents 351 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 343 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -1248,7 +1385,11 @@ endobj
 endobj
 208 0 obj
 <<
+<<<<<<< HEAD
 /Contents 352 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 344 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -1258,7 +1399,11 @@ endobj
 endobj
 209 0 obj
 <<
+<<<<<<< HEAD
 /Contents 353 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 345 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -1268,7 +1413,11 @@ endobj
 endobj
 210 0 obj
 <<
+<<<<<<< HEAD
 /Contents 354 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 346 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -1283,7 +1432,11 @@ endobj
 endobj
 212 0 obj
 <<
+<<<<<<< HEAD
 /Annots [ 211 0 R ] /Contents 355 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Annots [ 211 0 R ] /Contents 347 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -1293,7 +1446,11 @@ endobj
 endobj
 213 0 obj
 <<
+<<<<<<< HEAD
 /Contents 356 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 348 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -1303,7 +1460,11 @@ endobj
 endobj
 214 0 obj
 <<
+<<<<<<< HEAD
 /Contents 357 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 349 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -1320,32 +1481,43 @@ endobj
 endobj
 216 0 obj
 <<
+<<<<<<< HEAD
 /BitsPerComponent 8 /ColorSpace /DeviceRGB /Filter [ /ASCII85Decode /FlateDecode ] /Height 576 /Length 5781 /SMask 217 0 R 
   /Subtype /Image /Type /XObject /Width 432
+=======
+/BitsPerComponent 8 /ColorSpace /DeviceRGB /Filter [ /ASCII85Decode /FlateDecode ] /Height 120 /Length 48 /SMask 217 0 R 
+  /Subtype /Image /Type /XObject /Width 120
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 stream
-Gb"0N;6J\>G!nXbJ(*FR!sVCo;E"E.S;7UgE,MELo,dr4zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz!:KME!.UaBZu/j@"WjQ?Zu/j@"WjQ?[-gh9"eMXk\*d.<"eMXk\*d.<"WjQ?Zu/j@"WjQ?Zu/j@"WjQ?[-gh9"eMXk\*d.<"eMXk\*d.<"eMXk\*d.<"WjQ?Zu/j@"WjQ?[-gh9"eMXk\*d.<"eMXk\*d.<"eMXk\*d.<"WjQ?Zu/j@"WjQ?[-gh9"eMXk\*d.<"eMXk\*d.<"eMXk\*d.<"WjQ?Zu/j@"WjQ?[-gh9"eMXk\*d.<"eMXk\*d.<"eMXk\*d.<"WjQ?Zu/j@"WjQ?Zu/j@"WjQ?[-gh9"eMXk\*d.<"eMXk\*d.<"WjQ?Zu/j@"WjQ?Zu/j@"WjQ?[-gh9"eMXk\*d.<"eMXk\*d.<"WjQ?Zu/j@"WjQ?Zu/j@"WjQ?[-gh9"eMXk\*d.<"eMXk\*d.<"WjQ?Zu/j@"WjQ?Zu/j@"WjQ?[-gh9"eMXk\*d.<"eMXk\*d.<"WjQ?Zu/j@"WjQ?Zu/j@"WjQ?[-gh9"eMXk\*d.<"eMXk\*d.<"WjQ?Zu/j@"WjQ?Zu/j@"WjQ?[-gh9"eMXk\*d.<"eMXk\*d.<"eMXk\*d.<"WjQ?Zu/j@"WjQ?[-gh9"eMXk\*d.<"eMXk\*d.<"eMXk\*d.<"WjQ?[/O:ZG@&hu33&m]Wr!C,8%5MqEE#_D<VI_7O)@tlj/AQhWpWBM*o3jaa&,!Z8KEj]]t7;#O)+D@<cpV.p#oG!5E>#CXQk6;lHua!IN6ne=Om?Ue>$6urA^gTZ)[[5W(4=sqf,S2@oC@B;=AC&pZ#GjMcJSo5Wu\Yh2e=W)QUFkJU2F=\fXH81fe``!qkbXF[(oOBrpTK"R=C:l@'`'dob0!#h5VRec!!Ymp];k,>aG=<VPOPT#Reu8"^pZWp[o)4cNItO$Gk><S`_2H5`iq++\`[X1BBCoe]]l56CNA<cpX0e[nr6rFj]mS(-sfWi*,%q[obs\#T=F<)7"(pENLqDH6GkW1M#/mRNokh5]n`;*Bn=h2afa\lIRIC\9;\F[$f;mO!'=Np:>[l@&m$dB2\_*7`M?ebod'UKc:I33&m]Wr!C,8%5MqEE#_D<VI_7O)@tlj/AQhUlIs?hVFufa&,!Z<S`^$4h=YLO/%">X1BC(H??4!+%Pu\<cpV.p#oG!5E>#CXQk6;lHua!IN6neR+1Y>e@Sr8rO>ns@TE.I:lfKopZ&3D`iAGsTH;phm`/0fNE+eq5Wu\Yh2e=W)QUFkJU2F=\fXH81a[?-)YNN!F[*%Z]3*V^#h5VRebqJ-Vm39!&ZA4/Wr$d8:LdE!,>aG=<VPOPT#Reu8"^pZWp[o)4cN#RO%-gp<S`^Ooe'9f56CNA<cpWel=m?bIK\r`Xm1?Te^IXNr<UoJ>Li[3Wi*,%q[obs\#T=F<)7"(pENLqDH6Gk>.ohoh2afa\lIRIUO!iZ\fZKLFK;tp8+e]>F[#s#kZ2gjNp:>[l@&m$dB2\_*7`M?ebod'UKc:I\5r'-<VN7cmqu%Dj/AQhWpWBM*o3jaa&,!Z<S`^$4h=YLO/%">X1BC(H??4!+%Pu\<cpV.p#oG!5H`PK=Om@`e@V4"nMmPHZ)[[5W(4=sqf,S2@o`7J:lfKopZ&3D`iAGsTH;phm`/0fNE+eq5Wu\Yh2c@E/lm*Z)YNMFFZb]LBrpTK"R=C:l@'`'dob0!#h5VRebqJ-Vm39!&ZA4/Wr$d8:LdE!,>aG=<VPOPT#RRd8#+qsWp[p8H5EWn++\`[X1BBCoe]]l56CNA<cpWel=m?bIK\r`Xm1?Te^IXNr<UoJ>Li[3Wi%SNj3afL\#T=FXkq$smRNokh5]n`;*Bn=h2afa\lIRIUO!iZ\fZKLFK;tp8+e]>F[#s#kZ2gjNp:=Pl?G/Nh6#sk>cW(RWr!C,8%5MqEE#_D<VI_7O)@tlj/AQhWpWBM*o3jaa&,!Z<S`^$4h=YLO/%">P<'bEH?ZF$+4od`XQk6;lHua!IN6ne=Om?Ue>$6urA^gTZ)[[5W(4=sqf,S2@o`7J:lfKopZ&3D`iAGsTH;phm`2_](TY+hNI#f43Z^fa1fe``!qkbXF[(oOBrpTK"R=C:l@'`'dob0!#h5VRebqJ-Vm39!&ZA4/Wr$e<hSlM_8#+qsUlNJm4cNItO$Gk><S`_2H5`iq++\`[X1BBCoe]]l56CNA<cpWel=m?bIK\r`Xm1@?X*:hKqpD?d2lYhW<)7"(pENLqDH6GkW1M#/mRNokh5]n`;*Bn=h2afa\lIRIUO!iZ\fZKLFK;tp8+e\cFZ^T8mT+HpY1:-debod'UKc:I33&m]Wr!C,8%5MqEE#_D<VI_7O)@tlj/AQhWpWBM*o3jaa&,!Z8KEj]]t7;#O)+D@<cpV.p#oG!5E>#CXQk6;lHua!IN6ne=Om?Ue>$6urA^gTZ)[[5W(4=sqf,S2@oC@B;=AC&pZ#GjMcJSo5Wu\Yh2e=W)QUFkJU2F=\fXH81fe``!qkbXF[(oOBrpTK"R=C:l@'`'e!SYTB[jXuec!!Ymp];k,>aG=<VPOPT#Reu8"^pZWp[o)4cNItO$Gk><S`_2H5`iq++\`[X1BBCoe]]l56CNA<cpX0e[nr6rFj]mS(-sfWi*,%q[obs\#T=F<)7"(pENLqDH6GkW1M#/mRNokh5]n`;*Bn=h2afa\lIRIC\9;\F[$f;mO!'=Np:>[l@&m$dB2\_*7`M?ebod'UKc:I33&m]Wr!C,8%5MqEE#_D<VI_7O)@tlj''-S<S`^*]t6iVO/%">X1BC(H??4!+%Pu\<cpV.p#oG!5E>#CXQk6;lHua!IN6ne=Om?Ue>$6urA^gT0ra3\W->_Nqf/ap`N&>rTH;phm`/0fNE+eq5Wu\Yh2e=W)QUFkJU2F=\fXH81fe``!qkbXF[(oOBh[f:2!Wo!l@*!=GHn1F&ZA4/Wr$d8:LdE!,>aG=<VPOPT#Reu8"^pZWp[o)4cNItO$Gk><S`_2H5_u.*fYJiX1BD)l<ULVIK\r`Xm1?Te^IXNr<UoJ>Li[3Wi*,%q[obs\#T=F<)7"(pENLqDH6GkW1M#)N^ol$h5]n`[<`Xi\fZKLFK;tp8+e]>F[#s#kZ2gjNp:>[l@&m$dB2\_*7`M?ebod'UKc:I33&l2WT2C)GIOULENS*:WpWBPhVFufa&,!Z<S`^$4h=YLO/%">X1BC(H??4!+%Pu\<cpV.p#oG!5E>#CXQk6;lHua!IU&ptZ)[]KW-:2"j)J$o@o`7J:lfKopZ&3D`iAGsTH;phm`/0fNE+eq5Wu\Yh2e=W)QUFkJU2F=\f]Ph?**=?2!Wmkl?F<!dob0!#h5VRebqJ-Vm39!&ZA4/Wr$d8:LdE!,>aG=<VPOPT#Reu8"^pZWp[o)4cN#RO%-gp<S`^Ooe'9f56CNA<cpWel=m?bIK\r`Xm1?Te^IXNr<UoJ>Li[3Wi*,%q[obs\#T=F<)7"%a.lN#DH6Gk>.ohoh2afa\lIRIUO!iZ\fZKLFK;tp8+e]>F[#s#kZ2gjNp:>[l@&m$dB2\_*7`N*eF@5%]3Eha\5r'-<VI_7O)@tlj/AQhWpWBM*o3jaa&,!Z<S`^$4h=YLO/%">X1BC(H??4!+%Pu\-?VEhp$Pk'5H`PK=Om?Ue>$6urA^gTZ)[[5W(4=sqf,S2@o`7J:lfKopZ&3D`iAGsTH;phm`/0fNCb.O7_QE6h2c@E/lm*Z)YNMFFZb]LBrpTK"R=C:l@'`'dob0!#h5VRebqJ-Vm39!&ZA4/Wr$d8:LdE!,>aG=<VPNW]o,nHO%-gp8KEkeH5`iq++\`[X1BBCoe]]l56CNA<cpWel=m?bIK\r`Xm1?Te^IXNr<UoJ>Li\^<psKtpS1USDGnO8W1M#/mRNokh5]n`;*Bn=h2afa\lIRIUO!iZ\fZKLFK;tp8+e]>F[#s#kZ2gjY1:-debs12]3Eha\5r'-<VI_7O)@tlj/AQhWpWBM*o3jaa&,!Z<S`^$4h=YLO/%">X1BC(H??4!+%Pu\-?VEhp$Pk'5H`PK=Om?Ue>$6urA^gTZ)[[5W(4=sqf,S2@o`7J:lfKopZ&3D`iAGsTH;phm`/0fNCb.O7_QE6h2c@E/lm*Z!qkbXF[(oOBrpTK"R=C:l@'`'dob0!#h5VRebqJ-Vm39!&ZA4/Wr$d8:Ld;CUJ^Jt<VPNW]o,nHO$Gk><S`_2H5`iq++\`[X1BBCoe]]l56CNA<cpWel=m?bIK\r`Xm1?Te^IXNr<UoJ>Li[3Wi%SNj3afL2lYhW<)7"(pENLqDH6GkW1M#/mRNokh5]n`;*Bn=h2afa\lIRIUO!iZ\fZKLFK;tp8+e]>F[#s#kU(F7I\gAkWp[p:eVdY^rV2Y(*NQanhc;CJ<VPOPT#M#b$2M#UEN?Ym8+e]&TMES;eVdY^rA^gTZ)[[5W(/eGj7+Ym3^033aB-o5>Li]IQ$OGm:ab>)lFF%^If)gONXr'%nl>A<<cpWUV-_1Ie-YrNH>]dp+2:^WireS"HrW>=<S`_2H5`DQ=6+_nXf^l;r(=Y_c_rAb4n[B,F[(>O?H6^.(&=GICTG#g^J_8q1[9jF:VF/9h2bpBfC9`$7D>\Vg8aS]YLMn5N4L3?;@dVEpYuMO5X)%TaZ%^">Li]I5s:<jWC-4cou^<X5CQE>jC@J:HpbTQ<S`]Xe-#NB\g=hd-ap&PnUl-1T2`;\?M2$5F[(=UDreh$SD:%af;e8Zcg$L;=IkWpe`0i`rV/ZAOB^43\P'W;<S`]Xe-!6Sh3D3oZWboXpd%')]@:,s76R\C*KQiC)nAh:Q4L#$[As,oZ[*k*WrqrJoorL"5CQXOj;[C(Hq(fE<S`_.eJn=U\hpI66*%R=5H?a6D09dr?G2n$*KT)UcQr+QN1YO[^Y(QTEJM+I^SROD5NIi*?b#$DM3";+bNaQSQ?jlr<o<UNl=7!^If,LX->urBp/UBfY3LK6Q?jlr<o<UNl=3TSGl4^j.;r8Ep-%\6Y3LK6Y'MO8<o<U6l:\;FIf-?p.;r8Ep-%\6Y3LK6Y'MP#<?Lp7l=7!^If+bC/FQPFoi:9e:?m*%R<gOT<+#;]l:\;FIf,U[0CMkIof_S5Y3LK6R<gOT<+#;]l:\;FIf,U[0/$:soMt0dY3LK6R<gM><1ie_l=7!^If,U[0/$:soKDJ4Y3LK6Z$J/Y<1ieGl:\;FIf-Hs1+uV!oKDJ4Y3LK6NI!Ic;BPL1l=7!^If,1O26Tn"o2Y'cY3LK6NI!Ic;BPKnl:\;FIf-$g33Q4%o0)A3Y3LK6V0Y,);BPKnl:\;FIf-m*4"jI'nQ"jaY3LK6]m;an;4mAYl=7!^If-m*4"jI'nNH/1Y3LJ;l34jeIDbfX0=e+[Z)SW4#5&G_UV>fhm`2>6d,WX]I$OPqX1BAp:ljhnlKc,UIEY^INt80ZoPF3n?DTjJUlNL9e5L[tqK21'?ZK0@j(%@'4]m-DpS]aUWr)<XopQr$52*'ea'@0npnW41O&R4g<U+(sl@++_4fIPC0D6mg0dh*+DGeaF@HqpI7t&KZh2bdiZ[/#8>jkNsE`Mko0(lLkUH[2.eAkhErO>]fY%O]:"FNf>ffVNJ,2dh5s5mZihZrqbqUbOeeX$:<ouHYWWc%rLlL3o.;]c-ueXt4'U:pa!YGcrG9H>2L8(F6\pXH$jB;kj1]@:,;#HL(n&#^-CDc?[NJ#9@Pr3rVS]Do)&!UtU:HN8Q3rrrH'zzzzzzzzzzzzzzzzzzzzzz!;quZ"_FM*KE~>endstream
+Gb"0;0`_7S!5bE.WFlSlTE"rlzzzzzzzzz!!%PY!N#B2)#~>endstream
 endobj
 217 0 obj
 <<
-/BitsPerComponent 8 /ColorSpace /DeviceGray /Decode [ 0 1 ] /Filter [ /ASCII85Decode /FlateDecode ] /Height 576 /Length 6166 
-  /Subtype /Image /Type /XObject /Width 432
+/BitsPerComponent 8 /ColorSpace /DeviceGray /Decode [ 0 1 ] /Filter [ /ASCII85Decode /FlateDecode ] /Height 120 /Length 39 
+  /Subtype /Image /Type /XObject /Width 120
 >>
 stream
-Gb"0WM8*,5*X;,_U)St.fe`=b7*$8n]>hSR;d$D,p1<T;ejrIOOtCI.?%aa8)1,n$ZU@EdHd?fq*l[pQ51fE)S`b>akB[(0T',d7f9j+`o:2!i+sJ3T+sJ3T+sJ3T+sJ3T+sJ3T+sJ3T+sJ3T+sJ3T+sJ3T+sJ3T+sJ3T+sJ3T+sJ3T+sJ3T+sJ3T+sJ3T+sJ3T+sJ3T+sJ3T+sJ3T+sJ3T+sJ3T+sJ3T+sJ4/>4YcmGqF[)laBbBn%iE+HC%p6&C(c.Y'Fd7<=304;"r\"h4tmR%!Aa[lm@E?0%@Fp)qe3u@;)ll]tpjL#^o%1CTa;^<=31/;"n.[h4tmR$[&X?fhDh4LIS!*FY13t+ZpM)>feC;PsVu;e@D#B@ok+4I7)hk"1q,ZZjV#["5$<T@8`:cpZg)-;@(U&3`e(g?)8,/KfW;aam:L2cn3b\<b43=L=JZICO^Mk6C9f(W-e2K="/fh6CfVEcE:%N"%&QZnH=$#6Kf$H?7W7L'Z8Xum^4FS8KgcG*pR&JZE"\VX.dh(4O1*-#hK<nf6?R2KlBGYF"P@K;@FLt]%>6o-A>:P,1O<O@94n2[mQ]:H&,b&&8hu$YHdFDKlC"iF1#R<.>CP`h.p5<P@A2?l<^BpRhW_dU!AqYa0&;G[g0OsBC%+%E'gLE/\l7%$sSCrf2h5b`@ue?H_&)m;@"A"3`g>L]1O7%'C9$IYcAJT.A>&;RbabV\qIXrB6KJJ=<uD0NaXjqKJ,]`/%L@>V%=[RG-B<[.YVhBW,oAnCYA9_A#O`kaDOlaMhemqOmFEKn85+F,r`'/'Z-W]me%L18g0]Hl<JDq[;:-@/_%Jb@5fWiAOG;>&9a7((a&+PCtGnl'Z-'-cBZ&dY#5NALH8MCWU)*gY]m$mXhemQ$nI%C=*JhO6MN:fCY@;*?9d=4\L5u"T2ms"?jCqjIfHc_hr(Fdn>5<c=h0$[$[/_;g%gWCQ_*q_kKfZM("o%Hh["Voq*3O-1O!=t(1QGc!ag8f)EWH2,H/X!m.aW69@'L=H^u-k5,^tt5<HUlpsSbrm/39rY^;q_c>Njb^[$BSo4O*$MX8.(DZp'Sl\!md1Ugg^Jj#&i@96nqK=t"ip(#RsgqssDp,l;1h!=#t/[8s`_EEiT=\U5/28d+&%b1mNO^>iKDmV9#o*0C;9M_`\Y]&T&fKNE^,MDlK"0j&d^6)K*QXD[0AEV9HcgZYc7UCcXK5/uEAEU/FHob4Pgc+dRX3pZ<c$.h91EE/1iP(FU@EW%9De8+XoY?=eqaOnGm>BFVQCU5r!%Y>^4290g=NsRnq(jZi4XN+!k;R](]@VGsr,q.h!qdDHc>W@j<:_>Xr(MI98(sT+he4aGk2#D%RBBYS"5*F/[_lkZPFXpZ"]hE$4290W=Nt^8q(p>`4f25ao,HMDh(..T>u6M.69SX`kI::%WYt7'/uTMY*pIh6r'p9f28d,b"go.Ij=kb+UFia>_;=V^]*Kpm*]q+K\.Ar>IM^WM:ljnPg%gVFa6p>\4+@J3f%HPZpf?iL292u^B>AGV%:\KZRMU=HBIGrl#5m%TY`I@7fZ%%<54&1bn69PA5$Cln]s4#QZL__EDk.(/BMF0i_J66hcC_qeFVaD?2&5g3<-)MYG5aP\\'Dj=[&1.a%%%!Sh(.,JCFT`4/mloLT/dW:''uAN($9,<49R1?!'@rXS)Noc:leE*nZBG4QeObgdX0[CNPO.t`A:cU!k[&um/0=jL<IVI7CHdj2f^]Z*fLhJbKb%eB"0r-lL>TN^=@:$c(C^J/q^no4Nu)heDs,uk%j>])=U^^F4pAKg^KOc?Q"#qk;RE;>eUe#Z8=YXOdk>#)c2Ua2-eECpaa5qm/0=jL<JMY$l?2?)n?h=K>0/EH]*9*\J[#P+!1g_(AS;!(TSG"E#JQJaH+_2e51mdiA10Y_mA_-<aLO(i3*PjYk&gE)(pQV13@*j2f^]Z#(L2tcd$IiB"3fuatP]ALDn>)10b$5AU''&hoa,])>ob.!'@rXS)H-t.mjhjIO"?EU3MF9i3*P0g%gWCiA0e)A\[g^eDmGeg%gW?%$qomLO-o1:dZ+,L<JMY$j52YNSFr/_-\(+ZL]$G)(pQF8+"7?DrbN?r!:dsSqe6,E&1bu)X7p\6OdUO)(pQV1;rc\6YUFmbM]Q4nN>;tR[`:,kua(mf_LN^%%$G#MF@&46Q'crbF_'`id%Jr%.'+NG_XBL5Wp<;W1c';OeNZFq(psp;<)r#Ten^GjV+mCnN>;tR[`:,*E\GXg%gW_%%#k,HGoDO6Q'3bbH7EY&O"W?R[`:,-J6#kH)RDn2oFaPYTiVMNP./-_r[Al,"o03)dSEQN+]Zu(=_AKG'ken_r\G0Td#Q&o,G4X0!>fYM!1OedbG7t&&X:k_9Qu[B"34/<b-K!INpehj]A)r';BcNTaWTljf3#kO/L\,Xh5(/f7\IGQa--$\J["AL_\U(S_n*bXCaT0nb'q[XNJh,":gd1Yk)Ks5WpGQA`l!m1L-LSolu%Yhoa,]Gnm8JH5/NVOdk>#ITV^7g%gW_%$rWbMQFqFDrbN?r"RXjH5/NVOdk>#%oA>eZL_:G)(mQIogo,-c>VcU\@anHYJ]&hNPONDL$\`*$a:i@Zh#-H)(n,\or+IOS_qN5E;:HOa'7p*<nOkmiYa@%%eWA2B'2)SLWe#Jo4N6^mWC?J^QG#EnsNUB^TmAL\J[$WNtlBRc>VcU\GSA:j*c)u.keg%"ed"%*UN\nDMH>=A+r$HS_qN5E;=%GaB%[*7W*t(G@<oUAEPo:LXh>r\GRN"j"kk+.r`!<c-(rJ6Trlpf_LN^%$s%cpH"k9hoO&]q&$3SG3o,rDMH?D?pti@k;RE;>TO@IpmN5\b0+b7"ZBV7KUq#Ac#@q1W(2.T426oIiURR_O^6Z9NHW-Q`\Ul6*\4N)422@e>`S"/`32Kj`]%Ai2tA_/DE]*+0oV[\b0+aL/Z;0c#s5naS)Np(=HS$aq2O/<Q`nDdXN\t.jCYna''f!s'6\gL0>lnKPG'&DZ1D1F)(r)sogntbo,G4X0(4i9l,M"e":gdEB'7M4`JUb5c>VcU\3(br0sql\^QFlAEoRI&O-ePqXi<U`^LP=1X8qoaY@6TQ!f+s[Zh%i'`9qaR426oIiGp$Aa?&\c7W*t(6_PRk4@<8+S)NotW5fkDpf:^Ub=b/bdMpm8NSFr/GJ`duMk/bHc#EJpXN3ltr'kRYb7?j$C?Asf2nB4*=$4C^0;'BTZK#/7)(mQDogj"2k;RE;>jd4"lZdT%,<*O%;m7I8Zh#-H)(sg!'ktS2DrbN?r"7H=@s35M0>loITH<>\m/0=jL<H&ppH"#!hoO&]q)GHH4O6ii[Pq5CT&K6W=HQ&*q2N2KE[Q&0bWAX^Z0_6d?A?WTZ%j5=AEPml1L0>Non_fLb0o&RQ[<11id$9a1cN>6JQS%JStR^Qc#EK$W(/tr:mU'P\;WT#&C3.sAU#(FGD(91oF,;FD6]Q"%$u<K7H/TIZ8?O1*7#__#%0mZH%rU]2oFaDTH<Vc6Wo/1iURseTH;#(q5q:<QeOkjd_>)G7W*t(?*PUD4@<8?S)NoQ=HRj"Te+I5E;<Y8a-<Ifr'kRYb7gQj,MDmp]F:-.JpO4oZh#-H)(tB3h<Q2,INpehjbp>eCU*IM\J["a!VMi:S=SR$7dOIOr6amnW5kt*pf:^Ub=b2cdd,T^NSFr/GK0&n"?XA\S)Nou=HO'Fq2O/<QQLg*<4?8u2f^]Z*XhXcRiUD/bA\>HW8SM8INpehAalCJA(^U:g^KNF`JSbLk;V[\eVn.N49R1_R[r=A*%lGGkKeMWp%X%Xhoa,]\II%5]p##EaN\ZAI&Q!LG((Yp_e&>2L99/)NSFr/#@g1<@co[j1L.p@CA=;>hoa,])18CA5OA;;DMH?m6Od\4o,E7qn\m:h"s7U4St4aE*%i>RcCY-p`r9%_INpehAaH+FDqOT^]F:.CLDh4FkI:";>Qu9b31lc!aN\ZAI&LI4G((Yp_rY[=,0R:`)n?h=@h1GUDoBq>jCPh051K'I422O()db_FAalCJ9A0-#^u9;rD[Q^*`kF)f^QG#Ens*=>G3o,rDMH?\6TlbR@HTQNJ)cH!\D1U-eDkgtIOd(hAalCJ/(s`Xg^KPD_=#jES_qN5E;:-J8-a<e,<*O%-_VU1R^)H'Go84n)@uKX`QiD`A[i/_NW!%(INpehj^#-<*QlZGjCYoL*`cfWG(-2RYaY(jQQLd)<6rP/DZgQ:gU$Ka^4psHac:<$A[qY>W(/n)S_qN5E-XP3?G5%fNSFr/_1rpeB'2*n1L.r6\6LgC426oIiUVb#O"p"r<aLO(o0PUg_<h(hDMH=R@J;g6S_j^#3H71!jWguR>Hm]<J]$T@m/3:;YTi\Fo,G4X/n<caqMZHPb0+b71%q]n_sI:jDMH?mUA#jTINpehAT2)lc`[bR\J[#Pcb)0#Ns)s1/n79?R^q,INP#[dP>P/;:YG9?]F:.Cs*5I-6R\d^_rZ6tq(kZO7;c`#2f^]ZhAe%d/j$h1S)NpH=HRiW`@K3VE&m0@'oD*<Gbnidjg"1I^VW1OOfm$UDrYH>S@jV7=dbi<`m&J5.J?G\g6Q$[`m&IJ.BH(o5X%g$A[n7P#4KOVDrbK>N4sN]D&=oME\grqc3!Ib0](mKB"4Ad"PtYt&O8q$Y`eMbQ]l'tHSpb#/q_('("rD4oauGP"ka&Q]F:-j7bG^-9ikmbY])C':)3iUQ#=lb@,Y_-S?.b-CEI^%$TGubU^MLP#4W]D2oFb<5kJ@li]B)*L<E//14$-Yn/Wr:_rW/S'YRSZ0Y9Ysi4l)J)(rg6\XB-1]0^f$E4H38s"(s`-tddT?(jA>_e!p_<,67HF)s"PjV^74n!3TUG::MVE-[1Xpq8kPrD1.FL<DAHa7#97c7VtKS)JCN1_4Q.FPNVW)Pst^/dM/mn'<&7qk4"/\3(9`s"(sJBUr)T4\G9#>Ya5G"D!O*(F]C_cfAs0r3L,[k$2VH7Q`oOrg'&4ndK;h\^h2,U4(D?c#@r_otqcMf!qJ"I>tG"iGnuaQT)N0Hi8ZSkPt'->ctJ+TMteug3n=43*Fd@CMeFfR5a4)k>O=Wj]\4lgh@N]Dd@SVVTW#bo$<],h.GKg*;%b8Fas81Grsqr\6LQB^V=AZ1Nq!C,DJAObfJ1=rUqmNj)V<dB"2*H,?EsQ(n,Nb+^!NEL<HtcKXjBsoZ=Y<S)JCi:k.B$LHY3FfEOtfd;ZW3pgo4FA,1Kk\f!.#XEBmLeAHs0s)<*C(,qiDo$<bX3C5kkST@/;\@bedEQc0>D>4bsbIO:8iUTYaKXl]jIei^/1L-O9fg'1(>:&0UIYQ$%h%f&ZAs8_HgX"2bGp`%.f6SBuF$Dn,jdD,<EsAuM3VRSN>lM_9JaQog5ecph%$uGE55SN%*V->A%[K#IiUSY%Wl*W.BNeF380NQ%jf\EV[<OdW+cJnPgs45b\ILgUX,h%;DWbZB>c25-9@t5QD`L>*jZ;]2\qJ=Sq3H(Y>cuOl@[KfU<9O18U8-[fk5I'40R5J;DN9IpR6:KQ2CRa+NeY`FAHL])U3F?%)ESiis(Z);@i0$PD_pmD2ZrYGCXkMj/IZB7IeA>giUSN8RMP$(jc.BmRA8a3XME_LliuWXbgCBT<q&1$Xn#fC3Z9Wsk.s=W-n"2%a*JXVc__`Xbo<]Aq:>*n>b57$0_[!Uj.'>!)D9@='fP&*b'U,oIYf\WiUUo/`ZD1faa:$I(.t(jIiHlJptm)=3DUAq%@;RFn_IVk;G,5579@CghjNea0LtqK?fp/-<%Mol_r]ck2'U+Ar`B8Id;OXmcg]*6lR[3FDjh3<ke2.Mp[b;,LtBQDOX8ZI*:!$>`Qn-.]:2Gnk=hl!\UM,I?-T@FD@_5uBb)5GoA=kPUuRQ0J"<#^AH16I9$XP`9q\CTCIXl(8MbOZ,&#XM?D?&a0jsI)nb$!+g)ft?T7.Dc_Q^AUd=2JbY/Q^i5$-'e8'QC)S[RS,EIU6h[:ZI`]mT%aj_'sEhKc&,n*SgtqU4K"WEO$%mO.b@j7*pUIkbBScc<)Xr56"9Numi4huS7dft6iJXk3rVKK5JipSJ$)&J5Te&J5Te&J5Te&J5Te&J5Te&J5Te&J5Te&J5Te&J5Te&J5Te&J5Te&J5Te&J5Te&J5Te&J5TeX8`38(n@c~>endstream
+Gb"0;!=]#/!5bE':MgUI'EA+5zz!!)M#3'[HE~>endstream
 endobj
 218 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://tobi.oetiker.ch/lshort/lshort.pdf)
->> /Border [ 0 0 0 ] /Rect [ 210.6636220472441 350.6236220472442 374.07362204724416 362.6236220472442 ] /Subtype /Link /Type /Annot
+>> /Border [ 0 0 0 ] /Rect [ 210.6636 363.6236 374.0736 375.6236 ] /Subtype /Link /Type /Annot
 >>
 endobj
 219 0 obj
 <<
+<<<<<<< HEAD
 /Annots [ 215 0 R 218 0 R ] /Contents 358 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] /XObject <<
 /FormXob.0ba901e64a80f2e0e4e27e23b621fb7f 216 0 R
+=======
+/Annots [ 215 0 R 218 0 R ] /Contents 350 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ] /XObject <<
+/FormXob.b6f77d4eeded7b432395304cf1a6ac36 216 0 R
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 >> /Rotate 0 
   /Trans <<
@@ -1355,7 +1527,11 @@ endobj
 endobj
 220 0 obj
 <<
+<<<<<<< HEAD
 /Contents 359 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 351 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -1372,7 +1548,11 @@ endobj
 endobj
 222 0 obj
 <<
+<<<<<<< HEAD
 /Annots [ 221 0 R ] /Contents 360 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Annots [ 221 0 R ] /Contents 352 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -1389,7 +1569,11 @@ endobj
 endobj
 224 0 obj
 <<
+<<<<<<< HEAD
 /Annots [ 223 0 R ] /Contents 361 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Annots [ 223 0 R ] /Contents 353 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -1399,7 +1583,11 @@ endobj
 endobj
 225 0 obj
 <<
+<<<<<<< HEAD
 /Contents 362 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 354 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -1409,7 +1597,11 @@ endobj
 endobj
 226 0 obj
 <<
+<<<<<<< HEAD
 /Contents 363 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 355 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -1426,7 +1618,11 @@ endobj
 endobj
 228 0 obj
 <<
+<<<<<<< HEAD
 /Annots [ 227 0 R ] /Contents 364 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Annots [ 227 0 R ] /Contents 356 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -1443,7 +1639,11 @@ endobj
 endobj
 230 0 obj
 <<
+<<<<<<< HEAD
 /Annots [ 229 0 R ] /Contents 365 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Annots [ 229 0 R ] /Contents 357 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -1453,7 +1653,11 @@ endobj
 endobj
 231 0 obj
 <<
+<<<<<<< HEAD
 /Contents 366 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Contents 358 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -1468,7 +1672,11 @@ endobj
 endobj
 233 0 obj
 <<
+<<<<<<< HEAD
 /Annots [ 232 0 R ] /Contents 367 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 318 0 R /Resources <<
+=======
+/Annots [ 232 0 R ] /Contents 359 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 310 0 R /Resources <<
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -1478,18 +1686,22 @@ endobj
 endobj
 234 0 obj
 <<
+<<<<<<< HEAD
 /Length 1861
+=======
+/Length 1900
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 stream
 /CIDInit /ProcSet findresource begin
 12 dict begin
 begincmap
 /CIDSystemInfo
-<< /Registry (AAAAAA+New)
-/Ordering (AAAAAA+New)
+<< /Registry (AAAAAA+NotoSans-Regular)
+/Ordering (AAAAAA+NotoSans-Regular)
 /Supplement 0
 >> def
-/CMapName /AAAAAA+New def
+/CMapName /AAAAAA+NotoSans-Regular def
 /CMapType 2 def
 1 begincodespacerange
 <00> <7F>
@@ -1631,32 +1843,164 @@ endendstream
 endobj
 235 0 obj
 <<
-/Length 11172 /Length1 11172
+/Length 19484 /Length1 19484
 >>
 stream
-    
- Ä   OS/2}r=ì   ¨   Vcmap	∑
-    glyfå(C    $ºhead“R  &ÿ   6hhea
-*p  '   $hmtxgí)h  '4  
-loca¿M…“  (@   ƒmaxp Ö=  )    name‹`ÆÖ  )$  _post     +Ñ     ∞ê                            	                     sfty @   xˇ8  x »   ˇ¿               
-     Ä                                                                         	 
-                        ! " # $ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ `   ,  ºx    32+"&54632+"&=46ê»(<<(»(<<(»(<<(»(<<x<(˝®(<<(X(<¸<(»(<<(»(< ,ËÑx    462"&5%462"&5º<P<<P<˛p<P<<P<(<<(»(<<(»(<<(»(<<(    d  Lx = A  !"&5##"&5#"&46;5#"&46;462346232+32+35 (<»<((<d(<<(dd(<<(d<P<»<P<d(<<(dd(<<(d<˛¨»<(,˛‘(<<(,<P<»<P<,(<<(˛‘,(<<(˛‘<P<»<P<˛‘(< »»  d  Lx , 5 =  !"&=!"&463!5#"&46;5462!2#!32+;5#"#3264&X(<˛‘(<<(,dx¥¥xd<P<,(<<(˛‘dx¥¥xd<˛¨<(dd(<Ùdd(<<<(d<P<»¥¥d(<<(d<P<»¥¥d(<Ñ(<»<˛¨»<P<(    d  Lx   4  !"&=46;2#"&=46;2#"&=475462 (<<(»(<<(¸‡(<<(»(<<(»(<<P<¸˛<<(»(<<(»(<Ë<(»(<<(»(<¸<(»(ú(<<(»(˝§(<    d  Lx ( 2 :  !"/+"&=4?'&=462762754&#"	;Ë(Ü~(»x¥ÇÇ¥¥ÜÜÇÇP<ÇÇ<˝dd<((<h˛¸d<(†ÇÇ¥x»(ÇÇ(»x¥¥x»(ÇÇÇÇ<P~ÜP<∞ddú(<<(¸‡hú(<Ç ÙËºx   462"&5Ù<P<<P<(<<(»(<<(   Ù  Ñx   !"&54632#"2 x¥¥x(<<((<<P<<¥x x¥<P<<(¸‡(<<P<( ,  ºx   !"&462654&#"&4632ê(<<P<<((<<(x¥¥<P<<( (<<P<¥x¸‡x¥   dêLx +  "&4?#"&46;'&4626232+#"'ê(<z¸(<<(¸z<PÇÇP<z¸(<<(¸z<((ÇÇê<PÊ<P<ÊP<˛˙<PÊ<P<ÊP<˛˙@    d »L∞   %"&5!"&463!462!2#!X(<˛‘(<<(,<P<,(<<(˛‘<»<(,<P<,(<<(˛‘<P<˛‘(<   ,ˇ8ºê   32#"&546ê»(<»((<<ê<(»(»<(ê(<    dXL    "&463!2#»(<<( (<<(X<P<<P<    ,  ºê   32+"&=46ê»(<<(»(<<ê<(»(<<(»(<     d  Lx   3"&=475462»(<<P<¸˛<<(»(ú(<<(»(˝§(<  d  Lx   !  !"&5463!2#3!265	4&#!"êx¥¥xêx¥¥x˛<(ê(<˝®X<(˛p(<¥x x¥¥x¸‡x¥,(<<(˛Ë(<<(   ,  Ñx   "&4?6232#!"&46;ê(<»P<d(<<(˛p(<<(dË<P»<(˚¥<P<<P<`"4    d  Lx $  "&5463!2!2#!"&4754&#!"»(<¥xêx¥˝Ü4(<<(¸‡(<<(˛p(<<Ë<(x¥¥x»(˝ä<P<<Pú(<<((<&  d  Lx ;  )"&54623!26=4&+"&46;26=4&#!"#"&5463!2 ˛px¥<P<<(ê(<<(»(<<(»(<<(˛p(<<((<¥xêx¥ZZ¥¥x(<<((<<(»(<<P<<(»(<<((<<(x¥¥x»xZFx»x¥<    d  Lx !  !46232+#"&5!"&5462,ê<P<d(<<(d<((<˛(<<P<Xº(<<(˝D<P<˛‘(<<(,<(X(<<(^    d  Lx %  "&5463!2#!!2#!"&463!26=4&#»(<<( (<<(˝DÙx¥¥x˝®(<<(X(<<(X<(X(<<P<˛p¥x»x¥<P<<(»(<®    d  Lx  '  !"&5463!2#!"!2#3!26=4&#êx¥¥xê(<<(˛p(<Ùx¥¥x˛<(ê(<<(¥x x¥<P<<(˛‘†å»x¥X˛‘(<<(»(<<    d  Lx   3"&47!"&463!2»(<˝D(<<( (<¸‡<P <P<<(˛p(¸‡2  d  Lx  ) 9  547&=463!2#!"&26=4&#!"34&#!"3!265dZZ¥xêx¥ZZ¥x˛px¥º(<<(˛p(<<(Ù<(˛p(<<(ê(<,»xZFx»x¥¥x»xZFx»x¥¥l<(»(<<(»(<˛‘(<<(»(<<(<  d  Lx  '  2#!"&463!265!"&=4634&#!"3 x¥¥x˝®(<<(X(<˛x¥¥xÙ<(˛p(<<(x¥x¸‡x¥<P<<(,†å»x¥˝®,(<<(»(<t ,  º∞    32+"&=4632+"&=46ê»(<<(»(<<(»(<<(»(<<∞<(»(<<(»(<¸‡<(»(<<(»(<   ,ˇ8º∞     32+"&=4632#"&546ê»(<<(»(<<(»(<»((<<∞<(»(<<(»(<¸‡<(»(»<(ê(<    d  Ñx   	#"'&4762P<((˝®XP<º˝ÓP<XPX<P    dêLË    "&463!2#"&463!2#»(<<( (<<(¸‡(<<( (<<( <P<<P<˛p<P<<P<  ,  Lx   	&462#"&47`˝Í<PX˝®((<ºP<˝®P˝®<P    d  Lx  '  !"&462"&4754&#!""&5463!2X(<<P<<((<r<(˛p(<<P<¥xêx¥˛p<P<<P<ê<Pvú(<<((<<(x¥¥x»(˛p(    d  Lx ' 0  "&46;54&#!"3!2#!"&5463!2"264& x¥¥xd<(˛p(<<(X(<<(˝®x¥¥xêx¥¥x(<<P<<ê¥¥d(<<(¸‡(<<P<¥x x¥¥x˛px¥ê<P<<P<(    d  Lx     3"&5463!2"&5!!4&#!"»(<¥xêx¥<P<˝®<<X<(˛p(<<(Ëx¥¥x¸(<<(Ù˛(< ,(<<(     d  Lx   (  3"&5463!2#!26=4&#!!26=4&#!»(<<(Xx¥ZZ¥x˛Ù(<<(˛Ù(<<(˛<(∞(<¥x»xZFx»x¥ <(»(<¸<(»(<  d  Lx (  !"&5463!2#"&54&#!"3!265462#êx¥¥xêx¥<((<<(˛p(<<(ê(<<P<¥x¥x x¥¥x(<<((<<(¸‡(<<((<<(x¥    d  Lx    3"&5463!2#4&#!!26»(<<(Xx¥¥xd<(˛Ù(<<(∞(<¥x¸‡x¥, (<¸<  d  Lx   !!2#!"&5463!2#!!2 ˛º(<<(¸‡(<<( (<<(˝DÙ(<<X˛p<P<<(∞(<<P<˛p<P<    d  Lx   !"&5463!2#!!2 ˛<P<<( (<<(˝DÙ(<<X˛på<<(∞(<<P<˛p<P<(    d  Lx /  !"&5463!2#"&54&#!"3!265#"&46;2#êx¥¥xêx¥<((<<(˛p(<<(ê(<d(<<(»(<¥x¥x x¥¥x(<<((<<(¸‡(<<(,<P<<(˛px¥  d  Lx   "&5!"&5462!462L<P<˝®<P<<P<X<P<˚P(<<(Ù˛(<<(∞(<<(˛Ù(<<P   ,  Ñx   !"&46;#"&463!2+32#ê(<<(dd(<<(ê(<<(dd(<<(<P<Ë<P<<P<¸<P<    d  Lx   )"&54623!265462 ˛px¥<P<<(ê(<<P<¥¥x(<<((<<(Ë(<<(¸x¥   d  Lx   	"'"&546262<P˝Ód<P<<P<vP<º˝ÓP<d˛î(<<(∞(<<(˝‘r<P  d  Lx   %!2#!"&5462,º(<<(¸‡(<<P<»<P<<(∞(<<(    d  Lx   3"&5462	62"&5"/»(<<PJJP<<P<ÊPÊ<<(∞(<˛∂J<(˚P(<<(ƒÍÊ¸@(<  d  Lx   3"&5462462"&5»(<<Pv<P<<P<˝®<<(∞(<˝ä0(<<(˚P(<<(hX¸@(<   d  Lx    !"&5463!2#4&#!"3!265êx¥¥xêx¥¥xd<(˛p(<<(ê(<¥x x¥¥x¸‡x¥L(<<(¸‡(<<(    d  Lx 	   !26=4&#!"&5463!2#!,Ù(<<(˛<P<<(Xx¥¥x˛ <(»(<˚¥(<<(∞(<¥x»x¥    d  Lx  /  4&#!";7'&4627"/+"&5463!2Ñ<(˛p(<<(†dÇ<PfÄ»ÜÜ<PÜ~(»x¥¥xêx¥L(<<(¸‡(<dÇP<fÄ`(ÇÇP<ÇÇ¥x x¥¥x    d  Lx 	 (  !26=4&#!"&54&#!"&5463!2,Ù(<<(˛º(<<(˛<P<<(Xx¥ZZ< <(»(<˚P<(ê(<˛(<<(∞(<¥x»xZFx˛p(<  d  Lx 8  "&=463!2#"&54&#!"3!2#!"&54623!26=4&#êå††åêx¥<((<<(˛p(<<(êx¥¥x˛px¥<P<<(ê(<<(X†å»x¥¥x(<<((<<(»(<¥x»å†¥x(<<((<<(»(<  d  Lx   "&463!2#!"&5»(<<( (<<(˛‘<P<∞<P<<P<˚¥(<<(L    d  Lx   )"&54623!265462 ˛px¥<P<<(ê(<<P<¥¥xË(<<(¸(<<(Ë(<<(¸x¥     d  Lx   !"'&5462	462X(˛p<P<,,<P<˛pê( (<<(˝@˛‘,¿(<<(¸‡(˛p¸  d  Lx *  !"'#"&546232654623265462 xZFxx¥<P<<((<<P<<((<<P<¥ZZ¥xË(<<(¸(<<(ê(<<(˛p(<<(Ë(<<(¸x¥¥    d  Lx +  "&=47	&=462	5462	"&=,<P<J˛∂<P<,,<P<˛≤N<P<˛‘†(<<(»(JJ(»(<<(†˛‘,†(<<(»(˛∂˛∂(»(<<(†,    d  Lx   	&=462	5462"&5Ù˛é<P<,,<P<˛é<P<îr(»(<<(†˛‘,†(<<(»(˛í˝Ã(<<(  d  Lx   475!"&463!2!2#!"&5d˝D(<<( (<¸˛º(<<(¸‡(<,(8<P<<(»(˝@<P<<(   Ù  Ñx   !#"&546;2+32 »(<<(»(<<(dd(<<<(∞(<<P<¸<P<(  d  Lx   !"&=&=462Ë(<¸˛<P<<<(§˛(»(<<(ú¸˙(»(<    ,  ºx   !"&46;#"&46;2#ê(<<(dd(<<(»(<<(<P<Ë<P<<(˚P(<(  d Lx   "&4762#"'	»(<êPê<((˛∂˛∂ <Pê˛pP<N˛≤    dˇ8L     "&463!2#»(<<( (<<(»<P<<P< ÙËÑx   &462#"'<P»<((ŒP<»P<    d  LË  "  !"&5463!54&#!"&463!2#!"3!êx¥¥xÙ<(˛p(<<(êx¥<(d˛(<<(Ù¥xx¥d(<<P<¥x˝®(<ê<((<  d  Lx 	   !!2654&"&5462!2# ˛Ù(<<˝Ä(<<P<Ùx¥¥x ˝®<(ê(<¸‡<(∞(<<(˛‘¥x˛px¥<  d  LË (  !"&5463!2#"&54&#!"3!265462#êx¥¥xêx¥<((<<(˛p(<<(ê(<<P<¥x¥xêx¥¥x(<<((<<(˛p(<<((<<(x¥    d  Lx 	   "3!!"&5463!462ê(<<(Ùd˝®x¥¥xÙ<P<< <(˛p(<X¸‡¥xêx¥,(<<(˚P(<    d  LË  $  !"&5463!2#!3!2#!54&#!"êx¥¥xêx¥<(˝D<(ê(<<(˛X<(˛p(<¥xêx¥¥x»(<d(<<P<Xd(<<(<   ,  Lx #  #"&5#"&46;546;2+"32 d<P<d(<<(d¥x»(<<(»(<d(<< ˝D(<<(º<P<dx¥<P<<(d<P<H    dˇ8LË  $  %"&=463!2#!"&463!26=!"3êx¥¥xX(<¥x˛p(<<(ê(<˛(<<(»¥x»x¥<(¸‡x¥<P<<(d»ê<(»(<    d  Lx   462!2"&54&#!"&5d<P<Ùx¥<P<<(˛<P<(<<(˛‘¥x˝®(<<(X(<˝D(<<(   ,  Ñx  #  #"&46;232#!"&46;"&5462Ùd(<<(»(<d(<<(˛p(<<(dd(<<P<< <P<<(˝D<P<<P<Ë<((<<((<    dˇ8Ñx  '  "&462"&46;2+"&5462;265 (<<P<<(<<(»(<¥x»x¥<P<<(»(<∞<P<<P<˛p<P<<(¸‡x¥¥x(<<((<<(º ,  Lx   !"'"&546262	Ë(˛∂d<P<<P<ÆP<˛∂J<Jd†(<<(∞(<<(˝™<P˛∫˛≤P<   ,  Ñx   !"&46;#"&46;232#ê(<<(dd(<<(»(<d(<<(<P<Ë<P<<(˚¥<P<    d  LË )  "&546;2632"&54&#""&54&#,<P<<(»xZFxx¥<P<<((<<P<<( ˝D(<<( (<ZZ¥x˝®(<<(X(<<(˝®(<<(X(<  d  LË   "&5463!2"&54&#,<P<<(Xx¥<P<<( ˝D(<<( (<¥x˝®(<<(X(<<  d  LË    !"&5463!2#4&#!"3!265êx¥¥xêx¥¥xd<(˛p(<<(ê(<¥xêx¥¥x˛px¥º(<<(˛p(<<((    dˇ8LË    %!"&5463!2%!26=4&#! ˛<P<<(Xx¥¥˝îÙ(<<(˛»˛‘(<8,Ë(<¥x»x¥»<(»(<¥  dˇ8LË    %"&=463!2"&55!"3êx¥¥xX(<<P<˛(<<(»¥x»x¥<(¸,8<(,»ê<(»(< ,  LË   "&5463!2"&54&#Ù<P<<(êx¥<P<<( ˝D(<<( (<¥x(<<((<(    d  LË $  "&463!2# #"3!2#!"&463!264&#êx¥¥xX(<<(˝–((<<(êx¥¥x˝®(<<(X(<<,ê¥¥<P<<P<¥¥<P<<P< ,  Lx #  "&46;462!2#!;2+"&5ê(<<(d<P<,(<<(˛‘<(»(<<(»x¥ <P<,(<<(˛‘<P<˛(<<P<¥xÙ4    d  LË   %462#!"&54623Ñ<P<<(˝®x¥<P<<(»º(<<(¸‡(<¥xX(<<(˝®(<    d  LË   !"'&5462	462X(˛p<P<,,<P<˛pê(ê(<<(˛–˛‘,0(<<(˛p(˛p   d  LË *  !"'#"&546232654623265462 xZFxx¥<P<<((<<P<<((<<P<¥ZZ¥xX(<<(˝®(<<(ê(<<(˛p(<<(X(<<(˝®x¥     d  LË   	"&47	&462	62	"'X˛∂P<F˛∫<PJJP<˛≤N<Pl˛≤<PJJP<˛∫F<P˛∂˛∂P<    dˇ8LË #  %"&54623!462#!"&463!26=êx¥<P<<(Ù<P<¥x˛p(<<(ê(<»¥xê(<<(˛p(<Ù(<<(¸‡x¥<P<<(d<    d  LË   3"&47!"&463!2!2#»(<r˝‘(<<( (<˝Ü4(<<(<Pv<P<<P˝ä<P< ,  Ñx (  !"&=4&#"&4636=4632#"32 x¥<((<<($@¥x(<<((<ZZ<((<<¥x»(<<P<@(»x¥<P<<(»xZFx»(<<P< Ù  ºx   !"&5462X(<<P<<<(∞(<<(˚P(<< ,  Ñx (  !"&46326=47&=4&#"&463272#"ê(<<((<ZZ<((<<(x¥@$(<<((<¥<P<<(»xFZx»(<<P<¥x»(@<P<<(»x¥  d Lx "  "&546323265462#"&54&#"»(<¥xx¥<((<<P<¥xx¥<((<<Ë<(t∏¥x(<<((<<(x¥¥x(<<((<    d  Lx   2#!"&5463Ë(<<(¸‡(<<(x<(˚P(<<(∞(<       ºëT|_<ı  4    ≥@!´    ªQÑí dˇ8Lx              xˇ8  ∞ d dL                 $∞  ;  ;,;,; d; d; d; d;Ù;Ù;,; d; d;,; d;,; d; d;,; d; d; d; d; d; d; d; d;,;,; d; d;,; d; d∞ d; d d d d d d d, d d d d d d d d d d d d d d d d dÙ d, d dÙ d d d d d, d d, d,, d d d d d, d, d d d d d d,Ù, d d         0 X ∞R™¬Ê
-N|ö≤Œ(Tå‹HÑ™¸8höæÊ
-Hêƒ :dîæ .XÄ∞Œ˛	*	\	ä	“
-
-\
-~
-™
-ÿ\åºﬁ$J`zÆﬁHÄ¥ÍLÜ∏ﬁBt¢ŒÙ*`à∂Ù*`à¿ÿB^    a; #                        ∆        	          	                                        %       	 (  	   n 1  	   ü  	   ∑  	  2 ≈  	   ˜  	    	  '  	  P=CopyrightNewRegularNewNewVersion 1.00NewTrademark C o p y r i g h t   ©   1 9 9 9   b y   M a t t h e w   W e l c h .   A l l   R i g h t s   R e s e r v e d . W h i t e   R a b b i t R e g u l a r W h i t e   R a b b i t : V e r s i o n   1 . 0 0 W h i t e   R a b b i t V e r s i o n   1 . 0 0 W h i t e R a b b i t W h i t e   R a b b i t ô   T r a d e m a r k   o f   M a t t h e w   W e l c h                                            endstream
+     Ä  POS/2çØÜP   ‹   `cmap	ñ
+W  <  cvt >+  T  ,fpgmb/É  Ä  glyfdzÁ  å  0(head∞§´  A¥   6hhea≥È  AÏ   $hmtx»\r  B  Ñloca+j7T  Cî   ƒmaxpEÙ  DX    nameò¿j  Dx  |postˇü 2  JÙ    prepPGø  K   Aê   äX   KäX  ^ 2B  ‡ ˇ@    )   GOOG@  ˇ˝-˛€  -%  ü                    
+     Ä                                        	 
+                        ! " # $ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ `                                                                         [ [ I I     ˇ‘ˇˆ"ˇˆˇ [ [ I I ˇˆ¯ˇˆˇ’ˇˆ˝"ˇˆˇ \ \ K K<  Eˇ¯ \ \ K K<<    <Dˇ¯ˇ¯ H H > >h Ëˇ†ˇh Ëˇöˇ H H > > [ [ I I   Ï  ˇ’ˇˆÏ"ˇˆˇ ; ; , ,*ˇ~a ‚ˇ†ˇ2ˇva Ëˇöˇ ; ; , ,À†‡a è‡ò‡g è∞ , ∞ UXEY  K∏ QK∞SZX∞4∞(Y`f äUX∞%aπ  cc#b!!∞ Y∞ C#D≤  C`B-∞,∞ `f-∞,#!#!-∞, d≥ BC∞C ``B±CB±%C∞CTx ∞#∞CCad∞Px≤C`B∞!e!∞CC≤B ∞C#B≤C`B#∞ PXeY≤C`B-∞,∞+∞CX#!#!∞CC#∞ PXeY d ∞¿P∞&Z≤(CEcE∞EX!∞%YR[X!#!äX ∞PPX!∞@Y ∞8PX!∞8YY ±CEcEad∞(PX!±CEcE ∞0PX!∞0Y ∞¿PX f ääa ∞
+PX` ∞ PX!∞
+` ∞6PX!∞6``YYY∞%∞Cc∞ RX∞ K∞
+PX!∞CK∞PX!∞Ka∏ c∞Cc∏ bYYdaY∞+YY#∞ PXeYY d∞C#BY-∞, E ∞%ad ∞CPX∞#B∞#B!!Y∞`-∞,#!#!∞+ d±bB ∞#B∞EX±CEc±C∞	`Ec∞*! ∞C ä ä∞+±0%∞&QX`PaRYX#Y!Y ∞@SX∞+!∞@Y#∞ PXeY-∞,∞	C+≤  C`B-∞,∞	#B# ∞ #Ba∞bf∞c∞`∞*-∞	,  E ∞Cc∏ b ∞ PX∞@`Yf∞c`D∞`-∞
+,≤	 CEB*!≤  C`B-∞,∞ C#D≤  C`B-∞,  E ∞+#∞ C∞%` Eä#a d ∞ PX!∞ ∞0PX∞ ∞@YY#∞ PXeY∞%#aDD∞`-∞,  E ∞+#∞ C∞%` Eä#a d∞$PX∞ ∞@Y#∞ PXeY∞%#aDD∞`-∞, ∞ #B≥ EPX!#!Y*!-∞,±E∞daD-∞,∞`  ∞CJ∞ PX ∞#BY∞CJ∞ RX ∞#BY-∞, ∞bf∞c ∏ cä#a∞C` ä` ∞#B#-∞,KTX±dDY$∞e#x-∞,KQXKSX±dDY!Y$∞e#x-∞,± CUX±C∞aB∞+Y∞ C∞%B±%B±%B∞# ∞%PX± C`∞%Bää ä#a∞*!#∞a ä#a∞*!± C`∞%B∞%a∞*!Y∞CG∞CG`∞b ∞ PX∞@`Yf∞c ∞Cc∏ b ∞ PX∞@`Yf∞c`±  #D∞C∞ >≤C`B-∞, ± ETX∞#B E∞#B∞#∞	`B `∑   BBBä` ∞#B∞a±+∞ã+"Y-∞,± +-∞,±+-∞,±+-∞,±+-∞,±+-∞,±+-∞,±+-∞,±+-∞,±+-∞,±	+-∞+,# ∞bf∞c∞`KTX# .∞]!!Y-∞,,# ∞bf∞c∞`KTX# .∞q!!Y-∞-,# ∞bf∞c∞&`KTX# .∞r!!Y-∞ , ∞+± ETX∞#B E∞#B∞#∞	`B `∞aµ  BBä`±+∞ã+"Y-∞!,±  +-∞",± +-∞#,± +-∞$,± +-∞%,± +-∞&,± +-∞',± +-∞(,± +-∞),± +-∞*,±	 +-∞., <∞`-∞/, `∞` C#∞`C∞%a∞`∞.*!-∞0,∞/+∞/*-∞1,  G  ∞Cc∏ b ∞ PX∞@`Yf∞c`#a8# äUX G  ∞Cc∏ b ∞ PX∞@`Yf∞c`#a8!Y-∞2, ± ETX±EB∞∞1*±EX0Y"Y-∞3, ∞+± ETX±EB∞∞1*±EX0Y"Y-∞4, 5∞`-∞5, ±EB∞Ec∏ b ∞ PX∞@`Yf∞c∞+∞Cc∏ b ∞ PX∞@`Yf∞c∞+∞ ¥     D>#8±4*!-∞6, < G ∞Cc∏ b ∞ PX∞@`Yf∞c`∞ Ca8-∞7,.<-∞8, < G ∞Cc∏ b ∞ PX∞@`Yf∞c`∞ Ca∞Cc8-∞9,± % . G∞ #B∞%IääG#G#a Xb!Y∞#B≤8*-∞:,∞ ∞#B∞%∞%G#G#a± B∞C+eä.#  <ä8-∞;,∞ ∞#B∞%∞% .G#G#a ∞#B± B∞C+ ∞`PX ∞@QX≥  ≥&YBB# ∞
+C ä#G#G#a#F`∞C∞b ∞ PX∞@`Yf∞c` ∞+ ääa ∞C`d#∞CadPX∞Ca∞C`Y∞%∞b ∞ PX∞@`Yf∞ca#  ∞&#Fa8#∞
+CF∞%∞
+CG#G#a` ∞C∞b ∞ PX∞@`Yf∞c`# ∞+#∞C`∞+∞%a∞%∞b ∞ PX∞@`Yf∞c∞&a ∞%`d#∞%`dPX!#!Y#  ∞&#Fa8Y-∞<,∞ ∞#B   ∞& .G#G#a#<8-∞=,∞ ∞#B ∞
+#B   F#G∞+#a8-∞>,∞ ∞#B∞%∞%G#G#a∞ TX. <#!∞%∞%G#G#a ∞%∞%G#G#a∞%∞%I∞%aπ  cc# Xb!Yc∏ b ∞ PX∞@`Yf∞c`#.#  <ä8#!Y-∞?,∞ ∞#B ∞
+C .G#G#a `∞ `f∞b ∞ PX∞@`Yf∞c#  <ä8-∞@,# .F∞%F∞CXPRYX <Y.±0+-∞A,# .F∞%F∞CXRPYX <Y.±0+-∞B,# .F∞%F∞CXPRYX <Y# .F∞%F∞CXRPYX <Y.±0+-∞C,∞:+# .F∞%F∞CXPRYX <Y.±0+-∞D,∞;+ä  <∞#Bä8# .F∞%F∞CXPRYX <Y.±0+∞C.∞0+-∞E,∞ ∞%∞&   F#Ga∞#B.G#G#a∞C+# < .#8±0+-∞F,±
+%B∞ ∞%∞% .G#G#a ∞#B± B∞C+ ∞`PX ∞@QX≥  ≥&YBB# G∞C∞b ∞ PX∞@`Yf∞c` ∞+ ääa ∞C`d#∞CadPX∞Ca∞C`Y∞%∞b ∞ PX∞@`Yf∞ca∞%Fa8# <#8!  F#G∞+#a8!Y±0+-∞G,± :+.±0+-∞H,± ;+!#  <∞#B#8±0+∞C.∞0+-∞I,∞  G∞ #B≤ .∞6*-∞J,∞  G∞ #B≤ .∞6*-∞K,± ∞7*-∞L,∞9*-∞M,∞ E# . Fä#a8±0+-∞N,∞
+#B∞M+-∞O,≤  F+-∞P,≤ F+-∞Q,≤ F+-∞R,≤F+-∞S,≤  G+-∞T,≤ G+-∞U,≤ G+-∞V,≤G+-∞W,≥   C+-∞X,≥  C+-∞Y,≥  C+-∞Z,≥ C+-∞[,≥  C+-∞\,≥ C+-∞],≥ C+-∞^,≥C+-∞_,≤  E+-∞`,≤ E+-∞a,≤ E+-∞b,≤E+-∞c,≤  H+-∞d,≤ H+-∞e,≤ H+-∞f,≤H+-∞g,≥   D+-∞h,≥  D+-∞i,≥  D+-∞j,≥ D+-∞k,≥  D+-∞l,≥ D+-∞m,≥ D+-∞n,≥D+-∞o,± <+.±0+-∞p,± <+∞@+-∞q,± <+∞A+-∞r,∞ ± <+∞B+-∞s,±<+∞@+-∞t,±<+∞A+-∞u,∞ ±<+∞B+-∞v,± =+.±0+-∞w,± =+∞@+-∞x,± =+∞A+-∞y,± =+∞B+-∞z,±=+∞@+-∞{,±=+∞A+-∞|,±=+∞B+-∞},± >+.±0+-∞~,± >+∞@+-∞,± >+∞A+-∞Ä,± >+∞B+-∞Å,±>+∞@+-∞Ç,±>+∞A+-∞É,±>+∞B+-∞Ñ,± ?+.±0+-∞Ö,± ?+∞@+-∞Ü,± ?+∞A+-∞á,± ?+∞B+-∞à,±?+∞@+-∞â,±?+∞A+-∞ä,±?+∞B+-∞ã,≤ EPX∞≤EX#!!YYB+∞e∞$Px±EX0Y-  ^  ˘    *@'    g W _O    +3!%!!^õ˛ò5˛À ˝63d    HˇÚ ƒ    @   _ jM a qN$#+7#34632#"&£9kt$%%$…˝l%%$    A»W    $@!  _j N    +#!#†77 ˛˛˛˛     l    G@D
+ h  g		jMkN    +3##7##7#537#5373373337#‡âñ)G)è'F&~ã Üí(H(ê(E(˛èè¥†C————C†B‘‘‘‘B††   >ˇ∆˜ " ) 0 i@0*)#
+  LK∞-PX@Ä  Ü    j lN@  ÖÖ  Ü   Y  b   RY@	+7&&'55&&546753&&'#6654&'˝7h "j3c\gX@5W$ M(BX-h_@63-<@;60A1U RGJTXWJ…+?2FW
+oå*!(+˛‚+"&'    1ˇˆ‘    % / ôK∞PX@,j  	i a
+  pM 		akN@4j  	ijM a
+  pM kM 		a qNY@+'& -+&/'/!%% +2#"&546#"32542#"&546"3254√JLIMGKF˛tMå˛Ñ&##&MhIMIMGKFL&##&M‘ujjwwjju
+˝6 4QPPR¢°‡ujjwwjju?PPQQ¢†    5ˇˆ⁄’  + 5 z@&5LK∞PX@# a  pM akM akN@! a  pM _ kM a qNY@!  31 +!+
+ +26673#'#"&5467&&546"6654&32670P]Q>¡!Y0&íwW/tSgzSG 7cR*5&$;30R6=J>@\’QI?X$∫Q/@n)éT*4f^M]($R7JRH,'$=%"=($.˛» B67B*     A» †   @   _j N    +#†7 ˛˛     (ˇb   @  Ü   j N+4673#&&(GLSFGGERLGz„[^‚wtﬂ^Xﬂ   ˇb   @   Ü jN+#6654&'3GLREGGFSLGyﬂX^ﬂtw‚^[„  )6¸¯  3@
+	 IK∞)PX∂  l N¥  vY@	    +7''7'7'B¿∏wVUMYu∂æ¯¿6\û/ØØ/û\6¿  2 oS  &@#  W  g _ O+3##5#5353A««H««HÑGŒŒGœ   )ˇ ¿ t  @   W  _   O+7#6673¿1A^i569à4   ( Â3  @   W   _ O    +753(ÚÂNN     HˇÚ ƒ y  @   a qN$"+74632#"&H$%%$6%%$      
+  j   @jM   k N    +#j˛ˆV
+ ˝6   1ˇˆ’   @ a pM  a   q N$$%#+#"&54663232654&#"0hVys/hUxv˛~CQPEEPQCfs•X√≠t§W¡Æìíëîííí    Y  c   @
+	 L jM   k N+!#467'73cVL.¡IÛ+4>;ñ     0  ‘  *@' L a pM  _   k N'%(+!!57>54&#"'6632!˛(ª6J&F84O)/*mDdt.R7ïiIΩ6TQ0;=$ ;#1eY8b_6ì     -ˇˆ‘ * @@=$ L%K  i a pM  a   q N%$!$%*+#"&'532654&##532654&#"'6632ÌPDVT:y_8`,-h0`Ui_EFX[F<:R(,&qHpm#HU
+XG>a6RKBC;KJ=49"<,d     (Œ 
+  +@( L  h jM kN+%##5!533'467#!(hU˛™P[hΩ÷ ¢¢¢K·˛#·4I!,˛œ     ?ˇˆ   D@A 
+	L   i _ jM a qN  +2#"&'532654&#"'!!66nÇç~7a!$g/OaV]H,f˛Â:∂ndoSKOFK
+QPœ     7ˇˆ‘  , >@; 	L  i  a   pMa qN &$, ,$'%$+4>32&&#"36632#"&&2654&#"7GÄe3-E\5R@]r{hDnAÚ?NEE/F'"D1MïyHK.Ph;#1qhpÄDåÜQUDP'< +U7  ,     %@" L   _ jMkN    +3!5!à%˛ﬂ˛ﬁzPD˝z     1ˇˆ
+‘  ( 5 6@33#L a  pM a qN -+(( +2#"&54667&&5466"6654&32654&''^x%>%,H+ks|)D'4I8`<7G#<$4GFœJMIMRDBE‘XS+@15F1Zie[1H4UB7K(G52%2#>625˛(4EE74EI   2ˇˆ‘  , >@;	 L  ia pM  a   q N &$, ,%'$$+#"&'532>7##"&546632'"326654&&GÅe5'1F[6SA\q9fEDn@Ú>OCF0F'"DôMïyHK.Oi:"1qgKl:EãÜRTEO'< +T8     HˇÚ ƒ&   @  a   sM a qN$$$"+4632#"&4632#"&H$%%$$%%$‚&&$  ˛x%%$      ˇ ¬&   @  c  a   sN$"+4632#"&#>73F$%%$q1B
+^‚&&$  ˛´4Å5&WU#    2 t	`  ≥ 2+%%5%	˛)◊˛áytœ2ÎN≤û  8 ŸÁ   /@,   g W _O    +5!5!8 ˛6 †GG«GG     2 t	`  ≥2+7%%52y˛á◊˛)¬ù≥NÎ2œ   ˇÚò‘  + 2@/  L   Ä   a pM a qN$#%*+74667>54&#"'6632#4632#"&å% '+>;1L#(a<_h5$!#F#$$#‰&72!,*04F^Q-?5*)ì%%$       :ˇßI  ? M {@	G	/ 0LK∞PX@&  i  e a jM 		a m	N@$  		i  i  e a jNY@KI%'%%&(%%$
++#"&'##"&546632326654&&#"3267#"&&54>3232677&&#"I,@,.5F5LS4_A,U
+%+KÉSrùQúì=o++kAv®Y:nùch¢]˛3+81(1<e.XG+5"%2fTBe:	À4"3U3]ÅD^•jîûDX•t]üuAV†Ø@:TC}0K      ~Õ   ,@)L    h jMkN    +!'!#3.'3!V˛ÂU[Q˛‚Q‚››Õ˝3*-;ÿ  a  T    " D@ALg  _  jM _ kN "! 	+2##2654&##32654&#-ÜâFB-I*Ös˚ﬁ\DS[vê_JMc Ob?S&F8aj ˛–;:;3„K˛˝J<8E     =ˇˆY‘  7@4 	 
+L  a pM a qN  +"3267#"&&546632&&ìsÑ{{/T((U;míIOönqT$!QÖöÜÖõNZ¶pl•]*L  a  ù  	  @ _ jM  _   k N!%!"+##324&##3 ù≈∞«‹lûV_çÅua"lµ∑ PõvèÖ˝–    a     )@&  g _ jM  _   k N+!!!!!!!˛qè˛À#˛›5 OﬂNˇ   a    	 #@    g _ jM   k N+3#!!!!ªZè˛À"˛ﬁ O˝O    =ˇˆé‘   ;@8 L    g a pM a qN%%&#+3#"&&546632&&#"32675#ó˜:vKoòOX•u<k."&_3Äè7v`/Bùy˛¢Y•qp§[NöÜUÉI
+‘   a  É   !@   gjM  k N+!#!#3!3ÉZ˛íZZnZM˛≥ ˛“.   (  *    @
+	 L jM   k N+!!57'5!*˛˛TTTT4;44˝≈  ˇ≤ˇB ∂   (@% L   e jN  +"&'5326653$$-ZfæL2-∆˝Agb    a  k    @ LjM  k N+!##366773kj˝IZZ>¡i˛ÂU@˛Î ˛†"D"ÿ˛…    a  Û   @   jM `kN    +33!aZ8 ˝ÜP  a  *   '@$
+ LjM  k N    +!##333#467#úÎSÖ‹‡ÑYÓri9˛O ˝∑I˝6∑4f ˝è    a  ó   @ LjM  k N+!###33.53ói˛ÇSh}TQ#h7˛q ˝±@L ì   =ˇˆ–’   @ a pM  a   q N$%&#+#"&&54663232654&#"–KíloìHHìpkíK˝Ãryzppyysfo•\\¶on§\[•oáõõááôô  a  *    2@/  g _  jM kN 
+	 +2####32654&åÄ5}kRZµ[HfdX nd;g@˛Í M˛ÊBOED  =ˇV–’    +@(L   Ü a pM a qN$%&A+#'"#"&&54663232654&#"–ig´ÅäoìHHìpkíK˝ÃryzppyysfÉ∏#≤°\¶on§\[•oáõõááôô     a  _    ;@8L  g _  jMkN 
+	 +2####32654&&Ö*A$ƒi≠éZ¿fkWPT ef9L-˛¿'˛Ÿ N˛˜ECF;  3ˇˆˆ‘ ) .@+ L a pM  a   q N%,%"+%#"&'532654&&'&&546632&&#"ˆäu<f"$k9PQIA[]:gC;b(%W/CDD:?W-ø_jV>5#0)!`S9Q,M9/$0&5J    
+  !   @_ jM   k N+!##5!#CZﬂﬁ{OO  ZˇˆÄ   @jM  a   q N##+%#"&5332653Ä<{_ÖãZ]^aWY¸JwEëwÃ˛1W`gQŒ        X   !@ LjM   k N    +#3667XˇZˇ^°† ˝6 ˛6,M##N-»      ï   '@$ LjM  k N    +#.'#36673667ïæ[ã
+á[Ω^o~]Én ˝6‘:-	U.˛/ ˛L.V&'\,Ø˛N.[#%W/≥      F    @ LjM  k N+!##33FfΩ¿_ÌﬁdØ∞_›6˛ tV˛Ë˛¨        6   @ L  jM kN+3#3∫aÓZÓbk_˛K˛Îπ   &    	 )@& L _ jM  _   k N+!!5!5!!˛x˛îŸ˛àÇD6PD˝     Pˇb0   @    c _ jN+#3#30‡‡ääûhH˝(    
+  k   @jM   k N    +#`W˛ˆ ˝6    ˇb ˘   @    c _ jN+3#53#ää‡‡VÿH¸ò     &œ  '±dD@ L   Öv    +± D3#&‘2ÍN¥†ƒ˛<g˛ô    ˇ˛ˇfæˇ¶   ±dD@   W  _   O+± D!5!æ˛@¿ö@    (^ Ò˛  &±dD@
+ L Ö   v    +± D#.'5ë!%;:1˛7499
+  .ˇˆ‡!  & {@ LK∞PX@  g  a  sM akN@$ g  a  sM kM a qNY@ #!&&	 	+2#'##"&5467754&#"'6632655 b^@#MDI`~É[:5*L!#`NdM7+DZ!V^˛ìL,*MRPW C4B˛‚83-*KN0     Uˇˆ0¯  ! ä∂LK∞PX@ lM a   sM aqNK∞)PX@  lM a   sM kM a qN@  a   sM _ kM a qNYY@!!$&+36632#"&'##3"32654≠P?dyzc?P?XóUBAXHG?";".ãääå. D¯˛‡bgcijdÀ   7ˇˆø"  7@4 L a sM  a  q N 	 +"&&546632&&#"3267,Go?BqH)L@ûML,CA
+:z_c|:I	ÀagN   7ˇˆ¯  " ï∂	LK∞PX@ lM a sM a  q NK∞)PX@! lM a sM kM a  q N@! a sM _ kM a  q NYY@ "" +"&546323&&553#'#'26554&#"dxyd>OXGP1UEBYGGG
+ãääç.!3÷˝H"0I]^dkq_`j  7ˇˆ"   C@@L  g a  sM a qN 
+ +2!3267#"&&5466"!&&$Ec5˛ëYP3O*)P7LuA;kF?I>"<mI5[_M>{YX~DHQHDU     É˝  \@ LK∞PX@ a lM  _ mM kN@  i  _ mM kNY@	%%+###5754632&&#"3LáX^^\R 5*,+á‘˛,‘)h[E
+;?#   7ˇ"  + Ä@LK∞PX@" a  sM a qM a oN@& mM a  sM a qM a oNY@  &$+ +	 	+2373#"'532655467##"&546"326554&5UFu{vKOwEO6phuusCJIFQJL"()G˝ﬂst"Q*QF-	QíÉÄóJkcciWan_     U  ¯  HµLK∞)PX@ lM  a   sMkN@  a   sM _kNY∑"%+36632#4#"#3≠Y4bbWxZCXX(#)*]g˛£WÅe^˛Î¯     N   µ·   çK∞
+PX@  a  lMmM kNK∞PX@  a  pMmM kNK∞-PX@  a  lMmM kN@   imM kNYYY@  +2#"&546#ÇAX·…˝Ë   ˇ…ˇ µ·   •@
+LK∞
+PX@  a   lM mM aoNK∞PX@  a   pM mM aoNK∞-PX@  a   lM mM aoN@    i mM aoNYYY@$"+4632#"&"&'532653N8&  *XH©¸ÉG#1k˝òKU     U  ¯  G@	 LK∞)PX@ lM   mMkN@ _kM   mMkNY∂+3>773#'#3¨	´gŸËj∫=WWk4
+µÂ˛Õ˙5≈¯   U   ≠¯  (K∞)PX@ lM   k N@  _   k NY¥+3#3≠XX¯   U  V" ! ]∂LK∞PX@ a  sMkN@ mM a  sMkNY@ 	 !!	+2#4#"#4#"#336632366°[ZWmNCWnQ>XGU0~&]"]h˛£YZV˛ÿYd^˛ÍI*)Z.,     U  "  PµLK∞PX@  a  sMkN@ mM  a  sMkNY@ 	 +2#4#"#3366W`bWxYDXG\"]h˛£WÅd^˛ÍI*)    7ˇˆ'"   @ a sM  a   q N$%%"+#"&&5463232654&#"'ásGo@ÜsIo?˛kKRQLLRRJÖíA}YÖêA{Y_oo__ll    Uˇ0"  # k∂	LK∞PX@ a  sM a qM oN@! mM a  sM a qM oNY@ ## +2#"&'##3366"326654&Tcyyd>QXHN1RCAX1?G"äãâé/4‹I#0J\^ck6]<\n   7ˇ"  " a∂LK∞PX@ asM a   qM oN@  mM a sM a   qM oNY@""$&+467##"&54632373#26754&#"∫Q@ay{b?PFXòSEDWHFG0"0ãääç0#I¸¯/[^fiq__k    U  é"  fK∞PX@ L@ LYK∞PX@  a  sM kN@ mM  a  sM kNY@  +2&&#"#3366O#)H+XH
+R"Q-Q6˛‚b,@   3ˇˆ≤" ) .@+ L a sM  a   q N%,%"+%#"&'532654&&'.54632&&#"≤tb8Q [/C<954J(oZ1U%"J'69=33H&îNPP+$  (8,DJF#(9     ˇˆSì  @@=  L Ö_ mM  a qN  +%267#"&&5#57733#*4*G,LM#4õõ/>C	HA8*#r{D˛ 1/     Oˇˆ  LµLK∞PX@mM  a  k N@mM   kM a qNY@    "$+#'##"&533265H\4abYwYE˝ËG*']f_˛ßÄd^       ¸  !@ L  mMkN    +333>73ÀÀ^rr^Ã˛ƒ6126<˝Ë       " !@ LmM  k N+&&'##33>7336673#Ø`dì[J_`\KZïg/)OO*˛”˛‚+X27.˛“"PX.˝Ë    ˇ  @	 L  mMkN+373#'#‘πdäâcπ√díîc  ˛˙˛Ó÷÷     ˇ˛  '@$ L  mM a oN%#+336673#"&'532677^tm_ÁYN$.9˛œ(I!Q)0˝ûLZF4+G    '  Ø 	 )@& L _ mM  _   k N+!!5!5!!Ø˛x ˛Òp˛‰#:öDB˛n    ˇb\   ,@)L  i    e a jN+&&554&#56655463\\j?;;?nX4;mm:5ûNPì3+I*2îPNH,1êggì1+  Ôˇ8¯  (K∞)PX@   lM oN@   Ö oNY¥+3#ÔII¯¸      ˇb`   ,@)L   i    e a jN+6655475&554&'53# 4;mm:5\j?;;?nXV+1ëggí1+HNPí3+I*2ïOO   2	¢  <±dD@1 LJI  Y    i a Q$$$"+± D&&#"56323267#"&$/>0H9.$/>1G;?"N5"M6      æΩ…g_<ı Ë    ‹–?    ‹è›˝ì˛{
++             -˛€  ˝ì˝î
+                aX ^       Hò AÜ < >? 1‹ 5 · A, (, ' )< 2 )B ( Ht 
+< 1< Y< 0< -< < ?< 7< ,< 1< 2 H < 2< 8< 2≤ É :  ä ax =⁄ a, a aÿ =Â aS (ˇ≤k a aã a¯ a =] a =n a% 3, 
+€ ZX  ¢ J 6  < &I Pt 
+I < &ºˇ˛ (1 .g U‡ 7g 74 7X g 7j U Nˇ… U Uß Uj U] 7g Ug 7ù Uﬂ 3i j O¸    ˛ ÷ '| ' Ô|  < 2   * * * V ~ “RËxî∏‹<\xò¥ÓX∂ÚF¶Ã8ö–F\∂`öÚ	8	h	î	∫
+
+
+2
+Z
+å
+∫
+ÿB~∫J†æÏhî∏‰ @hÜ∞*¢Ëf∫é÷:∫  ÇÃrÿ.ÑÃDê∫¸(jåŒ    a      ò ¸ ç  â      ∫  	   ^    	   ^  	   p  	  6 ~  	  " ¥  	  ∞ ÷  	   Ü  	  D¶  	  *Í  	 	 (  	 
+ B<  	  >~  	  <º  	 ñ¯  	  4é C o p y r i g h t   2 0 1 5   G o o g l e   L L C .   A l l   R i g h t s   R e s e r v e d . N o t o   S a n s R e g u l a r 2 . 0 0 4 ; G O O G ; N o t o S a n s - R e g u l a r N o t o   S a n s   R e g u l a r V e r s i o n   2 . 0 0 4 ;   t t f a u t o h i n t   ( v 1 . 8 . 3 )   - l   8   - r   5 0   - G   2 0 0   - x   1 4   - D   l a t n   - f   n o n e   - a   q s q   - X   " " N o t o S a n s - R e g u l a r N o t o   i s   a   t r a d e m a r k   o f   G o o g l e   L L C . M o n o t y p e   I m a g i n g   I n c . M o n o t y p e   D e s i g n   T e a m D e s i g n e d   b y   M o n o t y p e   d e s i g n   t e a m . h t t p : / / w w w . g o o g l e . c o m / g e t / n o t o / h t t p : / / w w w . m o n o t y p e . c o m / s t u d i o T h i s   F o n t   S o f t w a r e   i s   l i c e n s e d   u n d e r   t h e   S I L   O p e n   F o n t   L i c e n s e ,   V e r s i o n   1 . 1 .   T h i s   F o n t   S o f t w a r e   i s   d i s t r i b u t e d   o n   a n   " A S   I S "   B A S I S ,   W I T H O U T   W A R R A N T I E S   O R   C O N D I T I O N S   O F   A N Y   K I N D ,   e i t h e r   e x p r e s s   o r   i m p l i e d .   S e e   t h e   S I L   O p e n   F o n t   L i c e n s e   f o r   t h e   s p e c i f i c   l a n g u a g e ,   p e r m i s s i o n s   a n d   l i m i t a t i o n s   g o v e r n i n g   y o u r   u s e   o f   t h i s   F o n t   S o f t w a r e . h t t p : / / s c r i p t s . s i l . o r g / O F L       ˇú 2                     K∏ »RX±éY∞π  cp± B@ìÉs ]Q =-	 *± B@àxhbVJB2$	
+*± B@êÄpe \PF:+	
+*± BA"@@@¿¿¿¿¿	@ 	 *± BA @ @ @ @ @ @ @ @ @ 	 *π   D±$àQX∞@àXπ  dD±(àQX∏ àXπ   DY±'àQX∫Ä @àcTXπ   DYYYYY@äzjdXLD4&	*∏ˇÖ∞ç± D≥d DD   endstream
 endobj
 236 0 obj
 <<
-/Ascent 666.6667 /CapHeight 666.6667 /Descent -95.2381 /Flags 4 /FontBBox [ 47.61905 -95.2381 523.8095 666.6667 ] /FontFile2 235 0 R 
-  /FontName /AAAAAA+New /ItalicAngle 0 /MissingWidth 571.4286 /StemV 87 /Type /FontDescriptor
+/Ascent 1069 /CapHeight 714 /Descent -293 /Flags 4 /FontBBox [ -621 -389 2800 1067 ] /FontFile2 235 0 R 
+  /FontName /AAAAAA+NotoSans-Regular /ItalicAngle 0 /MissingWidth 600 /StemV 87 /Type /FontDescriptor
 >>
 endobj
 237 0 obj
 <<
+/BaseFont /AAAAAA+NotoSans-Regular /FirstChar 0 /FontDescriptor 236 0 R /LastChar 127 /Name /F2+0 /Subtype /TrueType 
+  /ToUnicode 234 0 R /Type /Font /Widths [ 0 0 0 0 0 0 0 0 0 0 
+  0 0 0 0 0 0 0 0 0 0 
+  0 0 0 0 0 0 0 0 0 0 
+  0 0 260 269 408 646 572 831 732 225 
+  300 300 551 572 268 322 268 372 572 572 
+  572 572 572 572 572 572 572 572 268 268 
+  572 572 572 434 899 639 650 632 730 556 
+  519 728 741 339 273 619 524 907 760 781 
+  605 781 622 549 556 731 600 930 586 566 
+  572 329 372 329 572 444 281 561 615 480 
+  615 564 344 615 618 258 258 534 258 935 
+  618 605 615 615 413 479 361 618 508 786 
+  529 510 470 380 551 380 572 600 ]
+>>
+endobj
+238 0 obj
+<<
+/Outlines 240 0 R /PageLabels 360 0 R /PageMode /UseNone /Pages 310 0 R /Type /Catalog
+>>
+endobj
+239 0 obj
+<<
+/Author () /CreationDate (D:20241129134957+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20241129134957+00'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
+  /Subject (\(unspecified\)) /Title (How to use rst2pdf) /Trapped /False
+>>
+endobj
+240 0 obj
+<<
+/Count 85 /First 241 0 R /Last 309 0 R /Type /Outlines
+>>
+endobj
+241 0 obj
+<<
+/Count 1 /Dest [ 152 0 R /XYZ 57.02362 747.0236 0 ] /First 242 0 R /Last 242 0 R /Next 243 0 R /Parent 240 0 R 
+  /Title (\376\377\0001\000\240\000\240\000\240\000I\000n\000t\000r\000o\000d\000u\000c\000t\000i\000o\000n)
+>>
+endobj
+242 0 obj
+<<
+/Dest [ 152 0 R /XYZ 57.02362 570.8236 0 ] /Parent 241 0 R /Title (\376\377\0001\000.\0001\000\240\000\240\000\240\000R\000e\000l\000a\000t\000e\000d\000 \000R\000e\000a\000d\000i\000n\000g)
+>>
+endobj
+243 0 obj
+<<
+/Count 6 /Dest [ 154 0 R /XYZ 57.02362 747.0236 0 ] /First 244 0 R /Last 249 0 R /Next 250 0 R /Parent 240 0 R 
+  /Prev 241 0 R /Title (\376\377\0002\000\240\000\240\000\240\000C\000o\000m\000m\000a\000n\000d\000 \000l\000i\000n\000e\000 \000o\000p\000t\000i\000o\000n\000s)
+>>
+endobj
+244 0 obj
+<<
+/Dest [ 154 0 R /XYZ 57.02362 696.0236 0 ] /Next 245 0 R /Parent 243 0 R /Title (\376\377\0002\000.\0001\000\240\000\240\000\240\000G\000e\000n\000e\000r\000a\000l\000 \000O\000p\000t\000i\000o\000n\000s)
+>>
+endobj
+245 0 obj
+<<
+/Dest [ 154 0 R /XYZ 57.02362 546.0236 0 ] /Next 246 0 R /Parent 243 0 R /Prev 244 0 R /Title (\376\377\0002\000.\0002\000\240\000\240\000\240\000F\000i\000l\000e\000 \000a\000n\000d\000 \000C\000o\000n\000f\000i\000g\000u\000r\000a\000t\000i\000o\000n)
+>>
+endobj
+246 0 obj
+<<
+/Dest [ 154 0 R /XYZ 57.02362 432.0236 0 ] /Next 247 0 R /Parent 243 0 R /Prev 245 0 R /Title (\376\377\0002\000.\0003\000\240\000\240\000\240\000S\000t\000y\000l\000i\000n\000g\000 \000O\000p\000t\000i\000o\000n\000s)
+>>
+endobj
+236 0 obj
+<<
+<<<<<<< HEAD
+/Ascent 666.6667 /CapHeight 666.6667 /Descent -95.2381 /Flags 4 /FontBBox [ 47.61905 -95.2381 523.8095 666.6667 ] /FontFile2 235 0 R 
+  /FontName /AAAAAA+New /ItalicAngle 0 /MissingWidth 571.4286 /StemV 87 /Type /FontDescriptor
+=======
+/Dest [ 154 0 R /XYZ 57.02362 264.0236 0 ] /Next 248 0 R /Parent 243 0 R /Prev 246 0 R /Title (\376\377\0002\000.\0004\000\240\000\240\000\240\000P\000D\000F\000 \000O\000p\000t\000i\000o\000n\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
+>>
+endobj
+237 0 obj
+<<
+<<<<<<< HEAD
 /BaseFont /AAAAAA+New /FirstChar 0 /FontDescriptor 236 0 R /LastChar 127 /Name /F2+0 /Subtype /TrueType 
   /ToUnicode 234 0 R /Type /Font /Widths [ 571.4286 571.4286 571.4286 571.4286 571.4286 571.4286 571.4286 571.4286 571.4286 571.4286 
   571.4286 571.4286 571.4286 571.4286 571.4286 571.4286 571.4286 571.4286 571.4286 571.4286 
@@ -1671,10 +2015,14 @@ endobj
   571.4286 571.4286 571.4286 571.4286 571.4286 571.4286 571.4286 571.4286 571.4286 571.4286 
   571.4286 571.4286 571.4286 571.4286 571.4286 571.4286 571.4286 571.4286 571.4286 571.4286 
   571.4286 571.4286 571.4286 571.4286 571.4286 571.4286 571.4286 571.4286 ]
+=======
+/Dest [ 155 0 R /XYZ 57.02362 747.0236 0 ] /Next 249 0 R /Parent 243 0 R /Prev 247 0 R /Title (\376\377\0002\000.\0005\000\240\000\240\000\240\000F\000o\000r\000m\000a\000t\000t\000i\000n\000g\000 \000O\000p\000t\000i\000o\000n\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 238 0 obj
 <<
+<<<<<<< HEAD
 /Length 1882
 >>
 stream
@@ -1825,11 +2173,17 @@ endcmap
 CMapName currentdict /CMap defineresource pop
 end
 endendstream
+=======
+/Dest [ 155 0 R /XYZ 57.02362 459.0236 0 ] /Parent 243 0 R /Prev 248 0 R /Title (\376\377\0002\000.\0006\000\240\000\240\000\240\000M\000i\000s\000c\000e\000l\000l\000a\000n\000e\000o\000u\000s\000 \000O\000p\000t\000i\000o\000n\000s)
+>>
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 endobj
 239 0 obj
 <<
-/Length 35580 /Length1 35580
+/Count 2 /Dest [ 157 0 R /XYZ 57.02362 747.0236 0 ] /First 251 0 R /Last 252 0 R /Next 253 0 R /Parent 240 0 R 
+  /Prev 243 0 R /Title (\376\377\0003\000\240\000\240\000\240\000C\000o\000n\000f\000i\000g\000u\000r\000a\000t\000i\000o\000n\000 \000F\000i\000l\000e)
 >>
+<<<<<<< HEAD
 stream
      Ä  POS/2Y-v-   ‹   Vcmap	á
 G  4  cvt  i9  L  ˛fpgmq4vj  L   ´glyf
@@ -2259,15 +2613,22 @@ from Tavmjong Bah. For further information, contact: tavmjong @ free
 Y˙X
 WW2V˛UTUBTSSRQJQ˛PO˛NMN˛ML˛KJK˛JIJIIHG˛FñEñD˛C-C˙BªAK@˛?˛>=>=<=<;<@ˇ;:˛9˛878˙767656543212˛10/0/.-	.-	,2+*%+d*)*%)('%(A'%&%&%$˛#˛"!! d˙dB˛˙BB˛d˛˛˛˛B˛-B}d˛˛˛
 	˛-˛d˛@-˛- ˛∏dÖç+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++endstream
+=======
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 endobj
 240 0 obj
 <<
+<<<<<<< HEAD
 /Ascent 759.7656 /CapHeight 759.7656 /Descent -240.2344 /Flags 4 /FontBBox [ -1020.508 -462.8906 1793.457 1232.422 ] /FontFile2 239 0 R 
   /FontName /AAAAAA+DejaVuSans /ItalicAngle 0 /MissingWidth 600.0977 /StemV 87 /Type /FontDescriptor
+=======
+/Dest [ 157 0 R /XYZ 57.02362 636.0236 0 ] /Next 252 0 R /Parent 250 0 R /Title (\376\377\0003\000.\0001\000\240\000\240\000\240\000C\000o\000n\000f\000i\000g\000u\000r\000a\000t\000i\000o\000n\000 \000O\000p\000t\000i\000o\000n\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 241 0 obj
 <<
+<<<<<<< HEAD
 /BaseFont /AAAAAA+DejaVuSans /FirstChar 0 /FontDescriptor 240 0 R /LastChar 127 /Name /F9+0 /Subtype /TrueType 
   /ToUnicode 238 0 R /Type /Font /Widths [ 600.0977 837.8906 600.0977 600.0977 600.0977 600.0977 600.0977 600.0977 600.0977 600.0977 
   600.0977 600.0977 600.0977 600.0977 600.0977 600.0977 600.0977 600.0977 600.0977 600.0977 
@@ -2282,10 +2643,14 @@ endobj
   634.7656 615.2344 352.0508 634.7656 633.7891 277.832 277.832 579.1016 277.832 974.1211 
   633.7891 611.8164 634.7656 634.7656 411.1328 520.9961 392.0898 633.7891 591.7969 817.8711 
   591.7969 591.7969 524.9023 636.2305 336.9141 636.2305 837.8906 600.0977 ]
+=======
+/Dest [ 160 0 R /XYZ 57.02362 447.0236 0 ] /Parent 250 0 R /Prev 251 0 R /Title (\376\377\0003\000.\0002\000\240\000\240\000\240\000E\000x\000a\000m\000p\000l\000e\000 \000C\000o\000n\000f\000i\000g\000u\000r\000a\000t\000i\000o\000n\000 \000F\000i\000l\000e)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 242 0 obj
 <<
+<<<<<<< HEAD
 /Length 1918
 >>
 stream
@@ -2436,11 +2801,17 @@ endcmap
 CMapName currentdict /CMap defineresource pop
 end
 endendstream
+=======
+/Dest [ 161 0 R /XYZ 57.02362 747.0236 0 ] /Next 254 0 R /Parent 240 0 R /Prev 250 0 R /Title (\376\377\0004\000\240\000\240\000\240\000P\000i\000p\000e\000 \000u\000s\000a\000g\000e)
+>>
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 endobj
 243 0 obj
 <<
-/Length 11532 /Length1 11532
+/Count 3 /Dest [ 165 0 R /XYZ 57.02362 747.0236 0 ] /First 255 0 R /Last 257 0 R /Next 258 0 R /Parent 240 0 R 
+  /Prev 253 0 R /Title (\376\377\0005\000\240\000\240\000\240\000I\000m\000a\000g\000e\000s)
 >>
+<<<<<<< HEAD
 stream
     
  Ä   OS/2ﬂGº7   ¨   `cmap Ω#    glyf:ÔJ¢  $  headÒÉË¨  (   6hhea.î  `   $hmtx’ø  Ñ   .locaÿB  ¥   maxp S ;  –    nameek†    '¸postˇà   ,Ï     ,ê   ÙÙ   ˙ÙÙ  Ù                c  ÄÃ        STIX @  *ˇÓˇ∑4k†>ê˛                     
@@ -2453,15 +2824,22 @@ S4yYù<<úY)?n     mˇ\Õ* !  5>54&=475&=4>54'5Õ?F€@N££
 S4zYù<<úY)?n#˙®3c        |dˇo_<ı Ë    »6—ä    »6—ä¸˛ïﬂ             4˛ï  ¸ˇ‡ﬂ                 ˙  ! p ˙  ‘ ã‘ VC  ¥C  Ë  ? r m           8 P ` r Ä ê û –       8             @         V       ä       ø       ﬁ       '6       å       ø       ˚       \Ã      	 bÔ      
 ’˛              [      „!A       *&{  	      	  °  	  Œ  	  NÊ  	  ,^  	  £  	  ,Õ  	  ∏  	 	 ƒ)  	 
 	™R  	  0‘  	  :  	 	∆y  	  T&% C o p y r i g h t   ( c )   2 0 0 1 - 2 0 1 0   b y   t h e   S T I   P u b   C o m p a n i e s ,   c o n s i s t i n g   o f   t h e   A m e r i c a n   C h e m i c a l   S o c i e t y ,   t h e   A m e r i c a n   I n s t i t u t e   o f   P h y s i c s ,   t h e   A m e r i c a n   M a t h e m a t i c a l   S o c i e t y ,   t h e   A m e r i c a n   P h y s i c a l   S o c i e t y ,   E l s e v i e r ,   I n c . ,   a n d   T h e   I n s t i t u t e   o f   E l e c t r i c a l   a n d   E l e c t r o n i c   E n g i n e e r s ,   I n c .   P o r t i o n s   c o p y r i g h t   ( c )   1 9 9 8 - 2 0 0 3   b y   M i c r o P r e s s ,   I n c .   P o r t i o n s   c o p y r i g h t   ( c )   1 9 9 0   b y   E l s e v i e r ,   I n c .   A l l   r i g h t s   r e s e r v e d .  Copyright (c) 2001-2010 by the STI Pub Companies, consisting of the American Chemical Society, the American Institute of Physics, the American Mathematical Society, the American Physical Society, Elsevier, Inc., and The Institute of Electrical and Electronic Engineers, Inc. Portions copyright (c) 1998-2003 by MicroPress, Inc. Portions copyright (c) 1990 by Elsevier, Inc. All rights reserved.  S T I X S i z e O n e S y m  STIXSizeOneSym  R e g u l a r  Regular  F o n t M a s t e r : S T I X S i z e O n e S y m - R e g u l a r : 1 . 0 . 0  FontMaster:STIXSizeOneSym-Regular:1.0.0  S T I X S i z e O n e S y m - R e g u l a r  STIXSizeOneSym-Regular  V e r s i o n   1 . 0 . 0  Version 1.0.0  S T I X S i z e O n e S y m - R e g u l a r  STIXSizeOneSym-Regular  S T I X   F o n t s ( T M )   i s   a   t r a d e m a r k   o f   T h e   I n s t i t u t e   o f   E l e c t r i c a l   a n d   E l e c t r o n i c s   E n g i n e e r s ,   I n c .  STIX Fonts(TM) is a trademark of The Institute of Electrical and Electronics Engineers, Inc.  M i c r o P r e s s   I n c . ,   w i t h   f i n a l   a d d i t i o n s   a n d   c o r r e c t i o n s   p r o v i d e d   b y   C o e n   H o f f m a n ,   E l s e v i e r   ( r e t i r e d )  MicroPress Inc., with final additions and corrections provided by Coen Hoffman, Elsevier (retired)  A r i e   d e   R u i t e r ,   w h o   i n   1 9 9 5   w a s   H e a d   o f   I n f o r m a t i o n   T e c h n o l o g y   D e v e l o p m e n t   a t   E l s e v i e r   S c i e n c e ,   m a d e   a   p r o p o s a l   t o   t h e   S T I   P u b   g r o u p ,   a n   i n f o r m a l   g r o u p   o f   p u b l i s h e r s   c o n s i s t i n g   o f   r e p r e s e n t a t i v e s   f r o m   t h e   A m e r i c a n   C h e m i c a l   S o c i e t y   ( A C S ) ,   A m e r i c a n   I n s t i t u t e   o f   P h y s i c s   ( A I P ) ,   A m e r i c a n   M a t h e m a t i c a l   S o c i e t y   ( A M S ) ,   A m e r i c a n   P h y s i c a l   S o c i e t y   ( A P S ) ,   E l s e v i e r ,   a n d   I n s t i t u t e   o f   E l e c t r i c a l   a n d   E l e c t r o n i c s   E n g i n e e r s   ( I E E E ) .   D e   R u i t e r   e n c o u r a g e d   t h e   m e m b e r s   t o   c o n s i d e r   d e v e l o p m e n t   o f   a   s e r i e s   o f   W e b   f o n t s ,   w h i c h   h e   p r o p o s e d   s h o u l d   b e   c a l l e d   t h e   S c i e n t i f i c   a n d   T e c h n i c a l   I n f o r m a t i o n   e X c h a n g e ,   o r   S T I X ,   F o n t s .   A l l   S T I   P u b   m e m b e r   o r g a n i z a t i o n s   e n t h u s i a s t i c a l l y   e n d o r s e d   t h i s   p r o p o s a l ,   a n d   t h e   S T I   P u b   g r o u p   a g r e e d   t o   e m b a r k   o n   w h a t   h a s   b e c o m e   a   t w e l v e - y e a r   p r o j e c t .   T h e   g o a l   o f   t h e   p r o j e c t   w a s   t o   i d e n t i f y   a l l   a l p h a b e t i c ,   s y m b o l i c ,   a n d   o t h e r   s p e c i a l   c h a r a c t e r s   u s e d   i n   a n y   f a c e t   o f   s c i e n t i f i c   p u b l i s h i n g   a n d   t o   c r e a t e   a   s e t   o f   U n i c o d e - b a s e d   f o n t s   t h a t   w o u l d   b e   d i s t r i b u t e d   f r e e   t o   e v e r y   s c i e n t i s t ,   s t u d e n t ,   a n d   o t h e r   i n t e r e s t e d   p a r t y   w o r l d w i d e .   T h e   f o n t s   w o u l d   b e   c o n s i s t e n t   w i t h   t h e   e m e r g i n g   U n i c o d e   s t a n d a r d ,   a n d   w o u l d   p e r m i t   u n i v e r s a l   r e p r e s e n t a t i o n   o f   e v e r y   c h a r a c t e r .   W i t h   t h e   r e l e a s e   o f   t h e   S T I X   f o n t s ,   d e   R u i t e r ' s   v i s i o n   h a s   b e e n   r e a l i z e d .  Arie de Ruiter, who in 1995 was Head of Information Technology Development at Elsevier Science, made a proposal to the STI Pub group, an informal group of publishers consisting of representatives from the American Chemical Society (ACS), American Institute of Physics (AIP), American Mathematical Society (AMS), American Physical Society (APS), Elsevier, and Institute of Electrical and Electronics Engineers (IEEE). De Ruiter encouraged the members to consider development of a series of Web fonts, which he proposed should be called the Scientific and Technical Information eXchange, or STIX, Fonts. All STI Pub member organizations enthusiastically endorsed this proposal, and the STI Pub group agreed to embark on what has become a twelve-year project. The goal of the project was to identify all alphabetic, symbolic, and other special characters used in any facet of scientific publishing and to create a set of Unicode-based fonts that would be distributed free to every scientist, student, and other interested party worldwide. The fonts would be consistent with the emerging Unicode standard, and would permit universal representation of every character. With the release of the STIX fonts, de Ruiter's vision has been realized.  h t t p : / / w w w . s t i x f o n t s . o r g  http://www.stixfonts.org  h t t p : / / w w w . m i c r o p r e s s - i n c . c o m  http://www.micropress-inc.com  A s   a   c o n d i t i o n   f o r   r e c e i v i n g   t h e s e   f o n t s   a t   n o   c h a r g e ,   e a c h   p e r s o n   d o w n l o a d i n g   t h e   f o n t s   m u s t   a g r e e   t o   s o m e   s i m p l e   l i c e n s e   t e r m s .   T h e   l i c e n s e   i s   b a s e d   o n   t h e   S I L   O p e n   F o n t   L i c e n s e   < h t t p : / / s c r i p t s . s i l . o r g / c m s / s c r i p t s / p a g e . p h p ? s i t e _ i d = n r s i & i d = O F L > .   T h e   S I L   L i c e n s e   i s   a   f r e e   a n d   o p e n   s o u r c e   l i c e n s e   s p e c i f i c a l l y   d e s i g n e d   f o r   f o n t s   a n d   r e l a t e d   s o f t w a r e .   T h e   b a s i c   t e r m s   a r e   t h a t   t h e   r e c i p i e n t   w i l l   n o t   r e m o v e   t h e   c o p y r i g h t   a n d   t r a d e m a r k   s t a t e m e n t s   f r o m   t h e   f o n t s   a n d   t h a t ,   i f   t h e   p e r s o n   d e c i d e s   t o   c r e a t e   a   d e r i v a t i v e   w o r k   b a s e d   o n   t h e   S T I X   F o n t s   b u t   i n c o r p o r a t i n g   s o m e   c h a n g e s   o r   e n h a n c e m e n t s ,   t h e   d e r i v a t i v e   w o r k   ( " M o d i f i e d   V e r s i o n " )   w i l l   c a r r y   a   d i f f e r e n t   n a m e .   T h e   c o p y r i g h t   a n d   t r a d e m a r k   r e s t r i c t i o n s   a r e   p a r t   o f   t h e   a g r e e m e n t   b e t w e e n   t h e   S T I   P u b   c o m p a n i e s   a n d   t h e   t y p e f a c e   d e s i g n e r .   T h e   " r e n a m i n g "   r e s t r i c t i o n   r e s u l t s   f r o m   t h e   d e s i r e   o f   t h e   S T I   P u b   c o m p a n i e s   t o   a s s u r e   t h a t   t h e   S T I X   F o n t s   w i l l   c o n t i n u e   t o   f u n c t i o n   i n   a   p r e d i c t a b l e   f a s h i o n   f o r   a l l   t h a t   u s e   t h e m .   N o   c o p y   o f   o n e   o r   m o r e   o f   t h e   i n d i v i d u a l   F o n t   t y p e f a c e s   t h a t   f o r m   t h e   S T I X   F o n t s ( T M )   s e t   m a y   b e   s o l d   b y   i t s e l f ,   b u t   o t h e r   t h a n   t h i s   o n e   r e s t r i c t i o n ,   l i c e n s e e s   a r e   f r e e   t o   s e l l   t h e   f o n t s   e i t h e r   s e p a r a t e l y   o r   a s   p a r t   o f   a   p a c k a g e   t h a t   c o m b i n e s   o t h e r   s o f t w a r e   o r   f o n t s   w i t h   t h i s   f o n t   s e t .  As a condition for receiving these fonts at no charge, each person downloading the fonts must agree to some simple license terms. The license is based on the SIL Open Font License <http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL>. The SIL License is a free and open source license specifically designed for fonts and related software. The basic terms are that the recipient will not remove the copyright and trademark statements from the fonts and that, if the person decides to create a derivative work based on the STIX Fonts but incorporating some changes or enhancements, the derivative work ("Modified Version") will carry a different name. The copyright and trademark restrictions are part of the agreement between the STI Pub companies and the typeface designer. The "renaming" restriction results from the desire of the STI Pub companies to assure that the STIX Fonts will continue to function in a predictable fashion for all that use them. No copy of one or more of the individual Font typefaces that form the STIX Fonts(TM) set may be sold by itself, but other than this one restriction, licensees are free to sell the fonts either separately or as part of a package that combines other software or fonts with this font set.  h t t p : / / w w w . s t i x f o n t s . o r g / u s e r _ l i c e n s e . h t m l  http://www.stixfonts.org/user_license.html        ˇÖ                     endstream
+=======
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 endobj
 244 0 obj
 <<
+<<<<<<< HEAD
 /Ascent 750 /CapHeight 0 /Descent -250 /Flags 4 /FontBBox [ -1000 -363 1503 1566 ] /FontFile2 243 0 R 
   /FontName /AAAAAA+STIXSizeOneSym-Regular /ItalicAngle 0 /MissingWidth 250 /StemV 87 /Type /FontDescriptor
+=======
+/Dest [ 165 0 R /XYZ 57.02362 714.0236 0 ] /Next 256 0 R /Parent 254 0 R /Title (\376\377\0005\000.\0001\000\240\000\240\000\240\000I\000n\000l\000i\000n\000e)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 245 0 obj
 <<
+<<<<<<< HEAD
 /BaseFont /AAAAAA+STIXSizeOneSym-Regular /FirstChar 0 /FontDescriptor 244 0 R /LastChar 127 /Name /F10+0 /Subtype /TrueType 
   /ToUnicode 242 0 R /Type /Font /Widths [ 250 1057 250 250 250 250 250 250 250 250 
   250 250 250 250 250 250 250 250 250 250 
@@ -2534,293 +2912,528 @@ endobj
 256 0 obj
 <<
 /Dest [ 155 0 R /XYZ 57.02362 747.0236 0 ] /Next 257 0 R /Parent 251 0 R /Prev 255 0 R /Title (\376\377\0002\000.\0005\000\240\000\240\000\240\000F\000o\000r\000m\000a\000t\000t\000i\000n\000g\000 \000O\000p\000t\000i\000o\000n\000s)
+=======
+/Dest [ 165 0 R /XYZ 57.02362 588.8236 0 ] /Next 257 0 R /Parent 254 0 R /Prev 255 0 R /Title (\376\377\0005\000.\0002\000\240\000\240\000\240\000S\000u\000p\000p\000o\000r\000t\000e\000d\000 \000I\000m\000a\000g\000e\000 \000T\000y\000p\000e\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 257 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 155 0 R /XYZ 57.02362 459.0236 0 ] /Parent 251 0 R /Prev 256 0 R /Title (\376\377\0002\000.\0006\000\240\000\240\000\240\000M\000i\000s\000c\000e\000l\000l\000a\000n\000e\000o\000u\000s\000 \000O\000p\000t\000i\000o\000n\000s)
+=======
+/Dest [ 165 0 R /XYZ 57.02362 313.8236 0 ] /Parent 254 0 R /Prev 256 0 R /Title (\376\377\0005\000.\0003\000\240\000\240\000\240\000I\000m\000a\000g\000e\000 \000S\000i\000z\000e)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 258 0 obj
 <<
+<<<<<<< HEAD
 /Count 2 /Dest [ 157 0 R /XYZ 57.02362 747.0236 0 ] /First 259 0 R /Last 260 0 R /Next 261 0 R /Parent 248 0 R 
   /Prev 251 0 R /Title (\376\377\0003\000\240\000\240\000\240\000C\000o\000n\000f\000i\000g\000u\000r\000a\000t\000i\000o\000n\000 \000F\000i\000l\000e)
+=======
+/Count 3 /Dest [ 170 0 R /XYZ 57.02362 747.0236 0 ] /First 259 0 R /Last 261 0 R /Next 262 0 R /Parent 240 0 R 
+  /Prev 254 0 R /Title (\376\377\0006\000\240\000\240\000\240\000S\000t\000y\000l\000i\000n\000g\000 \000R\000e\000S\000t\000r\000u\000c\000t\000u\000r\000e\000d\000T\000e\000x\000t)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 259 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 157 0 R /XYZ 57.02362 636.0236 0 ] /Next 260 0 R /Parent 258 0 R /Title (\376\377\0003\000.\0001\000\240\000\240\000\240\000C\000o\000n\000f\000i\000g\000u\000r\000a\000t\000i\000o\000n\000 \000O\000p\000t\000i\000o\000n\000s)
+=======
+/Dest [ 170 0 R /XYZ 57.02362 642.0236 0 ] /Next 260 0 R /Parent 258 0 R /Title (\376\377\0006\000.\0001\000\240\000\240\000\240\000A\000p\000p\000l\000y\000i\000n\000g\000 \000S\000t\000y\000l\000e\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 260 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 160 0 R /XYZ 57.02362 447.0236 0 ] /Parent 258 0 R /Prev 259 0 R /Title (\376\377\0003\000.\0002\000\240\000\240\000\240\000E\000x\000a\000m\000p\000l\000e\000 \000C\000o\000n\000f\000i\000g\000u\000r\000a\000t\000i\000o\000n\000 \000F\000i\000l\000e)
+=======
+/Dest [ 170 0 R /XYZ 57.02362 152.4236 0 ] /Next 261 0 R /Parent 258 0 R /Prev 259 0 R /Title (\376\377\0006\000.\0002\000\240\000\240\000\240\000H\000e\000a\000d\000e\000r\000s\000 \000a\000n\000d\000 \000F\000o\000o\000t\000e\000r\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 261 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 161 0 R /XYZ 57.02362 747.0236 0 ] /Next 262 0 R /Parent 248 0 R /Prev 258 0 R /Title (\376\377\0004\000\240\000\240\000\240\000P\000i\000p\000e\000 \000u\000s\000a\000g\000e)
+=======
+/Dest [ 175 0 R /XYZ 57.02362 426.8236 0 ] /Parent 258 0 R /Prev 260 0 R /Title (\376\377\0006\000.\0003\000\240\000\240\000\240\000F\000o\000o\000t\000n\000o\000t\000e\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 262 0 obj
 <<
+<<<<<<< HEAD
 /Count 3 /Dest [ 165 0 R /XYZ 57.02362 747.0236 0 ] /First 263 0 R /Last 265 0 R /Next 266 0 R /Parent 248 0 R 
   /Prev 261 0 R /Title (\376\377\0005\000\240\000\240\000\240\000I\000m\000a\000g\000e\000s)
+=======
+/Count 7 /Dest [ 176 0 R /XYZ 57.02362 747.0236 0 ] /First 263 0 R /Last 267 0 R /Next 270 0 R /Parent 240 0 R 
+  /Prev 258 0 R /Title (\376\377\0007\000\240\000\240\000\240\000C\000u\000s\000t\000o\000m\000i\000z\000i\000n\000g\000 \000P\000D\000F\000 \000O\000u\000t\000p\000u\000t)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 263 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 165 0 R /XYZ 57.02362 714.0236 0 ] /Next 264 0 R /Parent 262 0 R /Title (\376\377\0005\000.\0001\000\240\000\240\000\240\000I\000n\000l\000i\000n\000e)
+=======
+/Dest [ 176 0 R /XYZ 57.02362 594.0236 0 ] /Next 264 0 R /Parent 262 0 R /Title (\376\377\0007\000.\0001\000\240\000\240\000\240\000U\000s\000i\000n\000g\000 \000S\000t\000y\000l\000e\000s\000h\000e\000e\000t\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 264 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 165 0 R /XYZ 57.02362 588.8236 0 ] /Next 265 0 R /Parent 262 0 R /Prev 263 0 R /Title (\376\377\0005\000.\0002\000\240\000\240\000\240\000S\000u\000p\000p\000o\000r\000t\000e\000d\000 \000I\000m\000a\000g\000e\000 \000T\000y\000p\000e\000s)
+=======
+/Dest [ 176 0 R /XYZ 57.02362 307.6236 0 ] /Next 265 0 R /Parent 262 0 R /Prev 263 0 R /Title (\376\377\0007\000.\0002\000\240\000\240\000\240\000I\000n\000c\000l\000u\000d\000e\000d\000 \000S\000t\000y\000l\000e\000S\000h\000e\000e\000t\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 265 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 165 0 R /XYZ 57.02362 313.8236 0 ] /Parent 262 0 R /Prev 264 0 R /Title (\376\377\0005\000.\0003\000\240\000\240\000\240\000I\000m\000a\000g\000e\000 \000S\000i\000z\000e)
+=======
+/Dest [ 178 0 R /XYZ 57.02362 558.8236 0 ] /Next 266 0 R /Parent 262 0 R /Prev 264 0 R /Title (\376\377\0007\000.\0003\000\240\000\240\000\240\000D\000e\000f\000a\000u\000l\000t\000 \000S\000t\000y\000l\000e\000s\000h\000e\000e\000t)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 266 0 obj
 <<
+<<<<<<< HEAD
 /Count 3 /Dest [ 170 0 R /XYZ 57.02362 747.0236 0 ] /First 267 0 R /Last 269 0 R /Next 270 0 R /Parent 248 0 R 
   /Prev 262 0 R /Title (\376\377\0006\000\240\000\240\000\240\000S\000t\000y\000l\000i\000n\000g\000 \000R\000e\000S\000t\000r\000u\000c\000t\000u\000r\000e\000d\000T\000e\000x\000t)
+=======
+/Dest [ 178 0 R /XYZ 57.02362 445.6236 0 ] /Next 267 0 R /Parent 262 0 R /Prev 265 0 R /Title (\376\377\0007\000.\0004\000\240\000\240\000\240\000M\000i\000g\000r\000a\000t\000i\000n\000g\000 \000S\000t\000y\000l\000e\000s\000h\000e\000e\000t\000 \000F\000o\000r\000m\000a\000t)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 267 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 170 0 R /XYZ 57.02362 642.0236 0 ] /Next 268 0 R /Parent 266 0 R /Title (\376\377\0006\000.\0001\000\240\000\240\000\240\000A\000p\000p\000l\000y\000i\000n\000g\000 \000S\000t\000y\000l\000e\000s)
+=======
+/Count 2 /Dest [ 178 0 R /XYZ 57.02362 272.8387 0 ] /First 268 0 R /Last 269 0 R /Parent 262 0 R /Prev 266 0 R 
+  /Title (\376\377\0007\000.\0005\000\240\000\240\000\240\000M\000i\000g\000r\000a\000t\000i\000n\000g\000 \000t\000o\000 \000t\000h\000e\000 \000N\000e\000w\000 \000D\000e\000f\000a\000u\000l\000t\000 \000S\000t\000y\000l\000e\000s\000h\000e\000e\000t)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 268 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 170 0 R /XYZ 57.02362 152.4236 0 ] /Next 269 0 R /Parent 266 0 R /Prev 267 0 R /Title (\376\377\0006\000.\0002\000\240\000\240\000\240\000H\000e\000a\000d\000e\000r\000s\000 \000a\000n\000d\000 \000F\000o\000o\000t\000e\000r\000s)
+=======
+/Dest [ 178 0 R /XYZ 57.02362 125.6387 0 ] /Next 269 0 R /Parent 267 0 R /Title (\376\377\0007\000.\0005\000.\0001\000\240\000\240\000\240\000U\000p\000d\000a\000t\000e\000d\000 \000F\000o\000n\000t\000 \000A\000l\000i\000a\000s\000 \000N\000a\000m\000e\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 269 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 175 0 R /XYZ 57.02362 426.8236 0 ] /Parent 266 0 R /Prev 268 0 R /Title (\376\377\0006\000.\0003\000\240\000\240\000\240\000F\000o\000o\000t\000n\000o\000t\000e\000s)
+=======
+/Dest [ 179 0 R /XYZ 57.02362 465.0236 0 ] /Parent 267 0 R /Prev 268 0 R /Title (\376\377\0007\000.\0005\000.\0002\000\240\000\240\000\240\000U\000p\000d\000a\000t\000e\000d\000 \000P\000a\000t\000e\000 \000T\000e\000m\000p\000l\000a\000t\000e\000 \000N\000a\000m\000e\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 270 0 obj
 <<
+<<<<<<< HEAD
 /Count 7 /Dest [ 176 0 R /XYZ 57.02362 747.0236 0 ] /First 271 0 R /Last 275 0 R /Next 278 0 R /Parent 248 0 R 
   /Prev 266 0 R /Title (\376\377\0007\000\240\000\240\000\240\000C\000u\000s\000t\000o\000m\000i\000z\000i\000n\000g\000 \000P\000D\000F\000 \000O\000u\000t\000p\000u\000t)
+=======
+/Count 10 /Dest [ 180 0 R /XYZ 57.02362 747.0236 0 ] /First 271 0 R /Last 280 0 R /Next 281 0 R /Parent 240 0 R 
+  /Prev 262 0 R /Title (\376\377\0008\000\240\000\240\000\240\000C\000r\000e\000a\000t\000i\000n\000g\000 \000S\000t\000y\000l\000e\000s\000h\000e\000e\000t\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 271 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 176 0 R /XYZ 57.02362 594.0236 0 ] /Next 272 0 R /Parent 270 0 R /Title (\376\377\0007\000.\0001\000\240\000\240\000\240\000U\000s\000i\000n\000g\000 \000S\000t\000y\000l\000e\000s\000h\000e\000e\000t\000s)
+=======
+/Dest [ 180 0 R /XYZ 57.02362 536.8236 0 ] /Next 272 0 R /Parent 270 0 R /Title (\376\377\0008\000.\0001\000\240\000\240\000\240\000S\000t\000y\000l\000e\000s\000 \000i\000n\000 \000D\000e\000t\000a\000i\000l)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 272 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 176 0 R /XYZ 57.02362 307.6236 0 ] /Next 273 0 R /Parent 270 0 R /Prev 271 0 R /Title (\376\377\0007\000.\0002\000\240\000\240\000\240\000I\000n\000c\000l\000u\000d\000e\000d\000 \000S\000t\000y\000l\000e\000S\000h\000e\000e\000t\000s)
+=======
+/Count 2 /Dest [ 183 0 R /XYZ 57.02362 747.0236 0 ] /First 273 0 R /Last 274 0 R /Next 275 0 R /Parent 270 0 R 
+  /Prev 271 0 R /Title (\376\377\0008\000.\0002\000\240\000\240\000\240\000S\000t\000y\000l\000e\000 \000E\000l\000e\000m\000e\000n\000t\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 273 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 178 0 R /XYZ 57.02362 558.8236 0 ] /Next 274 0 R /Parent 270 0 R /Prev 272 0 R /Title (\376\377\0007\000.\0003\000\240\000\240\000\240\000D\000e\000f\000a\000u\000l\000t\000 \000S\000t\000y\000l\000e\000s\000h\000e\000e\000t)
+=======
+/Dest [ 187 0 R /XYZ 57.02362 363.4236 0 ] /Next 274 0 R /Parent 272 0 R /Title (\376\377\0008\000.\0002\000.\0001\000\240\000\240\000\240\000I\000n\000l\000i\000n\000e\000 \000S\000t\000y\000l\000e\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 274 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 178 0 R /XYZ 57.02362 445.6236 0 ] /Next 275 0 R /Parent 270 0 R /Prev 273 0 R /Title (\376\377\0007\000.\0004\000\240\000\240\000\240\000M\000i\000g\000r\000a\000t\000i\000n\000g\000 \000S\000t\000y\000l\000e\000s\000h\000e\000e\000t\000 \000F\000o\000r\000m\000a\000t)
+=======
+/Dest [ 187 0 R /XYZ 57.02362 246.4236 0 ] /Parent 272 0 R /Prev 273 0 R /Title (\376\377\0008\000.\0002\000.\0002\000\240\000\240\000\240\000L\000i\000s\000t\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 275 0 obj
 <<
+<<<<<<< HEAD
 /Count 2 /Dest [ 178 0 R /XYZ 57.02362 272.8387 0 ] /First 276 0 R /Last 277 0 R /Parent 270 0 R /Prev 274 0 R 
   /Title (\376\377\0007\000.\0005\000\240\000\240\000\240\000M\000i\000g\000r\000a\000t\000i\000n\000g\000 \000t\000o\000 \000t\000h\000e\000 \000N\000e\000w\000 \000D\000e\000f\000a\000u\000l\000t\000 \000S\000t\000y\000l\000e\000s\000h\000e\000e\000t)
+=======
+/Count 2 /Dest [ 188 0 R /XYZ 57.02362 462.6236 0 ] /First 276 0 R /Last 277 0 R /Next 278 0 R /Parent 270 0 R 
+  /Prev 272 0 R /Title (\376\377\0008\000.\0003\000\240\000\240\000\240\000P\000a\000g\000e\000 \000L\000a\000y\000o\000u\000t)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 276 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 178 0 R /XYZ 57.02362 125.6387 0 ] /Next 277 0 R /Parent 275 0 R /Title (\376\377\0007\000.\0005\000.\0001\000\240\000\240\000\240\000U\000p\000d\000a\000t\000e\000d\000 \000F\000o\000n\000t\000 \000A\000l\000i\000a\000s\000 \000N\000a\000m\000e\000s)
+=======
+/Dest [ 188 0 R /XYZ 57.02362 402.6236 0 ] /Next 277 0 R /Parent 275 0 R /Title (\376\377\0008\000.\0003\000.\0001\000\240\000\240\000\240\000P\000a\000g\000e\000 \000S\000e\000t\000u\000p)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 277 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 179 0 R /XYZ 57.02362 465.0236 0 ] /Parent 275 0 R /Prev 276 0 R /Title (\376\377\0007\000.\0005\000.\0002\000\240\000\240\000\240\000U\000p\000d\000a\000t\000e\000d\000 \000P\000a\000t\000e\000 \000T\000e\000m\000p\000l\000a\000t\000e\000 \000N\000a\000m\000e\000s)
+=======
+/Dest [ 189 0 R /XYZ 57.02362 677.8236 0 ] /Parent 275 0 R /Prev 276 0 R /Title (\376\377\0008\000.\0003\000.\0002\000\240\000\240\000\240\000P\000a\000g\000e\000 \000T\000e\000m\000p\000l\000a\000t\000e\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 278 0 obj
 <<
+<<<<<<< HEAD
 /Count 10 /Dest [ 180 0 R /XYZ 57.02362 747.0236 0 ] /First 279 0 R /Last 288 0 R /Next 289 0 R /Parent 248 0 R 
   /Prev 270 0 R /Title (\376\377\0008\000\240\000\240\000\240\000C\000r\000e\000a\000t\000i\000n\000g\000 \000S\000t\000y\000l\000e\000s\000h\000e\000e\000t\000s)
+=======
+/Dest [ 191 0 R /XYZ 57.02362 473.8236 0 ] /Next 279 0 R /Parent 270 0 R /Prev 275 0 R /Title (\376\377\0008\000.\0004\000\240\000\240\000\240\000F\000o\000n\000t\000 \000A\000l\000i\000a\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 279 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 180 0 R /XYZ 57.02362 536.8236 0 ] /Next 280 0 R /Parent 278 0 R /Title (\376\377\0008\000.\0001\000\240\000\240\000\240\000S\000t\000y\000l\000e\000s\000 \000i\000n\000 \000D\000e\000t\000a\000i\000l)
+=======
+/Dest [ 191 0 R /XYZ 57.02362 270.6236 0 ] /Next 280 0 R /Parent 270 0 R /Prev 278 0 R /Title (\376\377\0008\000.\0005\000\240\000\240\000\240\000W\000i\000d\000o\000w\000s\000 \000a\000n\000d\000 \000O\000r\000p\000h\000a\000n\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 280 0 obj
 <<
+<<<<<<< HEAD
 /Count 2 /Dest [ 183 0 R /XYZ 57.02362 747.0236 0 ] /First 281 0 R /Last 282 0 R /Next 283 0 R /Parent 278 0 R 
   /Prev 279 0 R /Title (\376\377\0008\000.\0002\000\240\000\240\000\240\000S\000t\000y\000l\000e\000 \000E\000l\000e\000m\000e\000n\000t\000s)
+=======
+/Dest [ 192 0 R /XYZ 57.02362 581.8236 0 ] /Parent 270 0 R /Prev 279 0 R /Title (\376\377\0008\000.\0006\000\240\000\240\000\240\000T\000a\000b\000l\000e\000 \000S\000t\000y\000l\000e\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 281 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 187 0 R /XYZ 57.02362 363.4236 0 ] /Next 282 0 R /Parent 280 0 R /Title (\376\377\0008\000.\0002\000.\0001\000\240\000\240\000\240\000I\000n\000l\000i\000n\000e\000 \000S\000t\000y\000l\000e\000s)
+=======
+/Count 3 /Dest [ 196 0 R /XYZ 57.02362 747.0236 0 ] /First 282 0 R /Last 282 0 R /Next 285 0 R /Parent 240 0 R 
+  /Prev 270 0 R /Title (\376\377\0009\000\240\000\240\000\240\000S\000y\000n\000t\000a\000x\000 \000H\000i\000g\000h\000l\000i\000g\000h\000t\000i\000n\000g)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 282 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 187 0 R /XYZ 57.02362 246.4236 0 ] /Parent 280 0 R /Prev 281 0 R /Title (\376\377\0008\000.\0002\000.\0002\000\240\000\240\000\240\000L\000i\000s\000t\000s)
+=======
+/Count 2 /Dest [ 200 0 R /XYZ 57.02362 747.0236 0 ] /First 283 0 R /Last 284 0 R /Parent 281 0 R /Title (\376\377\0009\000.\0001\000\240\000\240\000\240\000F\000i\000l\000e\000 \000i\000n\000c\000l\000u\000s\000i\000o\000n)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 283 0 obj
 <<
+<<<<<<< HEAD
 /Count 2 /Dest [ 188 0 R /XYZ 57.02362 462.6236 0 ] /First 284 0 R /Last 285 0 R /Next 286 0 R /Parent 278 0 R 
   /Prev 280 0 R /Title (\376\377\0008\000.\0003\000\240\000\240\000\240\000P\000a\000g\000e\000 \000L\000a\000y\000o\000u\000t)
+=======
+/Dest [ 200 0 R /XYZ 57.02362 633.8236 0 ] /Next 284 0 R /Parent 282 0 R /Title (\376\377\0009\000.\0001\000.\0001\000\240\000\240\000\240\000I\000n\000c\000l\000u\000d\000e\000 \000w\000i\000t\000h\000 \000B\000o\000u\000n\000d\000a\000r\000i\000e\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 284 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 188 0 R /XYZ 57.02362 402.6236 0 ] /Next 285 0 R /Parent 283 0 R /Title (\376\377\0008\000.\0003\000.\0001\000\240\000\240\000\240\000P\000a\000g\000e\000 \000S\000e\000t\000u\000p)
+=======
+/Dest [ 200 0 R /XYZ 57.02362 464.8236 0 ] /Parent 282 0 R /Prev 283 0 R /Title (\376\377\0009\000.\0001\000.\0002\000\240\000\240\000\240\000O\000p\000t\000i\000o\000n\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 285 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 189 0 R /XYZ 57.02362 677.8236 0 ] /Parent 283 0 R /Prev 284 0 R /Title (\376\377\0008\000.\0003\000.\0002\000\240\000\240\000\240\000P\000a\000g\000e\000 \000T\000e\000m\000p\000l\000a\000t\000e\000s)
+=======
+/Count 6 /Dest [ 203 0 R /XYZ 57.02362 747.0236 0 ] /First 286 0 R /Last 287 0 R /Next 292 0 R /Parent 240 0 R 
+  /Prev 281 0 R /Title (\376\377\0001\0000\000\240\000\240\000\240\000F\000o\000n\000t\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 286 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 191 0 R /XYZ 57.02362 473.8236 0 ] /Next 287 0 R /Parent 278 0 R /Prev 283 0 R /Title (\376\377\0008\000.\0004\000\240\000\240\000\240\000F\000o\000n\000t\000 \000A\000l\000i\000a\000s)
+=======
+/Dest [ 203 0 R /XYZ 57.02362 684.0236 0 ] /Next 287 0 R /Parent 285 0 R /Title (\376\377\0001\0000\000.\0001\000\240\000\240\000\240\000S\000t\000a\000n\000d\000a\000r\000d\000 \000P\000D\000F\000 \000F\000o\000n\000t\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 287 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 191 0 R /XYZ 57.02362 270.6236 0 ] /Next 288 0 R /Parent 278 0 R /Prev 286 0 R /Title (\376\377\0008\000.\0005\000\240\000\240\000\240\000W\000i\000d\000o\000w\000s\000 \000a\000n\000d\000 \000O\000r\000p\000h\000a\000n\000s)
+=======
+/Count 4 /Dest [ 203 0 R /XYZ 57.02362 384.0236 0 ] /First 288 0 R /Last 291 0 R /Parent 285 0 R /Prev 286 0 R 
+  /Title (\376\377\0001\0000\000.\0002\000\240\000\240\000\240\000F\000o\000n\000t\000 \000E\000m\000b\000e\000d\000d\000i\000n\000g)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 288 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 192 0 R /XYZ 57.02362 581.8236 0 ] /Parent 278 0 R /Prev 287 0 R /Title (\376\377\0008\000.\0006\000\240\000\240\000\240\000T\000a\000b\000l\000e\000 \000S\000t\000y\000l\000e\000s)
+=======
+/Count 2 /Dest [ 203 0 R /XYZ 57.02362 324.0236 0 ] /First 289 0 R /Last 290 0 R /Next 291 0 R /Parent 287 0 R 
+  /Title (\376\377\0001\0000\000.\0002\000.\0001\000\240\000\240\000\240\000T\000h\000e\000 \000E\000a\000s\000y\000 \000W\000a\000y)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 289 0 obj
 <<
+<<<<<<< HEAD
 /Count 3 /Dest [ 196 0 R /XYZ 57.02362 747.0236 0 ] /First 290 0 R /Last 290 0 R /Next 293 0 R /Parent 248 0 R 
   /Prev 278 0 R /Title (\376\377\0009\000\240\000\240\000\240\000S\000y\000n\000t\000a\000x\000 \000H\000i\000g\000h\000l\000i\000g\000h\000t\000i\000n\000g)
+=======
+/Dest [ 203 0 R /XYZ 57.02362 195.8236 0 ] /Next 290 0 R /Parent 288 0 R /Title (\376\377\0001\0000\000.\0002\000.\0001\000.\0001\000\240\000\240\000\240\000F\000o\000n\000t\000y\000 \000i\000s\000 \000a\000 \000T\000r\000u\000e\000 \000T\000y\000p\000e\000 \000f\000o\000n\000t\000:)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 290 0 obj
 <<
+<<<<<<< HEAD
 /Count 2 /Dest [ 200 0 R /XYZ 57.02362 747.0236 0 ] /First 291 0 R /Last 292 0 R /Parent 289 0 R /Title (\376\377\0009\000.\0001\000\240\000\240\000\240\000F\000i\000l\000e\000 \000i\000n\000c\000l\000u\000s\000i\000o\000n)
+=======
+/Dest [ 204 0 R /XYZ 57.02362 609.8236 0 ] /Parent 288 0 R /Prev 289 0 R /Title (\376\377\0001\0000\000.\0002\000.\0001\000.\0002\000\240\000\240\000\240\000F\000o\000n\000t\000y\000 \000i\000s\000 \000a\000 \000T\000y\000p\000e\000 \0001\000 \000f\000o\000n\000t\000:)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 291 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 200 0 R /XYZ 57.02362 633.8236 0 ] /Next 292 0 R /Parent 290 0 R /Title (\376\377\0009\000.\0001\000.\0001\000\240\000\240\000\240\000I\000n\000c\000l\000u\000d\000e\000 \000w\000i\000t\000h\000 \000B\000o\000u\000n\000d\000a\000r\000i\000e\000s)
+=======
+/Dest [ 204 0 R /XYZ 57.02362 139.0236 0 ] /Parent 287 0 R /Prev 288 0 R /Title (\376\377\0001\0000\000.\0002\000.\0002\000\240\000\240\000\240\000T\000h\000e\000 \000H\000a\000r\000d\000e\000r\000 \000W\000a\000y\000 \000\(\000T\000r\000u\000e\000 \000T\000y\000p\000e\000\))
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 292 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 200 0 R /XYZ 57.02362 464.8236 0 ] /Parent 290 0 R /Prev 291 0 R /Title (\376\377\0009\000.\0001\000.\0002\000\240\000\240\000\240\000O\000p\000t\000i\000o\000n\000s)
+=======
+/Count 7 /Dest [ 207 0 R /XYZ 57.02362 747.0236 0 ] /First 293 0 R /Last 299 0 R /Next 300 0 R /Parent 240 0 R 
+  /Prev 285 0 R /Title (\376\377\0001\0001\000\240\000\240\000\240\000R\000a\000w\000 \000D\000i\000r\000e\000c\000t\000i\000v\000e)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 293 0 obj
 <<
+<<<<<<< HEAD
 /Count 6 /Dest [ 203 0 R /XYZ 57.02362 747.0236 0 ] /First 294 0 R /Last 295 0 R /Next 300 0 R /Parent 248 0 R 
   /Prev 289 0 R /Title (\376\377\0001\0000\000\240\000\240\000\240\000F\000o\000n\000t\000s)
+=======
+/Dest [ 207 0 R /XYZ 57.02362 714.0236 0 ] /Next 294 0 R /Parent 292 0 R /Title (\376\377\0001\0001\000.\0001\000\240\000\240\000\240\000R\000a\000w\000 \000P\000D\000F)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 294 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 203 0 R /XYZ 57.02362 684.0236 0 ] /Next 295 0 R /Parent 293 0 R /Title (\376\377\0001\0000\000.\0001\000\240\000\240\000\240\000S\000t\000a\000n\000d\000a\000r\000d\000 \000P\000D\000F\000 \000F\000o\000n\000t\000s)
+=======
+/Dest [ 207 0 R /XYZ 57.02362 402.8236 0 ] /Next 295 0 R /Parent 292 0 R /Prev 293 0 R /Title (\376\377\0001\0001\000.\0002\000\240\000\240\000\240\000P\000a\000g\000e\000 \000C\000o\000u\000n\000t\000e\000r\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 295 0 obj
 <<
+<<<<<<< HEAD
 /Count 4 /Dest [ 203 0 R /XYZ 57.02362 384.0236 0 ] /First 296 0 R /Last 299 0 R /Parent 293 0 R /Prev 294 0 R 
   /Title (\376\377\0001\0000\000.\0002\000\240\000\240\000\240\000F\000o\000n\000t\000 \000E\000m\000b\000e\000d\000d\000i\000n\000g)
+=======
+/Dest [ 208 0 R /XYZ 57.02362 577.0236 0 ] /Next 296 0 R /Parent 292 0 R /Prev 294 0 R /Title (\376\377\0001\0001\000.\0003\000\240\000\240\000\240\000P\000a\000g\000e\000 \000B\000r\000e\000a\000k\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 296 0 obj
 <<
+<<<<<<< HEAD
 /Count 2 /Dest [ 203 0 R /XYZ 57.02362 324.0236 0 ] /First 297 0 R /Last 298 0 R /Next 299 0 R /Parent 295 0 R 
   /Title (\376\377\0001\0000\000.\0002\000.\0001\000\240\000\240\000\240\000T\000h\000e\000 \000E\000a\000s\000y\000 \000W\000a\000y)
+=======
+/Dest [ 208 0 R /XYZ 57.02362 254.4236 0 ] /Next 297 0 R /Parent 292 0 R /Prev 295 0 R /Title (\376\377\0001\0001\000.\0004\000\240\000\240\000\240\000F\000r\000a\000m\000e\000 \000B\000r\000e\000a\000k\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 297 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 203 0 R /XYZ 57.02362 195.8236 0 ] /Next 298 0 R /Parent 296 0 R /Title (\376\377\0001\0000\000.\0002\000.\0001\000.\0001\000\240\000\240\000\240\000F\000o\000n\000t\000y\000 \000i\000s\000 \000a\000 \000T\000r\000u\000e\000 \000T\000y\000p\000e\000 \000f\000o\000n\000t\000:)
+=======
+/Dest [ 209 0 R /XYZ 57.02362 747.0236 0 ] /Next 298 0 R /Parent 292 0 R /Prev 296 0 R /Title (\376\377\0001\0001\000.\0005\000\240\000\240\000\240\000P\000a\000g\000e\000 \000T\000r\000a\000n\000s\000i\000t\000i\000o\000n\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 298 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 204 0 R /XYZ 57.02362 609.8236 0 ] /Parent 296 0 R /Prev 297 0 R /Title (\376\377\0001\0000\000.\0002\000.\0001\000.\0002\000\240\000\240\000\240\000F\000o\000n\000t\000y\000 \000i\000s\000 \000a\000 \000T\000y\000p\000e\000 \0001\000 \000f\000o\000n\000t\000:)
+=======
+/Dest [ 209 0 R /XYZ 57.02362 178.4236 0 ] /Next 299 0 R /Parent 292 0 R /Prev 297 0 R /Title (\376\377\0001\0001\000.\0006\000\240\000\240\000\240\000T\000e\000x\000t\000 \000A\000n\000n\000o\000t\000a\000t\000i\000o\000n\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 299 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 204 0 R /XYZ 57.02362 139.0236 0 ] /Parent 295 0 R /Prev 296 0 R /Title (\376\377\0001\0000\000.\0002\000.\0002\000\240\000\240\000\240\000T\000h\000e\000 \000H\000a\000r\000d\000e\000r\000 \000W\000a\000y\000 \000\(\000T\000r\000u\000e\000 \000T\000y\000p\000e\000\))
+=======
+/Dest [ 210 0 R /XYZ 57.02362 723.0236 0 ] /Parent 292 0 R /Prev 298 0 R /Title (\376\377\0001\0001\000.\0007\000\240\000\240\000\240\000R\000a\000w\000 \000H\000T\000M\000L)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 300 0 obj
 <<
+<<<<<<< HEAD
 /Count 7 /Dest [ 207 0 R /XYZ 57.02362 747.0236 0 ] /First 301 0 R /Last 307 0 R /Next 308 0 R /Parent 248 0 R 
   /Prev 293 0 R /Title (\376\377\0001\0001\000\240\000\240\000\240\000R\000a\000w\000 \000D\000i\000r\000e\000c\000t\000i\000v\000e)
+=======
+/Dest [ 212 0 R /XYZ 57.02362 747.0236 0 ] /Next 301 0 R /Parent 240 0 R /Prev 292 0 R /Title (\376\377\0001\0002\000\240\000\240\000\240\000T\000h\000e\000 \000c\000o\000u\000n\000t\000e\000r\000 \000r\000o\000l\000e)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 301 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 207 0 R /XYZ 57.02362 714.0236 0 ] /Next 302 0 R /Parent 300 0 R /Title (\376\377\0001\0001\000.\0001\000\240\000\240\000\240\000R\000a\000w\000 \000P\000D\000F)
+=======
+/Dest [ 213 0 R /XYZ 57.02362 747.0236 0 ] /Next 302 0 R /Parent 240 0 R /Prev 300 0 R /Title (\376\377\0001\0003\000\240\000\240\000\240\000T\000h\000e\000 \000v\000e\000r\000s\000i\000o\000n\000,\000 \000r\000e\000v\000i\000s\000i\000o\000n\000 \000r\000o\000l\000e\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 302 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 207 0 R /XYZ 57.02362 402.8236 0 ] /Next 303 0 R /Parent 300 0 R /Prev 301 0 R /Title (\376\377\0001\0001\000.\0002\000\240\000\240\000\240\000P\000a\000g\000e\000 \000C\000o\000u\000n\000t\000e\000r\000s)
+=======
+/Dest [ 214 0 R /XYZ 57.02362 747.0236 0 ] /Next 303 0 R /Parent 240 0 R /Prev 301 0 R /Title (\376\377\0001\0004\000\240\000\240\000\240\000T\000h\000e\000 \000o\000d\000d\000e\000v\000e\000n\000 \000d\000i\000r\000e\000c\000t\000i\000v\000e)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 303 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 208 0 R /XYZ 57.02362 577.0236 0 ] /Next 304 0 R /Parent 300 0 R /Prev 302 0 R /Title (\376\377\0001\0001\000.\0003\000\240\000\240\000\240\000P\000a\000g\000e\000 \000B\000r\000e\000a\000k\000s)
+=======
+/Dest [ 219 0 R /XYZ 57.02362 747.0236 0 ] /Next 304 0 R /Parent 240 0 R /Prev 302 0 R /Title (\376\377\0001\0005\000\240\000\240\000\240\000M\000a\000t\000h\000e\000m\000a\000t\000i\000c\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 304 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 208 0 R /XYZ 57.02362 254.4236 0 ] /Next 305 0 R /Parent 300 0 R /Prev 303 0 R /Title (\376\377\0001\0001\000.\0004\000\240\000\240\000\240\000F\000r\000a\000m\000e\000 \000B\000r\000e\000a\000k\000s)
+=======
+/Dest [ 220 0 R /XYZ 57.02362 747.0236 0 ] /Next 305 0 R /Parent 240 0 R /Prev 303 0 R /Title (\376\377\0001\0006\000\240\000\240\000\240\000H\000y\000p\000h\000e\000n\000a\000t\000i\000o\000n)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 305 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 209 0 R /XYZ 57.02362 747.0236 0 ] /Next 306 0 R /Parent 300 0 R /Prev 304 0 R /Title (\376\377\0001\0001\000.\0005\000\240\000\240\000\240\000P\000a\000g\000e\000 \000T\000r\000a\000n\000s\000i\000t\000i\000o\000n\000s)
+=======
+/Dest [ 222 0 R /XYZ 57.02362 747.0236 0 ] /Next 306 0 R /Parent 240 0 R /Prev 304 0 R /Title (\376\377\0001\0007\000\240\000\240\000\240\000S\000m\000a\000r\000t\000 \000Q\000u\000o\000t\000e\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 306 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 209 0 R /XYZ 57.02362 178.4236 0 ] /Next 307 0 R /Parent 300 0 R /Prev 305 0 R /Title (\376\377\0001\0001\000.\0006\000\240\000\240\000\240\000T\000e\000x\000t\000 \000A\000n\000n\000o\000t\000a\000t\000i\000o\000n\000s)
+=======
+/Dest [ 224 0 R /XYZ 57.02362 747.0236 0 ] /Next 307 0 R /Parent 240 0 R /Prev 305 0 R /Title (\376\377\0001\0008\000\240\000\240\000\240\000S\000p\000h\000i\000n\000x)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 307 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 210 0 R /XYZ 57.02362 723.0236 0 ] /Parent 300 0 R /Prev 306 0 R /Title (\376\377\0001\0001\000.\0007\000\240\000\240\000\240\000R\000a\000w\000 \000H\000T\000M\000L)
+=======
+/Dest [ 228 0 R /XYZ 57.02362 747.0236 0 ] /Next 308 0 R /Parent 240 0 R /Prev 306 0 R /Title (\376\377\0001\0009\000\240\000\240\000\240\000E\000x\000t\000e\000n\000s\000i\000o\000n\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 308 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 212 0 R /XYZ 57.02362 747.0236 0 ] /Next 309 0 R /Parent 248 0 R /Prev 300 0 R /Title (\376\377\0001\0002\000\240\000\240\000\240\000T\000h\000e\000 \000c\000o\000u\000n\000t\000e\000r\000 \000r\000o\000l\000e)
+=======
+/Dest [ 230 0 R /XYZ 57.02362 747.0236 0 ] /Next 309 0 R /Parent 240 0 R /Prev 307 0 R /Title (\376\377\0002\0000\000\240\000\240\000\240\000D\000e\000v\000e\000l\000o\000p\000e\000r\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 309 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 213 0 R /XYZ 57.02362 747.0236 0 ] /Next 310 0 R /Parent 248 0 R /Prev 308 0 R /Title (\376\377\0001\0003\000\240\000\240\000\240\000T\000h\000e\000 \000v\000e\000r\000s\000i\000o\000n\000,\000 \000r\000e\000v\000i\000s\000i\000o\000n\000 \000r\000o\000l\000e\000s)
+=======
+/Dest [ 231 0 R /XYZ 57.02362 747.0236 0 ] /Parent 240 0 R /Prev 308 0 R /Title (\376\377\0002\0001\000\240\000\240\000\240\000L\000i\000c\000e\000n\000s\000e\000s)
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 310 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 214 0 R /XYZ 57.02362 747.0236 0 ] /Next 311 0 R /Parent 248 0 R /Prev 309 0 R /Title (\376\377\0001\0004\000\240\000\240\000\240\000T\000h\000e\000 \000o\000d\000d\000e\000v\000e\000n\000 \000d\000i\000r\000e\000c\000t\000i\000v\000e)
+=======
+/Count 49 /Kids [ 4 0 R 87 0 R 146 0 R 152 0 R 154 0 R 155 0 R 157 0 R 160 0 R 161 0 R 165 0 R 
+  166 0 R 170 0 R 175 0 R 176 0 R 178 0 R 179 0 R 180 0 R 183 0 R 185 0 R 187 0 R 
+  188 0 R 189 0 R 191 0 R 192 0 R 193 0 R 196 0 R 198 0 R 199 0 R 200 0 R 203 0 R 
+  204 0 R 206 0 R 207 0 R 208 0 R 209 0 R 210 0 R 212 0 R 213 0 R 214 0 R 219 0 R 
+  220 0 R 222 0 R 224 0 R 225 0 R 226 0 R 228 0 R 230 0 R 231 0 R 233 0 R ] /Type /Pages
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 >>
 endobj
 311 0 obj
 <<
+<<<<<<< HEAD
 /Dest [ 219 0 R /XYZ 57.02362 747.0236 0 ] /Next 312 0 R /Parent 248 0 R /Prev 310 0 R /Title (\376\377\0001\0005\000\240\000\240\000\240\000M\000a\000t\000h\000e\000m\000a\000t\000i\000c\000s)
 >>
 endobj
@@ -2865,6 +3478,8 @@ endobj
 endobj
 319 0 obj
 <<
+=======
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 /Length 667
 >>
 stream
@@ -2873,7 +3488,7 @@ q
 1 0 0 1 177.3307 524.4094 cm
 q
 240.6142 0 0 240.6142 0 0 cm
-/FormXob.b1bf2fe7e90e108a689158f75eca11cc Do
+/FormXob.3cd1c2f0e47c6b40dca548e4f498806a Do
 Q
 Q
 q
@@ -2883,21 +3498,25 @@ q
 1 0 0 1 57.02362 438.463 cm
 q
 .133333 .133333 .133333 rg
-BT 1 0 0 1 0 7.6 Tm 132.0427 0 Td /F2+0 38 Tf 45.6 TL (How to use) Tj T* -132.0427 0 Td ET
+BT 1 0 0 1 0 7.6 Tm 140.3132 0 Td /F2+0 38 Tf 45.6 TL (How to use) Tj T* -140.3132 0 Td ET
 Q
 Q
 q
 1 0 0 1 57.02362 287.263 cm
 q
 .133333 .133333 .133333 rg
-BT 1 0 0 1 0 19.2 Tm 48.61417 0 Td /F2+0 96 Tf 115.2 TL (rst2pdf) Tj T* -48.61417 0 Td ET
+BT 1 0 0 1 0 19.2 Tm 77.46217 0 Td /F2+0 96 Tf 115.2 TL (rst2pdf) Tj T* -77.46217 0 Td ET
 Q
 Q
 q
 1 0 0 1 57.02362 239.263 cm
 q
 0 0 0 rg
+<<<<<<< HEAD
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 195.8742 0 Td (Version 0.103 \(final\)) Tj T* -195.8742 0 Td ET
+=======
+BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 191.4242 0 Td (Version 0.103 \(dev31\)) Tj T* -191.4242 0 Td ET
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 Q
 Q
 q
@@ -2906,7 +3525,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 320 0 obj
+=======
+312 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 9894
 >>
@@ -3487,7 +4110,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 321 0 obj
+=======
+313 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 7293
 >>
@@ -3925,7 +4552,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 322 0 obj
+=======
+314 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 4008
 >>
@@ -4151,7 +4782,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 323 0 obj
+=======
+315 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 9854
 >>
@@ -4713,7 +5348,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 324 0 obj
+=======
+316 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 8777
 >>
@@ -5201,7 +5840,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 325 0 obj
+=======
+317 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 8123
 >>
@@ -5640,7 +6283,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 326 0 obj
+=======
+318 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 7041
 >>
@@ -6049,7 +6696,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 327 0 obj
+=======
+319 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 2647
 >>
@@ -6220,7 +6871,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 328 0 obj
+=======
+320 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 5365
 >>
@@ -6474,7 +7129,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 329 0 obj
+=======
+321 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 6343
 >>
@@ -6835,7 +7494,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 330 0 obj
+=======
+322 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 5176
 >>
@@ -7032,7 +7695,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 331 0 obj
+=======
+323 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 4514
 >>
@@ -7261,7 +7928,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 332 0 obj
+=======
+324 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 8899
 >>
@@ -7888,7 +8559,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 333 0 obj
+=======
+325 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 7088
 >>
@@ -8220,7 +8895,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 334 0 obj
+=======
+326 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 7676
 >>
@@ -8712,7 +9391,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 335 0 obj
+=======
+327 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 9183
 >>
@@ -9052,7 +9735,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 336 0 obj
+=======
+328 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 8045
 >>
@@ -9502,7 +10189,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 337 0 obj
+=======
+329 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 9235
 >>
@@ -9958,7 +10649,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 338 0 obj
+=======
+330 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 8714
 >>
@@ -10399,7 +11094,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 339 0 obj
+=======
+331 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 5199
 >>
@@ -10601,7 +11300,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 340 0 obj
+=======
+332 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 11928
 >>
@@ -11061,7 +11764,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 341 0 obj
+=======
+333 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 7191
 >>
@@ -11439,7 +12146,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 342 0 obj
+=======
+334 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 6438
 >>
@@ -11787,7 +12498,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 343 0 obj
+=======
+335 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 5180
 >>
@@ -12095,7 +12810,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 344 0 obj
+=======
+336 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 10374
 >>
@@ -12760,7 +13479,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 345 0 obj
+=======
+337 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 10676
 >>
@@ -13537,7 +14260,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 346 0 obj
+=======
+338 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 7649
 >>
@@ -13795,7 +14522,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 347 0 obj
+=======
+339 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 4169
 >>
@@ -14040,7 +14771,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 348 0 obj
+=======
+340 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 7753
 >>
@@ -14610,7 +15345,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 349 0 obj
+=======
+341 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 6002
 >>
@@ -14865,7 +15604,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 350 0 obj
+=======
+342 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 5305
 >>
@@ -15085,7 +15828,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 351 0 obj
+=======
+343 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 4847
 >>
@@ -15342,7 +16089,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 352 0 obj
+=======
+344 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 6272
 >>
@@ -15751,7 +16502,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 353 0 obj
+=======
+345 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 6332
 >>
@@ -16191,7 +16946,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 354 0 obj
+=======
+346 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 1261
 >>
@@ -16262,7 +17021,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 355 0 obj
+=======
+347 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 4930
 >>
@@ -16474,7 +17237,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 356 0 obj
+=======
+348 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 2935
 >>
@@ -16649,7 +17416,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 357 0 obj
+=======
+349 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 4624
 >>
@@ -16868,9 +17639,13 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 358 0 obj
+=======
+350 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
-/Length 4786
+/Length 4415
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
@@ -16922,6 +17697,7 @@ BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (And here's the result:) Tj T* ET
 Q
 Q
 q
+<<<<<<< HEAD
 1 0 0 1 285.1378 570.8236 cm
 0 0 0 rg
 BT 1 0 0 1 0 4.825313 Tm /F9+0 7 Tf 8.4 TL (2) Tj T* ET
@@ -16937,19 +17713,27 @@ BT 1 0 0 1 9 -3.495 Tm /F9+0 7 Tf 8.4 TL (3) Tj T* ET
 [] 0 d
 n 17.20833 12.5625 6.203613 .4375 re B*
 n 0 2.950313 23.41194 .625 re B*
+=======
+1 0 0 1 292.6378 578.8236 cm
+BT 1 0 0 1 292.6378 578.8236 Tm (\\frac{2 \\pm \\sqrt{7}}{3}) Tj T* ET
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 Q
 q
-1 0 0 1 57.02362 547.8236 cm
+1 0 0 1 57.02362 560.8236 cm
 q
 q
-6 0 0 8 280.68 1 cm
-/FormXob.0ba901e64a80f2e0e4e27e23b621fb7f Do
+10 0 0 10 280.68 2 cm
+/FormXob.b6f77d4eeded7b432395304cf1a6ac36 Do
 Q
+<<<<<<< HEAD
 BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (If you want to insert mathematical notation in your text like this: ) Tj 286.68 0 Td ( that is the job of the math ) Tj /F6 10 Tf (role) Tj /F1 10 Tf (:) Tj T* -286.68 0 Td ET
+=======
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (If you want to insert mathematical notation in your text like this: ) Tj 290.68 0 Td ( that is the job of the math ) Tj /F6 10 Tf (role) Tj /F1 10 Tf (:) Tj T* -290.68 0 Td ET
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 Q
 Q
 q
-1 0 0 1 57.02362 514.6236 cm
+1 0 0 1 57.02362 527.6236 cm
 q
 q
 1 0 0 1 0 0 cm
@@ -16970,30 +17754,30 @@ Q
 Q
 Q
 q
-1 0 0 1 57.02362 494.6236 cm
+1 0 0 1 57.02362 507.6236 cm
 q
 q
-6 0 0 8 79.47 1 cm
-/FormXob.0ba901e64a80f2e0e4e27e23b621fb7f Do
+10 0 0 10 79.47 2 cm
+/FormXob.b6f77d4eeded7b432395304cf1a6ac36 Do
 Q
-BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (Produces: This is ) Tj 85.47 0 Td  T* -85.47 0 Td ET
+BT 1 0 0 1 0 2 Tm 12 TL /F1 10 Tf 0 0 0 rg (Produces: This is ) Tj 89.47 0 Td  T* -89.47 0 Td ET
 Q
 Q
 q
-1 0 0 1 57.02362 464.6236 cm
+1 0 0 1 57.02362 477.6236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .828241 Tw (Note that while the math directive embeds fonts and draws your formula as text, the math role embeds an) Tj T* 0 Tw (image. That means:) Tj T* ET
 Q
 Q
 q
-1 0 0 1 57.02362 458.6236 cm
+1 0 0 1 57.02362 471.6236 cm
 Q
 q
-1 0 0 1 57.02362 458.6236 cm
+1 0 0 1 57.02362 471.6236 cm
 Q
 q
-1 0 0 1 57.02362 446.6236 cm
+1 0 0 1 57.02362 459.6236 cm
 q
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
@@ -17016,10 +17800,10 @@ Q
 Q
 Q
 q
-1 0 0 1 57.02362 440.6236 cm
+1 0 0 1 57.02362 453.6236 cm
 Q
 q
-1 0 0 1 57.02362 428.6236 cm
+1 0 0 1 57.02362 441.6236 cm
 q
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
@@ -17042,35 +17826,35 @@ Q
 Q
 Q
 q
-1 0 0 1 57.02362 428.6236 cm
+1 0 0 1 57.02362 441.6236 cm
 Q
 q
-1 0 0 1 57.02362 410.6236 cm
+1 0 0 1 57.02362 423.6236 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (So, use it only in emergencies ;-\)) Tj T* ET
 Q
 Q
 q
-1 0 0 1 57.02362 380.6236 cm
+1 0 0 1 57.02362 393.6236 cm
 q
 BT 1 0 0 1 0 14 Tm 2.295464 Tw 12 TL /F1 10 Tf 0 0 0 rg (You don't need to worry about fonts, the correct math fonts will be used and embedded in your PDF) Tj T* 0 Tw (automatically \(they are included with ) Tj /F5 10 Tf (matplotlib) Tj /F1 10 Tf (\).) Tj T* ET
 Q
 Q
 q
-1 0 0 1 57.02362 350.6236 cm
+1 0 0 1 57.02362 363.6236 cm
 q
 BT 1 0 0 1 0 14 Tm .802556 Tw 12 TL /F1 10 Tf 0 0 0 rg (For an introduction to LaTeX syntax, see the "Typesetting Mathematical Formulae" chapter in "The Not So) Tj T* 0 Tw (Short Introduction to LaTeX 2e" at ) Tj 0 .4 .6 rg (https://tobi.oetiker.ch/lshort/lshort.pdf) Tj T* ET
 Q
 Q
 q
-1 0 0 1 57.02362 320.6236 cm
+1 0 0 1 57.02362 333.6236 cm
 q
 BT 1 0 0 1 0 14 Tm 1.92886 Tw 12 TL /F1 10 Tf 0 0 0 rg (Basically, the inline form ) Tj /F5 10 Tf ($a^2$) Tj /F1 10 Tf ( is similar to the math role, and the display form is similar to the math) Tj T* 0 Tw (directive.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 57.02362 320.6236 cm
+1 0 0 1 57.02362 333.6236 cm
 Q
 q
 1 0 0 1 51.02362 767.1969 cm
@@ -17116,7 +17900,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 359 0 obj
+=======
+351 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 3947
 >>
@@ -17287,7 +18075,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 360 0 obj
+=======
+352 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 4571
 >>
@@ -17532,7 +18324,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 361 0 obj
+=======
+353 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 4685
 >>
@@ -17732,7 +18528,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 362 0 obj
+=======
+354 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 2483
 >>
@@ -17813,7 +18613,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 363 0 obj
+=======
+355 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 5779
 >>
@@ -18068,7 +18872,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 364 0 obj
+=======
+356 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 3084
 >>
@@ -18251,7 +19059,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 365 0 obj
+=======
+357 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 835
 >>
@@ -18315,7 +19127,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 366 0 obj
+=======
+358 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 4266
 >>
@@ -18430,7 +19246,11 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 367 0 obj
+=======
+359 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /Length 1064
 >>
@@ -18504,6 +19324,7 @@ Q
  
 endstream
 endobj
+<<<<<<< HEAD
 368 0 obj
 <<
 /Nums [ 0 369 0 R 1 370 0 R 2 371 0 R 3 372 0 R 4 373 0 R 
@@ -18519,251 +19340,461 @@ endobj
 >>
 endobj
 369 0 obj
+=======
+360 0 obj
+<<
+/Nums [ 0 361 0 R 1 362 0 R 2 363 0 R 3 364 0 R 4 365 0 R 
+  5 366 0 R 6 367 0 R 7 368 0 R 8 369 0 R 9 370 0 R 
+  10 371 0 R 11 372 0 R 12 373 0 R 13 374 0 R 14 375 0 R 
+  15 376 0 R 16 377 0 R 17 378 0 R 18 379 0 R 19 380 0 R 
+  20 381 0 R 21 382 0 R 22 383 0 R 23 384 0 R 24 385 0 R 
+  25 386 0 R 26 387 0 R 27 388 0 R 28 389 0 R 29 390 0 R 
+  30 391 0 R 31 392 0 R 32 393 0 R 33 394 0 R 34 395 0 R 
+  35 396 0 R 36 397 0 R 37 398 0 R 38 399 0 R 39 400 0 R 
+  40 401 0 R 41 402 0 R 42 403 0 R 43 404 0 R 44 405 0 R 
+  45 406 0 R 46 407 0 R 47 408 0 R 48 409 0 R ]
+>>
+endobj
+361 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 1
 >>
 endobj
+<<<<<<< HEAD
 370 0 obj
+=======
+362 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 2
 >>
 endobj
+<<<<<<< HEAD
 371 0 obj
+=======
+363 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 3
 >>
 endobj
+<<<<<<< HEAD
 372 0 obj
+=======
+364 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 4
 >>
 endobj
+<<<<<<< HEAD
 373 0 obj
+=======
+365 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 5
 >>
 endobj
+<<<<<<< HEAD
 374 0 obj
+=======
+366 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 6
 >>
 endobj
+<<<<<<< HEAD
 375 0 obj
+=======
+367 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 7
 >>
 endobj
+<<<<<<< HEAD
 376 0 obj
+=======
+368 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 8
 >>
 endobj
+<<<<<<< HEAD
 377 0 obj
+=======
+369 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 9
 >>
 endobj
+<<<<<<< HEAD
 378 0 obj
+=======
+370 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 10
 >>
 endobj
+<<<<<<< HEAD
 379 0 obj
+=======
+371 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 11
 >>
 endobj
+<<<<<<< HEAD
 380 0 obj
+=======
+372 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 12
 >>
 endobj
+<<<<<<< HEAD
 381 0 obj
+=======
+373 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 13
 >>
 endobj
+<<<<<<< HEAD
 382 0 obj
+=======
+374 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 14
 >>
 endobj
+<<<<<<< HEAD
 383 0 obj
+=======
+375 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 15
 >>
 endobj
+<<<<<<< HEAD
 384 0 obj
+=======
+376 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 16
 >>
 endobj
+<<<<<<< HEAD
 385 0 obj
+=======
+377 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 17
 >>
 endobj
+<<<<<<< HEAD
 386 0 obj
+=======
+378 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 18
 >>
 endobj
+<<<<<<< HEAD
 387 0 obj
+=======
+379 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 19
 >>
 endobj
+<<<<<<< HEAD
 388 0 obj
+=======
+380 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 20
 >>
 endobj
+<<<<<<< HEAD
 389 0 obj
+=======
+381 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 21
 >>
 endobj
+<<<<<<< HEAD
 390 0 obj
+=======
+382 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 22
 >>
 endobj
+<<<<<<< HEAD
 391 0 obj
+=======
+383 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 23
 >>
 endobj
+<<<<<<< HEAD
 392 0 obj
+=======
+384 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 24
 >>
 endobj
+<<<<<<< HEAD
 393 0 obj
+=======
+385 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 25
 >>
 endobj
+<<<<<<< HEAD
 394 0 obj
+=======
+386 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 26
 >>
 endobj
+<<<<<<< HEAD
 395 0 obj
+=======
+387 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 27
 >>
 endobj
+<<<<<<< HEAD
 396 0 obj
+=======
+388 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 28
 >>
 endobj
+<<<<<<< HEAD
 397 0 obj
+=======
+389 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 29
 >>
 endobj
+<<<<<<< HEAD
 398 0 obj
+=======
+390 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 30
 >>
 endobj
+<<<<<<< HEAD
 399 0 obj
+=======
+391 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 31
 >>
 endobj
+<<<<<<< HEAD
 400 0 obj
+=======
+392 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 32
 >>
 endobj
+<<<<<<< HEAD
 401 0 obj
+=======
+393 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 33
 >>
 endobj
+<<<<<<< HEAD
 402 0 obj
+=======
+394 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 34
 >>
 endobj
+<<<<<<< HEAD
 403 0 obj
+=======
+395 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 35
 >>
 endobj
+<<<<<<< HEAD
 404 0 obj
+=======
+396 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 36
 >>
 endobj
+<<<<<<< HEAD
 405 0 obj
+=======
+397 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 37
 >>
 endobj
+<<<<<<< HEAD
 406 0 obj
+=======
+398 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 38
 >>
 endobj
+<<<<<<< HEAD
 407 0 obj
+=======
+399 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 39
 >>
 endobj
+<<<<<<< HEAD
 408 0 obj
+=======
+400 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 40
 >>
 endobj
+<<<<<<< HEAD
 409 0 obj
+=======
+401 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 41
 >>
 endobj
+<<<<<<< HEAD
 410 0 obj
+=======
+402 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 42
 >>
 endobj
+<<<<<<< HEAD
 411 0 obj
+=======
+403 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 43
 >>
 endobj
+<<<<<<< HEAD
 412 0 obj
+=======
+404 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 44
 >>
 endobj
+<<<<<<< HEAD
 413 0 obj
+=======
+405 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 45
 >>
 endobj
+<<<<<<< HEAD
 414 0 obj
+=======
+406 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 46
 >>
 endobj
+<<<<<<< HEAD
 415 0 obj
+=======
+407 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 47
 >>
 endobj
+<<<<<<< HEAD
 416 0 obj
+=======
+408 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 48
 >>
 endobj
+<<<<<<< HEAD
 417 0 obj
+=======
+409 0 obj
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 <<
 /S /D /St 49
 >>
 endobj
 xref
+<<<<<<< HEAD
 0 418
 0000000000 65535 f 
 0000000073 00000 n 
@@ -19226,4 +20257,429 @@ trailer
 %EndExifToolUpdate 506095
 startxref
 506424
+=======
+0 410
+0000000000 65535 f 
+0000000073 00000 n 
+0000000189 00000 n 
+0000000296 00000 n 
+0000057857 00000 n 
+0000058127 00000 n 
+0000058236 00000 n 
+0000058348 00000 n 
+0000058517 00000 n 
+0000058684 00000 n 
+0000058853 00000 n 
+0000059021 00000 n 
+0000059191 00000 n 
+0000059359 00000 n 
+0000059529 00000 n 
+0000059697 00000 n 
+0000059867 00000 n 
+0000060035 00000 n 
+0000060205 00000 n 
+0000060373 00000 n 
+0000060543 00000 n 
+0000060711 00000 n 
+0000060881 00000 n 
+0000061049 00000 n 
+0000061219 00000 n 
+0000061387 00000 n 
+0000061557 00000 n 
+0000061725 00000 n 
+0000061895 00000 n 
+0000062063 00000 n 
+0000062233 00000 n 
+0000062401 00000 n 
+0000062571 00000 n 
+0000062739 00000 n 
+0000062909 00000 n 
+0000063075 00000 n 
+0000063245 00000 n 
+0000063411 00000 n 
+0000063581 00000 n 
+0000063747 00000 n 
+0000063917 00000 n 
+0000064083 00000 n 
+0000064253 00000 n 
+0000064419 00000 n 
+0000064589 00000 n 
+0000064755 00000 n 
+0000064925 00000 n 
+0000065091 00000 n 
+0000065261 00000 n 
+0000065427 00000 n 
+0000065597 00000 n 
+0000065763 00000 n 
+0000065933 00000 n 
+0000066099 00000 n 
+0000066269 00000 n 
+0000066435 00000 n 
+0000066605 00000 n 
+0000066771 00000 n 
+0000066941 00000 n 
+0000067107 00000 n 
+0000067277 00000 n 
+0000067443 00000 n 
+0000067613 00000 n 
+0000067779 00000 n 
+0000067949 00000 n 
+0000068115 00000 n 
+0000068285 00000 n 
+0000068451 00000 n 
+0000068621 00000 n 
+0000068787 00000 n 
+0000068957 00000 n 
+0000069123 00000 n 
+0000069293 00000 n 
+0000069459 00000 n 
+0000069629 00000 n 
+0000069795 00000 n 
+0000069965 00000 n 
+0000070131 00000 n 
+0000070301 00000 n 
+0000070467 00000 n 
+0000070637 00000 n 
+0000070803 00000 n 
+0000070973 00000 n 
+0000071139 00000 n 
+0000071309 00000 n 
+0000071475 00000 n 
+0000071645 00000 n 
+0000071811 00000 n 
+0000072609 00000 n 
+0000072779 00000 n 
+0000072945 00000 n 
+0000073115 00000 n 
+0000073281 00000 n 
+0000073451 00000 n 
+0000073617 00000 n 
+0000073787 00000 n 
+0000073953 00000 n 
+0000074123 00000 n 
+0000074289 00000 n 
+0000074459 00000 n 
+0000074625 00000 n 
+0000074796 00000 n 
+0000074963 00000 n 
+0000075134 00000 n 
+0000075301 00000 n 
+0000075472 00000 n 
+0000075639 00000 n 
+0000075810 00000 n 
+0000075977 00000 n 
+0000076148 00000 n 
+0000076315 00000 n 
+0000076486 00000 n 
+0000076653 00000 n 
+0000076824 00000 n 
+0000076991 00000 n 
+0000077162 00000 n 
+0000077329 00000 n 
+0000077500 00000 n 
+0000077667 00000 n 
+0000077838 00000 n 
+0000078005 00000 n 
+0000078176 00000 n 
+0000078343 00000 n 
+0000078514 00000 n 
+0000078681 00000 n 
+0000078852 00000 n 
+0000079019 00000 n 
+0000079190 00000 n 
+0000079357 00000 n 
+0000079528 00000 n 
+0000079695 00000 n 
+0000079866 00000 n 
+0000080033 00000 n 
+0000080204 00000 n 
+0000080371 00000 n 
+0000080542 00000 n 
+0000080709 00000 n 
+0000080880 00000 n 
+0000081047 00000 n 
+0000081218 00000 n 
+0000081385 00000 n 
+0000081556 00000 n 
+0000081723 00000 n 
+0000081894 00000 n 
+0000082061 00000 n 
+0000082232 00000 n 
+0000082399 00000 n 
+0000083087 00000 n 
+0000083194 00000 n 
+0000083409 00000 n 
+0000083622 00000 n 
+0000083842 00000 n 
+0000084056 00000 n 
+0000084309 00000 n 
+0000084426 00000 n 
+0000084635 00000 n 
+0000084844 00000 n 
+0000085015 00000 n 
+0000085244 00000 n 
+0000085359 00000 n 
+0000085471 00000 n 
+0000085680 00000 n 
+0000085889 00000 n 
+0000086192 00000 n 
+0000086477 00000 n 
+0000086663 00000 n 
+0000086957 00000 n 
+0000087166 00000 n 
+0000087337 00000 n 
+0000087508 00000 n 
+0000087679 00000 n 
+0000087924 00000 n 
+0000088095 00000 n 
+0000088265 00000 n 
+0000088436 00000 n 
+0000088607 00000 n 
+0000088860 00000 n 
+0000089069 00000 n 
+0000089240 00000 n 
+0000089469 00000 n 
+0000089678 00000 n 
+0000089887 00000 n 
+0000090058 00000 n 
+0000090229 00000 n 
+0000090466 00000 n 
+0000090637 00000 n 
+0000090866 00000 n 
+0000091037 00000 n 
+0000091266 00000 n 
+0000091475 00000 n 
+0000091684 00000 n 
+0000091855 00000 n 
+0000092084 00000 n 
+0000092293 00000 n 
+0000092502 00000 n 
+0000092676 00000 n 
+0000092862 00000 n 
+0000093099 00000 n 
+0000093283 00000 n 
+0000093512 00000 n 
+0000093721 00000 n 
+0000093930 00000 n 
+0000094122 00000 n 
+0000094293 00000 n 
+0000094530 00000 n 
+0000094739 00000 n 
+0000094918 00000 n 
+0000095147 00000 n 
+0000095356 00000 n 
+0000095565 00000 n 
+0000095774 00000 n 
+0000095983 00000 n 
+0000096154 00000 n 
+0000096383 00000 n 
+0000096592 00000 n 
+0000096801 00000 n 
+0000096978 00000 n 
+0000097232 00000 n 
+0000097479 00000 n 
+0000097674 00000 n 
+0000097976 00000 n 
+0000098185 00000 n 
+0000098383 00000 n 
+0000098612 00000 n 
+0000098789 00000 n 
+0000099018 00000 n 
+0000099227 00000 n 
+0000099436 00000 n 
+0000099653 00000 n 
+0000099882 00000 n 
+0000100070 00000 n 
+0000100299 00000 n 
+0000100508 00000 n 
+0000100679 00000 n 
+0000100908 00000 n 
+0000102861 00000 n 
+0000122414 00000 n 
+0000122644 00000 n 
+0000123314 00000 n 
+0000123424 00000 n 
+0000123701 00000 n 
+0000123779 00000 n 
+0000124023 00000 n 
+0000124237 00000 n 
+0000124535 00000 n 
+0000124763 00000 n 
+0000125040 00000 n 
+0000125282 00000 n 
+0000125504 00000 n 
+0000125761 00000 n 
+0000126019 00000 n 
+0000126307 00000 n 
+0000126565 00000 n 
+0000126848 00000 n 
+0000127055 00000 n 
+0000127283 00000 n 
+0000127466 00000 n 
+0000127738 00000 n 
+0000127941 00000 n 
+0000128259 00000 n 
+0000128487 00000 n 
+0000128749 00000 n 
+0000128947 00000 n 
+0000129255 00000 n 
+0000129493 00000 n 
+0000129760 00000 n 
+0000130017 00000 n 
+0000130319 00000 n 
+0000130708 00000 n 
+0000130991 00000 n 
+0000131289 00000 n 
+0000131588 00000 n 
+0000131821 00000 n 
+0000132099 00000 n 
+0000132327 00000 n 
+0000132515 00000 n 
+0000132778 00000 n 
+0000132991 00000 n 
+0000133224 00000 n 
+0000133441 00000 n 
+0000133698 00000 n 
+0000133911 00000 n 
+0000134204 00000 n 
+0000134451 00000 n 
+0000134729 00000 n 
+0000134927 00000 n 
+0000135155 00000 n 
+0000135403 00000 n 
+0000135672 00000 n 
+0000135941 00000 n 
+0000136249 00000 n 
+0000136542 00000 n 
+0000136842 00000 n 
+0000137110 00000 n 
+0000137303 00000 n 
+0000137540 00000 n 
+0000137767 00000 n 
+0000137999 00000 n 
+0000138251 00000 n 
+0000138503 00000 n 
+0000138701 00000 n 
+0000138943 00000 n 
+0000139240 00000 n 
+0000139507 00000 n 
+0000139724 00000 n 
+0000139941 00000 n 
+0000140163 00000 n 
+0000140355 00000 n 
+0000140567 00000 n 
+0000140779 00000 n 
+0000140967 00000 n 
+0000141424 00000 n 
+0000142143 00000 n 
+0000152090 00000 n 
+0000159436 00000 n 
+0000163497 00000 n 
+0000173404 00000 n 
+0000182234 00000 n 
+0000190410 00000 n 
+0000197504 00000 n 
+0000200204 00000 n 
+0000205622 00000 n 
+0000212018 00000 n 
+0000217247 00000 n 
+0000221814 00000 n 
+0000230766 00000 n 
+0000237907 00000 n 
+0000245636 00000 n 
+0000254872 00000 n 
+0000262970 00000 n 
+0000272258 00000 n 
+0000281025 00000 n 
+0000286277 00000 n 
+0000298259 00000 n 
+0000305503 00000 n 
+0000311994 00000 n 
+0000317227 00000 n 
+0000327655 00000 n 
+0000338385 00000 n 
+0000346087 00000 n 
+0000350309 00000 n 
+0000358115 00000 n 
+0000364170 00000 n 
+0000369528 00000 n 
+0000374428 00000 n 
+0000380753 00000 n 
+0000387138 00000 n 
+0000388452 00000 n 
+0000393435 00000 n 
+0000396423 00000 n 
+0000401100 00000 n 
+0000405568 00000 n 
+0000409568 00000 n 
+0000414192 00000 n 
+0000418930 00000 n 
+0000421466 00000 n 
+0000427298 00000 n 
+0000430435 00000 n 
+0000431322 00000 n 
+0000435641 00000 n 
+0000436758 00000 n 
+0000437347 00000 n 
+0000437382 00000 n 
+0000437417 00000 n 
+0000437452 00000 n 
+0000437487 00000 n 
+0000437522 00000 n 
+0000437557 00000 n 
+0000437592 00000 n 
+0000437627 00000 n 
+0000437662 00000 n 
+0000437698 00000 n 
+0000437734 00000 n 
+0000437770 00000 n 
+0000437806 00000 n 
+0000437842 00000 n 
+0000437878 00000 n 
+0000437914 00000 n 
+0000437950 00000 n 
+0000437986 00000 n 
+0000438022 00000 n 
+0000438058 00000 n 
+0000438094 00000 n 
+0000438130 00000 n 
+0000438166 00000 n 
+0000438202 00000 n 
+0000438238 00000 n 
+0000438274 00000 n 
+0000438310 00000 n 
+0000438346 00000 n 
+0000438382 00000 n 
+0000438418 00000 n 
+0000438454 00000 n 
+0000438490 00000 n 
+0000438526 00000 n 
+0000438562 00000 n 
+0000438598 00000 n 
+0000438634 00000 n 
+0000438670 00000 n 
+0000438706 00000 n 
+0000438742 00000 n 
+0000438778 00000 n 
+0000438814 00000 n 
+0000438850 00000 n 
+0000438886 00000 n 
+0000438922 00000 n 
+0000438958 00000 n 
+0000438994 00000 n 
+0000439030 00000 n 
+0000439066 00000 n 
+trailer
+<<
+/ID 
+[<7919896e424bbbf3b0b54803affb1a59><7919896e424bbbf3b0b54803affb1a59>]
+% ReportLab generated PDF document -- digest (http://www.reportlab.com)
+
+/Info 239 0 R
+/Root 238 0 R
+/Size 410
+>>
+startxref
+439102
+>>>>>>> 0c532f6 (Update to newest manual from repo)
 %%EOF
